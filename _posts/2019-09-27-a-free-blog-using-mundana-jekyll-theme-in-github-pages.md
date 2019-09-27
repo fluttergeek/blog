@@ -1,13 +1,13 @@
 ---
 title: A Free Blog Using Mundana Jekyll Theme In Github Pages
-image: http://localhost:4000/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.00.31%20PM.png
+image: assets/images/Screen%20Shot%202019-09-27%20at%206.00.31%20PM.png
 categories: Jekyll, Tutorial, Admin
 tags: featured
 ---
 
 This might be too technical for a non computer savvy to be doing, so I've formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdirectory just like my blog `iosjunkie.com/blog`, then you might want to see this first:
 
-<p><iframe style="width:100%;" height="315" src="https://www.youtube.com/watch?v=nN6QuNqmAwk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nN6QuNqmAwk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 It really helped me setup a blog as a subdirectory of my domain. I only had to create another repository `blog` and cloned that repository into my computer. Then I copied Mundana's contents from [Github][mundana] into the blog folder. Next is you'll have to setup the *config.yml*.  If your site is in root, for baseurl, make sure this is set to baseurl: ''. In my case it's baseurl: '/blog'.
 
@@ -41,6 +41,6 @@ bundle exec jekyll serve --watch
 then go to `localhost:4000/admin`
 
 ### Posting
-I catch myself looking at the sample posts whenever I create a new post. You might need to if you're not familiar with the jekyll format or on how to use markdown.
+I catch myself looking at sample posts whenever I create a new post. You might need to if you're not familiar with the jekyll format or on how to use markdown.
 
 [mundana]: https://github.com/wowthemesnet/mundana-theme-jekyll.git
