@@ -32,7 +32,7 @@ There were just a few more things that needed filling up. Below are things that 
 	
 2. Build
   
-	This is an obvious requirement. And just to bring more light into it, because I didn't know how it worked at first. Every time you make changes in the code or anywhere in your project, you need to change the build number. So, after having dealt with those warning issues above, I had to increase the build number in project settings, otherwise I couldn't upload a project will an already existing build number in the app connect.
+	This is an obvious requirement. And just to bring more light into it, because I didn't know how it worked at first. Every time you make changes in the code or anywhere in your project, you need to change the build number. So, after having dealt with those warning issues above, I had to increase the build number in project settings, otherwise I couldn't upload a project with an already existing build number in the app connect.
 
 3. Rating
 

@@ -1,6 +1,6 @@
 # Site
 name: 'iOS Junkie'
-description: 'A blog for iOS related stuff.'
+description: 'A blog by an iOS developer who created Laundry City'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: '/blog'
