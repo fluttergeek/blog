@@ -15,6 +15,5 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap'
     gem 'jekyll-paginate'
     gem 'jekyll-seo-tag'
+    gem 'jekyll-admin'
 end
-
-gem 'jekyll-admin', group: :jekyll_plugins
