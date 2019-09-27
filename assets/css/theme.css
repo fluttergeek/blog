@@ -1,7 +1,8 @@
 /*!
  * Mundana Jekyll Theme (https://www.wowthemes.net/mundana-jekyll-theme/)
  */
- @import url(http://allfont.net/allfont.css?fonts=lobster);
+
+@import url(https://fonts.googleapis.com/css?family=Lobster&display=swap);
 
 body {
 	overflow-x:hidden;
@@ -206,7 +207,7 @@ a.text-dark:hover {
 .navbar-brand {
 	margin-right:2rem;
 	font-size:1.55rem;
-    font-family:'Lobster', arial;
+    font-family:'Lobster', Georgia,Times,"Times New Roman",serif;
 }
 .dropdown-item {
 	font-weight:400;
