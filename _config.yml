@@ -17,9 +17,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
+
+# Gems
+gem: [jekyll-admin]
   
 authors:
-    sal:
+    jules:
       name:           Jules Lee
       site:           https://iosjunkie.github.io
       avatar:         /assets/images/avatar1.jpg
@@ -35,7 +38,7 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
+      author: jules
       avatar: /assets/images/avatar1.jpg
       
   # all pages
