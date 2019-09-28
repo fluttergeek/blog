@@ -1,7 +1,7 @@
 ---
 title: A Free Blog Using Mundana Jekyll Theme In Github Pages
 image: assets/images/Screen%20Shot%202019-09-27%20at%206.00.31%20PM.png
-categories: Jekyll, Tutorial, Admin
+categories: [Jekyll, Tutorial, Admin]
 tags: featured
 ---
 
