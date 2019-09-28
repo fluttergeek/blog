@@ -19,7 +19,7 @@ Now, this is what makes life easier. With this dashboard, you don't have to expl
 ![metadata]({{ site.url }}/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.29.32%20PM.png)
 It's not a perfect system, uploading a photo here can be a pain. Which is why I decided to move a photo asset in the `/assets/images/` directory manually every time, because it saves the photo in my `/blog` folder when I upload using `jekyll-admin`.
 
-It's still a great interface I'm telling you. You can preview your markdown side by side what you've written or by toggling preview only. The texteditor isn't much, but it'll do more than just using a ordinary one.
+It's still a great interface I'm telling you. You can preview your markdown side by side what you've written or by toggling preview only. The texteditor isn't much, but it'll do more than just using an ordinary one.
 
 Install this admin dashboard interface on your Gemfile by adding `jekyll-admin` to it:
 ```
@@ -41,6 +41,6 @@ bundle exec jekyll serve --watch
 then go to `localhost:4000/admin`
 
 ### Posting
-I catch myself looking at sample posts whenever I create a new post. You might need to if you're not familiar with the jekyll format or on how to use markdown.
+I catch myself looking at sample posts whenever I create a new post. You might need to if you're not familiar with the jekyll format or on how to use markdown. So, I renamed the `_post` folder to `post` and added `post` to my .gitignore. It's not necessary to create another `_post` folder back, but if you're not using the jekyll-admin or if you're just using a text editor, then you should create it again.
 
 [mundana]: https://github.com/wowthemesnet/mundana-theme-jekyll.git
