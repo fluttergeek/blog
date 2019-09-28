@@ -8,7 +8,7 @@ tags: featured
 
 It was my first app submission to the app store. I mean, well, I hadn't submitted it for review yet, but it already detected a couple of issues that needs dealing with. I uploaded it to app connect for 6 times until I got it right. 
 
-The first issue I had to deal with only needed a little bit of tweaking in my project's 'Signing and Capabilities'. From there, I added a Capability known as 'Push Notifications'.
+The first issue I had to deal with only needed a little bit of tweaking in my project's `Signing and Capabilities`. From there, I added a Capability known as 'Push Notifications'.
 
 The second one is because of a deprecated API. I tried updating a cocoapod library "Firebase/Auth" after finding out that this utilizes UIWebView. For some reason, I can't get update working on a single pod. Prior to this, I thought Facebook Core and Facebook Login were the culprits, knowing those would open a UIWebView for me to sign into Facebook. I guess I found a fix on Github issues, which helped other developers with what might have been a similar problem.
 

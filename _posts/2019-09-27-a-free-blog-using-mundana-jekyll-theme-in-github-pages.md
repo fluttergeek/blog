@@ -14,7 +14,7 @@ It really helped me setup a blog as a subdirectory of my domain. I only had to c
 The first few lines of config.yml is straightforward. You'll have to change those values. Make sure to change the author attributes as well as the default author under `defaults`. Whenever you post something new, you don't have to indicate a meta for layout, author and avatar anymore. 
 
 ![example]({{ site.url }}/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.15.56%20PM.png)
-Now, this is what makes life easier. With this dashboard, you don't have to explicity input a meta for your title anymore. Although, you might need to put in the categories or tags in your metadata field if you wish to add some.
+Now, this is what makes life easier. With this dashboard, you don't have to explicity input a meta for your title anymore. Although, you might need to put in the categories, permalink, or tags in your metadata field if you wish to add some.
 
 ![metadata]({{ site.url }}/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.29.32%20PM.png)
 It's not a perfect system, uploading a photo here can be a pain. Which is why I decided to move a photo asset in the `/assets/images/` directory manually every time, because it saves the photo in my `/blog` folder when I upload using `jekyll-admin`.
