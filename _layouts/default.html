@@ -90,9 +90,9 @@
         </div>
         </div>
     </footer>
-
+    {% if jekyll.environment == 'production' %}
     {% include tracking-footer.html %}
-
+    {% endif %}
 </body>
 
 </html>
