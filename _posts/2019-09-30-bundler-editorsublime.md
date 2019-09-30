@@ -2,6 +2,14 @@
 title: Sublime 3 In BUNDLER_EDITOR
 image: assets/images/SublimeText3.jpg
 categories: Tutorial Sublime
+tags:
+- ''
+- sublime
+- bundle_editor
+- symlink
+- editor
+- bash
+- profile
 ---
 
 First, let's create a symlink:

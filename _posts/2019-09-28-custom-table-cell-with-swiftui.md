@@ -2,6 +2,16 @@
 title: Custom Table Cell With SwiftUI
 category: Tutorial
 image: assets/images/Screen%20Shot%202019-09-28%20at%2010.32.57%20PM.png
+tags:
+- ''
+- custom
+- table
+- swiftui
+- cell
+- scott
+- smith
+- ios
+- row
 ---
 
 First of all, thanks to Scott Smith for helping me understand this. I know it can be another learning curve to start learning SwiftUI if you've only begun diving into becoming an iOS developer. It's daunting at first, but I hope it can be simple too for many newbies. Now, I haven't gotten my hands on Mac OS Catalina yet, so I can't actually demonstrate my own version of this tutorial properly if I can't show you the canvas, which isn't available in Mojave yet, myself.  

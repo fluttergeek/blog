@@ -1,8 +1,19 @@
 ---
 title: A Free Blog Using Mundana Jekyll Theme In Github Pages
 image: assets/images/Screen%20Shot%202019-09-27%20at%206.00.31%20PM.png
-categories: [Jekyll, Tutorial, Admin]
-tags: featured
+categories:
+- Jekyll
+- Tutorial
+- Admin
+tags:
+- featured
+- mundana
+- jekyll
+- theme
+- gh-pages
+- github
+- pages
+- jekyll-admin
 ---
 
 This might be too technical for a non computer savvy to be doing, so I've formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdirectory just like my blog `iosjunkie.com/blog`, then you might want to see this first:

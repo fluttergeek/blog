@@ -3,7 +3,21 @@ title: Issues With My First App Store Connect Submission
 image: assets/images/Screen%20Shot%202019-09-25%20at%208.43.21%20PM.png
 categories:
 - Publish
-tags: featured
+tags:
+- featured
+- app
+- connect
+- itunes
+- store
+- submission
+- capabilities
+- uiwebview
+- deprecated
+- api
+- support
+- url
+- FacebookCore
+- notifications
 ---
 
 It was my first app submission to the app store. I mean, well, I hadn't submitted it for review yet, but it already detected a couple of issues that needs dealing with. I uploaded it to app connect for 6 times until I got it right. 
