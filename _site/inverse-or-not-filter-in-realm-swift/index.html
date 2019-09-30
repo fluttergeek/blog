@@ -4,20 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Categories | iOS Junkie</title>
+    <title>!= VS. NOT Filter In Realm Swift | iOS Junkie</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Categories | iOS Junkie</title>
+<title>!= VS. NOT Filter In Realm Swift | iOS Junkie</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Categories" />
+<meta property="og:title" content="!= VS. NOT Filter In Realm Swift" />
+<meta name="author" content="jules" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A blog by an iOS developer who created Laundry City" />
-<meta property="og:description" content="A blog by an iOS developer who created Laundry City" />
-<link rel="canonical" href="http://localhost:4000/blog/categories.html" />
-<meta property="og:url" content="http://localhost:4000/blog/categories.html" />
+<meta name="description" content="Instead of using != as your not equal, you can or should use NOT instead. I’m writing this post because I just can’t seem != to work as part of my predicate. I was struggling to find a way to make not equal to work. I looked it up in the documentations. Even though != is in there, I could not make it to work. However, the = sign worked. Weird. And so, I did something like this." />
+<meta property="og:description" content="Instead of using != as your not equal, you can or should use NOT instead. I’m writing this post because I just can’t seem != to work as part of my predicate. I was struggling to find a way to make not equal to work. I looked it up in the documentations. Even though != is in there, I could not make it to work. However, the = sign worked. Weird. And so, I did something like this." />
+<link rel="canonical" href="http://localhost:4000/blog/inverse-or-not-filter-in-realm-swift/" />
+<meta property="og:url" content="http://localhost:4000/blog/inverse-or-not-filter-in-realm-swift/" />
 <meta property="og:site_name" content="iOS Junkie" />
+<meta property="og:image" content="http://localhost:4000/blog/assets/images/1_DqzHUZj6HcmIBK9I2aOVww.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-09-30T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"A blog by an iOS developer who created Laundry City","@type":"WebPage","url":"http://localhost:4000/blog/categories.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/blog/assets/images/logo.png"}},"headline":"Categories","@context":"http://schema.org"}</script>
+{"description":"Instead of using != as your not equal, you can or should use NOT instead. I’m writing this post because I just can’t seem != to work as part of my predicate. I was struggling to find a way to make not equal to work. I looked it up in the documentations. Even though != is in there, I could not make it to work. However, the = sign worked. Weird. And so, I did something like this.","@type":"BlogPosting","url":"http://localhost:4000/blog/inverse-or-not-filter-in-realm-swift/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/blog/assets/images/logo.png"},"name":"jules"},"image":"http://localhost:4000/blog/assets/images/1_DqzHUZj6HcmIBK9I2aOVww.png","headline":"!= VS. NOT Filter In Realm Swift","dateModified":"2019-09-30T00:00:00+08:00","datePublished":"2019-09-30T00:00:00+08:00","author":{"@type":"Person","name":"jules"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/inverse-or-not-filter-in-realm-swift/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -95,7 +99,7 @@ var documents = [{
     "id": 2,
     "url": "http://localhost:4000/blog/posts/2019-01-19-markup-example/",
     "title": "Markdown Example",
-    "body": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. Something. To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post. ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: def print_hi(name) puts  Hi, #{name} endprint_hi('Tom')#=&gt; prints 'Hi, Tom' to STDOUT. Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk. "
+    "body": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. Something. To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post. ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: {% highlight ruby %}def print_hi(name) puts “Hi, #{name}”endprint_hi(‘Tom’)#=&gt; prints ‘Hi, Tom’ to STDOUT. {% endhighlight %} Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk. "
     }, {
     "id": 3,
     "url": "http://localhost:4000/blog/posts/2019-01-20-quick-start-guide/",
@@ -170,7 +174,7 @@ var documents = [{
     "id": 17,
     "url": "http://localhost:4000/blog/posts/2019-02-04-welcome-to-jekyll/",
     "title": "Welcome to Jekyll!",
-    "body": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post. ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: def print_hi(name) puts  Hi, #{name} endprint_hi('Tom')#=&gt; prints 'Hi, Tom' to STDOUT. Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk. "
+    "body": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post. ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: {% highlight ruby %}def print_hi(name) puts “Hi, #{name}”endprint_hi(‘Tom’)#=&gt; prints ‘Hi, Tom’ to STDOUT. {% endhighlight %} Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk. "
     }, {
     "id": 18,
     "url": "http://localhost:4000/blog/about.html",
@@ -180,17 +184,17 @@ var documents = [{
     "id": 19,
     "url": "http://localhost:4000/blog/author-sal.html",
     "title": "Jules Lee",
-    "body": "                        Jules Lee Follow:                                                    Posts by Jules Lee:               "
+    "body": "                        {{page. title}} Follow:         {{ site. authors. sal. site }}         {{ site. authors. sal. bio }}                                   Posts by {{page. title}}:       {% assign posts = site. posts | where: author , sal  %}      {% for post in posts %}      {% include main-loop-card. html %}      {% endfor %}  "
     }, {
     "id": 20,
     "url": "http://localhost:4000/blog/authors-list.html",
     "title": "Authors",
-    "body": "Authors:                                             Jules Lee :       (View Posts)      Hi, I am Jules, the author of iOS Junkie. I hope you like my blog!                          &nbsp;       &nbsp;                                      "
+    "body": "{{page. title}}:     {% for author in site. authors %}                                         {{ author[1]. name }} :       (View Posts)      {{ author[1]. bio }}                          &nbsp;       &nbsp;                                    {% endfor %}  "
     }, {
     "id": 21,
     "url": "http://localhost:4000/blog/categories.html",
     "title": "Categories",
-    "body": "          Categories               Jekyll:                                  		Use Jekyll Manager Instead of Jekyll Admin	: 		  I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m. . . 	 			In 				Jekyll, 				Admin, 				Manager, 								Sep 30, 2019						                                 		A Free Blog Using Mundana Jekyll Theme In Github Pages	: 		  This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi. . . 	 			In 				Jekyll, 				Tutorial, 				Admin, 								Sep 27, 2019						                              Tutorial:                                  		!= VS. NOT Filter In Realm Swift	: 		  Instead of using != as your not equal, you can or should use NOT instead. I’m writing this post because I just can’t seem != to work as part of my predicate. I was struggling to find . . . 	 			In 				Tutorial, 								Sep 30, 2019						                                 		Sublime 3 In BUNDLER_EDITOR	: 		  First, let’s create a symlink:	 			In 				Tutorial, 				Sublime, 								Sep 30, 2019						                                 		Eureka LocationRow	: 		  If you’re a newbie on this, you might not actually figure this out quick. Apparently, it’s only a quick tour to the example project in Eureka. Particularly in CustomCells. swift. Just . . . 	 			In 				Tutorial, 								Sep 29, 2019						                                 		Custom Table Cell With SwiftUI	: 		  First of all, thanks to Scott Smith for helping me understand this. I know it can be another learning curve to start learning SwiftUI if you’ve only begun diving into becoming an iOS . . . 	 			In 				Tutorial, 								Sep 28, 2019						                                 		A Free Blog Using Mundana Jekyll Theme In Github Pages	: 		  This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi. . . 	 			In 				Jekyll, 				Tutorial, 				Admin, 								Sep 27, 2019						                              Admin:                                  		Use Jekyll Manager Instead of Jekyll Admin	: 		  I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m. . . 	 			In 				Jekyll, 				Admin, 				Manager, 								Sep 30, 2019						                                 		A Free Blog Using Mundana Jekyll Theme In Github Pages	: 		  This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi. . . 	 			In 				Jekyll, 				Tutorial, 				Admin, 								Sep 27, 2019						                              Publish:                                  		Issues With My First App Store Connect Submission	: 		  It was my first app submission to the app store. I mean, well, I hadn’t submitted it for review yet, but it already detected a couple of issues that needs dealing with. I uploaded it . . . 	 			In 				Publish, 								Sep 27, 2019						                              Sublime:                                  		Sublime 3 In BUNDLER_EDITOR	: 		  First, let’s create a symlink:	 			In 				Tutorial, 				Sublime, 								Sep 30, 2019						                              Manager:                                  		Use Jekyll Manager Instead of Jekyll Admin	: 		  I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m. . . 	 			In 				Jekyll, 				Admin, 				Manager, 								Sep 30, 2019						                                             Featured:    				                                          Use Jekyll Manager Instead of Jekyll Admin                          In                     Jekyll,                     Admin,                     Manager,                                                                                           Eureka LocationRow                          In                     Tutorial,                                                                                           Issues With My First App Store Connect Submission                          In                     Publish,                                                                                           A Free Blog Using Mundana Jekyll Theme In Github Pages                          In                     Jekyll,                     Tutorial,                     Admin,                                                                   "
+    "body": "          Categories          {% for category in site. categories %}     {{ category[0] }}:           {% assign pages_list = category[1] %}    {% for post in pages_list %}    {% if post. title != null %}     {% if group == null or group == post. group %}           {% include main-loop-card. html %}     {% endif %}    {% endif %}    {% endfor %}    {% assign pages_list = nil %}    {% assign group = nil %}    {% endfor %}                  {% include sidebar-featured. html %}          "
     }, {
     "id": 22,
     "url": "http://localhost:4000/blog/contact.html",
@@ -318,566 +322,174 @@ function lunr_search(term) {
 
     <!-- Content -->
     <main role="main" class="site-content">
-        <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-        <h1 class="font-weight-bold title h6 text-uppercase mb-4">Categories</h1>
+        
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+		<div class="h-100 tofront">
+			<div class="row  justify-content-between ">
+				<div class=" col-md-6  pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+					<p class="text-uppercase font-weight-bold">
+                        <span class="catlist">
+						
+                          <a class="sscroll text-danger" href="/blog/categories.html#tutorial">tutorial</a><span class="sep">, </span>
+                        
+                        </span>
+					</p>
+					<h1 class="display-4 mb-4 article-headline">!= VS. NOT Filter In Realm Swift</h1>
+					<div class="d-flex align-items-center">
+                        
+                        <img class="rounded-circle" src="/blog//assets/images/avatar1.jpg" alt="Jules Lee" width="70"/>
+                        
+						<small class="ml-3"> Jules Lee <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
+                            <span class="text-muted d-block mt-1">Sep 30, 2019 · <span class="reading-time">
+  
+  
+    1 min read
+  
+</span>
+    </span>
+						</small>
+					</div>
+				</div>
+                
+				<div class="col-md-6 pr-0 align-self-center">
+					<img class="rounded" src="/blog/assets/images/1_DqzHUZj6HcmIBK9I2aOVww.png" alt="!= VS. NOT Filter In Realm Swift">
+				</div>
+                
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="container-lg pt-4 pb-4">
+	<div class="row justify-content-center">
+        
+        
+        <!-- Share -->
+		<div class="col-lg-2 pr-4 mb-4 col-md-12">
+			<div class="sticky-top sticky-top-offset text-center">
+				<div class="text-muted">
+					Share this
+				</div>
+				<div class="share d-inline-block">
+					<!-- AddToAny BEGIN -->
+					<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+						<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+						<a class="a2a_button_facebook"></a>
+						<a class="a2a_button_twitter"></a>
+					</div>
+					<script async src="https://static.addtoany.com/menu/page.js"></script>
+					<!-- AddToAny END -->
+				</div>
+			</div>
+		</div>
+        
+        
+		<div class="col-md-12 col-lg-8">
             
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="jekyll"><span>Jekyll</span></h4>
+            <!-- Article -->
+			<article class="article-post">                
+			<p>Instead of using <code class="highlighter-rouge">!=</code> as your not equal, you can or should use <code class="highlighter-rouge">NOT</code> instead. I’m writing this post because I just can’t seem <code class="highlighter-rouge">!=</code> to work as part of my predicate. I was struggling to find a way to make not equal to work. I looked it up in the documentations. Even though <code class="highlighter-rouge">!=</code> is in there, I could not make it to work. However, the <code class="highlighter-rouge">=</code> sign worked. Weird. And so, I did something like this.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let filter = "(status = 'Pending' OR (status = 'Washed' AND (pad = 2 OR pad = 3))) AND NOT cancel = 'Cancelled' AND NOT ownerId = ''"
+orders!.filter(filter)
+</code></pre></div></div>
+
+<p>Here, you’ll see <code class="highlighter-rouge">NOT</code> placed before the attribute. I don’t know why it works that way, but it works anyway.</p>
+                
+			</article>
+			
+			<!-- Tags -->
+			<div class="mb-4">
+				<span class="taglist">
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#"></a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#swift">swift</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#realm">realm</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#filter">filter</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#not">not</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#equal">equal</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#inverse">inverse</a>
+				
+				</span>
+			</div>
+ 
+            <!-- Mailchimp Subscribe Form -->
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">Use Jekyll Manager Instead of Jekyll Admin</a>
-	</h2>
-	<p class="excerpt">
-	   I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#manager">Manager</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 30, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" alt="Use Jekyll Manager Instead of Jekyll Admin">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">A Free Blog Using Mundana Jekyll Theme In Github Pages</a>
-	</h2>
-	<p class="excerpt">
-	   This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 27, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.00.31%20PM.png" alt="A Free Blog Using Mundana Jekyll Theme In Github Pages">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="tutorial"><span>Tutorial</span></h4>
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/inverse-or-not-filter-in-realm-swift/">!= VS. NOT Filter In Realm Swift</a>
-	</h2>
-	<p class="excerpt">
-	   Instead of using != as your not equal, you can or should use NOT instead. I’m writing this post because I just can’t seem != to work as part of my predicate. I was struggling to find ...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 30, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/inverse-or-not-filter-in-realm-swift/">
-	<img class="w-100" src="/blog/assets/images/1_DqzHUZj6HcmIBK9I2aOVww.png" alt="!= VS. NOT Filter In Realm Swift">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/bundler-editorsublime/">Sublime 3 In BUNDLER_EDITOR</a>
-	</h2>
-	<p class="excerpt">
-	   First, let’s create a symlink:
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#sublime">Sublime</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 30, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/bundler-editorsublime/">
-	<img class="w-100" src="/blog/assets/images/SublimeText3.jpg" alt="Sublime 3 In BUNDLER_EDITOR">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/eureka-locationrow/">Eureka LocationRow</a>
-	</h2>
-	<p class="excerpt">
-	   If you’re a newbie on this, you might not actually figure this out quick. Apparently, it’s only a quick tour to the example project in Eureka. Particularly in CustomCells.swift. Just ...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 29, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/eureka-locationrow/">
-	<img class="w-100" src="/blog/assets/images/EurekaLocationRow.gif" alt="Eureka LocationRow">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/custom-table-cell-with-swiftui/">Custom Table Cell With SwiftUI</a>
-	</h2>
-	<p class="excerpt">
-	   First of all, thanks to Scott Smith for helping me understand this. I know it can be another learning curve to start learning SwiftUI if you’ve only begun diving into becoming an iOS ...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 28, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/custom-table-cell-with-swiftui/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-28%20at%2010.32.57%20PM.png" alt="Custom Table Cell With SwiftUI">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">A Free Blog Using Mundana Jekyll Theme In Github Pages</a>
-	</h2>
-	<p class="excerpt">
-	   This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 27, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.00.31%20PM.png" alt="A Free Blog Using Mundana Jekyll Theme In Github Pages">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="admin"><span>Admin</span></h4>
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">Use Jekyll Manager Instead of Jekyll Admin</a>
-	</h2>
-	<p class="excerpt">
-	   I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#manager">Manager</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 30, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" alt="Use Jekyll Manager Instead of Jekyll Admin">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">A Free Blog Using Mundana Jekyll Theme In Github Pages</a>
-	</h2>
-	<p class="excerpt">
-	   This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 27, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.00.31%20PM.png" alt="A Free Blog Using Mundana Jekyll Theme In Github Pages">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="publish"><span>Publish</span></h4>
+             <!-- Author Box -->
+                				
+				<div class="row mt-5">
+					<div class="col-md-2 align-self-center">
+                         
+                        <img class="rounded-circle" src="/blog//assets/images/avatar1.jpg" alt="Jules Lee" width="90"/>
+                         
+					</div>
+					<div class="col-md-10">		
+                        <h5 class="font-weight-bold">Written by Jules Lee </h5>
+						Hi, I am Jules, the author of iOS Junkie. I hope you like my blog!					
+					</div>
+				</div>				
+                
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/issues-with-my-first-app-store-connect-submission/">Issues With My First App Store Connect Submission</a>
-	</h2>
-	<p class="excerpt">
-	   It was my first app submission to the app store. I mean, well, I hadn’t submitted it for review yet, but it already detected a couple of issues that needs dealing with. I uploaded it ...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#publish">Publish</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 27, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/issues-with-my-first-app-store-connect-submission/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-25%20at%208.43.21%20PM.png" alt="Issues With My First App Store Connect Submission">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="sublime"><span>Sublime</span></h4>
+            <!-- Comments -->
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/bundler-editorsublime/">Sublime 3 In BUNDLER_EDITOR</a>
-	</h2>
-	<p class="excerpt">
-	   First, let’s create a symlink:
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#sublime">Sublime</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 30, 2019
-	</small>
+                <!--  Don't edit anything here. Set your disqus id in _config.yml -->
+
+<div id="comments" class="mt-5">
+    <div id="disqus_thread">
+    </div>
+    <script type="text/javascript">
+        var disqus_shortname = 'iosjunkie'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>
+    Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
 </div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/bundler-editorsublime/">
-	<img class="w-100" src="/blog/assets/images/SublimeText3.jpg" alt="Sublime 3 In BUNDLER_EDITOR">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="manager"><span>Manager</span></h4>
             
+            
+		</div>
         
         
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">Use Jekyll Manager Instead of Jekyll Admin</a>
-	</h2>
-	<p class="excerpt">
-	   I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#manager">Manager</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 30, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" alt="Use Jekyll Manager Instead of Jekyll Admin">
-	</a>
 	</div>
-
 </div>
+
+
+<!-- Aletbar Prev/Next -->
+<div class="alertbar">
+    <div class="container">
+        <div class="row prevnextlinks small font-weight-bold">
           
-        
-        
-        
-        
-
-        
-
+            <div class="col-md-6 rightborder pl-0">
+                <a class="text-dark" href="/blog/bundler-editorsublime/"> <img height="30px" class="mr-1" src="/blog/assets/images/SublimeText3.jpg">  Sublime 3 In BUNDLER_EDITOR</a>
+            </div>
+          
+          
+            <div class="col-md-6 text-right pr-0">
+                <a class="text-dark" href="/blog/use-jekyll-manager-instead-of-jekyll-admin/"> Use Jekyll Manager Instead of Jekyll Admin  <img height="30px" class="ml-1" src="/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png"> </a>
+            </div>
+          
         </div>
-        
-            <div class="col-md-4">
-        <div class="sticky-top sticky-top-offset">
-    <h4 class="font-weight-bold spanborder"><span>Featured</span></h4>  
-    <ol class="list-featured">				
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/blog/use-jekyll-manager-instead-of-jekyll-admin/" class="text-dark">Use Jekyll Manager Instead of Jekyll Admin</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#manager">Manager</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/blog/eureka-locationrow/" class="text-dark">Eureka LocationRow</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/blog/issues-with-my-first-app-store-connect-submission/" class="text-dark">Issues With My First App Store Connect Submission</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#publish">Publish</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/" class="text-dark">A Free Blog Using Mundana Jekyll Theme In Github Pages</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-           
-    </ol>
-</div>     
-    </div>
-        
     </div>
 </div>
+
     </main>
 
 
@@ -894,7 +506,7 @@ function lunr_search(term) {
         <div class="container">
         <div class="row align-items-center justify-content-between">
             <div>
-                <span class="navbar-brand mr-2 mb-0"><strong>Categories</strong></span>
+                <span class="navbar-brand mr-2 mb-0"><strong>!= VS. NOT Filter In Realm Swift</strong></span>
                 <span>Copyright © <script>document.write(new Date().getFullYear())</script>.</span>
 
                 <!--  Github Repo Star Btn-->
