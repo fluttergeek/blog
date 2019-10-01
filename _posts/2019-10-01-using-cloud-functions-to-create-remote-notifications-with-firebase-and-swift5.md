@@ -91,7 +91,7 @@ exports.sendNewChangesNotification = functions.database.ref('houses/{house}/item
     var message = {
       notification: {
         title: 'New Quantity',
-        body: '${change.after.val().product} now has ${change.after.val().tentative} new items.'
+        body: change.after.val().product + ' now has ' + change.after.val().tentative + ' new items.'
       }
     };
 
