@@ -46,3 +46,7 @@ struct CustomRow : View {
 If we didn't need to create a custom table cell, we need not create the `CustomRow` struct and just use `Text(item)` instead. In the body of our `CustomRow` is where you can throw in all the components you're going to need.
 
 So, I thought to myself. That wasn't daunting at all. You no longer have to specify how many sections and rows, no need to get the cell identifier off from the storyboard, which reduces a hell lot of code to write. It's just that all UI designs you might have in mind will now have to be written in code which sucks.
+
+If you went on with the video tutorial, you might want some answers regarding @ObjectBinding and how it works. Here's my [explanation][explain].
+
+[explain]: /blog/state-to-objectbinding-modifier/
