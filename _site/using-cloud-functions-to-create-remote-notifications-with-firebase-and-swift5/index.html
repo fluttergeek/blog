@@ -4,20 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Categories | iOS Junkie</title>
+    <title>Using Cloud Functions To Create Remote Notifications With Firebase And Swift5 | iOS Junkie</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Categories | iOS Junkie</title>
+<title>Using Cloud Functions To Create Remote Notifications With Firebase And Swift5 | iOS Junkie</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Categories" />
+<meta property="og:title" content="Using Cloud Functions To Create Remote Notifications With Firebase And Swift5" />
+<meta name="author" content="jules" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A blog by an iOS developer who created Laundry City" />
-<meta property="og:description" content="A blog by an iOS developer who created Laundry City" />
-<link rel="canonical" href="http://localhost:4000/blog/categories.html" />
-<meta property="og:url" content="http://localhost:4000/blog/categories.html" />
+<meta name="description" content="This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already have the GoogleService-Info.plist in your Xcode project. It is important because it contains your bundle identifier. Without Firebase knowing your bundle identifier, you can’t proceed to enabling the Cloud messaging. We’re not doing what’s in the picture. It’s just a formality." />
+<meta property="og:description" content="This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already have the GoogleService-Info.plist in your Xcode project. It is important because it contains your bundle identifier. Without Firebase knowing your bundle identifier, you can’t proceed to enabling the Cloud messaging. We’re not doing what’s in the picture. It’s just a formality." />
+<link rel="canonical" href="http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/" />
+<meta property="og:url" content="http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/" />
 <meta property="og:site_name" content="iOS Junkie" />
+<meta property="og:image" content="http://localhost:4000/blog/assets/images/Notifications_Top_2x.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-01T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"A blog by an iOS developer who created Laundry City","@type":"WebPage","url":"http://localhost:4000/blog/categories.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/blog/assets/images/logo.png"}},"headline":"Categories","@context":"http://schema.org"}</script>
+{"description":"This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already have the GoogleService-Info.plist in your Xcode project. It is important because it contains your bundle identifier. Without Firebase knowing your bundle identifier, you can’t proceed to enabling the Cloud messaging. We’re not doing what’s in the picture. It’s just a formality.","@type":"BlogPosting","url":"http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/blog/assets/images/logo.png"},"name":"jules"},"image":"http://localhost:4000/blog/assets/images/Notifications_Top_2x.png","headline":"Using Cloud Functions To Create Remote Notifications With Firebase And Swift5","dateModified":"2019-10-01T00:00:00+08:00","datePublished":"2019-10-01T00:00:00+08:00","author":{"@type":"Person","name":"jules"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -95,7 +99,7 @@ var documents = [{
     "id": 2,
     "url": "http://localhost:4000/blog/posts/2019-01-19-markup-example/",
     "title": "Markdown Example",
-    "body": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. Something. To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post. ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: def print_hi(name) puts  Hi, #{name} endprint_hi('Tom')#=&gt; prints 'Hi, Tom' to STDOUT. Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk. "
+    "body": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. Something. To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post. ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: {% highlight ruby %}def print_hi(name) puts “Hi, #{name}”endprint_hi(‘Tom’)#=&gt; prints ‘Hi, Tom’ to STDOUT. {% endhighlight %} Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk. "
     }, {
     "id": 3,
     "url": "http://localhost:4000/blog/posts/2019-01-20-quick-start-guide/",
@@ -170,7 +174,7 @@ var documents = [{
     "id": 17,
     "url": "http://localhost:4000/blog/posts/2019-02-04-welcome-to-jekyll/",
     "title": "Welcome to Jekyll!",
-    "body": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post. ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: def print_hi(name) puts  Hi, #{name} endprint_hi('Tom')#=&gt; prints 'Hi, Tom' to STDOUT. Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk. "
+    "body": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post. ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: {% highlight ruby %}def print_hi(name) puts “Hi, #{name}”endprint_hi(‘Tom’)#=&gt; prints ‘Hi, Tom’ to STDOUT. {% endhighlight %} Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk. "
     }, {
     "id": 18,
     "url": "http://localhost:4000/blog/about.html",
@@ -180,17 +184,17 @@ var documents = [{
     "id": 19,
     "url": "http://localhost:4000/blog/author-sal.html",
     "title": "Jules Lee",
-    "body": "                        Jules Lee Follow:                                                    Posts by Jules Lee:               "
+    "body": "                        {{page. title}} Follow:         {{ site. authors. sal. site }}         {{ site. authors. sal. bio }}                                   Posts by {{page. title}}:       {% assign posts = site. posts | where: author , sal  %}      {% for post in posts %}      {% include main-loop-card. html %}      {% endfor %}  "
     }, {
     "id": 20,
     "url": "http://localhost:4000/blog/authors-list.html",
     "title": "Authors",
-    "body": "Authors:                                             Jules Lee :       (View Posts)      Hi, I am Jules, the author of iOS Junkie. I hope you like my blog!                          &nbsp;       &nbsp;                                      "
+    "body": "{{page. title}}:     {% for author in site. authors %}                                         {{ author[1]. name }} :       (View Posts)      {{ author[1]. bio }}                          &nbsp;       &nbsp;                                    {% endfor %}  "
     }, {
     "id": 21,
     "url": "http://localhost:4000/blog/categories.html",
     "title": "Categories",
-    "body": "          Categories               Jekyll:                                  		Use Jekyll Manager Instead of Jekyll Admin	: 		  I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m. . . 	 			In 				Jekyll, 				Admin, 				Manager, 								Sep 30, 2019						                                 		A Free Blog Using Mundana Jekyll Theme In Github Pages	: 		  This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi. . . 	 			In 				Jekyll, 				Tutorial, 				Admin, 								Sep 27, 2019						                              Tutorial:                                  		Using Cloud Functions To Create Remote Notifications With Firebase And Swift5	: 		  This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already hav. . . 	 			In 				Tutorial, 				Swift, 				Notification, 								Oct 01, 2019						                                 		!= VS. NOT Filter In Realm Swift	: 		  Instead of using != as your not equal, you can or should use NOT instead. I’m writing this post because I just can’t seem != to work as part of my predicate. I was struggling to find . . . 	 			In 				Tutorial, 								Sep 30, 2019						                                 		Sublime 3 In BUNDLER_EDITOR	: 		  First, let’s create a symlink:	 			In 				Tutorial, 				Sublime, 								Sep 30, 2019						                                 		Eureka LocationRow	: 		  If you’re a newbie on this, you might not actually figure this out quick. Apparently, it’s only a quick tour to the example project in Eureka. Particularly in CustomCells. swift. Just . . . 	 			In 				Tutorial, 								Sep 29, 2019						                                 		Custom Table Cell With SwiftUI	: 		  First of all, thanks to Scott Smith for helping me understand this. I know it can be another learning curve to start learning SwiftUI if you’ve only begun diving into becoming an iOS . . . 	 			In 				Tutorial, 								Sep 28, 2019						                                 		A Free Blog Using Mundana Jekyll Theme In Github Pages	: 		  This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi. . . 	 			In 				Jekyll, 				Tutorial, 				Admin, 								Sep 27, 2019						                              Admin:                                  		Use Jekyll Manager Instead of Jekyll Admin	: 		  I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m. . . 	 			In 				Jekyll, 				Admin, 				Manager, 								Sep 30, 2019						                                 		A Free Blog Using Mundana Jekyll Theme In Github Pages	: 		  This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi. . . 	 			In 				Jekyll, 				Tutorial, 				Admin, 								Sep 27, 2019						                              Publish:                                  		Issues With My First App Store Connect Submission	: 		  It was my first app submission to the app store. I mean, well, I hadn’t submitted it for review yet, but it already detected a couple of issues that needs dealing with. I uploaded it . . . 	 			In 				Publish, 								Sep 27, 2019						                              Sublime:                                  		Sublime 3 In BUNDLER_EDITOR	: 		  First, let’s create a symlink:	 			In 				Tutorial, 				Sublime, 								Sep 30, 2019						                              Manager:                                  		Use Jekyll Manager Instead of Jekyll Admin	: 		  I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m. . . 	 			In 				Jekyll, 				Admin, 				Manager, 								Sep 30, 2019						                              Swift:                                  		Using Cloud Functions To Create Remote Notifications With Firebase And Swift5	: 		  This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already hav. . . 	 			In 				Tutorial, 				Swift, 				Notification, 								Oct 01, 2019						                              Notification:                                  		Using Cloud Functions To Create Remote Notifications With Firebase And Swift5	: 		  This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already hav. . . 	 			In 				Tutorial, 				Swift, 				Notification, 								Oct 01, 2019						                                             Featured:    				                                          Using Cloud Functions To Create Remote Notifications With Firebase And Swift5                          In                     Tutorial,                     Swift,                     Notification,                                                                                           Use Jekyll Manager Instead of Jekyll Admin                          In                     Jekyll,                     Admin,                     Manager,                                                                                           Eureka LocationRow                          In                     Tutorial,                                                                                           Issues With My First App Store Connect Submission                          In                     Publish,                                                                                           A Free Blog Using Mundana Jekyll Theme In Github Pages                          In                     Jekyll,                     Tutorial,                     Admin,                                                                   "
+    "body": "          Categories          {% for category in site. categories %}     {{ category[0] }}:           {% assign pages_list = category[1] %}    {% for post in pages_list %}    {% if post. title != null %}     {% if group == null or group == post. group %}           {% include main-loop-card. html %}     {% endif %}    {% endif %}    {% endfor %}    {% assign pages_list = nil %}    {% assign group = nil %}    {% endfor %}                  {% include sidebar-featured. html %}          "
     }, {
     "id": 22,
     "url": "http://localhost:4000/blog/contact.html",
@@ -323,712 +327,287 @@ function lunr_search(term) {
 
     <!-- Content -->
     <main role="main" class="site-content">
-        <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-        <h1 class="font-weight-bold title h6 text-uppercase mb-4">Categories</h1>
+        
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+		<div class="h-100 tofront">
+			<div class="row  justify-content-between ">
+				<div class=" col-md-6  pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+					<p class="text-uppercase font-weight-bold">
+                        <span class="catlist">
+						
+                          <a class="sscroll text-danger" href="/blog/categories.html#tutorial">tutorial</a><span class="sep">, </span>
+                        
+                          <a class="sscroll text-danger" href="/blog/categories.html#swift">swift</a><span class="sep">, </span>
+                        
+                          <a class="sscroll text-danger" href="/blog/categories.html#notification">notification</a><span class="sep">, </span>
+                        
+                        </span>
+					</p>
+					<h1 class="display-4 mb-4 article-headline">Using Cloud Functions To Create Remote Notifications With Firebase And Swift5</h1>
+					<div class="d-flex align-items-center">
+                        
+                        <img class="rounded-circle" src="/blog//assets/images/avatar1.jpg" alt="Jules Lee" width="70"/>
+                        
+						<small class="ml-3"> Jules Lee <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
+                            <span class="text-muted d-block mt-1">Oct 01, 2019 · <span class="reading-time">
+  
+  
+    5 mins read
+  
+</span>
+    </span>
+						</small>
+					</div>
+				</div>
+                
+				<div class="col-md-6 pr-0 align-self-center">
+					<img class="rounded" src="/blog/assets/images/Notifications_Top_2x.png" alt="Using Cloud Functions To Create Remote Notifications With Firebase And Swift5">
+				</div>
+                
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="container-lg pt-4 pb-4">
+	<div class="row justify-content-center">
+        
+        
+        <!-- Share -->
+		<div class="col-lg-2 pr-4 mb-4 col-md-12">
+			<div class="sticky-top sticky-top-offset text-center">
+				<div class="text-muted">
+					Share this
+				</div>
+				<div class="share d-inline-block">
+					<!-- AddToAny BEGIN -->
+					<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+						<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+						<a class="a2a_button_facebook"></a>
+						<a class="a2a_button_twitter"></a>
+					</div>
+					<script async src="https://static.addtoany.com/menu/page.js"></script>
+					<!-- AddToAny END -->
+				</div>
+			</div>
+		</div>
+        
+        
+		<div class="col-md-12 col-lg-8">
             
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="jekyll"><span>Jekyll</span></h4>
+            <!-- Article -->
+			<article class="article-post">                
+			<p>This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already have the GoogleService-Info.plist in your Xcode project. It is important because it contains your bundle identifier. Without Firebase knowing your bundle identifier, you can’t proceed to enabling the Cloud messaging. We’re not doing what’s in the picture. It’s just a formality.</p>
+
+<p>Install this pod libraries first in addition to your preinstalled libraries with Firebase.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pod 'Firebase/Analytics'
+pod 'Firebase/Core'
+pod 'Firebase/Messaging'
+</code></pre></div></div>
+
+<p>In your Xcode project’s signing and capabilities, enable or add capabilities:</p>
+<ol>
+  <li>Background Modes -&gt; Remote Notifications</li>
+  <li>Push Notifications</li>
+</ol>
+
+<p>Let’s create a certificate signing request by going to Keychain Access.</p>
+
+<ol>
+  <li>On the toolbar, click <code class="highlighter-rouge">Keychain Access</code> beside <code class="highlighter-rouge">File</code></li>
+  <li>In this dropdown menu, Certificate Assistant -&gt; <code class="highlighter-rouge">Request a Certificate From a Certificate Authority</code></li>
+  <li>Enter your credentials into the text fields and choose <code class="highlighter-rouge">Save to disk</code>.</li>
+</ol>
+
+<p>Once that is done, you will have a .cert file on your desktop. Now let’s convert that to .p12. Still, using the Keychain Access.</p>
+
+<ol>
+  <li>File -&gt; Import Items -&gt; Select your .cert file</li>
+  <li>Drag that file to <code class="highlighter-rouge">System</code>, assuming you are in <code class="highlighter-rouge">login</code> in the <code class="highlighter-rouge">Keychains</code> sidebar.</li>
+  <li>Drag it back from <code class="highlighter-rouge">System</code> to <code class="highlighter-rouge">login</code>. You now have a duplicate, but you’ll only need the most recent.</li>
+  <li>Select <code class="highlighter-rouge">My Certificates</code> in the Category.</li>
+  <li>Select the most recent certificate pertaining to your project, and right-click.</li>
+  <li>Click Export “Apple Development IOS Push Services: your.project…”</li>
+  <li>Make sure to export it in .p12 format.</li>
+  <li>It will then ask you to create a password to protect this certficate. Give it one and click <code class="highlighter-rouge">ok</code>.</li>
+</ol>
+
+<p>Then go to Apple Developer. For this, you need a paid developer account which costs $99.</p>
+<ol>
+  <li>Open <code class="highlighter-rouge">Certificates, Identifiers &amp; Profiles</code></li>
+  <li>Navigate to <code class="highlighter-rouge">Identifiers</code></li>
+  <li>Click on the current project you are working on.</li>
+  <li>Beside the Push Notifications, click <code class="highlighter-rouge">Configure</code>.</li>
+  <li>Depending on which environment you are, click <code class="highlighter-rouge">Create Certificate</code></li>
+  <li><code class="highlighter-rouge">Choose a file</code> -&gt; Upload the .p12 cert you just created, then enter the password for this certificate.</li>
+</ol>
+
+<p>In order to test this while under development, you need a Provisioning Profile for development to authorize your devices to run an app that is not yet published on the App Store.</p>
+<ol>
+  <li>Open <code class="highlighter-rouge">Certificates, Identifiers &amp; Profiles</code></li>
+  <li>Select <code class="highlighter-rouge">Profiles</code></li>
+  <li>Generate a Profile</li>
+  <li>Select iOS App Development and continue</li>
+  <li>Select your App ID and continue</li>
+  <li>Select the iOS Development certificate of the App ID you have chosen in the previous step, then click Continue.</li>
+  <li>Select the iOS devices that you want to include in the Provisioning Profile, then click Continue. Make sure to select all the devices you want to use for your testing.</li>
+  <li>Name the provisioning profile whatever you want and generate.</li>
+  <li>Download the provisioning profile and open it to install.</li>
+</ol>
+
+<p>To enable the cloud messaging feature, go to https://console.cloud.google.com/ -&gt; <code class="highlighter-rouge">APIs and Services</code> -&gt; <code class="highlighter-rouge">+ ENABLE APIS AND SERVICES</code>-&gt; Search for <code class="highlighter-rouge">Firebase Cloud Messaging API</code> -&gt; click Enable.</p>
+
+<p>In your Firebase console, navigate to <code class="highlighter-rouge">Project Settings</code> -&gt; <code class="highlighter-rouge">Cloud Messaging</code> -&gt; <code class="highlighter-rouge">iOS app configuration</code> -&gt; <code class="highlighter-rouge">APNs Certificates</code> -&gt; Upload the <code class="highlighter-rouge">.p12 file</code> here.</p>
+
+<p>That’s all you need for now to allow <code class="highlighter-rouge">Cloud Messaging</code> on your iOS device. It’s like a term for Remote Push Notifications. I was baffled at that at first.</p>
+
+<p>Now this is the part where we detect changes in the firebase database. If you haven’t installed the <a href="https://firebase.google.com/docs/cli">firebase CLI</a> yet, please do so.</p>
+<ol>
+  <li>Create a directory where you want to put the cloud functions code. In my case, I created <code class="highlighter-rouge">triggers</code> directory under my Xcode project directory. <code class="highlighter-rouge">Laundry City/triggers</code></li>
+  <li>‘cd triggers`</li>
+  <li>In the terminal, type <code class="highlighter-rouge">firebase init functions</code>, but make sure you’re logged in with firebase cli.</li>
+  <li>Choose javascript and type <code class="highlighter-rouge">y</code> as in yes to any remaining questions from the cli.</li>
+  <li>Open index.js and create your function such as below:</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// index.js
+const functions = require('firebase-functions');
+const admin = require('firebase-admin');
+
+admin.initializeApp();
+
+exports.sendNewChangesNotification = functions.database.ref('houses/{house}/items/{item}/').onWrite((change, context) =&gt; {
+
+    var topic = "Serenity";
+		
+    // A message that contains the notification that devices will receive	
+    var message = {
+      notification: {
+        title: 'New Quantity',
+        body: '${change.after.val().product} now has ${change.after.val().tentative} new items.'
+      }
+    };
+
+    // Using Cloud Messaging to create notification
+    return admin.messaging().sendToTopic(topic, message).then(function (response) {
+        console.log('Successfully sent message:', response);
+        return null;
+    }).catch(function (error) {
+        throw new Error("Error sending message:", error);
+    });
+})
+</code></pre></div></div>
+
+<p>First thing to note here is, you won’t start your <code class="highlighter-rouge">ref</code> with the Project ID.. Instead, the branch below it. The ones in the brackets are <code class="highlighter-rouge">ids</code>, which varies. This will detect any write or changes happening in that reference. It will catch the changes in the <code class="highlighter-rouge">change</code> parameter. Thereby, allowing access to the new tentative value in <code class="highlighter-rouge">change.after.val().tentative</code> from the reference <code class="highlighter-rouge">houses/1/items/2/tentative</code>. 1 and 2 here are just examples of IDs. <code class="highlighter-rouge">sendNewChangesNotification</code> is just a variable. You can change it however you like.</p>
+
+<p>When everything is in place, go back to terminal and deploy it with <code class="highlighter-rouge">firebase deploy</code>. Now, you have a listener or a trigger whenever your items have been changed or added.</p>
+
+<p>Your AppDelegate.swift should look like <a href="https://github.com/firebase/quickstart-ios/blob/master/messaging/MessagingExampleSwift/AppDelegate.swift">this</a>. This firebase sample is as instructed in the <a href="https://firebase.google.com/docs/cloud-messaging/ios/client">documentation</a>.</p>
+
+<p>To send a notification, <code class="highlighter-rouge">admin.messaging.send</code> will do the trick. But you have to provide a <code class="highlighter-rouge">token</code>, <code class="highlighter-rouge">topic</code>, or a <code class="highlighter-rouge">condition</code>. <code class="highlighter-rouge">Token</code> is generated by the AppDelegate and is uploaded to Firebase automatically. If you specify a specific token, then only the device with that token will receive the notification. <code class="highlighter-rouge">Topic</code> is what its name suggests. To subscribe to a topic, add this to wherever you need to put in your Xcode project:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Messaging.messaging().subscribe(toTopic: "Serenity") { error in
+          print("Subscribed to weather topic")
+        }
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">Condition</code> can be something like you want to send this to notification to subscribers of more than one topic. For example: <code class="highlighter-rouge">"'Serenity' in topics || 'Manor' in topics"</code>. Further <a href="https://firebase.google.com/docs/cloud-messaging/ios/topic-messaging">documentation</a> about this.</p>
+
+                
+			</article>
+			
+			<!-- Tags -->
+			<div class="mb-4">
+				<span class="taglist">
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#remote">remote</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#notification">notification</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#swift">swift</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#cloud">cloud</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#function">function</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#firebase">firebase</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#messaging">messaging</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#featured">featured</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#apns">apns</a>
+				
+				</span>
+			</div>
+ 
+            <!-- Mailchimp Subscribe Form -->
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">Use Jekyll Manager Instead of Jekyll Admin</a>
-	</h2>
-	<p class="excerpt">
-	   I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#manager">Manager</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 30, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" alt="Use Jekyll Manager Instead of Jekyll Admin">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">A Free Blog Using Mundana Jekyll Theme In Github Pages</a>
-	</h2>
-	<p class="excerpt">
-	   This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 27, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.00.31%20PM.png" alt="A Free Blog Using Mundana Jekyll Theme In Github Pages">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="tutorial"><span>Tutorial</span></h4>
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">Using Cloud Functions To Create Remote Notifications With Firebase And Swift5</a>
-	</h2>
-	<p class="excerpt">
-	   This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already hav...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#notification">Notification</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Oct 01, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">
-	<img class="w-100" src="/blog/assets/images/Notifications_Top_2x.png" alt="Using Cloud Functions To Create Remote Notifications With Firebase And Swift5">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/inverse-or-not-filter-in-realm-swift/">!= VS. NOT Filter In Realm Swift</a>
-	</h2>
-	<p class="excerpt">
-	   Instead of using != as your not equal, you can or should use NOT instead. I’m writing this post because I just can’t seem != to work as part of my predicate. I was struggling to find ...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 30, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/inverse-or-not-filter-in-realm-swift/">
-	<img class="w-100" src="/blog/assets/images/1_DqzHUZj6HcmIBK9I2aOVww.png" alt="!= VS. NOT Filter In Realm Swift">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/bundler-editorsublime/">Sublime 3 In BUNDLER_EDITOR</a>
-	</h2>
-	<p class="excerpt">
-	   First, let’s create a symlink:
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#sublime">Sublime</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 30, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/bundler-editorsublime/">
-	<img class="w-100" src="/blog/assets/images/SublimeText3.jpg" alt="Sublime 3 In BUNDLER_EDITOR">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/eureka-locationrow/">Eureka LocationRow</a>
-	</h2>
-	<p class="excerpt">
-	   If you’re a newbie on this, you might not actually figure this out quick. Apparently, it’s only a quick tour to the example project in Eureka. Particularly in CustomCells.swift. Just ...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 29, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/eureka-locationrow/">
-	<img class="w-100" src="/blog/assets/images/EurekaLocationRow.gif" alt="Eureka LocationRow">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/custom-table-cell-with-swiftui/">Custom Table Cell With SwiftUI</a>
-	</h2>
-	<p class="excerpt">
-	   First of all, thanks to Scott Smith for helping me understand this. I know it can be another learning curve to start learning SwiftUI if you’ve only begun diving into becoming an iOS ...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 28, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/custom-table-cell-with-swiftui/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-28%20at%2010.32.57%20PM.png" alt="Custom Table Cell With SwiftUI">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">A Free Blog Using Mundana Jekyll Theme In Github Pages</a>
-	</h2>
-	<p class="excerpt">
-	   This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 27, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.00.31%20PM.png" alt="A Free Blog Using Mundana Jekyll Theme In Github Pages">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="admin"><span>Admin</span></h4>
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">Use Jekyll Manager Instead of Jekyll Admin</a>
-	</h2>
-	<p class="excerpt">
-	   I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#manager">Manager</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 30, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" alt="Use Jekyll Manager Instead of Jekyll Admin">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">A Free Blog Using Mundana Jekyll Theme In Github Pages</a>
-	</h2>
-	<p class="excerpt">
-	   This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 27, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.00.31%20PM.png" alt="A Free Blog Using Mundana Jekyll Theme In Github Pages">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="publish"><span>Publish</span></h4>
+             <!-- Author Box -->
+                				
+				<div class="row mt-5">
+					<div class="col-md-2 align-self-center">
+                         
+                        <img class="rounded-circle" src="/blog//assets/images/avatar1.jpg" alt="Jules Lee" width="90"/>
+                         
+					</div>
+					<div class="col-md-10">		
+                        <h5 class="font-weight-bold">Written by Jules Lee </h5>
+						Hi, I am Jules, the author of iOS Junkie. I hope you like my blog!					
+					</div>
+				</div>				
+                
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/issues-with-my-first-app-store-connect-submission/">Issues With My First App Store Connect Submission</a>
-	</h2>
-	<p class="excerpt">
-	   It was my first app submission to the app store. I mean, well, I hadn’t submitted it for review yet, but it already detected a couple of issues that needs dealing with. I uploaded it ...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#publish">Publish</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 27, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/issues-with-my-first-app-store-connect-submission/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-25%20at%208.43.21%20PM.png" alt="Issues With My First App Store Connect Submission">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="sublime"><span>Sublime</span></h4>
+            <!-- Comments -->
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/bundler-editorsublime/">Sublime 3 In BUNDLER_EDITOR</a>
-	</h2>
-	<p class="excerpt">
-	   First, let’s create a symlink:
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#sublime">Sublime</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 30, 2019
-	</small>
+                <!--  Don't edit anything here. Set your disqus id in _config.yml -->
+
+<div id="comments" class="mt-5">
+    <div id="disqus_thread">
+    </div>
+    <script type="text/javascript">
+        var disqus_shortname = 'iosjunkie'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>
+    Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
 </div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/bundler-editorsublime/">
-	<img class="w-100" src="/blog/assets/images/SublimeText3.jpg" alt="Sublime 3 In BUNDLER_EDITOR">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="manager"><span>Manager</span></h4>
             
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">Use Jekyll Manager Instead of Jekyll Admin</a>
-	</h2>
-	<p class="excerpt">
-	   I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#manager">Manager</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 30, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">
-	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" alt="Use Jekyll Manager Instead of Jekyll Admin">
-	</a>
-	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="swift"><span>Swift</span></h4>
             
+		</div>
         
         
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">Using Cloud Functions To Create Remote Notifications With Firebase And Swift5</a>
-	</h2>
-	<p class="excerpt">
-	   This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already hav...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#notification">Notification</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Oct 01, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">
-	<img class="w-100" src="/blog/assets/images/Notifications_Top_2x.png" alt="Using Cloud Functions To Create Remote Notifications With Firebase And Swift5">
-	</a>
 	</div>
-
-</div>
-          
-        
-        
-        
-        
-
-         
-        <h4 class="font-weight-bold spanborder text-capitalize" id="notification"><span>Notification</span></h4>
-            
-        
-        
-        
-          
-         
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">Using Cloud Functions To Create Remote Notifications With Firebase And Swift5</a>
-	</h2>
-	<p class="excerpt">
-	   This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already hav...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#notification">Notification</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Oct 01, 2019
-	</small>
 </div>
 
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">
-	<img class="w-100" src="/blog/assets/images/Notifications_Top_2x.png" alt="Using Cloud Functions To Create Remote Notifications With Firebase And Swift5">
-	</a>
-	</div>
 
-</div>
+<!-- Aletbar Prev/Next -->
+<div class="alertbar">
+    <div class="container">
+        <div class="row prevnextlinks small font-weight-bold">
           
-        
-        
-        
-        
-
-        
-
+            <div class="col-md-6 rightborder pl-0">
+                <a class="text-dark" href="/blog/use-jekyll-manager-instead-of-jekyll-admin/"> <img height="30px" class="mr-1" src="/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png">  Use Jekyll Manager Instead of Jekyll Admin</a>
+            </div>
+          
+          
         </div>
-        
-            <div class="col-md-4">
-        <div class="sticky-top sticky-top-offset">
-    <h4 class="font-weight-bold spanborder"><span>Featured</span></h4>  
-    <ol class="list-featured">				
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/" class="text-dark">Using Cloud Functions To Create Remote Notifications With Firebase And Swift5</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#notification">Notification</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/blog/use-jekyll-manager-instead-of-jekyll-admin/" class="text-dark">Use Jekyll Manager Instead of Jekyll Admin</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#manager">Manager</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/blog/eureka-locationrow/" class="text-dark">Eureka LocationRow</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/blog/issues-with-my-first-app-store-connect-submission/" class="text-dark">Issues With My First App Store Connect Submission</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#publish">Publish</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-                        
-            <li class="mb-4">
-            <span>
-                <h6 class="font-weight-bold">
-                    <a href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/" class="text-dark">A Free Blog Using Mundana Jekyll Theme In Github Pages</a>
-                </h6>
-                <span class="d-block text-muted">
-                    In <span class="catlist">
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-                    
-                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
-                    
-                    </span>
-                </span>
-            </span>
-            </li>                
-           
-    </ol>
-</div>     
-    </div>
-        
     </div>
 </div>
+
     </main>
 
 
@@ -1045,7 +624,7 @@ function lunr_search(term) {
         <div class="container">
         <div class="row align-items-center justify-content-between">
             <div>
-                <span class="navbar-brand mr-2 mb-0"><strong>Categories</strong></span>
+                <span class="navbar-brand mr-2 mb-0"><strong>Using Cloud Functions To Create Remote Notifications With Firebase And Swift5</strong></span>
                 <span>Copyright © <script>document.write(new Date().getFullYear())</script>.</span>
 
                 <!--  Github Repo Star Btn-->
