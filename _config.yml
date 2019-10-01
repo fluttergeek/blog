@@ -1,5 +1,5 @@
 name: iOS Junkie
-description: Simplifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.
+description: Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.
 logo: assets/images/logo.png
 favicon: assets/images/favicon.ico
 baseurl: /blog
@@ -21,7 +21,7 @@ authors:
     site: 'https://iosjunkie.github.io'
     avatar: /assets/images/avatar1.jpg
     bio: >-
-      Hi, I am Jules, the author of iOS Junkie. Simplifying complex instructions
+      Hi, I am Jules, the author of iOS Junkie. Demystifying complex instructions
       from the internet.
     email: zoom.flux@gmail.com
     facebook: 'https://facebook.com/mr.jules.lee'
