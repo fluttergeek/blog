@@ -54,4 +54,19 @@ then go to `localhost:4000/admin`
 ### Posting
 I catch myself looking at sample posts whenever I create a new post. You might need to if you're not familiar with the jekyll format or on how to use markdown. So, I renamed the `_post` folder to `post` and added `post` to my .gitignore. It's not necessary to create another `_post` folder back, but if you're not using the jekyll-admin or if you're just using a text editor, then you should create it again.
 
+### Automating
+You might want to lessen the technicality of going through terminal to go to your blog directory and serving jekyll to access admin. You can do this by opening `Automator`. You have this preinstalled on your Mac OS. Create a new `workflow`, then choose to run shell script like so:
+
+![shell](/blog/assets/images/Screen%20Shot%202019-10-02%20at%209.07.22%20PM.png)
+
+Type in what you'd normally type on your terminal.
+
+```
+cd /Directory/To/Your/Blog
+source ~/.bash_profile
+bundle exec jekyll serve --watch
+```
+
+If you run it and everything goes smoothly, try opening `localhost:4000/admin` on your browser. That's how you'll know if it works. And if it does, you may close the `Automator` and it'll ask you to save the script. Save it as Application to your preferred directory. If you ever need to access the admin dashboard of your blog, just double-click like you would on a normal app.
+
 [mundana]: https://github.com/wowthemesnet/mundana-theme-jekyll.git
