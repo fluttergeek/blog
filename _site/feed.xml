@@ -1,4 +1,113 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-10-02T21:17:03+08:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Top 5 Github Pages Portfolio Templates</title><link href="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/" rel="alternate" type="text/html" title="Top 5 Github Pages Portfolio Templates" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/top-5-github-pages-portfolio-templates</id><content type="html" xml:base="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/">&lt;p&gt;As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-10-02T21:39:27+08:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Why I Prefer Cloud Firestore Than Realtime Database</title><link href="http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/" rel="alternate" type="text/html" title="Why I Prefer Cloud Firestore Than Realtime Database" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database</id><content type="html" xml:base="http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/">&lt;p&gt;This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.&lt;/p&gt;
+
+&lt;p&gt;Initially, all I understood was Firebase RD will charge you depending on bandwidth usage, while Firestore will charge on writes and reads. I was intimidated by that. The key is to make the writes and reads as minimal as possible to lessen the cost.&lt;/p&gt;
+
+&lt;p&gt;In my previous personal project, I used Firebase RD. I have a web app for it and iOS app. Both coded by me. I was wondering why it always took so long to read from Firebase. Then I realized, I created a tree structure and whenever I tried to access the root’s value, it grabs all the branches along with it making my succeeding read queries redundant. It loads a very heavy amount of information as my database grew. That’s how I came to a decision to start using Firestore.&lt;/p&gt;
+
+&lt;p&gt;Collections. Documents. You must’ve read those before. It’s confusing, I know. That’s how Firestore works. Think of it this way. &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt; are Folders, and &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt; are files that can contain a pointer to a sub Collection. Documents contain the attributes and its values. Collections only contain Documents.&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Customer (&lt;code class=&quot;highlighter-rouge&quot;&gt;Collection&lt;/code&gt;)
+    &lt;ul&gt;
+      &lt;li&gt;Jane (&lt;code class=&quot;highlighter-rouge&quot;&gt;Document&lt;/code&gt;)
+        &lt;ul&gt;
+          &lt;li&gt;address: “In the woods”&lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;age: 16&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;Orders (sub &lt;code class=&quot;highlighter-rouge&quot;&gt;Collection&lt;/code&gt;)
+            &lt;ul&gt;
+              &lt;li&gt;2019-1-19 (&lt;code class=&quot;highlighter-rouge&quot;&gt;Document&lt;/code&gt;)
+                &lt;ul&gt;
+                  &lt;li&gt;item: “Pizza”&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I hope you see the pattern now. &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt; always contain &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt; can contain &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;What makes it better than Firebase DB?&lt;/p&gt;
+
+&lt;p&gt;Well, whenever you reference to collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer&lt;/code&gt;”).document(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Jane&lt;/code&gt;”), you won’t be including &lt;code class=&quot;highlighter-rouge&quot;&gt;Orders&lt;/code&gt; in your read. Thereby, reducing the load. I guess you can say it’s faster this way. You only get to access the &lt;code class=&quot;highlighter-rouge&quot;&gt;address&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;age&lt;/code&gt; of Jane. If you want to get her orders as well, then reference to collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer&lt;/code&gt;”).document(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Jane&lt;/code&gt;”).collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Orders&lt;/code&gt;”). You can loop through all her orders thereafter.&lt;/p&gt;
+
+&lt;p&gt;No matter how deep your tree becomes with Firestore, you won’t be able to directly access its sub collections and that cuts down a lot of loading time and heaviness.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="firestore" /><category term="firebase" /><category term="database" /><category term="collections" /><category term="documents" /><category term="Xcode" /><category term="swift" /><summary type="html">This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/update.jpg" /></entry><entry><title type="html">@State to @ObjectBinding Modifier</title><link href="http://localhost:4000/blog/state-to-objectbinding-modifier/" rel="alternate" type="text/html" title="@State to @ObjectBinding Modifier" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/state-to-objectbinding-modifier</id><content type="html" xml:base="http://localhost:4000/blog/state-to-objectbinding-modifier/">&lt;p&gt;Notice how Scott changed from &lt;code class=&quot;highlighter-rouge&quot;&gt;@State&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;@ObjectBinding&lt;/code&gt;. He started discussing BindableObject at 5:17. That’s because you can only use &lt;code class=&quot;highlighter-rouge&quot;&gt;@State&lt;/code&gt; with local properties in the struct view. Let’s see his code one more time.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7sxdhunvSCg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import Combine
+
+class ListDataSource: BindableObject {
+	var willChange = PassthroughSubject&amp;lt;Void, Never&amp;gt; ()
+	
+	var rowModels = [CustomRowModel] () {
+		willSet {
+			willChange.send()
+		}
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this tutorial, that’s all the code we need. Just kidding. There’s one more:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct ContentView: View {
+	@ObjectBinding var datasource = ListDataSource()
+	
+	// to access the rowModels array
+	datasource.rowModels
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice here that he used @ObjectBinding instead of @State. If you want a hold of the state of a class, then you must use @ObjectBinding instead and that class should inherit from &lt;code class=&quot;highlighter-rouge&quot;&gt;BindableObject&lt;/code&gt; protocol, which requires that you have a &lt;code class=&quot;highlighter-rouge&quot;&gt;PassthroughSubject&lt;/code&gt;. In order to use &lt;code class=&quot;highlighter-rouge&quot;&gt;PassthroughSubject&lt;/code&gt;, import &lt;code class=&quot;highlighter-rouge&quot;&gt;Combine&lt;/code&gt; first. You can substitude willChange to didChange. Heck, it’s just a variable name. But if you do, also change the &lt;code class=&quot;highlighter-rouge&quot;&gt;willSet&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;didSet&lt;/code&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;willChange.send()&lt;/code&gt; will notify the subscribed view, which in this case is &lt;code class=&quot;highlighter-rouge&quot;&gt;ContentView&lt;/code&gt;, of any changes done to &lt;code class=&quot;highlighter-rouge&quot;&gt;rowModels&lt;/code&gt; array.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="state" /><category term="bindable" /><category term="object" /><category term="@objectbinding" /><category term="swiftui" /><summary type="html">Notice how Scott changed from @State to @ObjectBinding. He started discussing BindableObject at 5:17. That’s because you can only use @State with local properties in the struct view. Let’s see his code one more time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/maxresdefault.jpg" /></entry><entry><title type="html">A Better EmptyView In An Empty CollectionView</title><link href="http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview/" rel="alternate" type="text/html" title="A Better EmptyView In An Empty CollectionView" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview</id><content type="html" xml:base="http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview/">&lt;p&gt;One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez &lt;a href=&quot;https://medium.com/@mtssonmez/handle-empty-tableview-in-swift-4-ios-11-23635d108409&quot;&gt;post&lt;/a&gt; on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// EmptyView.swift
+extension UICollectionView {
+    func setEmptyView(title: String, message: String) {
+        let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
+        let titleLabel = UILabel()
+        let messageLabel = UILabel()
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textColor = UIColor.black
+        titleLabel.font = UIFont(name: &quot;HelveticaNeue-Bold&quot;, size: 18)
+        messageLabel.textColor = UIColor.lightGray
+        messageLabel.font = UIFont(name: &quot;HelveticaNeue-Regular&quot;, size: 17)
+        emptyView.addSubview(titleLabel)
+        emptyView.addSubview(messageLabel)
+        titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
+        messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+        messageLabel.leftAnchor.constraint(equalTo: emptyView.leftAnchor, constant: 20).isActive = true
+        messageLabel.rightAnchor.constraint(equalTo: emptyView.rightAnchor, constant: -20).isActive = true
+        titleLabel.text = title
+        messageLabel.text = message
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        // The only tricky part is here:
+        self.backgroundView = emptyView
+    }
+    func restore() {
+        self.backgroundView = nil
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After extending the UICollectionView, go back to the implementation of your collection view. Add this code in your numberOfItemsInSection:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -&amp;gt; Int {
+        if orders?.count ?? 0 == 0 {
+            collectionView.setEmptyView(title: &quot;You don't have any orders yet.&quot;, message: &quot;Your orders will be in here.&quot;)
+        }
+        return orders?.count ?? 0
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="collection" /><category term="view" /><category term="empty" /><category term="swift" /><category term="table" /><summary type="html">One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez post on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/71823045_2511297908958002_3393944923223883776_n.jpg" /></entry><entry><title type="html">Top 5 Github Pages Portfolio Templates</title><link href="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/" rel="alternate" type="text/html" title="Top 5 Github Pages Portfolio Templates" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/top-5-github-pages-portfolio-templates</id><content type="html" xml:base="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/">&lt;p&gt;As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.&lt;/p&gt;
 
 &lt;h3 id=&quot;1-dev-portfolio&quot;&gt;1. &lt;a href=&quot;https://github.com/RyanFitzgerald/devblog&quot;&gt;Dev Portfolio&lt;/a&gt;&lt;/h3&gt;
 
@@ -39,74 +148,7 @@ If you like the project, you can help by sharing it on social media and giving u
 
 &lt;p&gt;This is not a portfolio, but I couldn’t find another interesting portfolio repository anymore. I just thought this might be noteworthy too. Pillar is a free Bootstrap resume/CV template tailored specifically for developers. The template comes with 6 color schemes and are quick and easy to change via the source SASS files. Built on Bootstrap 4, this template is included in our premium Bootstrap 4 theme Instance. If you are a developer and need to build your online presence, you need to check out the Instance theme as it has all the winning ingredients to get you hired by your potential employers or clients.&lt;/p&gt;
 
-&lt;h3 id=&quot;demo-4&quot;&gt;&lt;a href=&quot;https://themes.3rdwavemedia.com/demo/pillar/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;</content><author><name>jules</name></author><category term="" /><category term="portfolio" /><category term="github" /><category term="pages" /><category term="jekyll" /><category term="developer" /><summary type="html">As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg" /></entry><entry><title type="html">@State to @ObjectBinding Modifier</title><link href="http://localhost:4000/blog/state-to-objectbinding-modifier/" rel="alternate" type="text/html" title="@State to @ObjectBinding Modifier" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/state-to-objectbinding-modifier</id><content type="html" xml:base="http://localhost:4000/blog/state-to-objectbinding-modifier/">&lt;p&gt;Notice how Scott changed from &lt;code class=&quot;highlighter-rouge&quot;&gt;@State&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;@ObjectBinding&lt;/code&gt;. He started discussing BindableObject at 5:17. That’s because you can only use &lt;code class=&quot;highlighter-rouge&quot;&gt;@State&lt;/code&gt; with local properties in the struct view. Let’s see his code one more time.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7sxdhunvSCg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import Combine
-
-class ListDataSource: BindableObject {
-	var willChange = PassthroughSubject&amp;lt;Void, Never&amp;gt; ()
-	
-	var rowModels = [CustomRowModel] () {
-		willSet {
-			willChange.send()
-		}
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In this tutorial, that’s all the code we need. Just kidding. There’s one more:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct ContentView: View {
-	@ObjectBinding var datasource = ListDataSource()
-	
-	// to access the rowModels array
-	datasource.rowModels
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Notice here that he used @ObjectBinding instead of @State. If you want a hold of the state of a class, then you must use @ObjectBinding instead and that class should inherit from &lt;code class=&quot;highlighter-rouge&quot;&gt;BindableObject&lt;/code&gt; protocol, which requires that you have a &lt;code class=&quot;highlighter-rouge&quot;&gt;PassthroughSubject&lt;/code&gt;. In order to use &lt;code class=&quot;highlighter-rouge&quot;&gt;PassthroughSubject&lt;/code&gt;, import &lt;code class=&quot;highlighter-rouge&quot;&gt;Combine&lt;/code&gt; first. You can substitude willChange to didChange. Heck, it’s just a variable name. But if you do, also change the &lt;code class=&quot;highlighter-rouge&quot;&gt;willSet&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;didSet&lt;/code&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;willChange.send()&lt;/code&gt; will notify the subscribed view, which in this case is &lt;code class=&quot;highlighter-rouge&quot;&gt;ContentView&lt;/code&gt;, of any changes done to &lt;code class=&quot;highlighter-rouge&quot;&gt;rowModels&lt;/code&gt; array.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="state" /><category term="bindable" /><category term="object" /><category term="@objectbinding" /><category term="swiftui" /><summary type="html">Notice how Scott changed from @State to @ObjectBinding. He started discussing BindableObject at 5:17. That’s because you can only use @State with local properties in the struct view. Let’s see his code one more time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/maxresdefault.jpg" /></entry><entry><title type="html">Why I Prefer Cloud Firestore Than Realtime Database</title><link href="http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/" rel="alternate" type="text/html" title="Why I Prefer Cloud Firestore Than Realtime Database" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database</id><content type="html" xml:base="http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/">&lt;p&gt;This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.&lt;/p&gt;
-
-&lt;p&gt;Initially, all I understood was Firebase RD will charge you depending on bandwidth usage, while Firestore will charge on writes and reads. I was intimidated by that. The key is to make the writes and reads as minimal as possible to lessen the cost.&lt;/p&gt;
-
-&lt;p&gt;In my previous personal project, I used Firebase RD. I have a web app for it and iOS app. Both coded by me. I was wondering why it always took so long to read from Firebase. Then I realized, I created a tree structure and whenever I tried to access the root’s value, it grabs all the branches along with it making my succeeding read queries redundant. It loads a very heavy amount of information as my database grew. That’s how I came to a decision to start using Firestore.&lt;/p&gt;
-
-&lt;p&gt;Collections. Documents. You must’ve read those before. It’s confusing, I know. That’s how Firestore works. Think of it this way. &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt; are Folders, and &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt; are files that can contain a pointer to a sub Collection. Documents contain the attributes and its values. Collections only contain Documents.&lt;/p&gt;
-
-&lt;p&gt;For example:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Customer (&lt;code class=&quot;highlighter-rouge&quot;&gt;Collection&lt;/code&gt;)
-    &lt;ul&gt;
-      &lt;li&gt;Jane (&lt;code class=&quot;highlighter-rouge&quot;&gt;Document&lt;/code&gt;)
-        &lt;ul&gt;
-          &lt;li&gt;address: “In the woods”&lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;age: 16&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;Orders (sub &lt;code class=&quot;highlighter-rouge&quot;&gt;Collection&lt;/code&gt;)
-            &lt;ul&gt;
-              &lt;li&gt;2019-1-19 (&lt;code class=&quot;highlighter-rouge&quot;&gt;Document&lt;/code&gt;)
-                &lt;ul&gt;
-                  &lt;li&gt;item: “Pizza”&lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I hope you see the pattern now. &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt; always contain &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt; can contain &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;What makes it better than Firebase DB?&lt;/p&gt;
-
-&lt;p&gt;Well, whenever you reference to collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer&lt;/code&gt;”).document(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Jane&lt;/code&gt;”), you won’t be including &lt;code class=&quot;highlighter-rouge&quot;&gt;Orders&lt;/code&gt; in your read. Thereby, reducing the load. I guess you can say it’s faster this way. You only get to access the &lt;code class=&quot;highlighter-rouge&quot;&gt;address&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;age&lt;/code&gt; of Jane. If you want to get her orders as well, then reference to collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer&lt;/code&gt;”).document(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Jane&lt;/code&gt;”).collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Orders&lt;/code&gt;”). You can loop through all her orders thereafter.&lt;/p&gt;
-
-&lt;p&gt;No matter how deep your tree becomes with Firestore, you won’t be able to directly access its sub collections and that cuts down a lot of loading time and heaviness.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="firestore" /><category term="firebase" /><category term="database" /><category term="collections" /><category term="documents" /><category term="Xcode" /><category term="swift" /><summary type="html">This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/update.jpg" /></entry><entry><title type="html">Using Cloud Functions To Create Remote Notifications With Firebase And Swift5</title><link href="http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/" rel="alternate" type="text/html" title="Using Cloud Functions To Create Remote Notifications With Firebase And Swift5" /><published>2019-10-01T00:00:00+08:00</published><updated>2019-10-01T00:00:00+08:00</updated><id>http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5</id><content type="html" xml:base="http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">&lt;p&gt;This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already have the GoogleService-Info.plist in your Xcode project. It is important because it contains your bundle identifier. Without Firebase knowing your bundle identifier, you can’t proceed to enabling the Cloud messaging. We’re not doing what’s in the picture. It’s just a formality.&lt;/p&gt;
+&lt;h3 id=&quot;demo-4&quot;&gt;&lt;a href=&quot;https://themes.3rdwavemedia.com/demo/pillar/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;</content><author><name>jules</name></author><category term="" /><category term="portfolio" /><category term="github" /><category term="pages" /><category term="jekyll" /><category term="developer" /><summary type="html">As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg" /></entry><entry><title type="html">Using Cloud Functions To Create Remote Notifications With Firebase And Swift5</title><link href="http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/" rel="alternate" type="text/html" title="Using Cloud Functions To Create Remote Notifications With Firebase And Swift5" /><published>2019-10-01T00:00:00+08:00</published><updated>2019-10-01T00:00:00+08:00</updated><id>http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5</id><content type="html" xml:base="http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">&lt;p&gt;This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already have the GoogleService-Info.plist in your Xcode project. It is important because it contains your bundle identifier. Without Firebase knowing your bundle identifier, you can’t proceed to enabling the Cloud messaging. We’re not doing what’s in the picture. It’s just a formality.&lt;/p&gt;
 
 &lt;p&gt;Install this pod libraries first in addition to your preinstalled libraries with Firebase.&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pod 'Firebase/Analytics'
@@ -244,7 +286,21 @@ export BUNDLER_EDITOR=&quot;sublime&quot;
 
 &lt;p&gt;The text editor’s panel for tools is now dark but overall, it works the same and still no Grammarly functionality. I mean &lt;code class=&quot;highlighter-rouge&quot;&gt;Grammarly&lt;/code&gt; is disabled when using the text editor, but not on other text fields.  Bummer.&lt;/p&gt;
 
-&lt;p&gt;For the most part, it looks almost exactly like jekyll-admin and better, but I don’t understand why there isn’t any noticeable changes in jekyll-admin that will make it better than the 2 years ago maintaned code of jekyll-manager.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="jekyll-manager" /><category term="jekyll-admin" /><category term="blog" /><category term="dashboard" /><category term="admin" /><category term="grammarly" /><summary type="html">I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s more intuitive. I am wrong. However, the upgrades done in jekyll-manager isn’t really all that drastic. They still haven’t got a fix for when selecting the image metadata. It is still http://localhost:4000/blog/assets/images/…jpg when I select an image from the static files. I wonder why they haven’t dealt this yet. This should have been the turning point of their fork. Instead, a few UI changes have been made. Some, impressive.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" /></entry><entry><title type="html">!= VS. NOT Filter In Realm Swift</title><link href="http://localhost:4000/blog/inverse-or-not-filter-in-realm-swift/" rel="alternate" type="text/html" title="!= VS. NOT Filter In Realm Swift" /><published>2019-09-30T00:00:00+08:00</published><updated>2019-09-30T00:00:00+08:00</updated><id>http://localhost:4000/blog/inverse-or-not-filter-in-realm-swift</id><content type="html" xml:base="http://localhost:4000/blog/inverse-or-not-filter-in-realm-swift/">&lt;p&gt;Instead of using &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt; as your not equal, you can or should use &lt;code class=&quot;highlighter-rouge&quot;&gt;NOT&lt;/code&gt; instead. I’m writing this post because I just can’t seem &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt; to work as part of my predicate. I was struggling to find a way to make not equal to work. I looked it up in the documentations. Even though &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt; is in there, I could not make it to work. However, the &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; sign worked. Weird. And so, I did something like this.&lt;/p&gt;
+&lt;p&gt;For the most part, it looks almost exactly like jekyll-admin and better, but I don’t understand why there isn’t any noticeable changes in jekyll-admin that will make it better than the 2 years ago maintaned code of jekyll-manager.&lt;/p&gt;
+
+&lt;h3 id=&quot;automating&quot;&gt;Automating&lt;/h3&gt;
+&lt;p&gt;You might want to lessen the technicality of going through terminal to go to your blog directory and serving jekyll to access admin. You can do this by opening &lt;code class=&quot;highlighter-rouge&quot;&gt;Automator&lt;/code&gt;. You have this preinstalled on your Mac OS. Create a new &lt;code class=&quot;highlighter-rouge&quot;&gt;workflow&lt;/code&gt;, then choose to run shell script like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-02%20at%209.07.22%20PM.png&quot; alt=&quot;shell&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Type in what you’d normally type on your terminal.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /Directory/To/Your/Blog
+source ~/.bash_profile
+bundle exec jekyll serve --watch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you run it and everything goes smoothly, try opening &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:4000/admin&lt;/code&gt; on your browser. That’s how you’ll know if it works. And if it does, you may close the &lt;code class=&quot;highlighter-rouge&quot;&gt;Automator&lt;/code&gt; and it’ll ask you to save the script. Save it as Application to your preferred directory. If you ever need to access the admin dashboard of your blog, just double-click like you would on a normal app. You might be surprised. This also works for pushing all your changes to github.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="jekyll-manager" /><category term="jekyll-admin" /><category term="blog" /><category term="dashboard" /><category term="admin" /><category term="grammarly" /><summary type="html">I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s more intuitive. I am wrong. However, the upgrades done in jekyll-manager isn’t really all that drastic. They still haven’t got a fix for when selecting the image metadata. It is still http://localhost:4000/blog/assets/images/…jpg when I select an image from the static files. I wonder why they haven’t dealt this yet. This should have been the turning point of their fork. Instead, a few UI changes have been made. Some, impressive.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" /></entry><entry><title type="html">!= VS. NOT Filter In Realm Swift</title><link href="http://localhost:4000/blog/inverse-or-not-filter-in-realm-swift/" rel="alternate" type="text/html" title="!= VS. NOT Filter In Realm Swift" /><published>2019-09-30T00:00:00+08:00</published><updated>2019-09-30T00:00:00+08:00</updated><id>http://localhost:4000/blog/inverse-or-not-filter-in-realm-swift</id><content type="html" xml:base="http://localhost:4000/blog/inverse-or-not-filter-in-realm-swift/">&lt;p&gt;Instead of using &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt; as your not equal, you can or should use &lt;code class=&quot;highlighter-rouge&quot;&gt;NOT&lt;/code&gt; instead. I’m writing this post because I just can’t seem &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt; to work as part of my predicate. I was struggling to find a way to make not equal to work. I looked it up in the documentations. Even though &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt; is in there, I could not make it to work. However, the &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; sign worked. Weird. And so, I did something like this.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let filter = &quot;(status = 'Pending' OR (status = 'Washed' AND (pad = 2 OR pad = 3))) AND NOT cancel = 'Cancelled' AND NOT ownerId = ''&quot;
 orders!.filter(filter)
@@ -513,61 +569,4 @@ public class MapViewController : UIViewController, TypedRowControllerType, MKMap
 
 &lt;p&gt;So, I thought to myself. That wasn’t daunting at all. You no longer have to specify how many sections and rows, no need to get the cell identifier off from the storyboard, which reduces a hell lot of code to write. It’s just that all UI designs you might have in mind will now have to be written in code which sucks.&lt;/p&gt;
 
-&lt;p&gt;If you went on with the video tutorial, you might want some answers regarding @ObjectBinding and how it works. Here’s my &lt;a href=&quot;/blog/state-to-objectbinding-modifier/&quot;&gt;explanation&lt;/a&gt;.&lt;/p&gt;</content><author><name>jules</name></author><category term="Tutorial" /><category term="" /><category term="custom" /><category term="table" /><category term="swiftui" /><category term="cell" /><category term="scott" /><category term="smith" /><category term="ios" /><category term="row" /><summary type="html">First of all, thanks to Scott Smith for helping me understand this. I know it can be another learning curve to start learning SwiftUI if you’ve only begun diving into becoming an iOS developer. It’s daunting at first, but I hope it can be simple too for many newbies. Now, I haven’t gotten my hands on Mac OS Catalina yet, so I can’t actually demonstrate my own version of this tutorial properly if I can’t show you the canvas, which isn’t available in Mojave yet, myself.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-09-28%20at%2010.32.57%20PM.png" /></entry><entry><title type="html">Issues With My First App Store Connect Submission</title><link href="http://localhost:4000/blog/issues-with-my-first-app-store-connect-submission/" rel="alternate" type="text/html" title="Issues With My First App Store Connect Submission" /><published>2019-09-27T00:00:00+08:00</published><updated>2019-09-27T00:00:00+08:00</updated><id>http://localhost:4000/blog/issues-with-my-first-app-store-connect-submission</id><content type="html" xml:base="http://localhost:4000/blog/issues-with-my-first-app-store-connect-submission/">&lt;p&gt;It was my first app submission to the app store. I mean, well, I hadn’t submitted it for review yet, but it already detected a couple of issues that needs dealing with. I uploaded it to app connect for 6 times until I got it right.&lt;/p&gt;
-
-&lt;p&gt;The first issue I had to deal with only needed a little bit of tweaking in my project’s &lt;code class=&quot;highlighter-rouge&quot;&gt;Signing and Capabilities&lt;/code&gt;. From there, I added a Capability known as ‘Push Notifications’.&lt;/p&gt;
-
-&lt;p&gt;The second one is because of a deprecated API. I tried updating a cocoapod library “Firebase/Auth” after finding out that this utilizes UIWebView. For some reason, I can’t get update working on a single pod. Prior to this, I thought Facebook Core and Facebook Login were the culprits, knowing those would open a UIWebView for me to sign into Facebook. I guess I found a fix on Github issues, which helped other developers with what might have been a similar problem.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pod 'FacebookCore', '~&amp;gt; 0.9.0'
-pod 'FacebookLogin', '~&amp;gt; 0.9.0'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;After trying this out, it didn’t actually help with the second issue. Until, I finally decided to  update all the pods with just a simple&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pod update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;I didn’t know most of my pods were actually not up-to-date until I did that. Voila, I didn’t get another warning after uploading my project to App Connect.&lt;/p&gt;
-
-&lt;p&gt;There were just a few more things that needed filling up. Below are things that needed to be filled:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Support URL&lt;/p&gt;
-
-    &lt;p&gt;It would come as a surprise to you that you actually might need something like this. I mean, it surprised me too. I didn’t fully grasp what it meant even after  hovering on the question mark to reveal insights of what this might be. From what I’ve gathered in teamtreehouse.com, “its purpose is to allow users to get in contact with you if they experience problems, desire new features or want to ask questions about your app.” Hence, I just used my portfolio as the link.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Build&lt;/p&gt;
-
-    &lt;p&gt;This is an obvious requirement. And just to bring more light into it, because I didn’t know how it worked at first. Every time you make changes in the code or anywhere in your project, you need to change the build number. So, after having dealt with those warning issues above, I had to increase the build number in project settings, otherwise I couldn’t upload a project with an already existing build number in the app connect.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Rating&lt;/p&gt;
-
-    &lt;p&gt;This I had no idea too. I initially thought &lt;code class=&quot;highlighter-rouge&quot;&gt;why would I be rating stars of my own app?&lt;/code&gt; Stupid, right? Well, just click the edit button beside it and you’ll have a change of perspective.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
- 	&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-09-27%20at%204.09.36%20PM.png&quot; alt=&quot;ratings&quot; /&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Copyright&lt;/p&gt;
-
-    &lt;p&gt;I’m not running a company, so I also googled what I could possibly put here. I was wondering if I could actually use &lt;code class=&quot;highlighter-rouge&quot;&gt;2019 iOS Junkie&lt;/code&gt;, but maybe not. So, I just used my name instead.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;General App Information and Contact Information&lt;/p&gt;
-
-    &lt;p&gt;I had to fill out all details with fields referring to name, address, contact number, and email address. Otherwise, it will turn red and not submit for review when you have to.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;post-submission&quot;&gt;Post submission&lt;/h2&gt;
-
-&lt;p&gt;I encountered a rejection. Yes, you can’t have all the fun yet. They sent me this email&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-09-27%20at%2010.45.05%20AM.png&quot; alt=&quot;location&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Below it was a screenshot of where in my app particularly went wrong. I changed my Information Property List with just one line of sentence that has to do with my location privacy usage to &lt;code class=&quot;highlighter-rouge&quot;&gt;Laundry City would like to use your current location to display it on the app, also for directions and estimations of distance. It is secure and private.&lt;/code&gt; It’s much longer and I hope it’s worth it.&lt;/p&gt;</content><author><name>jules</name></author><category term="featured" /><category term="app" /><category term="connect" /><category term="itunes" /><category term="store" /><category term="submission" /><category term="capabilities" /><category term="uiwebview" /><category term="deprecated" /><category term="api" /><category term="support" /><category term="url" /><category term="FacebookCore" /><category term="notifications" /><summary type="html">It was my first app submission to the app store. I mean, well, I hadn’t submitted it for review yet, but it already detected a couple of issues that needs dealing with. I uploaded it to app connect for 6 times until I got it right.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-09-25%20at%208.43.21%20PM.png" /></entry></feed>
+&lt;p&gt;If you went on with the video tutorial, you might want some answers regarding @ObjectBinding and how it works. Here’s my &lt;a href=&quot;/blog/state-to-objectbinding-modifier/&quot;&gt;explanation&lt;/a&gt;.&lt;/p&gt;</content><author><name>jules</name></author><category term="Tutorial" /><category term="" /><category term="custom" /><category term="table" /><category term="swiftui" /><category term="cell" /><category term="scott" /><category term="smith" /><category term="ios" /><category term="row" /><summary type="html">First of all, thanks to Scott Smith for helping me understand this. I know it can be another learning curve to start learning SwiftUI if you’ve only begun diving into becoming an iOS developer. It’s daunting at first, but I hope it can be simple too for many newbies. Now, I haven’t gotten my hands on Mac OS Catalina yet, so I can’t actually demonstrate my own version of this tutorial properly if I can’t show you the canvas, which isn’t available in Mojave yet, myself.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-09-28%20at%2010.32.57%20PM.png" /></entry></feed>

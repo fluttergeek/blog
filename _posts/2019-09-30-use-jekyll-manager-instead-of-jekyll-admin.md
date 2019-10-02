@@ -24,3 +24,18 @@ The metadata too has changed. It is, by default, hidden and expandable. It's qui
 The text editor's panel for tools is now dark but overall, it works the same and still no Grammarly functionality. I mean `Grammarly` is disabled when using the text editor, but not on other text fields.  Bummer.
 
 For the most part, it looks almost exactly like jekyll-admin and better, but I don't understand why there isn't any noticeable changes in jekyll-admin that will make it better than the 2 years ago maintaned code of jekyll-manager.
+
+### Automating
+You might want to lessen the technicality of going through terminal to go to your blog directory and serving jekyll to access admin. You can do this by opening `Automator`. You have this preinstalled on your Mac OS. Create a new `workflow`, then choose to run shell script like so:
+
+![shell](/blog/assets/images/Screen%20Shot%202019-10-02%20at%209.07.22%20PM.png)
+
+Type in what you'd normally type on your terminal.
+
+```
+cd /Directory/To/Your/Blog
+source ~/.bash_profile
+bundle exec jekyll serve --watch
+```
+
+If you run it and everything goes smoothly, try opening `localhost:4000/admin` on your browser. That's how you'll know if it works. And if it does, you may close the `Automator` and it'll ask you to save the script. Save it as Application to your preferred directory. If you ever need to access the admin dashboard of your blog, just double-click like you would on a normal app. You might be surprised. This also works for pushing all your changes to github.
