@@ -48,7 +48,7 @@ If you like the project, you can help by sharing it on social media and giving u
 
 ### 5. [Pillar][pillar]
 
-![pillar](http://localhost:4000/blog/assets/images/Bootstrap-Resume-CV-Template-Pillar-Pormo.jpg)
+![pillar](/blog/assets/images/Bootstrap-Resume-CV-Template-Pillar-Pormo.jpg)
 
 This is not a portfolio, but I couldn't find another interesting portfolio repository anymore. I just thought this might be noteworthy too. Pillar is a free Bootstrap resume/CV template tailored specifically for developers. The template comes with 6 color schemes and are quick and easy to change via the source SASS files. Built on Bootstrap 4, this template is included in our premium Bootstrap 4 theme Instance. If you are a developer and need to build your online presence, you need to check out the Instance theme as it has all the winning ingredients to get you hired by your potential employers or clients.
 
