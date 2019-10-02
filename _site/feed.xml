@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-10-03T03:05:55+08:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Codable JSON Parsing</title><link href="http://localhost:4000/blog/codable-json-parsing/" rel="alternate" type="text/html" title="Codable JSON Parsing" /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://localhost:4000/blog/codable-json-parsing</id><content type="html" xml:base="http://localhost:4000/blog/codable-json-parsing/">&lt;p&gt;One of the reasons why you should learn this is, first, because you’re an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let’s look at the code done by &lt;a href=&quot;https://www.youtube.com/watch?v=Oj-2s0ALACE&amp;amp;list=WL&amp;amp;index=12&amp;amp;t=481s&quot;&gt;Code Pro&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-10-03T04:22:07+08:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Codable JSON Parsing</title><link href="http://localhost:4000/blog/codable-json-parsing/" rel="alternate" type="text/html" title="Codable JSON Parsing" /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://localhost:4000/blog/codable-json-parsing</id><content type="html" xml:base="http://localhost:4000/blog/codable-json-parsing/">&lt;p&gt;One of the reasons why you should learn this is, first, because you’re an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let’s look at the code done by &lt;a href=&quot;https://www.youtube.com/watch?v=Oj-2s0ALACE&amp;amp;list=WL&amp;amp;index=12&amp;amp;t=481s&quot;&gt;Code Pro&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let singleDictJSON = &quot;&quot;&quot;
     {
@@ -112,34 +112,74 @@ do {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is familiar, but there’s one tiny difference. We have more than one owner in our json, hence we need an array of &lt;code class=&quot;highlighter-rouge&quot;&gt;Owner&lt;/code&gt; like this &lt;code class=&quot;highlighter-rouge&quot;&gt;[Owner].self&lt;/code&gt;. So that’s how you decode an array.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="codable" /><category term="decode" /><category term="encode" /><category term="SwiftyJSON" /><category term="CodingKeys" /><summary type="html">One of the reasons why you should learn this is, first, because you’re an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let’s look at the code done by Code Pro.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/codable-json-swift-how-to-770x400.jpg" /></entry><entry><title type="html">@State to @ObjectBinding Modifier</title><link href="http://localhost:4000/blog/state-to-objectbinding-modifier/" rel="alternate" type="text/html" title="@State to @ObjectBinding Modifier" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/state-to-objectbinding-modifier</id><content type="html" xml:base="http://localhost:4000/blog/state-to-objectbinding-modifier/">&lt;p&gt;Notice how Scott changed from &lt;code class=&quot;highlighter-rouge&quot;&gt;@State&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;@ObjectBinding&lt;/code&gt;. He started discussing BindableObject at 5:17. That’s because you can only use &lt;code class=&quot;highlighter-rouge&quot;&gt;@State&lt;/code&gt; with local properties in the struct view. Let’s see his code one more time.&lt;/p&gt;
+&lt;p&gt;This is familiar, but there’s one tiny difference. We have more than one owner in our json, hence we need an array of &lt;code class=&quot;highlighter-rouge&quot;&gt;Owner&lt;/code&gt; like this &lt;code class=&quot;highlighter-rouge&quot;&gt;[Owner].self&lt;/code&gt;. So that’s how you decode an array.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="codable" /><category term="decode" /><category term="encode" /><category term="SwiftyJSON" /><category term="CodingKeys" /><summary type="html">One of the reasons why you should learn this is, first, because you’re an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let’s look at the code done by Code Pro.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/codable-json-swift-how-to-770x400.jpg" /></entry><entry><title type="html">Where To Learn Async Callback and Futures</title><link href="http://localhost:4000/blog/where-to-learn-async-callback-and-futures/" rel="alternate" type="text/html" title="Where To Learn Async Callback and Futures" /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://localhost:4000/blog/where-to-learn-async-callback-and-futures</id><content type="html" xml:base="http://localhost:4000/blog/where-to-learn-async-callback-and-futures/">&lt;p&gt;One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be digging into. Most of this article is coming from his tutorial and I’ve also included his video in case anyone’s interested.&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7sxdhunvSCg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;Async is concurrent. It does not wait for something to finish for it to start working. When you hear async, think low priority, background, and fetching data. That much I know.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import Combine
+&lt;p&gt;Fernando Martín Ortiz is another iOS developer who’s talked about this. The callback hell he says. Callback hell looks exactly like our picture above. We must refrain from using callbacks with our async functions to avoid spaghetti like codes. Instead, like Let’s Build That App, use &lt;code class=&quot;highlighter-rouge&quot;&gt;Futures&lt;/code&gt;. Whatever the hell that means. Kidding aside, it actually means that it has to &lt;code class=&quot;highlighter-rouge&quot;&gt;return&lt;/code&gt; something in the future instead of making a &lt;code class=&quot;highlighter-rouge&quot;&gt;callback&lt;/code&gt;. Read more about his thoughts on that &lt;a href=&quot;https://medium.com/ios-os-x-development/managing-async-code-in-swift-d7be44cae89f#targetText=You%20call%20that%20function%20and,resolved%2C%20is%20commonly%20called%20then.&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-class ListDataSource: BindableObject {
-	var willChange = PassthroughSubject&amp;lt;Void, Never&amp;gt; ()
-	
-	var rowModels = [CustomRowModel] () {
-		willSet {
-			willChange.send()
-		}
-	}
+&lt;p&gt;Now let me dive into Let’s Build That App’s (LBTA) precious little code from his video tutorial. In this video, he shows how to convert a callback async function into a future async function. There’s a lot of code here that’ll overwhelm a newbie.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/JHqxmBFrWl8&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;enum NetworkError: Error {
+    case url
+    case statusCode
+    case standard
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;In this tutorial, that’s all the code we need. Just kidding. There’s one more:&lt;/p&gt;
+&lt;p&gt;Let’s start with the simplest tiniest detail that we have to wrap our brains with. If you’re a newbie, you might be intimidated from using enums. I know I do. &lt;code class=&quot;highlighter-rouge&quot;&gt;NetworkError&lt;/code&gt; is just a name here and you can change it however you like. It inherits an &lt;code class=&quot;highlighter-rouge&quot;&gt;Error&lt;/code&gt; which has no requirements of its own, you can declare conformance on any custom type you create. Hence, url, statusCode, and standard are just made up by LBTA. You can add more cases of your own words. In the end, these cases will be printed as strings anyway. For example, case url when printed &lt;code class=&quot;highlighter-rouge&quot;&gt;print(NetworkError.url)&lt;/code&gt; will return “url”.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct ContentView: View {
-	@ObjectBinding var datasource = ListDataSource()
-	
-	// to access the rowModels array
-	datasource.rowModels
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func fetchSomethingAsyncAwait(url: String) throws -&amp;gt; Data? {
+    guard let dummyURL = URL(string: url) else {
+        throw NetworkError.url
+    }
+    
+    var data: Data?
+    var response: URLResponse?
+    var error: Error?
+    
+    // Semaphore
+    let semaphore = DispatchSemaphore(value: 0)
+		
+    URLSession.shared.dataTask(with: dummyURL) { (d, r, e) in
+        data = d
+        response = r
+        error = e
+        
+        semaphore.signal()
+    }.resume()
+    
+    // this will return a result, doing this will just get rid of the warning
+    // but its still functional without assigning it to an underscore
+    _ = semaphore.wait(timeout: .distantFuture)
+    
+    if let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode &amp;gt; 300 {
+        throw NetworkError.statusCode
+    }
+    
+    if error != nil {
+        throw NetworkError.standard
+    }
+    
+    return data
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Notice here that he used @ObjectBinding instead of @State. If you want a hold of the state of a class, then you must use @ObjectBinding instead and that class should inherit from &lt;code class=&quot;highlighter-rouge&quot;&gt;BindableObject&lt;/code&gt; protocol, which requires that you have a &lt;code class=&quot;highlighter-rouge&quot;&gt;PassthroughSubject&lt;/code&gt;. In order to use &lt;code class=&quot;highlighter-rouge&quot;&gt;PassthroughSubject&lt;/code&gt;, import &lt;code class=&quot;highlighter-rouge&quot;&gt;Combine&lt;/code&gt; first. You can substitude willChange to didChange. Heck, it’s just a variable name. But if you do, also change the &lt;code class=&quot;highlighter-rouge&quot;&gt;willSet&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;didSet&lt;/code&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;willChange.send()&lt;/code&gt; will notify the subscribed view, which in this case is &lt;code class=&quot;highlighter-rouge&quot;&gt;ContentView&lt;/code&gt;, of any changes done to &lt;code class=&quot;highlighter-rouge&quot;&gt;rowModels&lt;/code&gt; array.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="state" /><category term="bindable" /><category term="object" /><category term="@objectbinding" /><category term="swiftui" /><summary type="html">Notice how Scott changed from @State to @ObjectBinding. He started discussing BindableObject at 5:17. That’s because you can only use @State with local properties in the struct view. Let’s see his code one more time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/maxresdefault.jpg" /></entry><entry><title type="html">A Better EmptyView In An Empty CollectionView</title><link href="http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview/" rel="alternate" type="text/html" title="A Better EmptyView In An Empty CollectionView" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview</id><content type="html" xml:base="http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview/">&lt;p&gt;One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez &lt;a href=&quot;https://medium.com/@mtssonmez/handle-empty-tableview-in-swift-4-ios-11-23635d108409&quot;&gt;post&lt;/a&gt; on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.&lt;/p&gt;
+&lt;p&gt;This is a &lt;code class=&quot;highlighter-rouge&quot;&gt;Future&lt;/code&gt;. You know when you see one because it needs to return something, &lt;code class=&quot;highlighter-rouge&quot;&gt;Data?&lt;/code&gt;. This is a function that can throw an error. So every time you use this function, you must always put it inside a do &lt;code class=&quot;highlighter-rouge&quot;&gt;try&lt;/code&gt; catch.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;do {
+    let data = `try` fetchSomethingAsyncAwait(url: &quot;http://google.com&quot;)
+} catch {
+    print(&quot;Failed to Fetch stuff: &quot;, error)
+    return
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If this catches an error, it might print something like “Failed to Fetch stuff: statusCode”.&lt;/p&gt;
+
+&lt;p&gt;But the most intriguing part of his code is the semaphore. He scheduled the return to execute after the URLSession has finished its task. If there was no semaphore, then his data might return nil. That’s because he didn’t initialize data when he first created it and it is an optional. With this semaphore superpower, he was able to ask the main thread to wait until a &lt;code class=&quot;highlighter-rouge&quot;&gt;signal()&lt;/code&gt; has been found in the distant future. URLSession is the async here, and it is making another thread in the background. Once URLSession’s task reached til the end of its closure, the signal will ask the main thread to continue. &lt;code class=&quot;highlighter-rouge&quot;&gt;if let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode &amp;gt; 300&lt;/code&gt; is the next thing after coming back to the main thread, then the &lt;code class=&quot;highlighter-rouge&quot;&gt;if error != nil&lt;/code&gt;. This way, if no error has been thrown, the &lt;code class=&quot;highlighter-rouge&quot;&gt;return data&lt;/code&gt; will surely have a value to return, otherwise, it returns nil.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="async" /><category term="callback" /><category term="hell" /><category term="futures" /><category term="swift" /><category term="algorithm" /><category term="advanced" /><category term="await" /><summary type="html">One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be digging into. Most of this article is coming from his tutorial and I’ve also included his video in case anyone’s interested.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/reactivecocoa-functional-reactive-programming-concepts-in-ios-11-638.jpg" /></entry><entry><title type="html">A Better EmptyView In An Empty CollectionView</title><link href="http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview/" rel="alternate" type="text/html" title="A Better EmptyView In An Empty CollectionView" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview</id><content type="html" xml:base="http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview/">&lt;p&gt;One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez &lt;a href=&quot;https://medium.com/@mtssonmez/handle-empty-tableview-in-swift-4-ios-11-23635d108409&quot;&gt;post&lt;/a&gt; on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// EmptyView.swift
 extension UICollectionView {
@@ -185,47 +225,7 @@ extension UICollectionView {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Restoring&lt;/code&gt; is essential here. You wouldn’t want to have the empty view when your collection view reloads and holds data.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="collection" /><category term="view" /><category term="empty" /><category term="swift" /><category term="table" /><summary type="html">One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez post on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/71823045_2511297908958002_3393944923223883776_n.jpg" /></entry><entry><title type="html">Why I Prefer Cloud Firestore Than Realtime Database</title><link href="http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/" rel="alternate" type="text/html" title="Why I Prefer Cloud Firestore Than Realtime Database" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database</id><content type="html" xml:base="http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/">&lt;p&gt;This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.&lt;/p&gt;
-
-&lt;p&gt;Initially, all I understood was Firebase RD will charge you depending on bandwidth usage, while Firestore will charge on writes and reads. I was intimidated by that. The key is to make the writes and reads as minimal as possible to lessen the cost.&lt;/p&gt;
-
-&lt;p&gt;In my previous personal project, I used Firebase RD. I have a web app for it and iOS app. Both coded by me. I was wondering why it always took so long to read from Firebase. Then I realized, I created a tree structure and whenever I tried to access the root’s value, it grabs all the branches along with it making my succeeding read queries redundant. It loads a very heavy amount of information as my database grew. That’s how I came to a decision to start using Firestore.&lt;/p&gt;
-
-&lt;p&gt;Collections. Documents. You must’ve read those before. It’s confusing, I know. That’s how Firestore works. Think of it this way. &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt; are Folders, and &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt; are files that can contain a pointer to a sub Collection. Documents contain the attributes and its values. Collections only contain Documents.&lt;/p&gt;
-
-&lt;p&gt;For example:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Customer (&lt;code class=&quot;highlighter-rouge&quot;&gt;Collection&lt;/code&gt;)
-    &lt;ul&gt;
-      &lt;li&gt;Jane (&lt;code class=&quot;highlighter-rouge&quot;&gt;Document&lt;/code&gt;)
-        &lt;ul&gt;
-          &lt;li&gt;address: “In the woods”&lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;age: 16&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;Orders (sub &lt;code class=&quot;highlighter-rouge&quot;&gt;Collection&lt;/code&gt;)
-            &lt;ul&gt;
-              &lt;li&gt;2019-1-19 (&lt;code class=&quot;highlighter-rouge&quot;&gt;Document&lt;/code&gt;)
-                &lt;ul&gt;
-                  &lt;li&gt;item: “Pizza”&lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I hope you see the pattern now. &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt; always contain &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt; can contain &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;What makes it better than Firebase DB?&lt;/p&gt;
-
-&lt;p&gt;Well, whenever you reference to collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer&lt;/code&gt;”).document(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Jane&lt;/code&gt;”), you won’t be including &lt;code class=&quot;highlighter-rouge&quot;&gt;Orders&lt;/code&gt; in your read. Thereby, reducing the load. I guess you can say it’s faster this way. You only get to access the &lt;code class=&quot;highlighter-rouge&quot;&gt;address&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;age&lt;/code&gt; of Jane. If you want to get her orders as well, then reference to collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer&lt;/code&gt;”).document(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Jane&lt;/code&gt;”).collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Orders&lt;/code&gt;”). You can loop through all her orders thereafter.&lt;/p&gt;
-
-&lt;p&gt;No matter how deep your tree becomes with Firestore, you won’t be able to directly access its sub collections and that cuts down a lot of loading time and heaviness.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="firestore" /><category term="firebase" /><category term="database" /><category term="collections" /><category term="documents" /><category term="Xcode" /><category term="swift" /><summary type="html">This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/update.jpg" /></entry><entry><title type="html">Top 5 Github Pages Portfolio Templates</title><link href="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/" rel="alternate" type="text/html" title="Top 5 Github Pages Portfolio Templates" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/top-5-github-pages-portfolio-templates</id><content type="html" xml:base="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/">&lt;p&gt;As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Restoring&lt;/code&gt; is essential here. You wouldn’t want to have the empty view when your collection view reloads and holds data.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="collection" /><category term="view" /><category term="empty" /><category term="swift" /><category term="table" /><summary type="html">One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez post on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/71823045_2511297908958002_3393944923223883776_n.jpg" /></entry><entry><title type="html">Top 5 Github Pages Portfolio Templates</title><link href="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/" rel="alternate" type="text/html" title="Top 5 Github Pages Portfolio Templates" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/top-5-github-pages-portfolio-templates</id><content type="html" xml:base="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/">&lt;p&gt;As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.&lt;/p&gt;
 
 &lt;h3 id=&quot;1-dev-portfolio&quot;&gt;1. &lt;a href=&quot;https://github.com/RyanFitzgerald/devblog&quot;&gt;Dev Portfolio&lt;/a&gt;&lt;/h3&gt;
 
@@ -266,7 +266,74 @@ If you like the project, you can help by sharing it on social media and giving u
 
 &lt;p&gt;This is not a portfolio, but I couldn’t find another interesting portfolio repository anymore. I just thought this might be noteworthy too. Pillar is a free Bootstrap resume/CV template tailored specifically for developers. The template comes with 6 color schemes and are quick and easy to change via the source SASS files. Built on Bootstrap 4, this template is included in our premium Bootstrap 4 theme Instance. If you are a developer and need to build your online presence, you need to check out the Instance theme as it has all the winning ingredients to get you hired by your potential employers or clients.&lt;/p&gt;
 
-&lt;h3 id=&quot;demo-4&quot;&gt;&lt;a href=&quot;https://themes.3rdwavemedia.com/demo/pillar/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;</content><author><name>jules</name></author><category term="" /><category term="portfolio" /><category term="github" /><category term="pages" /><category term="jekyll" /><category term="developer" /><summary type="html">As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg" /></entry><entry><title type="html">Using Cloud Functions To Create Remote Notifications With Firebase And Swift5</title><link href="http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/" rel="alternate" type="text/html" title="Using Cloud Functions To Create Remote Notifications With Firebase And Swift5" /><published>2019-10-01T00:00:00+08:00</published><updated>2019-10-01T00:00:00+08:00</updated><id>http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5</id><content type="html" xml:base="http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">&lt;p&gt;This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already have the GoogleService-Info.plist in your Xcode project. It is important because it contains your bundle identifier. Without Firebase knowing your bundle identifier, you can’t proceed to enabling the Cloud messaging. We’re not doing what’s in the picture. It’s just a formality.&lt;/p&gt;
+&lt;h3 id=&quot;demo-4&quot;&gt;&lt;a href=&quot;https://themes.3rdwavemedia.com/demo/pillar/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;</content><author><name>jules</name></author><category term="" /><category term="portfolio" /><category term="github" /><category term="pages" /><category term="jekyll" /><category term="developer" /><summary type="html">As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg" /></entry><entry><title type="html">@State to @ObjectBinding Modifier</title><link href="http://localhost:4000/blog/state-to-objectbinding-modifier/" rel="alternate" type="text/html" title="@State to @ObjectBinding Modifier" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/state-to-objectbinding-modifier</id><content type="html" xml:base="http://localhost:4000/blog/state-to-objectbinding-modifier/">&lt;p&gt;Notice how Scott changed from &lt;code class=&quot;highlighter-rouge&quot;&gt;@State&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;@ObjectBinding&lt;/code&gt;. He started discussing BindableObject at 5:17. That’s because you can only use &lt;code class=&quot;highlighter-rouge&quot;&gt;@State&lt;/code&gt; with local properties in the struct view. Let’s see his code one more time.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7sxdhunvSCg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import Combine
+
+class ListDataSource: BindableObject {
+	var willChange = PassthroughSubject&amp;lt;Void, Never&amp;gt; ()
+	
+	var rowModels = [CustomRowModel] () {
+		willSet {
+			willChange.send()
+		}
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this tutorial, that’s all the code we need. Just kidding. There’s one more:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct ContentView: View {
+	@ObjectBinding var datasource = ListDataSource()
+	
+	// to access the rowModels array
+	datasource.rowModels
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice here that he used @ObjectBinding instead of @State. If you want a hold of the state of a class, then you must use @ObjectBinding instead and that class should inherit from &lt;code class=&quot;highlighter-rouge&quot;&gt;BindableObject&lt;/code&gt; protocol, which requires that you have a &lt;code class=&quot;highlighter-rouge&quot;&gt;PassthroughSubject&lt;/code&gt;. In order to use &lt;code class=&quot;highlighter-rouge&quot;&gt;PassthroughSubject&lt;/code&gt;, import &lt;code class=&quot;highlighter-rouge&quot;&gt;Combine&lt;/code&gt; first. You can substitude willChange to didChange. Heck, it’s just a variable name. But if you do, also change the &lt;code class=&quot;highlighter-rouge&quot;&gt;willSet&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;didSet&lt;/code&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;willChange.send()&lt;/code&gt; will notify the subscribed view, which in this case is &lt;code class=&quot;highlighter-rouge&quot;&gt;ContentView&lt;/code&gt;, of any changes done to &lt;code class=&quot;highlighter-rouge&quot;&gt;rowModels&lt;/code&gt; array.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="state" /><category term="bindable" /><category term="object" /><category term="@objectbinding" /><category term="swiftui" /><summary type="html">Notice how Scott changed from @State to @ObjectBinding. He started discussing BindableObject at 5:17. That’s because you can only use @State with local properties in the struct view. Let’s see his code one more time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/maxresdefault.jpg" /></entry><entry><title type="html">Why I Prefer Cloud Firestore Than Realtime Database</title><link href="http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/" rel="alternate" type="text/html" title="Why I Prefer Cloud Firestore Than Realtime Database" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database</id><content type="html" xml:base="http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/">&lt;p&gt;This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.&lt;/p&gt;
+
+&lt;p&gt;Initially, all I understood was Firebase RD will charge you depending on bandwidth usage, while Firestore will charge on writes and reads. I was intimidated by that. The key is to make the writes and reads as minimal as possible to lessen the cost.&lt;/p&gt;
+
+&lt;p&gt;In my previous personal project, I used Firebase RD. I have a web app for it and iOS app. Both coded by me. I was wondering why it always took so long to read from Firebase. Then I realized, I created a tree structure and whenever I tried to access the root’s value, it grabs all the branches along with it making my succeeding read queries redundant. It loads a very heavy amount of information as my database grew. That’s how I came to a decision to start using Firestore.&lt;/p&gt;
+
+&lt;p&gt;Collections. Documents. You must’ve read those before. It’s confusing, I know. That’s how Firestore works. Think of it this way. &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt; are Folders, and &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt; are files that can contain a pointer to a sub Collection. Documents contain the attributes and its values. Collections only contain Documents.&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Customer (&lt;code class=&quot;highlighter-rouge&quot;&gt;Collection&lt;/code&gt;)
+    &lt;ul&gt;
+      &lt;li&gt;Jane (&lt;code class=&quot;highlighter-rouge&quot;&gt;Document&lt;/code&gt;)
+        &lt;ul&gt;
+          &lt;li&gt;address: “In the woods”&lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;age: 16&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;Orders (sub &lt;code class=&quot;highlighter-rouge&quot;&gt;Collection&lt;/code&gt;)
+            &lt;ul&gt;
+              &lt;li&gt;2019-1-19 (&lt;code class=&quot;highlighter-rouge&quot;&gt;Document&lt;/code&gt;)
+                &lt;ul&gt;
+                  &lt;li&gt;item: “Pizza”&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I hope you see the pattern now. &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt; always contain &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt; can contain &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;What makes it better than Firebase DB?&lt;/p&gt;
+
+&lt;p&gt;Well, whenever you reference to collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer&lt;/code&gt;”).document(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Jane&lt;/code&gt;”), you won’t be including &lt;code class=&quot;highlighter-rouge&quot;&gt;Orders&lt;/code&gt; in your read. Thereby, reducing the load. I guess you can say it’s faster this way. You only get to access the &lt;code class=&quot;highlighter-rouge&quot;&gt;address&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;age&lt;/code&gt; of Jane. If you want to get her orders as well, then reference to collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer&lt;/code&gt;”).document(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Jane&lt;/code&gt;”).collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Orders&lt;/code&gt;”). You can loop through all her orders thereafter.&lt;/p&gt;
+
+&lt;p&gt;No matter how deep your tree becomes with Firestore, you won’t be able to directly access its sub collections and that cuts down a lot of loading time and heaviness.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="firestore" /><category term="firebase" /><category term="database" /><category term="collections" /><category term="documents" /><category term="Xcode" /><category term="swift" /><summary type="html">This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/update.jpg" /></entry><entry><title type="html">Using Cloud Functions To Create Remote Notifications With Firebase And Swift5</title><link href="http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/" rel="alternate" type="text/html" title="Using Cloud Functions To Create Remote Notifications With Firebase And Swift5" /><published>2019-10-01T00:00:00+08:00</published><updated>2019-10-01T00:00:00+08:00</updated><id>http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5</id><content type="html" xml:base="http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">&lt;p&gt;This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already have the GoogleService-Info.plist in your Xcode project. It is important because it contains your bundle identifier. Without Firebase knowing your bundle identifier, you can’t proceed to enabling the Cloud messaging. We’re not doing what’s in the picture. It’s just a formality.&lt;/p&gt;
 
 &lt;p&gt;Install this pod libraries first in addition to your preinstalled libraries with Firebase.&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pod 'Firebase/Analytics'
@@ -427,236 +494,4 @@ source ~/.bash_profile
 bundle exec jekyll serve --watch
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;If you run it and everything goes smoothly, try opening &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:4000/admin&lt;/code&gt; on your browser. That’s how you’ll know if it works. And if it does, you may close the &lt;code class=&quot;highlighter-rouge&quot;&gt;Automator&lt;/code&gt; and it’ll ask you to save the script. Save it as Application to your preferred directory. If you ever need to access the admin dashboard of your blog, just double-click like you would on a normal app. You might be surprised. This also works for pushing all your changes to github.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="jekyll-manager" /><category term="jekyll-admin" /><category term="blog" /><category term="dashboard" /><category term="admin" /><category term="grammarly" /><summary type="html">I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s more intuitive. I am wrong. However, the upgrades done in jekyll-manager isn’t really all that drastic. They still haven’t got a fix for when selecting the image metadata. It is still http://localhost:4000/blog/assets/images/…jpg when I select an image from the static files. I wonder why they haven’t dealt this yet. This should have been the turning point of their fork. Instead, a few UI changes have been made. Some, impressive.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" /></entry><entry><title type="html">Eureka LocationRow</title><link href="http://localhost:4000/blog/eureka-locationrow/" rel="alternate" type="text/html" title="Eureka LocationRow" /><published>2019-09-29T00:00:00+08:00</published><updated>2019-09-29T00:00:00+08:00</updated><id>http://localhost:4000/blog/eureka-locationrow</id><content type="html" xml:base="http://localhost:4000/blog/eureka-locationrow/">&lt;p&gt;If you’re a newbie on this, you might not actually figure this out quick. Apparently, it’s only a quick tour to the example project in Eureka. Particularly in &lt;a href=&quot;https://github.com/xmartlabs/Eureka/blob/master/Example/Example/CustomCells.swift&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CustomCells.swift&lt;/code&gt;&lt;/a&gt;. Just create a file and copy the last code below or from the link if the repository gets updated.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;&amp;lt;&amp;lt; LocationRow(){
-                $0.title = &quot;Location&quot;
-                $0.value = CLLocation(latitude: latitude, longitude: longitude)
-                $0.tag = &quot;location&quot;
-                $0.validationOptions = .validatesOnChange //2
-                $0.cellUpdate { (cell, row) in //3
-                    if !row.isValid {
-                        cell.textLabel?.textColor = .red
-                    } else {
-                        let lastLocation = row.value
-                        let geocoder = CLGeocoder()
-                        geocoder.reverseGeocodeLocation(lastLocation!,
-                            completionHandler: { (placemarks, error) in
-                                if error == nil {
-                                    let place = placemarks![0]
-                                    var adressString : String = &quot;&quot;
-                                    if place.thoroughfare != nil {
-                                        adressString = adressString + place.thoroughfare! + &quot;, &quot;
-                                    }
-                                    if place.subThoroughfare != nil {
-                                        adressString = adressString + place.subThoroughfare! + &quot; &quot;
-                                    }
-                                    if place.locality != nil {
-                                        adressString = adressString + place.locality! + &quot; - &quot;
-                                    }
-                                    if place.postalCode != nil {
-                                        adressString = adressString + place.postalCode! + &quot; &quot;
-                                    }
-                                    if place.subAdministrativeArea != nil {
-                                        adressString = adressString + place.subAdministrativeArea! + &quot; - &quot;
-                                    }
-                                    if place.country != nil {
-                                        adressString = adressString + place.country!
-                                    }
-                                    
-                                    self.address = adressString.trimmingCharacters(in: .whitespacesAndNewlines)
-                                }
-                        })
-                    }
-                }
-            }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The code above is how I implemented LocationRow in my form. You’ll see from here that I used a&lt;code class=&quot;highlighter-rouge&quot;&gt; Geocoder&lt;/code&gt; in order to formulate an address string from the coordinates selected to a variable in the ViewController called &lt;code class=&quot;highlighter-rouge&quot;&gt;address&lt;/code&gt;.  If you don’t need this feature, just get rid of what’s after &lt;code class=&quot;highlighter-rouge&quot;&gt;else&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import Foundation
-import UIKit
-import MapKit
-import Eureka
-
-//MARK: LocationRow
-public final class LocationRow: OptionsRow&amp;lt;PushSelectorCell&amp;lt;CLLocation&amp;gt;&amp;gt;, PresenterRowType, RowType {
-    
-    public typealias PresenterRow = MapViewController
-    
-    /// Defines how the view controller will be presented, pushed, etc.
-    public var presentationMode: PresentationMode&amp;lt;PresenterRow&amp;gt;?
-    
-    /// Will be called before the presentation occurs.
-    public var onPresentCallback: ((FormViewController, PresenterRow) -&amp;gt; Void)?
-    
-    public required init(tag: String?) {
-        super.init(tag: tag)
-        presentationMode = .show(controllerProvider: ControllerProvider.callback { return MapViewController(){ _ in } }, onDismiss: { vc in _ = vc.navigationController?.popViewController(animated: true) })
-        
-        displayValueFor = {
-            guard let location = $0 else { return &quot;&quot; }
-            let fmt = NumberFormatter()
-            fmt.maximumFractionDigits = 4
-            fmt.minimumFractionDigits = 4
-            let latitude = fmt.string(from: NSNumber(value: location.coordinate.latitude))!
-            let longitude = fmt.string(from: NSNumber(value: location.coordinate.longitude))!
-            return  &quot;\(latitude), \(longitude)&quot;
-        }
-    }
-    
-    /**
-     Extends `didSelect` method
-     */
-    public override func customDidSelect() {
-        super.customDidSelect()
-        guard let presentationMode = presentationMode, !isDisabled else { return }
-        if let controller = presentationMode.makeController() {
-            controller.row = self
-            controller.title = selectorTitle ?? controller.title
-            onPresentCallback?(cell.formViewController()!, controller)
-            presentationMode.present(controller, row: self, presentingController: self.cell.formViewController()!)
-        } else {
-            presentationMode.present(nil, row: self, presentingController: self.cell.formViewController()!)
-        }
-    }
-    
-    /**
-     Prepares the pushed row setting its title and completion callback.
-     */
-    public override func prepare(for segue: UIStoryboardSegue) {
-        super.prepare(for: segue)
-        guard let rowVC = segue.destination as? PresenterRow else { return }
-        rowVC.title = selectorTitle ?? rowVC.title
-        rowVC.onDismissCallback = presentationMode?.onDismissCallback ?? rowVC.onDismissCallback
-        onPresentCallback?(cell.formViewController()!, rowVC)
-        rowVC.row = self
-    }
-}
-
-public class MapViewController : UIViewController, TypedRowControllerType, MKMapViewDelegate {
-    
-    public var row: RowOf&amp;lt;CLLocation&amp;gt;!
-    public var onDismissCallback: ((UIViewController) -&amp;gt; ())?
-    
-    lazy var mapView : MKMapView = { [unowned self] in
-        let v = MKMapView(frame: self.view.bounds)
-        v.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        return v
-        }()
-    
-    lazy var pinView: UIImageView = { [unowned self] in
-        let v = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        v.image = UIImage(named: &quot;map_pin&quot;, in: Bundle(for: MapViewController.self), compatibleWith: nil)
-        v.image = v.image?.withRenderingMode(.alwaysTemplate)
-        v.tintColor = self.view.tintColor
-        v.backgroundColor = .clear
-        v.clipsToBounds = true
-        v.contentMode = .scaleAspectFit
-        v.isUserInteractionEnabled = false
-        return v
-        }()
-    
-    let width: CGFloat = 10.0
-    let height: CGFloat = 5.0
-    
-    lazy var ellipse: UIBezierPath = { [unowned self] in
-        let ellipse = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: self.width, height: self.height))
-        return ellipse
-        }()
-    
-    
-    lazy var ellipsisLayer: CAShapeLayer = { [unowned self] in
-        let layer = CAShapeLayer()
-        layer.bounds = CGRect(x: 0, y: 0, width: self.width, height: self.height)
-        layer.path = self.ellipse.cgPath
-        layer.fillColor = UIColor.gray.cgColor
-        layer.fillRule = .nonZero
-        layer.lineCap = .butt
-        layer.lineDashPattern = nil
-        layer.lineDashPhase = 0.0
-        layer.lineJoin = .miter
-        layer.lineWidth = 1.0
-        layer.miterLimit = 10.0
-        layer.strokeColor = UIColor.gray.cgColor
-        return layer
-        }()
-    
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    convenience public init(_ callback: ((UIViewController) -&amp;gt; ())?){
-        self.init(nibName: nil, bundle: nil)
-        onDismissCallback = callback
-    }
-    
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        view.addSubview(mapView)
-        
-        mapView.delegate = self
-        mapView.addSubview(pinView)
-        mapView.layer.insertSublayer(ellipsisLayer, below: pinView.layer)
-        
-        let button = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(MapViewController.tappedDone(_:)))
-        button.title = &quot;Done&quot;
-        navigationItem.rightBarButtonItem = button
-        
-        if let value = row.value {
-            let region = MKCoordinateRegion(center: value.coordinate, latitudinalMeters: 400, longitudinalMeters: 400)
-            mapView.setRegion(region, animated: true)
-        }
-        else{
-            mapView.showsUserLocation = true
-        }
-        updateTitle()
-        
-    }
-    
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        let center = mapView.convert(mapView.centerCoordinate, toPointTo: pinView)
-        pinView.center = CGPoint(x: center.x, y: center.y - (pinView.bounds.height/2))
-        ellipsisLayer.position = center
-    }
-    
-    
-    @objc func tappedDone(_ sender: UIBarButtonItem){
-        let target = mapView.convert(ellipsisLayer.position, toCoordinateFrom: mapView)
-        row.value = CLLocation(latitude: target.latitude, longitude: target.longitude)
-        onDismissCallback?(self)
-    }
-    
-    func updateTitle(){
-        let fmt = NumberFormatter()
-        fmt.maximumFractionDigits = 4
-        fmt.minimumFractionDigits = 4
-        let latitude = fmt.string(from: NSNumber(value: mapView.centerCoordinate.latitude))!
-        let longitude = fmt.string(from: NSNumber(value: mapView.centerCoordinate.longitude))!
-        title = &quot;\(latitude), \(longitude)&quot;
-    }
-    
-    public func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
-        ellipsisLayer.transform = CATransform3DMakeScale(0.5, 0.5, 1)
-        UIView.animate(withDuration: 0.2, animations: { [weak self] in
-            self?.pinView.center = CGPoint(x: self!.pinView.center.x, y: self!.pinView.center.y - 10)
-        })
-    }
-    
-    public func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        ellipsisLayer.transform = CATransform3DIdentity
-        UIView.animate(withDuration: 0.2, animations: { [weak self] in
-            self?.pinView.center = CGPoint(x: self!.pinView.center.x, y: self!.pinView.center.y + 10)
-        })
-        updateTitle()
-    }
-}
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jules</name></author><category term="featured" /><category term="eureka" /><category term="row" /><category term="location" /><category term="custom" /><category term="cell" /><category term="swift" /><category term="mapkit" /><category term="cllocation" /><summary type="html">If you’re a newbie on this, you might not actually figure this out quick. Apparently, it’s only a quick tour to the example project in Eureka. Particularly in CustomCells.swift. Just create a file and copy the last code below or from the link if the repository gets updated.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/EurekaLocationRow.gif" /></entry></feed>
+&lt;p&gt;If you run it and everything goes smoothly, try opening &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:4000/admin&lt;/code&gt; on your browser. That’s how you’ll know if it works. And if it does, you may close the &lt;code class=&quot;highlighter-rouge&quot;&gt;Automator&lt;/code&gt; and it’ll ask you to save the script. Save it as Application to your preferred directory. If you ever need to access the admin dashboard of your blog, just double-click like you would on a normal app. You might be surprised. This also works for pushing all your changes to github.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="jekyll-manager" /><category term="jekyll-admin" /><category term="blog" /><category term="dashboard" /><category term="admin" /><category term="grammarly" /><summary type="html">I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s more intuitive. I am wrong. However, the upgrades done in jekyll-manager isn’t really all that drastic. They still haven’t got a fix for when selecting the image metadata. It is still http://localhost:4000/blog/assets/images/…jpg when I select an image from the static files. I wonder why they haven’t dealt this yet. This should have been the turning point of their fork. Instead, a few UI changes have been made. Some, impressive.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" /></entry></feed>
