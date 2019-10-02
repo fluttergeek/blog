@@ -33,6 +33,16 @@ Let's create a certificate signing request by going to Keychain Access.
 2. In this dropdown menu, Certificate Assistant -> `Request a Certificate From a Certificate Authority`
 3. Enter your credentials into the text fields and choose `Save to disk`.
 
+Then go to Apple Developer. For this, you need a paid developer account which costs $99. 
+
+1. Open `Certificates, Identifiers & Profiles`
+2. Navigate to `Identifiers`
+3. Click on the current project you are working on.
+4. Beside the Push Notifications, click `Configure`.
+5. Depending on which environment you are, click `Create Certificate`
+6. `Choose a file` -> Upload the CertificateSigningRequest.certSigningRequest you just created.
+7. Continue and download aps_development.cer.
+
 Once that is done, you will have a .cert file on your desktop. Now let's convert that to .p12. Still, using the Keychain Access.
 
 1. File -> Import Items -> Select your .cert file
@@ -44,14 +54,6 @@ Once that is done, you will have a .cert file on your desktop. Now let's convert
 7. Make sure to export it in .p12 format.
 8. It will then ask you to create a password to protect this certficate. Give it one and click `ok`.
 
-Then go to Apple Developer. For this, you need a paid developer account which costs $99. 
-1. Open `Certificates, Identifiers & Profiles`
-2. Navigate to `Identifiers`
-3. Click on the current project you are working on.
-4. Beside the Push Notifications, click `Configure`.
-5. Depending on which environment you are, click `Create Certificate`
-6. `Choose a file` -> Upload the .p12 cert you just created, then enter the password for this certificate.
-
 In order to test this while under development, you need a Provisioning Profile for development to authorize your devices to run an app that is not yet published on the App Store.
 1.  Open `Certificates, Identifiers & Profiles`
 2.  Select `Profiles`
@@ -62,10 +64,11 @@ In order to test this while under development, you need a Provisioning Profile f
 7.  Select the iOS devices that you want to include in the Provisioning Profile, then click Continue. Make sure to select all the devices you want to use for your testing.
 8.  Name the provisioning profile whatever you want and generate.
 9.  Download the provisioning profile and open it to install.
+10.  If it crashes your Xcode, just go to your Xcode project settings -> Signing & Capabilities -> Disable Automatically Manage Signing -> Import the provisioning profile.
 
-To enable the cloud messaging feature, go to https://console.cloud.google.com/ -> `APIs and Services` -> `+ ENABLE APIS AND SERVICES`-> Search for `Firebase Cloud Messaging API` -> click Enable.
+To enable the cloud messaging feature, go to https://console.cloud.google.com/ -> Search for your Firebase project and select it -> `APIs and Services` -> `+ ENABLE APIS AND SERVICES`-> Search for `Firebase Cloud Messaging API` -> click Enable.
 
-In your Firebase console, navigate to `Project Settings` -> `Cloud Messaging` -> `iOS app configuration` -> `APNs Certificates` -> Upload the `.p12 file` here.
+In your Firebase console, navigate to `Project Settings` -> `Cloud Messaging` -> `iOS app configuration` -> `APNs Certificates` -> Upload the `.p12 file` here, then enter the password for this certificate.
 
 That's all you need for now to allow `Cloud Messaging` on your iOS device. It's like a term for Remote Push Notifications. I was baffled at that at first.
 

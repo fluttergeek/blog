@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-10-02T21:39:27+08:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Why I Prefer Cloud Firestore Than Realtime Database</title><link href="http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/" rel="alternate" type="text/html" title="Why I Prefer Cloud Firestore Than Realtime Database" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database</id><content type="html" xml:base="http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/">&lt;p&gt;This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-10-03T01:34:28+08:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Why I Prefer Cloud Firestore Than Realtime Database</title><link href="http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/" rel="alternate" type="text/html" title="Why I Prefer Cloud Firestore Than Realtime Database" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database</id><content type="html" xml:base="http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/">&lt;p&gt;This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.&lt;/p&gt;
 
 &lt;p&gt;Initially, all I understood was Firebase RD will charge you depending on bandwidth usage, while Firestore will charge on writes and reads. I was intimidated by that. The key is to make the writes and reads as minimal as possible to lessen the cost.&lt;/p&gt;
 
@@ -104,10 +104,14 @@ extension UICollectionView {
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -&amp;gt; Int {
         if orders?.count ?? 0 == 0 {
             collectionView.setEmptyView(title: &quot;You don't have any orders yet.&quot;, message: &quot;Your orders will be in here.&quot;)
+        } else {
+            collectionView.restore()
         }
         return orders?.count ?? 0
-    }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="collection" /><category term="view" /><category term="empty" /><category term="swift" /><category term="table" /><summary type="html">One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez post on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/71823045_2511297908958002_3393944923223883776_n.jpg" /></entry><entry><title type="html">Top 5 Github Pages Portfolio Templates</title><link href="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/" rel="alternate" type="text/html" title="Top 5 Github Pages Portfolio Templates" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/top-5-github-pages-portfolio-templates</id><content type="html" xml:base="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/">&lt;p&gt;As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.&lt;/p&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Restoring&lt;/code&gt; is essential here. You wouldn’t want to have the empty view when your collection view reloads and holds data.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="collection" /><category term="view" /><category term="empty" /><category term="swift" /><category term="table" /><summary type="html">One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez post on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/71823045_2511297908958002_3393944923223883776_n.jpg" /></entry><entry><title type="html">Top 5 Github Pages Portfolio Templates</title><link href="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/" rel="alternate" type="text/html" title="Top 5 Github Pages Portfolio Templates" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/top-5-github-pages-portfolio-templates</id><content type="html" xml:base="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/">&lt;p&gt;As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.&lt;/p&gt;
 
 &lt;h3 id=&quot;1-dev-portfolio&quot;&gt;1. &lt;a href=&quot;https://github.com/RyanFitzgerald/devblog&quot;&gt;Dev Portfolio&lt;/a&gt;&lt;/h3&gt;
 
@@ -170,6 +174,18 @@ pod 'Firebase/Messaging'
   &lt;li&gt;Enter your credentials into the text fields and choose &lt;code class=&quot;highlighter-rouge&quot;&gt;Save to disk&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;p&gt;Then go to Apple Developer. For this, you need a paid developer account which costs $99.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;Certificates, Identifiers &amp;amp; Profiles&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;Identifiers&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Click on the current project you are working on.&lt;/li&gt;
+  &lt;li&gt;Beside the Push Notifications, click &lt;code class=&quot;highlighter-rouge&quot;&gt;Configure&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Depending on which environment you are, click &lt;code class=&quot;highlighter-rouge&quot;&gt;Create Certificate&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Choose a file&lt;/code&gt; -&amp;gt; Upload the CertificateSigningRequest.certSigningRequest you just created.&lt;/li&gt;
+  &lt;li&gt;Continue and download aps_development.cer.&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;p&gt;Once that is done, you will have a .cert file on your desktop. Now let’s convert that to .p12. Still, using the Keychain Access.&lt;/p&gt;
 
 &lt;ol&gt;
@@ -183,16 +199,6 @@ pod 'Firebase/Messaging'
   &lt;li&gt;It will then ask you to create a password to protect this certficate. Give it one and click &lt;code class=&quot;highlighter-rouge&quot;&gt;ok&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Then go to Apple Developer. For this, you need a paid developer account which costs $99.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;Certificates, Identifiers &amp;amp; Profiles&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;Identifiers&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Click on the current project you are working on.&lt;/li&gt;
-  &lt;li&gt;Beside the Push Notifications, click &lt;code class=&quot;highlighter-rouge&quot;&gt;Configure&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Depending on which environment you are, click &lt;code class=&quot;highlighter-rouge&quot;&gt;Create Certificate&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Choose a file&lt;/code&gt; -&amp;gt; Upload the .p12 cert you just created, then enter the password for this certificate.&lt;/li&gt;
-&lt;/ol&gt;
-
 &lt;p&gt;In order to test this while under development, you need a Provisioning Profile for development to authorize your devices to run an app that is not yet published on the App Store.&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;Certificates, Identifiers &amp;amp; Profiles&lt;/code&gt;&lt;/li&gt;
@@ -204,11 +210,12 @@ pod 'Firebase/Messaging'
   &lt;li&gt;Select the iOS devices that you want to include in the Provisioning Profile, then click Continue. Make sure to select all the devices you want to use for your testing.&lt;/li&gt;
   &lt;li&gt;Name the provisioning profile whatever you want and generate.&lt;/li&gt;
   &lt;li&gt;Download the provisioning profile and open it to install.&lt;/li&gt;
+  &lt;li&gt;If it crashes your Xcode, just go to your Xcode project settings -&amp;gt; Signing &amp;amp; Capabilities -&amp;gt; Disable Automatically Manage Signing -&amp;gt; Import the provisioning profile.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;To enable the cloud messaging feature, go to https://console.cloud.google.com/ -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;APIs and Services&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;+ ENABLE APIS AND SERVICES&lt;/code&gt;-&amp;gt; Search for &lt;code class=&quot;highlighter-rouge&quot;&gt;Firebase Cloud Messaging API&lt;/code&gt; -&amp;gt; click Enable.&lt;/p&gt;
+&lt;p&gt;To enable the cloud messaging feature, go to https://console.cloud.google.com/ -&amp;gt; Search for your Firebase project and select it -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;APIs and Services&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;+ ENABLE APIS AND SERVICES&lt;/code&gt;-&amp;gt; Search for &lt;code class=&quot;highlighter-rouge&quot;&gt;Firebase Cloud Messaging API&lt;/code&gt; -&amp;gt; click Enable.&lt;/p&gt;
 
-&lt;p&gt;In your Firebase console, navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;Project Settings&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Cloud Messaging&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;iOS app configuration&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;APNs Certificates&lt;/code&gt; -&amp;gt; Upload the &lt;code class=&quot;highlighter-rouge&quot;&gt;.p12 file&lt;/code&gt; here.&lt;/p&gt;
+&lt;p&gt;In your Firebase console, navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;Project Settings&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Cloud Messaging&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;iOS app configuration&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;APNs Certificates&lt;/code&gt; -&amp;gt; Upload the &lt;code class=&quot;highlighter-rouge&quot;&gt;.p12 file&lt;/code&gt; here, then enter the password for this certificate.&lt;/p&gt;
 
 &lt;p&gt;That’s all you need for now to allow &lt;code class=&quot;highlighter-rouge&quot;&gt;Cloud Messaging&lt;/code&gt; on your iOS device. It’s like a term for Remote Push Notifications. I was baffled at that at first.&lt;/p&gt;
 

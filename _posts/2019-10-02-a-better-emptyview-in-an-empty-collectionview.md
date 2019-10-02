@@ -53,10 +53,13 @@ After extending the UICollectionView, go back to the implementation of your coll
 func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if orders?.count ?? 0 == 0 {
             collectionView.setEmptyView(title: "You don't have any orders yet.", message: "Your orders will be in here.")
+        } else {
+            collectionView.restore()
         }
         return orders?.count ?? 0
-    }
+}
 ```
 
+`Restoring` is essential here. You wouldn't want to have the empty view when your collection view reloads and holds data.
 
 [taha]: https://medium.com/@mtssonmez/handle-empty-tableview-in-swift-4-ios-11-23635d108409

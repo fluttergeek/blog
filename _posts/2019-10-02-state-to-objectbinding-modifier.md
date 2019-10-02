@@ -15,7 +15,6 @@ Notice how Scott changed from `@State` to `@ObjectBinding`. He started discussin
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7sxdhunvSCg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
 ```
 import Combine
 
