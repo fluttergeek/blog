@@ -67,6 +67,6 @@ source ~/.bash_profile
 bundle exec jekyll serve --watch
 ```
 
-If you run it and everything goes smoothly, try opening `localhost:4000/admin` on your browser. That's how you'll know if it works. And if it does, you may close the `Automator` and it'll ask you to save the script. Save it as Application to your preferred directory. If you ever need to access the admin dashboard of your blog, just double-click like you would on a normal app.
+If you run it and everything goes smoothly, try opening `localhost:4000/admin` on your browser. That's how you'll know if it works. And if it does, you may close the `Automator` and it'll ask you to save the script. Save it as Application to your preferred directory. If you ever need to access the admin dashboard of your blog, just double-click like you would on a normal app. You might be surprised. This also works for pushing all your changes to github.
 
 [mundana]: https://github.com/wowthemesnet/mundana-theme-jekyll.git
