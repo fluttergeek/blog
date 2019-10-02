@@ -47,7 +47,7 @@ do {
 }
 ```
 
-Provided that singleDictJSON conforms to the `Food` class then it should not throw an error. However if you remove calories and its value, it will throw an error when decoding it into a `Food` object. If you stick to that, without a calories in the json, then you'd have to make the calories variable in your class optional, as well as the calories in the initializer. If this is the case, then `foodResult.calories` will have a value of nil and will not throw an error if the json does not contain calories.
+Provided that singleDictJSON conforms to the `Food` class then it should not throw an error. However say you removed calories and its value, it will throw an error when decoding it into a `Food` object. If you stick to that, without a calories in the json, then you'd have to make the calories variable in your class optional, as well as the calories in the initializer. If this is the case, then `foodResult.calories` will have a value of nil and will not throw an error if the json does not contain calories.
 
 ```
 let apple = Food(foodName: "Apple", calories: 80)
