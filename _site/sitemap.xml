@@ -37,6 +37,10 @@
 <lastmod>2019-10-02T00:00:00+08:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/blog/top-5-github-pages-portfolio-templates/</loc>
+<lastmod>2019-10-02T00:00:00+08:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/</loc>
 <lastmod>2019-10-02T00:00:00+08:00</lastmod>
 </url>
@@ -117,5 +121,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/blog/tags.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/blog/page2/</loc>
 </url>
 </urlset>
