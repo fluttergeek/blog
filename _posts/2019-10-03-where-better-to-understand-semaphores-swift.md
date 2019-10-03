@@ -1,4 +1,5 @@
 ---
+title: Where Better To Understand Semaphores (Swift)
 image: assets/images/1_7aP7xcLcB6cJ9wySieNNCA.gif
 tags:
 - ''
@@ -12,10 +13,9 @@ tags:
 - central
 - dispatch
 categories: Tutorial Swift
-title: Where Better To Understand Semaphores (Swift)
 ---
 
-Thanks to Roy Kronenfeld's [Medium post][roy] for this explanation.` Let's Build That App` made a brief tutorial on this topic but it was not explained much deeper and I think it's best if all iOS developers dive into the semaphore counters the way Roy did.
+Thanks to Roy Kronenfeld's [Medium post][roy] for this explanation of how to use a semaphore, specifically, utilizing the counter: `let semaphore = DispatchSemaphore(value: 0)`. Another [tutorial][lbat] was made by `Let's Build That App` but semaphore wasn't covered in great detail, and I think it's best if all iOS developers dive into the semaphore counters the way Roy did.
 
 In Roy's tutorial, it's more on semaphore counters. But if you want to see semaphore in action, kindly refer to my [previous post][previous] where it is applied on a `Futures` function.
 
@@ -27,3 +27,4 @@ If you want a more elaborate explanation on how this counting algorithm works, h
 
 [roy]: https://medium.com/@roykronenfeld/semaphores-in-swift-e296ea80f860
 [previous]: /blog/where-to-learn-async-callback-and-futures/
+[lbat]: https://www.youtube.com/watch?v=6rJN_ECd1XM
