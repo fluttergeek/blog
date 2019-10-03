@@ -84,7 +84,14 @@ do {
  
 If this catches an error, it might print something like "Failed to Fetch stuff: statusCode". 
 
-But the most intriguing part of his code is the semaphore. He scheduled the return to execute after the URLSession has finished its task. If there was no semaphore, then his data might return nil. That's because he didn't initialize data when he first created it and it is an optional. With this semaphore superpower, he was able to ask the main thread to wait until a `signal()` has been found in the distant future. URLSession is the async here, and it is making another thread in the background. Once URLSession's task reached til the end of its closure, the signal will ask the main thread to continue. `if let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode > 300` is the next thing after coming back to the main thread, then the `if error != nil`. This way, if no error has been thrown, the `return data` will surely have a value to return, otherwise, it returns nil.
+But the most intriguing part of his code is the semaphore. He scheduled the return to execute after the URLSession has finished its task. If there was no semaphore, then the data? might return nil. That's because he didn't initialize data when he first created it and it is an optional. With this semaphore superpower, he was able to ask the main thread to wait until a `signal()` has been found in the distant future. 
+
+URLSession is the async here, and it is making another thread in the background. Once URLSession's task reached til the end of its closure, the semaphore.signal() will ask the fetchSomethingAsyncAwait() function to continue where it left off. 
+
+`if let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode > 300` is the next thing after coming back to the main thread, then the `if error != nil`. This way, if no error has been thrown, the `return data` will surely have a value to return, otherwise, it returns nil.
+
+To know better about semaphores, check [this][sem] out.
 
 
 [managing]: https://medium.com/ios-os-x-development/managing-async-code-in-swift-d7be44cae89f#targetText=You%20call%20that%20function%20and,resolved%2C%20is%20commonly%20called%20then.
+[sem]: /blog/where-better-to-understand-semaphores-swift/
