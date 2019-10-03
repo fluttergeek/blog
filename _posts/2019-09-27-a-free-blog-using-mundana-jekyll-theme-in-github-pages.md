@@ -54,6 +54,11 @@ then go to `localhost:4000/admin`
 ### Posting
 I catch myself looking at sample posts whenever I create a new post. You might need to if you're not familiar with the jekyll format or on how to use markdown. So, I renamed the `_post` folder to `post` and added `post` to my .gitignore. It's not necessary to create another `_post` folder back, but if you're not using the jekyll-admin or if you're just using a text editor, then you should create it again.
 
+### Creating Pages
+Create your pages in `_pages`, but there's one very important matter to discuss here. You need a permalink meta for every page you make. Otherwise, the url will become `/_pages/your_new_page`.
+
+![permalink](/blog/assets/images/Screen%20Shot%202019-10-04%20at%2012.51.16%20AM.png)
+
 ### Automating
 You might want to lessen the technicality of going through terminal to go to your blog directory and serving jekyll to access admin. You can do this by opening `Automator`. You have this preinstalled on your Mac OS. Create a new `workflow`, then choose to run shell script like so:
 

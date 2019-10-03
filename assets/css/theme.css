@@ -18,6 +18,7 @@ body {
 img {
 	max-width:100%;
 }
+img[alt=legend] { width: 250px; }
 .tofront {
 	position:relative;
 	z-index:1;
