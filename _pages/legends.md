@@ -36,7 +36,7 @@ He's like the all around guy teaching designers how to code and developers how t
 Another great iOS developer tutor. He has only begun to teach SwiftUI since July. His content are superb.
 
 ## 5. [Kyle Lee a.k.a. Kilo Loco][kilo]
-The most entertaining coder you'll see. Head on to his tutorials and you'll see why. He's got merch, podcast, membership to his courses and a YouTuber of course, that's how I found out about him. Heck, that's how I found out about everyone.
+The most entertaining coder you'll see. Head on to his tutorials and you'll see why. He's got merch, podcast, membership to his courses and a YouTuber of course, that's how I found out about him. Heck, that's how I found out about everyone. Not forgetting to mention, his passionate about coding.
 
 [brian]: https://www.youtube.com/channel/UCuP2vJ6kRutQBfRmdcI92mA
 [sean]: https://www.youtube.com/channel/UCbTw29mcP12YlTt1EpUaVJw/featured

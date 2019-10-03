@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-10-04T02:09:56+08:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Where To Learn Async Callback and Futures</title><link href="http://localhost:4000/blog/where-to-learn-async-callback-and-futures/" rel="alternate" type="text/html" title="Where To Learn Async Callback and Futures" /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://localhost:4000/blog/where-to-learn-async-callback-and-futures</id><content type="html" xml:base="http://localhost:4000/blog/where-to-learn-async-callback-and-futures/">&lt;p&gt;One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be digging into. Most of this article is coming from his tutorial and I’ve also included his video in case anyone’s interested.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-10-04T04:05:33+08:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Faster Build Time Xcode From HDD</title><link href="http://localhost:4000/blog/faster-build-time-xcode-from-hdd/" rel="alternate" type="text/html" title="Faster Build Time Xcode From HDD" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/faster-build-time-xcode-from-hdd</id><content type="html" xml:base="http://localhost:4000/blog/faster-build-time-xcode-from-hdd/">&lt;p&gt;I’ve had my Xcode projects in the HDD drive ever since. Today, I transferred them to my SSD thinking it would solve my problem. But yeah, I guess it would load my codes faster since it’s already loading my storyboard faster, but there’s a ton of things that Xcode would launch aside from just your code and whatever you’ve put in your project folder.&lt;/p&gt;
+
+&lt;p&gt;There’s this thing called &lt;code class=&quot;highlighter-rouge&quot;&gt;DerivedData&lt;/code&gt; folder. It is defaultly located in your boot hard drive. It’s the location where Xcode stores all kinds of intermediate build results, generated indexes, etc. DerivedData folder is also infamous for growing up to gargantuan sizes. My latest project alone built up 4.1GB of derived data after I saw my Xcode index and ran build with this project. Horrible! Because my project folder’s contents is only half of that.&lt;/p&gt;
+
+&lt;p&gt;Now that we know where all those extra files are being sent to, the only logical solution is to change the &lt;code class=&quot;highlighter-rouge&quot;&gt;DerivedData&lt;/code&gt; folder over to your SSD, may it be internal or external. This will in turn make the reads and writes, or writes mostly, faster.&lt;/p&gt;</content><author><name>jules</name></author><summary type="html">I’ve had my Xcode projects in the HDD drive ever since. Today, I transferred them to my SSD thinking it would solve my problem. But yeah, I guess it would load my codes faster since it’s already loading my storyboard faster, but there’s a ton of things that Xcode would launch aside from just your code and whatever you’ve put in your project folder.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Pv7si.png" /></entry><entry><title type="html">You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs.</title><link href="http://localhost:4000/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/" rel="alternate" type="text/html" title="You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs." /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://localhost:4000/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs</id><content type="html" xml:base="http://localhost:4000/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/">&lt;p&gt;You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The problem lies with the partition scheme you’ve used. If you’ve set your Disk Utility’s view to &lt;code class=&quot;highlighter-rouge&quot;&gt;Show Only Volumes&lt;/code&gt;, then it would look like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.10.19%20PM.png&quot; alt=&quot;diskutil&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You have no option to choose the partitioning scheme of your choice, but if you set the view to &lt;code class=&quot;highlighter-rouge&quot;&gt;Show All Devices&lt;/code&gt; then you’ll see this option like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.09.23%20PM.png&quot; alt=&quot;diskutil&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Since you want your disk to be bootable, then set your scheme to &lt;code class=&quot;highlighter-rouge&quot;&gt;GUID Partition Map&lt;/code&gt;. If you chose Master Boot Record, you’ll have no EFI volume hence not bootable. You will then be able to fill your new partition with say a Mac OS or Hackintosh.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="carbon" /><category term="copy" /><category term="cloner" /><category term="EFI" /><summary type="html">You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The problem lies with the partition scheme you’ve used. If you’ve set your Disk Utility’s view to Show Only Volumes, then it would look like this:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.07.54%20PM.png" /></entry><entry><title type="html">Where To Learn Async Callback and Futures</title><link href="http://localhost:4000/blog/where-to-learn-async-callback-and-futures/" rel="alternate" type="text/html" title="Where To Learn Async Callback and Futures" /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://localhost:4000/blog/where-to-learn-async-callback-and-futures</id><content type="html" xml:base="http://localhost:4000/blog/where-to-learn-async-callback-and-futures/">&lt;p&gt;One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be digging into. Most of this article is coming from his tutorial and I’ve also included his video in case anyone’s interested.&lt;/p&gt;
 
 &lt;p&gt;Async is concurrent. It does not wait for something to finish for it to start working. When you hear async, think low priority, background, and fetching data. That much I know.&lt;/p&gt;
 
@@ -203,15 +215,7 @@ do {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is familiar, but there’s one tiny difference. We have more than one owner in our json, hence we need an array of &lt;code class=&quot;highlighter-rouge&quot;&gt;Owner&lt;/code&gt; like this &lt;code class=&quot;highlighter-rouge&quot;&gt;[Owner].self&lt;/code&gt;. So that’s how you decode an array.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="codable" /><category term="decode" /><category term="encode" /><category term="SwiftyJSON" /><category term="CodingKeys" /><summary type="html">One of the reasons why you should learn this is, first, because you’re an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let’s look at the code done by Code Pro.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/codable-json-swift-how-to-770x400.jpg" /></entry><entry><title type="html">You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs.</title><link href="http://localhost:4000/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/" rel="alternate" type="text/html" title="You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs." /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://localhost:4000/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs</id><content type="html" xml:base="http://localhost:4000/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/">&lt;p&gt;You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The problem lies with the partition scheme you’ve used. If you’ve set your Disk Utility’s view to &lt;code class=&quot;highlighter-rouge&quot;&gt;Show Only Volumes&lt;/code&gt;, then it would look like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.10.19%20PM.png&quot; alt=&quot;diskutil&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You have no option to choose the partitioning scheme of your choice, but if you set the view to &lt;code class=&quot;highlighter-rouge&quot;&gt;Show All Devices&lt;/code&gt; then you’ll see this option like so:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.09.23%20PM.png&quot; alt=&quot;diskutil&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Since you want your disk to be bootable, then set your scheme to &lt;code class=&quot;highlighter-rouge&quot;&gt;GUID Partition Map&lt;/code&gt;. If you chose Master Boot Record, you’ll have no EFI volume hence not bootable. You will then be able to fill your new partition with say a Mac OS or Hackintosh.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="carbon" /><category term="copy" /><category term="cloner" /><category term="EFI" /><summary type="html">You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The problem lies with the partition scheme you’ve used. If you’ve set your Disk Utility’s view to Show Only Volumes, then it would look like this:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.07.54%20PM.png" /></entry><entry><title type="html">@State to @ObjectBinding Modifier</title><link href="http://localhost:4000/blog/state-to-objectbinding-modifier/" rel="alternate" type="text/html" title="@State to @ObjectBinding Modifier" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/state-to-objectbinding-modifier</id><content type="html" xml:base="http://localhost:4000/blog/state-to-objectbinding-modifier/">&lt;p&gt;Notice how Scott changed from &lt;code class=&quot;highlighter-rouge&quot;&gt;@State&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;@ObjectBinding&lt;/code&gt;. He started discussing BindableObject at 5:17. That’s because you can only use &lt;code class=&quot;highlighter-rouge&quot;&gt;@State&lt;/code&gt; with local properties in the struct view. Let’s see his code one more time.&lt;/p&gt;
+&lt;p&gt;This is familiar, but there’s one tiny difference. We have more than one owner in our json, hence we need an array of &lt;code class=&quot;highlighter-rouge&quot;&gt;Owner&lt;/code&gt; like this &lt;code class=&quot;highlighter-rouge&quot;&gt;[Owner].self&lt;/code&gt;. So that’s how you decode an array.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="codable" /><category term="decode" /><category term="encode" /><category term="SwiftyJSON" /><category term="CodingKeys" /><summary type="html">One of the reasons why you should learn this is, first, because you’re an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let’s look at the code done by Code Pro.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/codable-json-swift-how-to-770x400.jpg" /></entry><entry><title type="html">@State to @ObjectBinding Modifier</title><link href="http://localhost:4000/blog/state-to-objectbinding-modifier/" rel="alternate" type="text/html" title="@State to @ObjectBinding Modifier" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/state-to-objectbinding-modifier</id><content type="html" xml:base="http://localhost:4000/blog/state-to-objectbinding-modifier/">&lt;p&gt;Notice how Scott changed from &lt;code class=&quot;highlighter-rouge&quot;&gt;@State&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;@ObjectBinding&lt;/code&gt;. He started discussing BindableObject at 5:17. That’s because you can only use &lt;code class=&quot;highlighter-rouge&quot;&gt;@State&lt;/code&gt; with local properties in the struct view. Let’s see his code one more time.&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7sxdhunvSCg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
@@ -365,121 +369,4 @@ extension UICollectionView {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Restoring&lt;/code&gt; is essential here. You wouldn’t want to have the empty view when your collection view reloads and holds data.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="collection" /><category term="view" /><category term="empty" /><category term="swift" /><category term="table" /><summary type="html">One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez post on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/71823045_2511297908958002_3393944923223883776_n.jpg" /></entry><entry><title type="html">Using Cloud Functions To Create Remote Notifications With Firebase And Swift5</title><link href="http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/" rel="alternate" type="text/html" title="Using Cloud Functions To Create Remote Notifications With Firebase And Swift5" /><published>2019-10-01T00:00:00+08:00</published><updated>2019-10-01T00:00:00+08:00</updated><id>http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5</id><content type="html" xml:base="http://localhost:4000/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">&lt;p&gt;This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already have the GoogleService-Info.plist in your Xcode project. It is important because it contains your bundle identifier. Without Firebase knowing your bundle identifier, you can’t proceed to enabling the Cloud messaging. We’re not doing what’s in the picture. It’s just a formality.&lt;/p&gt;
-
-&lt;p&gt;Install this pod libraries first in addition to your preinstalled libraries with Firebase.&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pod 'Firebase/Analytics'
-pod 'Firebase/Core'
-pod 'Firebase/Messaging'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In your Xcode project’s signing and capabilities, enable or add capabilities:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Background Modes -&amp;gt; Remote Notifications&lt;/li&gt;
-  &lt;li&gt;Push Notifications&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Let’s create a certificate signing request by going to Keychain Access.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;On the toolbar, click &lt;code class=&quot;highlighter-rouge&quot;&gt;Keychain Access&lt;/code&gt; beside &lt;code class=&quot;highlighter-rouge&quot;&gt;File&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;In this dropdown menu, Certificate Assistant -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Request a Certificate From a Certificate Authority&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Enter your credentials into the text fields and choose &lt;code class=&quot;highlighter-rouge&quot;&gt;Save to disk&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Then go to Apple Developer. For this, you need a paid developer account which costs $99.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;Certificates, Identifiers &amp;amp; Profiles&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;Identifiers&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Click on the current project you are working on.&lt;/li&gt;
-  &lt;li&gt;Beside the Push Notifications, click &lt;code class=&quot;highlighter-rouge&quot;&gt;Configure&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Depending on which environment you are, click &lt;code class=&quot;highlighter-rouge&quot;&gt;Create Certificate&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Choose a file&lt;/code&gt; -&amp;gt; Upload the CertificateSigningRequest.certSigningRequest you just created.&lt;/li&gt;
-  &lt;li&gt;Continue and download aps_development.cer.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Once that is done, you will have a .cert file on your desktop. Now let’s convert that to .p12. Still, using the Keychain Access.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;File -&amp;gt; Import Items -&amp;gt; Select your .cert file&lt;/li&gt;
-  &lt;li&gt;Drag that file to &lt;code class=&quot;highlighter-rouge&quot;&gt;System&lt;/code&gt;, assuming you are in &lt;code class=&quot;highlighter-rouge&quot;&gt;login&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Keychains&lt;/code&gt; sidebar.&lt;/li&gt;
-  &lt;li&gt;Drag it back from &lt;code class=&quot;highlighter-rouge&quot;&gt;System&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;login&lt;/code&gt;. You now have a duplicate, but you’ll only need the most recent.&lt;/li&gt;
-  &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;My Certificates&lt;/code&gt; in the Category.&lt;/li&gt;
-  &lt;li&gt;Select the most recent certificate pertaining to your project, and right-click.&lt;/li&gt;
-  &lt;li&gt;Click Export “Apple Development IOS Push Services: your.project…”&lt;/li&gt;
-  &lt;li&gt;Make sure to export it in .p12 format.&lt;/li&gt;
-  &lt;li&gt;It will then ask you to create a password to protect this certficate. Give it one and click &lt;code class=&quot;highlighter-rouge&quot;&gt;ok&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In order to test this while under development, you need a Provisioning Profile for development to authorize your devices to run an app that is not yet published on the App Store.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;Certificates, Identifiers &amp;amp; Profiles&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;Profiles&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Generate a Profile&lt;/li&gt;
-  &lt;li&gt;Select iOS App Development and continue&lt;/li&gt;
-  &lt;li&gt;Select your App ID and continue&lt;/li&gt;
-  &lt;li&gt;Select the iOS Development certificate of the App ID you have chosen in the previous step, then click Continue.&lt;/li&gt;
-  &lt;li&gt;Select the iOS devices that you want to include in the Provisioning Profile, then click Continue. Make sure to select all the devices you want to use for your testing.&lt;/li&gt;
-  &lt;li&gt;Name the provisioning profile whatever you want and generate.&lt;/li&gt;
-  &lt;li&gt;Download the provisioning profile and open it to install.&lt;/li&gt;
-  &lt;li&gt;If it crashes your Xcode, just go to your Xcode project settings -&amp;gt; Signing &amp;amp; Capabilities -&amp;gt; Disable Automatically Manage Signing -&amp;gt; Import the provisioning profile.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;To enable the cloud messaging feature, go to https://console.cloud.google.com/ -&amp;gt; Search for your Firebase project and select it -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;APIs and Services&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;+ ENABLE APIS AND SERVICES&lt;/code&gt;-&amp;gt; Search for &lt;code class=&quot;highlighter-rouge&quot;&gt;Firebase Cloud Messaging API&lt;/code&gt; -&amp;gt; click Enable.&lt;/p&gt;
-
-&lt;p&gt;In your Firebase console, navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;Project Settings&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Cloud Messaging&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;iOS app configuration&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;APNs Certificates&lt;/code&gt; -&amp;gt; Upload the &lt;code class=&quot;highlighter-rouge&quot;&gt;.p12 file&lt;/code&gt; here, then enter the password for this certificate.&lt;/p&gt;
-
-&lt;p&gt;That’s all you need for now to allow &lt;code class=&quot;highlighter-rouge&quot;&gt;Cloud Messaging&lt;/code&gt; on your iOS device. It’s like a term for Remote Push Notifications. I was baffled at that at first.&lt;/p&gt;
-
-&lt;p&gt;Now this is the part where we detect changes in the firebase database. If you haven’t installed the &lt;a href=&quot;https://firebase.google.com/docs/cli&quot;&gt;firebase CLI&lt;/a&gt; yet, please do so.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Create a directory where you want to put the cloud functions code. In my case, I created &lt;code class=&quot;highlighter-rouge&quot;&gt;triggers&lt;/code&gt; directory under my Xcode project directory. &lt;code class=&quot;highlighter-rouge&quot;&gt;Laundry City/triggers&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;‘cd triggers`&lt;/li&gt;
-  &lt;li&gt;In the terminal, type &lt;code class=&quot;highlighter-rouge&quot;&gt;firebase init functions&lt;/code&gt;, but make sure you’re logged in with firebase cli.&lt;/li&gt;
-  &lt;li&gt;Choose javascript and type &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt; as in yes to any remaining questions from the cli.&lt;/li&gt;
-  &lt;li&gt;Open index.js and create your function such as below:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// index.js
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
-
-admin.initializeApp();
-
-exports.sendNewChangesNotification = functions.database.ref('houses/{house}/items/{item}/').onWrite((change, context) =&amp;gt; {
-
-    var topic = &quot;Serenity&quot;;
-		
-    // A message that contains the notification that devices will receive	
-    var message = {
-      notification: {
-        title: 'New Quantity',
-        body: change.after.val().product + ' now has ' + change.after.val().tentative + ' new items.'
-      }
-    };
-
-    // Using Cloud Messaging to create notification
-    return admin.messaging().sendToTopic(topic, message).then(function (response) {
-        console.log('Successfully sent message:', response);
-        return null;
-    }).catch(function (error) {
-        throw new Error(&quot;Error sending message:&quot;, error);
-    });
-})
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;First thing to note here is, you won’t start your &lt;code class=&quot;highlighter-rouge&quot;&gt;ref&lt;/code&gt; with the Project ID.. Instead, the branch below it. The ones in the brackets are &lt;code class=&quot;highlighter-rouge&quot;&gt;ids&lt;/code&gt;, which varies. This will detect any write or changes happening in that reference. It will catch the changes in the &lt;code class=&quot;highlighter-rouge&quot;&gt;change&lt;/code&gt; parameter. Thereby, allowing access to the new tentative value in &lt;code class=&quot;highlighter-rouge&quot;&gt;change.after.val().tentative&lt;/code&gt; from the reference &lt;code class=&quot;highlighter-rouge&quot;&gt;houses/1/items/2/tentative&lt;/code&gt;. 1 and 2 here are just examples of IDs. &lt;code class=&quot;highlighter-rouge&quot;&gt;sendNewChangesNotification&lt;/code&gt; is just a variable. You can change it however you like.&lt;/p&gt;
-
-&lt;p&gt;When everything is in place, go back to terminal and deploy it with &lt;code class=&quot;highlighter-rouge&quot;&gt;firebase deploy&lt;/code&gt;. Now, you have a listener or a trigger whenever your items have been changed or added.&lt;/p&gt;
-
-&lt;p&gt;Your AppDelegate.swift should look like &lt;a href=&quot;https://github.com/firebase/quickstart-ios/blob/master/messaging/MessagingExampleSwift/AppDelegate.swift&quot;&gt;this&lt;/a&gt;. This firebase sample is as instructed in the &lt;a href=&quot;https://firebase.google.com/docs/cloud-messaging/ios/client&quot;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To send a notification, &lt;code class=&quot;highlighter-rouge&quot;&gt;admin.messaging.send&lt;/code&gt; will do the trick. But you have to provide a &lt;code class=&quot;highlighter-rouge&quot;&gt;token&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;topic&lt;/code&gt;, or a &lt;code class=&quot;highlighter-rouge&quot;&gt;condition&lt;/code&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;Token&lt;/code&gt; is generated by the AppDelegate and is uploaded to Firebase automatically. If you specify a specific token, then only the device with that token will receive the notification. &lt;code class=&quot;highlighter-rouge&quot;&gt;Topic&lt;/code&gt; is what its name suggests. To subscribe to a topic, add this to wherever you need to put in your Xcode project:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Messaging.messaging().subscribe(toTopic: &quot;Serenity&quot;) { error in
-          print(&quot;Subscribed to weather topic&quot;)
-        }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Condition&lt;/code&gt; can be something like you want to send this to notification to subscribers of more than one topic. For example: &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;'Serenity' in topics || 'Manor' in topics&quot;&lt;/code&gt;. Further &lt;a href=&quot;https://firebase.google.com/docs/cloud-messaging/ios/topic-messaging&quot;&gt;documentation&lt;/a&gt; about this.&lt;/p&gt;</content><author><name>jules</name></author><category term="remote" /><category term="notification" /><category term="swift" /><category term="cloud" /><category term="function" /><category term="firebase" /><category term="messaging" /><category term="featured" /><category term="APNs" /><summary type="html">This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already have the GoogleService-Info.plist in your Xcode project. It is important because it contains your bundle identifier. Without Firebase knowing your bundle identifier, you can’t proceed to enabling the Cloud messaging. We’re not doing what’s in the picture. It’s just a formality.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Notifications_Top_2x.png" /></entry></feed>
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Restoring&lt;/code&gt; is essential here. You wouldn’t want to have the empty view when your collection view reloads and holds data.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="collection" /><category term="view" /><category term="empty" /><category term="swift" /><category term="table" /><summary type="html">One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez post on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/71823045_2511297908958002_3393944923223883776_n.jpg" /></entry></feed>
