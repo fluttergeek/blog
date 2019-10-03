@@ -75,7 +75,7 @@ This is a `Future`. You know when you see one because it needs to return somethi
 
 ```
 do {
-    let data = `try` fetchSomethingAsyncAwait(url: "http://google.com")
+    let data = try fetchSomethingAsyncAwait(url: "http://google.com")
 } catch {
     print("Failed to Fetch stuff: ", error)
     return
@@ -86,7 +86,7 @@ If this catches an error, it might print something like "Failed to Fetch stuff: 
 
 But the most intriguing part of his code is the semaphore. He scheduled the return to execute after the URLSession has finished its task. If there was no semaphore, then the data? might return nil. That's because he didn't initialize data when he first created it and it is an optional. With this semaphore superpower, he was able to ask the main thread to wait until a `signal()` has been found in the distant future. 
 
-URLSession is the async here, and it is making another thread in the background. Once URLSession's task reached til the end of its closure, the semaphore.signal() will ask the fetchSomethingAsyncAwait() function to continue where it left off. 
+URLSession is the async here, and it is making another thread in the background. Once URLSession's task reached til the end of its closure, the `semaphore.signal()` will ask the `fetchSomethingAsyncAwait()` function to continue where it left off. 
 
 `if let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode > 300` is the next thing after coming back to the main thread, then the `if error != nil`. This way, if no error has been thrown, the `return data` will surely have a value to return, otherwise, it returns nil.
 
