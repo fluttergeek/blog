@@ -1,18 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-10-04T05:50:45+08:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Faster Build Time Xcode From HDD</title><link href="http://localhost:4000/blog/faster-build-time-xcode-from-hdd/" rel="alternate" type="text/html" title="Faster Build Time Xcode From HDD" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/faster-build-time-xcode-from-hdd</id><content type="html" xml:base="http://localhost:4000/blog/faster-build-time-xcode-from-hdd/">&lt;p&gt;I’ve had my Xcode projects in the HDD drive ever since. Today, I transferred them to my SSD thinking it would solve my problem. But yeah, I guess it would load my codes faster since it’s already loading my storyboard faster, but there’s a ton of things that Xcode would launch aside from just your code and whatever you’ve put in your project folder.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-10-04T21:47:10+08:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Swift: If Let vs. Guard Let</title><link href="http://localhost:4000/blog/swift-if-let-vs-guard-let/" rel="alternate" type="text/html" title="Swift: If Let vs. Guard Let" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/swift-if-let-vs-guard-let</id><content type="html" xml:base="http://localhost:4000/blog/swift-if-let-vs-guard-let/">&lt;p&gt;This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you want a more thorough explanation on this, check out the &lt;a href=&quot;https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html&quot;&gt;Swift Language Guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if john.residence?.printNumberOfRooms() != nil {
+    print(&quot;good&quot;)
+} else {
+    print(&quot;bad&quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Both if and guard checks whether the value of a variable could be nil. They are interchangeable depending on the implementation. Let’s start with the code above. This is a primitive way of checking whether a variable/method is or returns &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;. It is closer to how &lt;code class=&quot;highlighter-rouge&quot;&gt;guard&lt;/code&gt; works than &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if let firstRoomName = john.residence?[0].name {
+    print(firstRoomName)
+} else {
+    print(&quot;bad.&quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It is important to note here that &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt; only allows you to acces the new variable &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; inside the first bracket. That is if  john.residence?[0].name &lt;code class=&quot;highlighter-rouge&quot;&gt;optional&lt;/code&gt; assigns a non-nil value in our new variable.&lt;/p&gt;
+
+&lt;p&gt;Outside this &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt; conditional, &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; cannot be accessed.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;guard let firstRoomName = john.residence?[0].name else {
+    print(&quot;bad.&quot;)
+    return
+}
+
+print(firstRoomName)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;guard let&lt;/code&gt; is just a smart way of making sure a new variable, &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt;, will not be accessible anywhere if it is &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;. If &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; happens to be assigned a &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; value, then “bad” will print and will escape the function where this piece of conditional is located, never allowing to pass &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; to anyone who wants to access its value. The code will not be able to reach the &lt;code class=&quot;highlighter-rouge&quot;&gt;print&lt;/code&gt; line anymore.&lt;/p&gt;
+
+&lt;p&gt;However, if &lt;code class=&quot;highlighter-rouge&quot;&gt;john.residence?[0].name&lt;/code&gt; hold say a string value, then all is good. &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; will now have an unwrapped value of &lt;code class=&quot;highlighter-rouge&quot;&gt;john.residence?[0].name&lt;/code&gt;.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="language" /><summary type="html">This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you want a more thorough explanation on this, check out the Swift Language Guide.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.ytimg.com/vi/P2YZu9MwLaM/maxresdefault.jpg" /></entry><entry><title type="html">Faster Build Time Xcode From HDD</title><link href="http://localhost:4000/blog/faster-build-time-xcode-from-hdd/" rel="alternate" type="text/html" title="Faster Build Time Xcode From HDD" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/faster-build-time-xcode-from-hdd</id><content type="html" xml:base="http://localhost:4000/blog/faster-build-time-xcode-from-hdd/">&lt;p&gt;I’ve had my Xcode projects in the HDD drive ever since. Today, I transferred them to my SSD thinking it would solve my problem. But yeah, I guess it would load my codes faster since it’s already loading my storyboard faster, but there’s a ton of things that Xcode would launch aside from just your code and whatever you’ve put in your project folder.&lt;/p&gt;
 
 &lt;p&gt;There’s this thing called &lt;code class=&quot;highlighter-rouge&quot;&gt;DerivedData&lt;/code&gt; folder. It is defaultly located in your boot hard drive. It’s the location where Xcode stores all kinds of intermediate build results, generated indexes, etc. DerivedData folder is also infamous for growing up to gargantuan sizes. My latest project alone built up 6.33 GB of derived data after I saw my Xcode index and ran build with this project. Horrible! Because my project folder’s contents is only way less than half of that. 2 GB to be exact.&lt;/p&gt;
 
 &lt;p&gt;Now that we know where all those extra files are being sent to, the only logical solution is to change the &lt;code class=&quot;highlighter-rouge&quot;&gt;DerivedData&lt;/code&gt; folder over to your SSD, may it be internal or external. This will in turn make the reads and writes, or writes mostly, faster.&lt;/p&gt;
 
-&lt;p&gt;For more tips about optimizing compilation time, read &lt;a href=&quot;https://codeburst.io/optimizing-compilation-time-for-swift-code-e692376085a6&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>jules</name></author><summary type="html">I’ve had my Xcode projects in the HDD drive ever since. Today, I transferred them to my SSD thinking it would solve my problem. But yeah, I guess it would load my codes faster since it’s already loading my storyboard faster, but there’s a ton of things that Xcode would launch aside from just your code and whatever you’ve put in your project folder.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Pv7si.png" /></entry><entry><title type="html">You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs.</title><link href="http://localhost:4000/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/" rel="alternate" type="text/html" title="You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs." /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://localhost:4000/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs</id><content type="html" xml:base="http://localhost:4000/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/">&lt;p&gt;You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The problem lies with the partition scheme you’ve used. If you’ve set your Disk Utility’s view to &lt;code class=&quot;highlighter-rouge&quot;&gt;Show Only Volumes&lt;/code&gt;, then it would look like this:&lt;/p&gt;
+&lt;p&gt;For more tips about optimizing compilation time, read &lt;a href=&quot;https://codeburst.io/optimizing-compilation-time-for-swift-code-e692376085a6&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>jules</name></author><summary type="html">I’ve had my Xcode projects in the HDD drive ever since. Today, I transferred them to my SSD thinking it would solve my problem. But yeah, I guess it would load my codes faster since it’s already loading my storyboard faster, but there’s a ton of things that Xcode would launch aside from just your code and whatever you’ve put in your project folder.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Pv7si.png" /></entry><entry><title type="html">MapKit Theme Style Overlay Swift 5</title><link href="http://localhost:4000/blog/mapkit-theme-overlay-swift-5/" rel="alternate" type="text/html" title="MapKit Theme Style Overlay Swift 5" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/mapkit-theme-overlay-swift-5</id><content type="html" xml:base="http://localhost:4000/blog/mapkit-theme-overlay-swift-5/">&lt;p&gt;You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, whatever those might be.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.10.19%20PM.png&quot; alt=&quot;diskutil&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;I’ve been looking for a workaround for this for a few months now. I must have overlooked this &lt;a href=&quot;https://medium.com/@ortizfernandomartin/customize-mapkits-mkmapview-with-google-maps-styling-wizard-a5dcc095e19f&quot;&gt;post&lt;/a&gt; on Medium. It’s now an outdated solution, but I found a way for it to work. Thanks to Fernando Martín Ortiz for that &lt;a href=&quot;https://medium.com/@ortizfernandomartin/customize-mapkits-mkmapview-with-google-maps-styling-wizard-a5dcc095e19f&quot;&gt;post&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;You have no option to choose the partitioning scheme of your choice, but if you set the view to &lt;code class=&quot;highlighter-rouge&quot;&gt;Show All Devices&lt;/code&gt; then you’ll see this option like so:&lt;/p&gt;
+&lt;p&gt;There’s this pod, made by Fernando himself, that you need to install.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.09.23%20PM.png&quot; alt=&quot;diskutil&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pod &quot;MapKitGoogleStyler&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Since you want your disk to be bootable, then set your scheme to &lt;code class=&quot;highlighter-rouge&quot;&gt;GUID Partition Map&lt;/code&gt;. If you chose Master Boot Record, you’ll have no EFI volume hence not bootable. You will then be able to fill your new partition with say a Mac OS or Hackintosh.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="carbon" /><category term="copy" /><category term="cloner" /><category term="EFI" /><summary type="html">You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The problem lies with the partition scheme you’ve used. If you’ve set your Disk Utility’s view to Show Only Volumes, then it would look like this:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.07.54%20PM.png" /></entry><entry><title type="html">Where To Learn Async Callback and Futures</title><link href="http://localhost:4000/blog/where-to-learn-async-callback-and-futures/" rel="alternate" type="text/html" title="Where To Learn Async Callback and Futures" /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://localhost:4000/blog/where-to-learn-async-callback-and-futures</id><content type="html" xml:base="http://localhost:4000/blog/where-to-learn-async-callback-and-futures/">&lt;p&gt;One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be digging into. Most of this article is coming from his tutorial and I’ve also included his video in case anyone’s interested.&lt;/p&gt;
+&lt;p&gt;Wherever you’re using the map view, you need to import this library: &lt;code class=&quot;highlighter-rouge&quot;&gt;import MapKitGoogleStyler&lt;/code&gt;. And this is the sample code that contains a single change from Fernando’s view controller that shows the map view.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import UIKit
+import MapKit
+import MapKitGoogleStyler
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        guard let overlayFileURLString = Bundle.main.path(forResource: &quot;overlay&quot;, ofType: &quot;json&quot;) else {
+                return
+        }
+        let overlayFileURL = URL(fileURLWithPath: overlayFileURLString)
+        
+        // After that, you can create the tile overlay using MapKitGoogleStyler
+        guard let tileOverlay = try? MapKitGoogleStyler.buildOverlay(with: overlayFileURL) else {
+            return
+        }
+        
+        // And finally add it to your MKMapView
+        mapView.addOverlay(tileOverlay)
+    }
+
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -&amp;gt; MKOverlayRenderer {
+            // This is the final step. This code can be copied and pasted into your project
+            // without thinking on it so much. It simply instantiates a MKTileOverlayRenderer
+            // for displaying the tile overlay.
+            if let tileOverlay = overlay as? MKTileOverlay {
+                return MKTileOverlayRenderer(tileOverlay: tileOverlay)
+            } else {
+                return MKOverlayRenderer(overlay: overlay)
+            }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You might run into an error because the pod is a bit outdated, but no worries. All you have to do is find that GoogleStyle.swift and replace it with &lt;a href=&quot;https://github.com/iosjunkie/StyleMapKit/blob/master/StyleMapKit/GoogleStyle.swift&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Notice that we need a json file named &lt;code class=&quot;highlighter-rouge&quot;&gt;overlay&lt;/code&gt;. It’s where our theme’s color scheme lies, but make sure you’ve configured the &lt;code class=&quot;highlighter-rouge&quot;&gt;json&lt;/code&gt; file this way. Otherwise, your json will not be found by &lt;code class=&quot;highlighter-rouge&quot;&gt;Bundle.main.path(forResource: &quot;overlay&quot;, ofType: &quot;json&quot;) &lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-04%20at%209.22.14%20PM.png&quot; alt=&quot;json&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You may be wondering, where do I get such theme? Did I make those myself?&lt;/p&gt;
+
+&lt;p&gt;No, silly! I copied that JSON file. There’s actually tons of those themes out there. I just got mine from &lt;a href=&quot;https://snazzymaps.com/style/282895/xemeneies-pou&quot;&gt;Snazzy Maps&lt;/a&gt;.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swift" /><category term="mapkit" /><category term="UIKit" /><category term="mapbox" /><category term="googlemap" /><summary type="html">You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, whatever those might be.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202019-10-04%20at%2020.23.31.png" /></entry><entry><title type="html">Where To Learn Async Callback and Futures</title><link href="http://localhost:4000/blog/where-to-learn-async-callback-and-futures/" rel="alternate" type="text/html" title="Where To Learn Async Callback and Futures" /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://localhost:4000/blog/where-to-learn-async-callback-and-futures</id><content type="html" xml:base="http://localhost:4000/blog/where-to-learn-async-callback-and-futures/">&lt;p&gt;One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be digging into. Most of this article is coming from his tutorial and I’ve also included his video in case anyone’s interested.&lt;/p&gt;
 
 &lt;p&gt;Async is concurrent. It does not wait for something to finish for it to start working. When you hear async, think low priority, background, and fetching data. That much I know.&lt;/p&gt;
 
@@ -217,115 +297,15 @@ do {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is familiar, but there’s one tiny difference. We have more than one owner in our json, hence we need an array of &lt;code class=&quot;highlighter-rouge&quot;&gt;Owner&lt;/code&gt; like this &lt;code class=&quot;highlighter-rouge&quot;&gt;[Owner].self&lt;/code&gt;. So that’s how you decode an array.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="codable" /><category term="decode" /><category term="encode" /><category term="SwiftyJSON" /><category term="CodingKeys" /><summary type="html">One of the reasons why you should learn this is, first, because you’re an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let’s look at the code done by Code Pro.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/codable-json-swift-how-to-770x400.jpg" /></entry><entry><title type="html">@State to @ObjectBinding Modifier</title><link href="http://localhost:4000/blog/state-to-objectbinding-modifier/" rel="alternate" type="text/html" title="@State to @ObjectBinding Modifier" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/state-to-objectbinding-modifier</id><content type="html" xml:base="http://localhost:4000/blog/state-to-objectbinding-modifier/">&lt;p&gt;Notice how Scott changed from &lt;code class=&quot;highlighter-rouge&quot;&gt;@State&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;@ObjectBinding&lt;/code&gt;. He started discussing BindableObject at 5:17. That’s because you can only use &lt;code class=&quot;highlighter-rouge&quot;&gt;@State&lt;/code&gt; with local properties in the struct view. Let’s see his code one more time.&lt;/p&gt;
+&lt;p&gt;This is familiar, but there’s one tiny difference. We have more than one owner in our json, hence we need an array of &lt;code class=&quot;highlighter-rouge&quot;&gt;Owner&lt;/code&gt; like this &lt;code class=&quot;highlighter-rouge&quot;&gt;[Owner].self&lt;/code&gt;. So that’s how you decode an array.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="codable" /><category term="decode" /><category term="encode" /><category term="SwiftyJSON" /><category term="CodingKeys" /><summary type="html">One of the reasons why you should learn this is, first, because you’re an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let’s look at the code done by Code Pro.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/codable-json-swift-how-to-770x400.jpg" /></entry><entry><title type="html">You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs.</title><link href="http://localhost:4000/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/" rel="alternate" type="text/html" title="You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs." /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://localhost:4000/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs</id><content type="html" xml:base="http://localhost:4000/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/">&lt;p&gt;You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The problem lies with the partition scheme you’ve used. If you’ve set your Disk Utility’s view to &lt;code class=&quot;highlighter-rouge&quot;&gt;Show Only Volumes&lt;/code&gt;, then it would look like this:&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7sxdhunvSCg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.10.19%20PM.png&quot; alt=&quot;diskutil&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import Combine
+&lt;p&gt;You have no option to choose the partitioning scheme of your choice, but if you set the view to &lt;code class=&quot;highlighter-rouge&quot;&gt;Show All Devices&lt;/code&gt; then you’ll see this option like so:&lt;/p&gt;
 
-class ListDataSource: BindableObject {
-	var willChange = PassthroughSubject&amp;lt;Void, Never&amp;gt; ()
-	
-	var rowModels = [CustomRowModel] () {
-		willSet {
-			willChange.send()
-		}
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.09.23%20PM.png&quot; alt=&quot;diskutil&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;In this tutorial, that’s all the code we need. Just kidding. There’s one more:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct ContentView: View {
-	@ObjectBinding var datasource = ListDataSource()
-	
-	// to access the rowModels array
-	datasource.rowModels
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Notice here that he used @ObjectBinding instead of @State. If you want a hold of the state of a class, then you must use @ObjectBinding instead and that class should inherit from &lt;code class=&quot;highlighter-rouge&quot;&gt;BindableObject&lt;/code&gt; protocol, which requires that you have a &lt;code class=&quot;highlighter-rouge&quot;&gt;PassthroughSubject&lt;/code&gt;. In order to use &lt;code class=&quot;highlighter-rouge&quot;&gt;PassthroughSubject&lt;/code&gt;, import &lt;code class=&quot;highlighter-rouge&quot;&gt;Combine&lt;/code&gt; first. You can substitude willChange to didChange. Heck, it’s just a variable name. But if you do, also change the &lt;code class=&quot;highlighter-rouge&quot;&gt;willSet&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;didSet&lt;/code&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;willChange.send()&lt;/code&gt; will notify the subscribed view, which in this case is &lt;code class=&quot;highlighter-rouge&quot;&gt;ContentView&lt;/code&gt;, of any changes done to &lt;code class=&quot;highlighter-rouge&quot;&gt;rowModels&lt;/code&gt; array.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="state" /><category term="bindable" /><category term="object" /><category term="@objectbinding" /><category term="swiftui" /><summary type="html">Notice how Scott changed from @State to @ObjectBinding. He started discussing BindableObject at 5:17. That’s because you can only use @State with local properties in the struct view. Let’s see his code one more time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/maxresdefault.jpg" /></entry><entry><title type="html">Top 5 Github Pages Portfolio Templates</title><link href="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/" rel="alternate" type="text/html" title="Top 5 Github Pages Portfolio Templates" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/top-5-github-pages-portfolio-templates</id><content type="html" xml:base="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/">&lt;p&gt;As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.&lt;/p&gt;
-
-&lt;h3 id=&quot;1-dev-portfolio&quot;&gt;1. &lt;a href=&quot;https://github.com/RyanFitzgerald/devblog&quot;&gt;Dev Portfolio&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-02%20at%207.24.31%20AM.png&quot; alt=&quot;dev portfolio&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If I may be so bold to place this as number 1. I’m currently using this template as my portfolio. This repo contains an easy-to-customize personal dev portfolio template that was created with Sass and JavaScript. It is lightweight and fully responsive, as well as comes with the Bootstrap grid system and loaded with Font Awesome. The site is static and comes production ready if you just want to add your information and go. Alternatively, you can edit styles, colours, and scripts fairly easily. The site was built as modular as possible to make it easy to shift around styles and content.&lt;/p&gt;
-
-&lt;h3 id=&quot;demo&quot;&gt;&lt;a href=&quot;https://ryanfitzgerald.github.io/devportfolio/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;2-developer&quot;&gt;2. &lt;a href=&quot;https://github.com/xriley/developer-theme&quot;&gt;Developer&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/free-bootstrap-portfolio-theme-for-web-developers.jpg&quot; alt=&quot;developer&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Developer is a free Bootstrap theme designed to help developers promote their work. It can be used as a professional portal to your other online portfolios or websites (eg. Linkedin, CoderWall, Blog, GitHub etc) in a modular fashion. The theme comes with all of the source SCSS files included so the styling/color can easily be customised to your taste.&lt;/p&gt;
-
-&lt;h3 id=&quot;demo-1&quot;&gt;&lt;a href=&quot;https://themes.3rdwavemedia.com/demo/developer/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;3-single-page-developer-portfolio-template-&quot;&gt;3. &lt;a href=&quot;https://github.com/akkefa/developer-portfolio&quot;&gt;Single Page Developer Portfolio Template &lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-02%20at%207.38.55%20AM.png&quot; alt=&quot;single page&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Complete Resume based portfolio for developers. Developers don’t talk much. Their code does all the talking.&lt;/p&gt;
-
-&lt;h3 id=&quot;demo-2&quot;&gt;&lt;a href=&quot;https://akkefa.com/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;4-plug-and-play-github-portfolio&quot;&gt;4. &lt;a href=&quot;https://github.com/gitshowcase/gitshowcase&quot;&gt;Plug-and-play GitHub portfolio&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg&quot; alt=&quot;gitshowcase&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;GitShowcase is an Open Source project designed to help developers show off their talents.
-If you like the project, you can help by sharing it on social media and giving us a Star on GitHub.&lt;/p&gt;
-
-&lt;h3 id=&quot;demo-3&quot;&gt;&lt;a href=&quot;http://pedrosm.com/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;5-pillar&quot;&gt;5. &lt;a href=&quot;https://github.com/xriley/pillar-theme&quot;&gt;Pillar&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Bootstrap-Resume-CV-Template-Pillar-Pormo.jpg&quot; alt=&quot;pillar&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is not a portfolio, but I couldn’t find another interesting portfolio repository anymore. I just thought this might be noteworthy too. Pillar is a free Bootstrap resume/CV template tailored specifically for developers. The template comes with 6 color schemes and are quick and easy to change via the source SASS files. Built on Bootstrap 4, this template is included in our premium Bootstrap 4 theme Instance. If you are a developer and need to build your online presence, you need to check out the Instance theme as it has all the winning ingredients to get you hired by your potential employers or clients.&lt;/p&gt;
-
-&lt;h3 id=&quot;demo-4&quot;&gt;&lt;a href=&quot;https://themes.3rdwavemedia.com/demo/pillar/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;</content><author><name>jules</name></author><category term="" /><category term="portfolio" /><category term="github" /><category term="pages" /><category term="jekyll" /><category term="developer" /><summary type="html">As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg" /></entry><entry><title type="html">Why I Prefer Cloud Firestore Than Realtime Database</title><link href="http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/" rel="alternate" type="text/html" title="Why I Prefer Cloud Firestore Than Realtime Database" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database</id><content type="html" xml:base="http://localhost:4000/blog/why-i-prefer-cloud-firestore-than-realtime-database/">&lt;p&gt;This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.&lt;/p&gt;
-
-&lt;p&gt;Initially, all I understood was Firebase RD will charge you depending on bandwidth usage, while Firestore will charge on writes and reads. I was intimidated by that. The key is to make the writes and reads as minimal as possible to lessen the cost.&lt;/p&gt;
-
-&lt;p&gt;In my previous personal project, I used Firebase RD. I have a web app for it and iOS app. Both coded by me. I was wondering why it always took so long to read from Firebase. Then I realized, I created a tree structure and whenever I tried to access the root’s value, it grabs all the branches along with it making my succeeding read queries redundant. It loads a very heavy amount of information as my database grew. That’s how I came to a decision to start using Firestore.&lt;/p&gt;
-
-&lt;p&gt;Collections. Documents. You must’ve read those before. It’s confusing, I know. That’s how Firestore works. Think of it this way. &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt; are Folders, and &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt; are files that can contain a pointer to a sub Collection. Documents contain the attributes and its values. Collections only contain Documents.&lt;/p&gt;
-
-&lt;p&gt;For example:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Customer (&lt;code class=&quot;highlighter-rouge&quot;&gt;Collection&lt;/code&gt;)
-    &lt;ul&gt;
-      &lt;li&gt;Jane (&lt;code class=&quot;highlighter-rouge&quot;&gt;Document&lt;/code&gt;)
-        &lt;ul&gt;
-          &lt;li&gt;address: “In the woods”&lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;age: 16&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;Orders (sub &lt;code class=&quot;highlighter-rouge&quot;&gt;Collection&lt;/code&gt;)
-            &lt;ul&gt;
-              &lt;li&gt;2019-1-19 (&lt;code class=&quot;highlighter-rouge&quot;&gt;Document&lt;/code&gt;)
-                &lt;ul&gt;
-                  &lt;li&gt;item: “Pizza”&lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I hope you see the pattern now. &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt; always contain &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;Documents&lt;/code&gt; can contain &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;What makes it better than Firebase DB?&lt;/p&gt;
-
-&lt;p&gt;Well, whenever you reference to collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer&lt;/code&gt;”).document(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Jane&lt;/code&gt;”), you won’t be including &lt;code class=&quot;highlighter-rouge&quot;&gt;Orders&lt;/code&gt; in your read. Thereby, reducing the load. I guess you can say it’s faster this way. You only get to access the &lt;code class=&quot;highlighter-rouge&quot;&gt;address&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;age&lt;/code&gt; of Jane. If you want to get her orders as well, then reference to collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer&lt;/code&gt;”).document(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Jane&lt;/code&gt;”).collection(“&lt;code class=&quot;highlighter-rouge&quot;&gt;Orders&lt;/code&gt;”). You can loop through all her orders thereafter.&lt;/p&gt;
-
-&lt;p&gt;No matter how deep your tree becomes with Firestore, you won’t be able to directly access its sub collections and that cuts down a lot of loading time and heaviness.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="firestore" /><category term="firebase" /><category term="database" /><category term="collections" /><category term="documents" /><category term="Xcode" /><category term="swift" /><summary type="html">This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/update.jpg" /></entry><entry><title type="html">A Better EmptyView In An Empty CollectionView</title><link href="http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview/" rel="alternate" type="text/html" title="A Better EmptyView In An Empty CollectionView" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview</id><content type="html" xml:base="http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview/">&lt;p&gt;One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez &lt;a href=&quot;https://medium.com/@mtssonmez/handle-empty-tableview-in-swift-4-ios-11-23635d108409&quot;&gt;post&lt;/a&gt; on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.&lt;/p&gt;
+&lt;p&gt;Since you want your disk to be bootable, then set your scheme to &lt;code class=&quot;highlighter-rouge&quot;&gt;GUID Partition Map&lt;/code&gt;. If you chose Master Boot Record, you’ll have no EFI volume hence not bootable. You will then be able to fill your new partition with say a Mac OS or Hackintosh.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="carbon" /><category term="copy" /><category term="cloner" /><category term="EFI" /><summary type="html">You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The problem lies with the partition scheme you’ve used. If you’ve set your Disk Utility’s view to Show Only Volumes, then it would look like this:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.07.54%20PM.png" /></entry><entry><title type="html">A Better EmptyView In An Empty CollectionView</title><link href="http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview/" rel="alternate" type="text/html" title="A Better EmptyView In An Empty CollectionView" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview</id><content type="html" xml:base="http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview/">&lt;p&gt;One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez &lt;a href=&quot;https://medium.com/@mtssonmez/handle-empty-tableview-in-swift-4-ios-11-23635d108409&quot;&gt;post&lt;/a&gt; on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// EmptyView.swift
 extension UICollectionView {
@@ -371,4 +351,45 @@ extension UICollectionView {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Restoring&lt;/code&gt; is essential here. You wouldn’t want to have the empty view when your collection view reloads and holds data.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="collection" /><category term="view" /><category term="empty" /><category term="swift" /><category term="table" /><summary type="html">One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez post on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/71823045_2511297908958002_3393944923223883776_n.jpg" /></entry></feed>
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Restoring&lt;/code&gt; is essential here. You wouldn’t want to have the empty view when your collection view reloads and holds data.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="collection" /><category term="view" /><category term="empty" /><category term="swift" /><category term="table" /><summary type="html">One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez post on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/71823045_2511297908958002_3393944923223883776_n.jpg" /></entry><entry><title type="html">Top 5 Github Pages Portfolio Templates</title><link href="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/" rel="alternate" type="text/html" title="Top 5 Github Pages Portfolio Templates" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/top-5-github-pages-portfolio-templates</id><content type="html" xml:base="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/">&lt;p&gt;As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-dev-portfolio&quot;&gt;1. &lt;a href=&quot;https://github.com/RyanFitzgerald/devblog&quot;&gt;Dev Portfolio&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-02%20at%207.24.31%20AM.png&quot; alt=&quot;dev portfolio&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If I may be so bold to place this as number 1. I’m currently using this template as my portfolio. This repo contains an easy-to-customize personal dev portfolio template that was created with Sass and JavaScript. It is lightweight and fully responsive, as well as comes with the Bootstrap grid system and loaded with Font Awesome. The site is static and comes production ready if you just want to add your information and go. Alternatively, you can edit styles, colours, and scripts fairly easily. The site was built as modular as possible to make it easy to shift around styles and content.&lt;/p&gt;
+
+&lt;h3 id=&quot;demo&quot;&gt;&lt;a href=&quot;https://ryanfitzgerald.github.io/devportfolio/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&quot;2-developer&quot;&gt;2. &lt;a href=&quot;https://github.com/xriley/developer-theme&quot;&gt;Developer&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/free-bootstrap-portfolio-theme-for-web-developers.jpg&quot; alt=&quot;developer&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Developer is a free Bootstrap theme designed to help developers promote their work. It can be used as a professional portal to your other online portfolios or websites (eg. Linkedin, CoderWall, Blog, GitHub etc) in a modular fashion. The theme comes with all of the source SCSS files included so the styling/color can easily be customised to your taste.&lt;/p&gt;
+
+&lt;h3 id=&quot;demo-1&quot;&gt;&lt;a href=&quot;https://themes.3rdwavemedia.com/demo/developer/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&quot;3-single-page-developer-portfolio-template-&quot;&gt;3. &lt;a href=&quot;https://github.com/akkefa/developer-portfolio&quot;&gt;Single Page Developer Portfolio Template &lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-02%20at%207.38.55%20AM.png&quot; alt=&quot;single page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Complete Resume based portfolio for developers. Developers don’t talk much. Their code does all the talking.&lt;/p&gt;
+
+&lt;h3 id=&quot;demo-2&quot;&gt;&lt;a href=&quot;https://akkefa.com/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&quot;4-plug-and-play-github-portfolio&quot;&gt;4. &lt;a href=&quot;https://github.com/gitshowcase/gitshowcase&quot;&gt;Plug-and-play GitHub portfolio&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg&quot; alt=&quot;gitshowcase&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;GitShowcase is an Open Source project designed to help developers show off their talents.
+If you like the project, you can help by sharing it on social media and giving us a Star on GitHub.&lt;/p&gt;
+
+&lt;h3 id=&quot;demo-3&quot;&gt;&lt;a href=&quot;http://pedrosm.com/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&quot;5-pillar&quot;&gt;5. &lt;a href=&quot;https://github.com/xriley/pillar-theme&quot;&gt;Pillar&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Bootstrap-Resume-CV-Template-Pillar-Pormo.jpg&quot; alt=&quot;pillar&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is not a portfolio, but I couldn’t find another interesting portfolio repository anymore. I just thought this might be noteworthy too. Pillar is a free Bootstrap resume/CV template tailored specifically for developers. The template comes with 6 color schemes and are quick and easy to change via the source SASS files. Built on Bootstrap 4, this template is included in our premium Bootstrap 4 theme Instance. If you are a developer and need to build your online presence, you need to check out the Instance theme as it has all the winning ingredients to get you hired by your potential employers or clients.&lt;/p&gt;
+
+&lt;h3 id=&quot;demo-4&quot;&gt;&lt;a href=&quot;https://themes.3rdwavemedia.com/demo/pillar/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;</content><author><name>jules</name></author><category term="" /><category term="portfolio" /><category term="github" /><category term="pages" /><category term="jekyll" /><category term="developer" /><summary type="html">As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg" /></entry></feed>
