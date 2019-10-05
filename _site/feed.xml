@@ -1,42 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-10-04T21:47:10+08:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Swift: If Let vs. Guard Let</title><link href="http://localhost:4000/blog/swift-if-let-vs-guard-let/" rel="alternate" type="text/html" title="Swift: If Let vs. Guard Let" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/swift-if-let-vs-guard-let</id><content type="html" xml:base="http://localhost:4000/blog/swift-if-let-vs-guard-let/">&lt;p&gt;This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you want a more thorough explanation on this, check out the &lt;a href=&quot;https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html&quot;&gt;Swift Language Guide&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-10-06T00:28:27+08:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">How Static Is Used</title><link href="http://localhost:4000/blog/how-static-is-used/" rel="alternate" type="text/html" title="How Static Is Used" /><published>2019-10-06T00:00:00+08:00</published><updated>2019-10-06T00:00:00+08:00</updated><id>http://localhost:4000/blog/how-static-is-used</id><content type="html" xml:base="http://localhost:4000/blog/how-static-is-used/">&lt;p&gt;Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if john.residence?.printNumberOfRooms() != nil {
-    print(&quot;good&quot;)
-} else {
-    print(&quot;bad&quot;)
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/s2E5hVxQAZQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;There’s just one hiccup here that might confuse the newbies. Sean used the term &lt;code class=&quot;highlighter-rouge&quot;&gt;Type&lt;/code&gt; and the struct’s name interchangeably.&lt;/p&gt;
+
+&lt;p&gt;Let’s have at it one more time:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct Video {
+    static let creator = &quot;iOS Junkie&quot;
+    
+    var title: String
+    var viewCount: Int
+}
+
+let tutorial = Video(title: &quot;Static&quot;, viewCount: 1000)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;Type&lt;/code&gt; mentioned by Sean is the &lt;code class=&quot;highlighter-rouge&quot;&gt;Video&lt;/code&gt; struct, which owns the creator. Say you access the creator via &lt;code class=&quot;highlighter-rouge&quot;&gt;Video.creator&lt;/code&gt; without creating a &lt;code class=&quot;highlighter-rouge&quot;&gt;Video()&lt;/code&gt; object, then it is a &lt;code class=&quot;highlighter-rouge&quot;&gt;type&lt;/code&gt; and not an &lt;code class=&quot;highlighter-rouge&quot;&gt;instance&lt;/code&gt; like tutorial. &lt;code class=&quot;highlighter-rouge&quot;&gt;tutorial&lt;/code&gt; is assigned an instance of &lt;code class=&quot;highlighter-rouge&quot;&gt;Video()&lt;/code&gt; object.&lt;/p&gt;
+
+&lt;p&gt;If you’re curious whether &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt; can be accessed this like this &lt;code class=&quot;highlighter-rouge&quot;&gt;Video.title&lt;/code&gt;, then no. Even if it is pre-initialized a value, it will give out an error saying: &lt;code class=&quot;highlighter-rouge&quot;&gt;Instance member 'title' cannot be used on type 'Helper'&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You’ll want to use static for a reason like you might not want to create an object to access its properies or methods making it possible to directly access the struct &lt;code class=&quot;highlighter-rouge&quot;&gt;Vlog&lt;/code&gt;’s properties without creating an object. Static can also be applied to a method, which allows you to do something like &lt;code class=&quot;highlighter-rouge&quot;&gt;Video.play()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;It’s also important to note that you can replace the creator’s value just by assigning it a new value this way:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Video.creator = &quot;Sean Allen&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The next time you access &lt;code class=&quot;highlighter-rouge&quot;&gt;Video.creator&lt;/code&gt; or create an object with &lt;code class=&quot;highlighter-rouge&quot;&gt;Video()&lt;/code&gt;, the creator will be &lt;code class=&quot;highlighter-rouge&quot;&gt;Sean Allen&lt;/code&gt; by then.&lt;/p&gt;
+
+&lt;p&gt;Now that we’re talking about static, there’s another way to access computed properties and methods of a construct without making an object. This is from Kilo Loco:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/CV0czLueGeI&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Helper {
+    // Static - allowed in structs and classes
+    static var staticStoredProperty = &quot;Static Stored Property&quot;
+    static var staticComputedProperty: String {
+        return &quot;Static computed property&quot;
+    }
+    
+    static func staticMethod() {
+        print(&quot;Static Method&quot;)
+    }
+    
+    // Class - only allows within classes, not structs
+    class var classComputedProperty: String {
+        return &quot;Class computed property&quot;
+    }
+    
+    class func classMethod() {
+        print(&quot;class method&quot;)
+    }
+}
+
+class SubHelper : Helper {
+    override class var classComputedProperty: String {
+        return &quot;subClassed computed property&quot;
+    }
+    
+    override class func classMethod() {
+        print(&quot;subclassed method&quot;)
+    }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Both if and guard checks whether the value of a variable could be nil. They are interchangeable depending on the implementation. Let’s start with the code above. This is a primitive way of checking whether a variable/method is or returns &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;. It is closer to how &lt;code class=&quot;highlighter-rouge&quot;&gt;guard&lt;/code&gt; works than &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Aside from &lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt;, you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;class&lt;/code&gt; in exchange. No! Not the class construct. I’m talking about class type. It works almost similarly to static. However, you cannot store a property like you would with &lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt;. With &lt;code class=&quot;highlighter-rouge&quot;&gt;class&lt;/code&gt;, you can do something that &lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt; too can’t do. You can override computed properties and methods as you can see inside the the &lt;code class=&quot;highlighter-rouge&quot;&gt;SubHelper&lt;/code&gt; class.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if let firstRoomName = john.residence?[0].name {
-    print(firstRoomName)
-} else {
-    print(&quot;bad.&quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;It is important to note that you cannot use the &lt;code class=&quot;highlighter-rouge&quot;&gt;class&lt;/code&gt; type inside a &lt;code class=&quot;highlighter-rouge&quot;&gt;struct&lt;/code&gt;, only inside classes.&lt;/p&gt;
 
-&lt;p&gt;It is important to note here that &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt; only allows you to acces the new variable &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; inside the first bracket. That is if  john.residence?[0].name &lt;code class=&quot;highlighter-rouge&quot;&gt;optional&lt;/code&gt; assigns a non-nil value in our new variable.&lt;/p&gt;
+&lt;p&gt;These are all valid ways to access properties and methods given the code above:&lt;/p&gt;
 
-&lt;p&gt;Outside this &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt; conditional, &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; cannot be accessed.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Helper.staticStoredProperty
+Helper.staticComputedProperty
+Helper.staticMethod()
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;guard let firstRoomName = john.residence?[0].name else {
-    print(&quot;bad.&quot;)
-    return
-}
+Helper.classComputedProperty
+Helper.classMethod()
 
-print(firstRoomName)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+SubHelper.classComputedProperty
+SubHelper.classMethod()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swift" /><category term="data" /><category term="structure" /><category term="static" /><category term="struct" /><category term="class" /><category term="construct" /><category term="type" /><summary type="html">Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.ytimg.com/vi/s2E5hVxQAZQ/hqdefault.jpg" /></entry><entry><title type="html">Take Your Swift Data Structures Knowledge To The Next Level</title><link href="http://localhost:4000/blog/take-your-swift-data-structures-knowledge-to-the-next-level/" rel="alternate" type="text/html" title="Take Your Swift Data Structures Knowledge To The Next Level" /><published>2019-10-05T00:00:00+08:00</published><updated>2019-10-05T00:00:00+08:00</updated><id>http://localhost:4000/blog/take-your-swift-data-structures-knowledge-to-the-next-level</id><content type="html" xml:base="http://localhost:4000/blog/take-your-swift-data-structures-knowledge-to-the-next-level/">&lt;p&gt;I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen’s Swift News. Though I wouldn’t recommended relying on this alone, in case you need to prepare for an interview, because there are other aspects of iOS development that needs perusing.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;guard let&lt;/code&gt; is just a smart way of making sure a new variable, &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt;, will not be accessible anywhere if it is &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;. If &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; happens to be assigned a &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; value, then “bad” will print and will escape the function where this piece of conditional is located, never allowing to pass &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; to anyone who wants to access its value. The code will not be able to reach the &lt;code class=&quot;highlighter-rouge&quot;&gt;print&lt;/code&gt; line anymore.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/blog/assets/images/Screen%20Shot%202019-10-05%20at%209.26.13%20PM.png&quot; alt=&quot;ray wenderlich&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;However, if &lt;code class=&quot;highlighter-rouge&quot;&gt;john.residence?[0].name&lt;/code&gt; hold say a string value, then all is good. &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; will now have an unwrapped value of &lt;code class=&quot;highlighter-rouge&quot;&gt;john.residence?[0].name&lt;/code&gt;.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="language" /><summary type="html">This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you want a more thorough explanation on this, check out the Swift Language Guide.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.ytimg.com/vi/P2YZu9MwLaM/maxresdefault.jpg" /></entry><entry><title type="html">Faster Build Time Xcode From HDD</title><link href="http://localhost:4000/blog/faster-build-time-xcode-from-hdd/" rel="alternate" type="text/html" title="Faster Build Time Xcode From HDD" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/faster-build-time-xcode-from-hdd</id><content type="html" xml:base="http://localhost:4000/blog/faster-build-time-xcode-from-hdd/">&lt;p&gt;I’ve had my Xcode projects in the HDD drive ever since. Today, I transferred them to my SSD thinking it would solve my problem. But yeah, I guess it would load my codes faster since it’s already loading my storyboard faster, but there’s a ton of things that Xcode would launch aside from just your code and whatever you’ve put in your project folder.&lt;/p&gt;
+&lt;p&gt;I don’t always find Ray Wenderlich’s site a great place to look for tutorials. Some of the contents do baffle me sometimes. Although, it’s still a good place to start learning programming, Swift especially. This resource, &lt;a href=&quot;https://www.raywenderlich.com/762435-swift-interview-questions-and-answers&quot;&gt;Swift Interview Questions and Answers&lt;/a&gt;, is a good find for me though. It’s a good place to start learning or refreshing your knowledge on the most utilized methods of using the Swift language. It’s kind of like a flashcard wherein answers are hidden, then you press the reveal button to get an explanation.&lt;/p&gt;
 
-&lt;p&gt;There’s this thing called &lt;code class=&quot;highlighter-rouge&quot;&gt;DerivedData&lt;/code&gt; folder. It is defaultly located in your boot hard drive. It’s the location where Xcode stores all kinds of intermediate build results, generated indexes, etc. DerivedData folder is also infamous for growing up to gargantuan sizes. My latest project alone built up 6.33 GB of derived data after I saw my Xcode index and ran build with this project. Horrible! Because my project folder’s contents is only way less than half of that. 2 GB to be exact.&lt;/p&gt;
-
-&lt;p&gt;Now that we know where all those extra files are being sent to, the only logical solution is to change the &lt;code class=&quot;highlighter-rouge&quot;&gt;DerivedData&lt;/code&gt; folder over to your SSD, may it be internal or external. This will in turn make the reads and writes, or writes mostly, faster.&lt;/p&gt;
-
-&lt;p&gt;For more tips about optimizing compilation time, read &lt;a href=&quot;https://codeburst.io/optimizing-compilation-time-for-swift-code-e692376085a6&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>jules</name></author><summary type="html">I’ve had my Xcode projects in the HDD drive ever since. Today, I transferred them to my SSD thinking it would solve my problem. But yeah, I guess it would load my codes faster since it’s already loading my storyboard faster, but there’s a ton of things that Xcode would launch aside from just your code and whatever you’ve put in your project folder.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Pv7si.png" /></entry><entry><title type="html">MapKit Theme Style Overlay Swift 5</title><link href="http://localhost:4000/blog/mapkit-theme-overlay-swift-5/" rel="alternate" type="text/html" title="MapKit Theme Style Overlay Swift 5" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/mapkit-theme-overlay-swift-5</id><content type="html" xml:base="http://localhost:4000/blog/mapkit-theme-overlay-swift-5/">&lt;p&gt;You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, whatever those might be.&lt;/p&gt;
+&lt;p&gt;The explanations are superb! It’s not always just a bunch of paragraphs, some have a bunch of examples every step of the way and explained in the simplest-to-understand manner. I mean who needs more explaining when there’s the easy to understand examples. I wish there is a similar resource for &lt;code class=&quot;highlighter-rouge&quot;&gt;GCD&lt;/code&gt; because it is tough for newbies.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="interview" /><category term="questions" /><category term="reference" /><category term="knowledge" /><category term="Xcode" /><category term="iOS" /><summary type="html">I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen’s Swift News. Though I wouldn’t recommended relying on this alone, in case you need to prepare for an interview, because there are other aspects of iOS development that needs perusing.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8GiuB-Wn_sJ6WubFAJbuOx_ArtUmQgrbCqpIj6rl9GFHJZ0m" /></entry><entry><title type="html">MapKit Theme Style Overlay Swift 5</title><link href="http://localhost:4000/blog/mapkit-theme-overlay-swift-5/" rel="alternate" type="text/html" title="MapKit Theme Style Overlay Swift 5" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/mapkit-theme-overlay-swift-5</id><content type="html" xml:base="http://localhost:4000/blog/mapkit-theme-overlay-swift-5/">&lt;p&gt;You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, whatever those might be.&lt;/p&gt;
 
 &lt;p&gt;I’ve been looking for a workaround for this for a few months now. I must have overlooked this &lt;a href=&quot;https://medium.com/@ortizfernandomartin/customize-mapkits-mkmapview-with-google-maps-styling-wizard-a5dcc095e19f&quot;&gt;post&lt;/a&gt; on Medium. It’s now an outdated solution, but I found a way for it to work. Thanks to Fernando Martín Ortiz for that &lt;a href=&quot;https://medium.com/@ortizfernandomartin/customize-mapkits-mkmapview-with-google-maps-styling-wizard-a5dcc095e19f&quot;&gt;post&lt;/a&gt;.&lt;/p&gt;
 
@@ -92,7 +141,45 @@ class ViewController: UIViewController {
 
 &lt;p&gt;You may be wondering, where do I get such theme? Did I make those myself?&lt;/p&gt;
 
-&lt;p&gt;No, silly! I copied that JSON file. There’s actually tons of those themes out there. I just got mine from &lt;a href=&quot;https://snazzymaps.com/style/282895/xemeneies-pou&quot;&gt;Snazzy Maps&lt;/a&gt;.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swift" /><category term="mapkit" /><category term="UIKit" /><category term="mapbox" /><category term="googlemap" /><summary type="html">You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, whatever those might be.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202019-10-04%20at%2020.23.31.png" /></entry><entry><title type="html">Where To Learn Async Callback and Futures</title><link href="http://localhost:4000/blog/where-to-learn-async-callback-and-futures/" rel="alternate" type="text/html" title="Where To Learn Async Callback and Futures" /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://localhost:4000/blog/where-to-learn-async-callback-and-futures</id><content type="html" xml:base="http://localhost:4000/blog/where-to-learn-async-callback-and-futures/">&lt;p&gt;One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be digging into. Most of this article is coming from his tutorial and I’ve also included his video in case anyone’s interested.&lt;/p&gt;
+&lt;p&gt;No, silly! I copied that JSON file. There’s actually tons of those themes out there. I just got mine from &lt;a href=&quot;https://snazzymaps.com/style/282895/xemeneies-pou&quot;&gt;Snazzy Maps&lt;/a&gt;.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swift" /><category term="mapkit" /><category term="UIKit" /><category term="mapbox" /><category term="googlemap" /><summary type="html">You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, whatever those might be.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202019-10-04%20at%2020.23.31.png" /></entry><entry><title type="html">Faster Build Time Xcode From HDD</title><link href="http://localhost:4000/blog/faster-build-time-xcode-from-hdd/" rel="alternate" type="text/html" title="Faster Build Time Xcode From HDD" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/faster-build-time-xcode-from-hdd</id><content type="html" xml:base="http://localhost:4000/blog/faster-build-time-xcode-from-hdd/">&lt;p&gt;I’ve had my Xcode projects in the HDD drive ever since. Today, I transferred them to my SSD thinking it would solve my problem. But yeah, I guess it would load my codes faster since it’s already loading my storyboard faster, but there’s a ton of things that Xcode would launch aside from just your code and whatever you’ve put in your project folder.&lt;/p&gt;
+
+&lt;p&gt;There’s this thing called &lt;code class=&quot;highlighter-rouge&quot;&gt;DerivedData&lt;/code&gt; folder. It is defaultly located in your boot hard drive. It’s the location where Xcode stores all kinds of intermediate build results, generated indexes, etc. DerivedData folder is also infamous for growing up to gargantuan sizes. My latest project alone built up 6.33 GB of derived data after I saw my Xcode index and ran build with this project. Horrible! Because my project folder’s contents is only way less than half of that. 2 GB to be exact.&lt;/p&gt;
+
+&lt;p&gt;Now that we know where all those extra files are being sent to, the only logical solution is to change the &lt;code class=&quot;highlighter-rouge&quot;&gt;DerivedData&lt;/code&gt; folder over to your SSD, may it be internal or external. This will in turn make the reads and writes, or writes mostly, faster.&lt;/p&gt;
+
+&lt;p&gt;For more tips about optimizing compilation time, read &lt;a href=&quot;https://codeburst.io/optimizing-compilation-time-for-swift-code-e692376085a6&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>jules</name></author><summary type="html">I’ve had my Xcode projects in the HDD drive ever since. Today, I transferred them to my SSD thinking it would solve my problem. But yeah, I guess it would load my codes faster since it’s already loading my storyboard faster, but there’s a ton of things that Xcode would launch aside from just your code and whatever you’ve put in your project folder.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Pv7si.png" /></entry><entry><title type="html">Swift: If Let vs. Guard Let</title><link href="http://localhost:4000/blog/swift-if-let-vs-guard-let/" rel="alternate" type="text/html" title="Swift: If Let vs. Guard Let" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/swift-if-let-vs-guard-let</id><content type="html" xml:base="http://localhost:4000/blog/swift-if-let-vs-guard-let/">&lt;p&gt;This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you want a more thorough explanation on this, check out the &lt;a href=&quot;https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html&quot;&gt;Swift Language Guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if john.residence?.printNumberOfRooms() != nil {
+    print(&quot;good&quot;)
+} else {
+    print(&quot;bad&quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Both if and guard checks whether the value of a variable could be nil. They are interchangeable depending on the implementation. Let’s start with the code above. This is a primitive way of checking whether a variable/method is or returns &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;. It is closer to how &lt;code class=&quot;highlighter-rouge&quot;&gt;guard&lt;/code&gt; works than &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if let firstRoomName = john.residence?[0].name {
+    print(firstRoomName)
+} else {
+    print(&quot;bad.&quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It is important to note here that &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt; only allows you to acces the new variable &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; inside the first bracket. That is if  john.residence?[0].name &lt;code class=&quot;highlighter-rouge&quot;&gt;optional&lt;/code&gt; assigns a non-nil value in our new variable.&lt;/p&gt;
+
+&lt;p&gt;Outside this &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt; conditional, &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; cannot be accessed.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;guard let firstRoomName = john.residence?[0].name else {
+    print(&quot;bad.&quot;)
+    return
+}
+
+print(firstRoomName)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;guard let&lt;/code&gt; is just a smart way of making sure a new variable, &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt;, will not be accessible anywhere if it is &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;. If &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; happens to be assigned a &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; value, then “bad” will print and will escape the function where this piece of conditional is located, never allowing to pass &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; to anyone who wants to access its value. The code will not be able to reach the &lt;code class=&quot;highlighter-rouge&quot;&gt;print&lt;/code&gt; line anymore.&lt;/p&gt;
+
+&lt;p&gt;However, if &lt;code class=&quot;highlighter-rouge&quot;&gt;john.residence?[0].name&lt;/code&gt; hold say a string value, then all is good. &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; will now have an unwrapped value of &lt;code class=&quot;highlighter-rouge&quot;&gt;john.residence?[0].name&lt;/code&gt;.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="language" /><summary type="html">This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you want a more thorough explanation on this, check out the Swift Language Guide.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.ytimg.com/vi/P2YZu9MwLaM/maxresdefault.jpg" /></entry><entry><title type="html">Where To Learn Async Callback and Futures</title><link href="http://localhost:4000/blog/where-to-learn-async-callback-and-futures/" rel="alternate" type="text/html" title="Where To Learn Async Callback and Futures" /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://localhost:4000/blog/where-to-learn-async-callback-and-futures</id><content type="html" xml:base="http://localhost:4000/blog/where-to-learn-async-callback-and-futures/">&lt;p&gt;One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be digging into. Most of this article is coming from his tutorial and I’ve also included his video in case anyone’s interested.&lt;/p&gt;
 
 &lt;p&gt;Async is concurrent. It does not wait for something to finish for it to start working. When you hear async, think low priority, background, and fetching data. That much I know.&lt;/p&gt;
 
@@ -305,91 +392,4 @@ do {
 
 &lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.09.23%20PM.png&quot; alt=&quot;diskutil&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Since you want your disk to be bootable, then set your scheme to &lt;code class=&quot;highlighter-rouge&quot;&gt;GUID Partition Map&lt;/code&gt;. If you chose Master Boot Record, you’ll have no EFI volume hence not bootable. You will then be able to fill your new partition with say a Mac OS or Hackintosh.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="carbon" /><category term="copy" /><category term="cloner" /><category term="EFI" /><summary type="html">You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The problem lies with the partition scheme you’ve used. If you’ve set your Disk Utility’s view to Show Only Volumes, then it would look like this:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.07.54%20PM.png" /></entry><entry><title type="html">A Better EmptyView In An Empty CollectionView</title><link href="http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview/" rel="alternate" type="text/html" title="A Better EmptyView In An Empty CollectionView" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview</id><content type="html" xml:base="http://localhost:4000/blog/a-better-emptyview-in-an-empty-collectionview/">&lt;p&gt;One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez &lt;a href=&quot;https://medium.com/@mtssonmez/handle-empty-tableview-in-swift-4-ios-11-23635d108409&quot;&gt;post&lt;/a&gt; on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// EmptyView.swift
-extension UICollectionView {
-    func setEmptyView(title: String, message: String) {
-        let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
-        let titleLabel = UILabel()
-        let messageLabel = UILabel()
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        messageLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.textColor = UIColor.black
-        titleLabel.font = UIFont(name: &quot;HelveticaNeue-Bold&quot;, size: 18)
-        messageLabel.textColor = UIColor.lightGray
-        messageLabel.font = UIFont(name: &quot;HelveticaNeue-Regular&quot;, size: 17)
-        emptyView.addSubview(titleLabel)
-        emptyView.addSubview(messageLabel)
-        titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
-        titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
-        messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
-        messageLabel.leftAnchor.constraint(equalTo: emptyView.leftAnchor, constant: 20).isActive = true
-        messageLabel.rightAnchor.constraint(equalTo: emptyView.rightAnchor, constant: -20).isActive = true
-        titleLabel.text = title
-        messageLabel.text = message
-        messageLabel.numberOfLines = 0
-        messageLabel.textAlignment = .center
-        // The only tricky part is here:
-        self.backgroundView = emptyView
-    }
-    func restore() {
-        self.backgroundView = nil
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;After extending the UICollectionView, go back to the implementation of your collection view. Add this code in your numberOfItemsInSection:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -&amp;gt; Int {
-        if orders?.count ?? 0 == 0 {
-            collectionView.setEmptyView(title: &quot;You don't have any orders yet.&quot;, message: &quot;Your orders will be in here.&quot;)
-        } else {
-            collectionView.restore()
-        }
-        return orders?.count ?? 0
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Restoring&lt;/code&gt; is essential here. You wouldn’t want to have the empty view when your collection view reloads and holds data.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="collection" /><category term="view" /><category term="empty" /><category term="swift" /><category term="table" /><summary type="html">One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez post on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/71823045_2511297908958002_3393944923223883776_n.jpg" /></entry><entry><title type="html">Top 5 Github Pages Portfolio Templates</title><link href="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/" rel="alternate" type="text/html" title="Top 5 Github Pages Portfolio Templates" /><published>2019-10-02T00:00:00+08:00</published><updated>2019-10-02T00:00:00+08:00</updated><id>http://localhost:4000/blog/top-5-github-pages-portfolio-templates</id><content type="html" xml:base="http://localhost:4000/blog/top-5-github-pages-portfolio-templates/">&lt;p&gt;As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.&lt;/p&gt;
-
-&lt;h3 id=&quot;1-dev-portfolio&quot;&gt;1. &lt;a href=&quot;https://github.com/RyanFitzgerald/devblog&quot;&gt;Dev Portfolio&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-02%20at%207.24.31%20AM.png&quot; alt=&quot;dev portfolio&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If I may be so bold to place this as number 1. I’m currently using this template as my portfolio. This repo contains an easy-to-customize personal dev portfolio template that was created with Sass and JavaScript. It is lightweight and fully responsive, as well as comes with the Bootstrap grid system and loaded with Font Awesome. The site is static and comes production ready if you just want to add your information and go. Alternatively, you can edit styles, colours, and scripts fairly easily. The site was built as modular as possible to make it easy to shift around styles and content.&lt;/p&gt;
-
-&lt;h3 id=&quot;demo&quot;&gt;&lt;a href=&quot;https://ryanfitzgerald.github.io/devportfolio/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;2-developer&quot;&gt;2. &lt;a href=&quot;https://github.com/xriley/developer-theme&quot;&gt;Developer&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/free-bootstrap-portfolio-theme-for-web-developers.jpg&quot; alt=&quot;developer&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Developer is a free Bootstrap theme designed to help developers promote their work. It can be used as a professional portal to your other online portfolios or websites (eg. Linkedin, CoderWall, Blog, GitHub etc) in a modular fashion. The theme comes with all of the source SCSS files included so the styling/color can easily be customised to your taste.&lt;/p&gt;
-
-&lt;h3 id=&quot;demo-1&quot;&gt;&lt;a href=&quot;https://themes.3rdwavemedia.com/demo/developer/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;3-single-page-developer-portfolio-template-&quot;&gt;3. &lt;a href=&quot;https://github.com/akkefa/developer-portfolio&quot;&gt;Single Page Developer Portfolio Template &lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-02%20at%207.38.55%20AM.png&quot; alt=&quot;single page&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Complete Resume based portfolio for developers. Developers don’t talk much. Their code does all the talking.&lt;/p&gt;
-
-&lt;h3 id=&quot;demo-2&quot;&gt;&lt;a href=&quot;https://akkefa.com/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;4-plug-and-play-github-portfolio&quot;&gt;4. &lt;a href=&quot;https://github.com/gitshowcase/gitshowcase&quot;&gt;Plug-and-play GitHub portfolio&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg&quot; alt=&quot;gitshowcase&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;GitShowcase is an Open Source project designed to help developers show off their talents.
-If you like the project, you can help by sharing it on social media and giving us a Star on GitHub.&lt;/p&gt;
-
-&lt;h3 id=&quot;demo-3&quot;&gt;&lt;a href=&quot;http://pedrosm.com/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;5-pillar&quot;&gt;5. &lt;a href=&quot;https://github.com/xriley/pillar-theme&quot;&gt;Pillar&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Bootstrap-Resume-CV-Template-Pillar-Pormo.jpg&quot; alt=&quot;pillar&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is not a portfolio, but I couldn’t find another interesting portfolio repository anymore. I just thought this might be noteworthy too. Pillar is a free Bootstrap resume/CV template tailored specifically for developers. The template comes with 6 color schemes and are quick and easy to change via the source SASS files. Built on Bootstrap 4, this template is included in our premium Bootstrap 4 theme Instance. If you are a developer and need to build your online presence, you need to check out the Instance theme as it has all the winning ingredients to get you hired by your potential employers or clients.&lt;/p&gt;
-
-&lt;h3 id=&quot;demo-4&quot;&gt;&lt;a href=&quot;https://themes.3rdwavemedia.com/demo/pillar/&quot;&gt;DEMO&lt;/a&gt;&lt;/h3&gt;</content><author><name>jules</name></author><category term="" /><category term="portfolio" /><category term="github" /><category term="pages" /><category term="jekyll" /><category term="developer" /><summary type="html">As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there’s a link to their repositories. You won’t find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it’s better to see them in all in one place.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg" /></entry></feed>
+&lt;p&gt;Since you want your disk to be bootable, then set your scheme to &lt;code class=&quot;highlighter-rouge&quot;&gt;GUID Partition Map&lt;/code&gt;. If you chose Master Boot Record, you’ll have no EFI volume hence not bootable. You will then be able to fill your new partition with say a Mac OS or Hackintosh.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="carbon" /><category term="copy" /><category term="cloner" /><category term="EFI" /><summary type="html">You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The problem lies with the partition scheme you’ve used. If you’ve set your Disk Utility’s view to Show Only Volumes, then it would look like this:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.07.54%20PM.png" /></entry></feed>
