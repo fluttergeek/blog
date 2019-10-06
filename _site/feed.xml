@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-07T02:07:39+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Sophisticated Way To Use LocationManager Swift 5</title><link href="http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5/" rel="alternate" type="text/html" title="Sophisticated Way To Use LocationManager Swift 5" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5/">&lt;p&gt;This is the most elegant solution I found on how to retrieve location with CoreLocation.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-07T02:46:41+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Sophisticated Way To Use LocationManager Swift 5</title><link href="http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5/" rel="alternate" type="text/html" title="Sophisticated Way To Use LocationManager Swift 5" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5/">&lt;p&gt;This is the most elegant solution I found on how to retrieve location with CoreLocation.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import CoreLocation
 class ViewController: UIViewController {
@@ -112,7 +112,22 @@ class ViewController: UIViewController {
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;If you use &lt;code class=&quot;highlighter-rouge&quot;&gt;requestLocation()&lt;/code&gt;, it will only gather location data once. However, this takes 10 seconds as opposed to &lt;code class=&quot;highlighter-rouge&quot;&gt;startUpdatingLocation()&lt;/code&gt;, which fires immediately.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>jules</name></author><category term="" /><category term="location" /><category term="manager" /><category term="swift" /><category term="data" /><category term="corelocation" /><category term="operation" /><category term="queue" /><summary type="html">This is the most elegant solution I found on how to retrieve location with CoreLocation.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.stack.imgur.com/hDiMB.png" /></entry><entry><title type="html">How Static Is Used</title><link href="http://iosjunkie.com/blog/how-static-is-used/" rel="alternate" type="text/html" title="How Static Is Used" /><published>2019-10-06T00:00:00+08:00</published><updated>2019-10-06T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/how-static-is-used</id><content type="html" xml:base="http://iosjunkie.com/blog/how-static-is-used/">&lt;p&gt;Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial.&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>jules</name></author><category term="" /><category term="location" /><category term="manager" /><category term="swift" /><category term="data" /><category term="corelocation" /><category term="operation" /><category term="queue" /><summary type="html">This is the most elegant solution I found on how to retrieve location with CoreLocation.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.stack.imgur.com/hDiMB.png" /></entry><entry><title type="html">Grand Central Dispatch (GCD): Where To Start Learning</title><link href="http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning/" rel="alternate" type="text/html" title="Grand Central Dispatch (GCD): Where To Start Learning" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning</id><content type="html" xml:base="http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning/">&lt;p&gt;I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;GCD is an API provided by apple to allow you to manage concurrent operations in a smooth way, in order to avoid freezing of your application and keep it always responsive for users. - Jaafar Barek&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hackernoon.com/swift-multi-threading-using-gcd-for-beginners-2581b7aa21cb&quot;&gt;Swift Multi-Threading using GCD For Beginners&lt;/a&gt;. This is just a brief article with great visual aids to simply start off learning DispatchQueue.&lt;/p&gt;
+
+&lt;p&gt;When you’re done with that, hold your breath and dive in two of these lakes. &lt;a href=&quot;https://dev.to/leogdion/asynchronous-multi-threaded-parallel-world-of-swift-4gjh&quot;&gt;Asynchronous Multi-Threaded Parallel World of Swift&lt;/a&gt; and &lt;a href=&quot;https://theswiftdev.com/2018/07/10/ultimate-grand-central-dispatch-tutorial-in-swift/&quot;&gt;Ultimate Grand Central Dispatch tutorial in Swift&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The former will first walk you through processing concepts and many visuals on how to use DispatchQueue, Semaphores, and SwiftUI’s combine in relation to asynchronous operations.&lt;/p&gt;
+
+&lt;p&gt;The latter is almost the same but with less visuals and no &lt;code class=&quot;highlighter-rouge&quot;&gt;combine&lt;/code&gt;. DispatchWorkItem and deadlocks is discussed which isn’t found in the former.&lt;/p&gt;
+
+&lt;p&gt;Both are really valuable resources for learning &lt;code class=&quot;highlighter-rouge&quot;&gt;GCD&lt;/code&gt;. It takes quite a while to grasp this simple concept but with broad applications, so I recommend reading on both to consolidate that chunk of knowledge. It is really intimidating to learn, since most of the time, programmers only usually use &lt;code class=&quot;highlighter-rouge&quot;&gt;background&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;I bet these resources are good for interviews too.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="grand" /><category term="central" /><category term="dispatch" /><category term="dispatchqueue" /><category term="barrier" /><category term="ultimate" /><category term="guide" /><category term="asynchronous" /><category term="operation" /><category term="swiftui" /><category term="combine" /><category term="framework" /><summary type="html">I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no. GCD is an API provided by apple to allow you to manage concurrent operations in a smooth way, in order to avoid freezing of your application and keep it always responsive for users. - Jaafar Barek</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://res.cloudinary.com/practicaldev/image/fetch/s--orob56V4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://learningswift.brightdigit.com/wp-content/uploads/sites/2/2019/09/ParallelConcurrency.001-1024x768.jpeg" /></entry><entry><title type="html">How Static Is Used</title><link href="http://iosjunkie.com/blog/how-static-is-used/" rel="alternate" type="text/html" title="How Static Is Used" /><published>2019-10-06T00:00:00+08:00</published><updated>2019-10-06T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/how-static-is-used</id><content type="html" xml:base="http://iosjunkie.com/blog/how-static-is-used/">&lt;p&gt;Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial.&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/s2E5hVxQAZQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
@@ -199,7 +214,39 @@ SubHelper.classMethod()
 
 &lt;p&gt;I don’t always find Ray Wenderlich’s site a great place to look for tutorials. Some of the contents do baffle me sometimes. Although, it’s still a good place to start learning programming, Swift especially. This resource, &lt;a href=&quot;https://www.raywenderlich.com/762435-swift-interview-questions-and-answers&quot;&gt;Swift Interview Questions and Answers&lt;/a&gt;, is a good find for me though. It’s a good place to start learning or refreshing your knowledge on the most utilized methods of using the Swift language. It’s kind of like a flashcard wherein answers are hidden, then you press the reveal button to get an explanation.&lt;/p&gt;
 
-&lt;p&gt;The explanations are superb! It’s not always just a bunch of paragraphs, some have a bunch of examples every step of the way and explained in the simplest-to-understand manner. I mean who needs more explaining when there’s the easy to understand examples. I wish there is a similar resource for &lt;code class=&quot;highlighter-rouge&quot;&gt;GCD&lt;/code&gt; because it is tough for newbies.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="interview" /><category term="questions" /><category term="reference" /><category term="knowledge" /><category term="Xcode" /><category term="iOS" /><summary type="html">I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen’s Swift News. Though I wouldn’t recommended relying on this alone, in case you need to prepare for an interview, because there are other aspects of iOS development that needs perusing.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8GiuB-Wn_sJ6WubFAJbuOx_ArtUmQgrbCqpIj6rl9GFHJZ0m" /></entry><entry><title type="html">MapKit Theme Style Overlay Swift 5</title><link href="http://iosjunkie.com/blog/mapkit-theme-overlay-swift-5/" rel="alternate" type="text/html" title="MapKit Theme Style Overlay Swift 5" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/mapkit-theme-overlay-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/mapkit-theme-overlay-swift-5/">&lt;p&gt;You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, whatever those might be.&lt;/p&gt;
+&lt;p&gt;The explanations are superb! It’s not always just a bunch of paragraphs, some have a bunch of examples every step of the way and explained in the simplest-to-understand manner. I mean who needs more explaining when there’s the easy to understand examples. I wish there is a similar resource for &lt;code class=&quot;highlighter-rouge&quot;&gt;GCD&lt;/code&gt; because it is tough for newbies.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="interview" /><category term="questions" /><category term="reference" /><category term="knowledge" /><category term="Xcode" /><category term="iOS" /><summary type="html">I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen’s Swift News. Though I wouldn’t recommended relying on this alone, in case you need to prepare for an interview, because there are other aspects of iOS development that needs perusing.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8GiuB-Wn_sJ6WubFAJbuOx_ArtUmQgrbCqpIj6rl9GFHJZ0m" /></entry><entry><title type="html">Swift: If Let vs. Guard Let</title><link href="http://iosjunkie.com/blog/swift-if-let-vs-guard-let/" rel="alternate" type="text/html" title="Swift: If Let vs. Guard Let" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/swift-if-let-vs-guard-let</id><content type="html" xml:base="http://iosjunkie.com/blog/swift-if-let-vs-guard-let/">&lt;p&gt;This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you want a more thorough explanation on this, check out the &lt;a href=&quot;https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html&quot;&gt;Swift Language Guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if john.residence?.printNumberOfRooms() != nil {
+    print(&quot;good&quot;)
+} else {
+    print(&quot;bad&quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Both if and guard checks whether the value of a variable could be nil. They are interchangeable depending on the implementation. Let’s start with the code above. This is a primitive way of checking whether a variable/method is or returns &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;. It is closer to how &lt;code class=&quot;highlighter-rouge&quot;&gt;guard&lt;/code&gt; works than &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if let firstRoomName = john.residence?[0].name {
+    print(firstRoomName)
+} else {
+    print(&quot;bad.&quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It is important to note here that &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt; only allows you to acces the new variable &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; inside the first bracket. That is if  john.residence?[0].name &lt;code class=&quot;highlighter-rouge&quot;&gt;optional&lt;/code&gt; assigns a non-nil value in our new variable.&lt;/p&gt;
+
+&lt;p&gt;Outside this &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt; conditional, &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; cannot be accessed.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;guard let firstRoomName = john.residence?[0].name else {
+    print(&quot;bad.&quot;)
+    return
+}
+
+print(firstRoomName)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;guard let&lt;/code&gt; is just a smart way of making sure a new variable, &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt;, will not be accessible anywhere if it is &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;. If &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; happens to be assigned a &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; value, then “bad” will print and will escape the function where this piece of conditional is located, never allowing to pass &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; to anyone who wants to access its value. The code will not be able to reach the &lt;code class=&quot;highlighter-rouge&quot;&gt;print&lt;/code&gt; line anymore.&lt;/p&gt;
+
+&lt;p&gt;However, if &lt;code class=&quot;highlighter-rouge&quot;&gt;john.residence?[0].name&lt;/code&gt; hold say a string value, then all is good. &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; will now have an unwrapped value of &lt;code class=&quot;highlighter-rouge&quot;&gt;john.residence?[0].name&lt;/code&gt;.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="language" /><summary type="html">This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you want a more thorough explanation on this, check out the Swift Language Guide.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.ytimg.com/vi/P2YZu9MwLaM/maxresdefault.jpg" /></entry><entry><title type="html">MapKit Theme Style Overlay Swift 5</title><link href="http://iosjunkie.com/blog/mapkit-theme-overlay-swift-5/" rel="alternate" type="text/html" title="MapKit Theme Style Overlay Swift 5" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/mapkit-theme-overlay-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/mapkit-theme-overlay-swift-5/">&lt;p&gt;You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, whatever those might be.&lt;/p&gt;
 
 &lt;p&gt;I’ve been looking for a workaround for this for a few months now. I must have overlooked this &lt;a href=&quot;https://medium.com/@ortizfernandomartin/customize-mapkits-mkmapview-with-google-maps-styling-wizard-a5dcc095e19f&quot;&gt;post&lt;/a&gt; on Medium. It’s now an outdated solution, but I found a way for it to work. Thanks to Fernando Martín Ortiz for that &lt;a href=&quot;https://medium.com/@ortizfernandomartin/customize-mapkits-mkmapview-with-google-maps-styling-wizard-a5dcc095e19f&quot;&gt;post&lt;/a&gt;.&lt;/p&gt;
 
@@ -261,39 +308,7 @@ class ViewController: UIViewController {
 
 &lt;p&gt;Now that we know where all those extra files are being sent to, the only logical solution is to change the &lt;code class=&quot;highlighter-rouge&quot;&gt;DerivedData&lt;/code&gt; folder over to your SSD, may it be internal or external. This will in turn make the reads and writes, or writes mostly, faster.&lt;/p&gt;
 
-&lt;p&gt;For more tips about optimizing compilation time, read &lt;a href=&quot;https://codeburst.io/optimizing-compilation-time-for-swift-code-e692376085a6&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>jules</name></author><summary type="html">I’ve had my Xcode projects in the HDD drive ever since. Today, I transferred them to my SSD thinking it would solve my problem. But yeah, I guess it would load my codes faster since it’s already loading my storyboard faster, but there’s a ton of things that Xcode would launch aside from just your code and whatever you’ve put in your project folder.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Pv7si.png" /></entry><entry><title type="html">Swift: If Let vs. Guard Let</title><link href="http://iosjunkie.com/blog/swift-if-let-vs-guard-let/" rel="alternate" type="text/html" title="Swift: If Let vs. Guard Let" /><published>2019-10-04T00:00:00+08:00</published><updated>2019-10-04T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/swift-if-let-vs-guard-let</id><content type="html" xml:base="http://iosjunkie.com/blog/swift-if-let-vs-guard-let/">&lt;p&gt;This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you want a more thorough explanation on this, check out the &lt;a href=&quot;https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html&quot;&gt;Swift Language Guide&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if john.residence?.printNumberOfRooms() != nil {
-    print(&quot;good&quot;)
-} else {
-    print(&quot;bad&quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Both if and guard checks whether the value of a variable could be nil. They are interchangeable depending on the implementation. Let’s start with the code above. This is a primitive way of checking whether a variable/method is or returns &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;. It is closer to how &lt;code class=&quot;highlighter-rouge&quot;&gt;guard&lt;/code&gt; works than &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if let firstRoomName = john.residence?[0].name {
-    print(firstRoomName)
-} else {
-    print(&quot;bad.&quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;It is important to note here that &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt; only allows you to acces the new variable &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; inside the first bracket. That is if  john.residence?[0].name &lt;code class=&quot;highlighter-rouge&quot;&gt;optional&lt;/code&gt; assigns a non-nil value in our new variable.&lt;/p&gt;
-
-&lt;p&gt;Outside this &lt;code class=&quot;highlighter-rouge&quot;&gt;if let&lt;/code&gt; conditional, &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; cannot be accessed.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;guard let firstRoomName = john.residence?[0].name else {
-    print(&quot;bad.&quot;)
-    return
-}
-
-print(firstRoomName)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;guard let&lt;/code&gt; is just a smart way of making sure a new variable, &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt;, will not be accessible anywhere if it is &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;. If &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; happens to be assigned a &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; value, then “bad” will print and will escape the function where this piece of conditional is located, never allowing to pass &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; to anyone who wants to access its value. The code will not be able to reach the &lt;code class=&quot;highlighter-rouge&quot;&gt;print&lt;/code&gt; line anymore.&lt;/p&gt;
-
-&lt;p&gt;However, if &lt;code class=&quot;highlighter-rouge&quot;&gt;john.residence?[0].name&lt;/code&gt; hold say a string value, then all is good. &lt;code class=&quot;highlighter-rouge&quot;&gt;firstRoomName&lt;/code&gt; will now have an unwrapped value of &lt;code class=&quot;highlighter-rouge&quot;&gt;john.residence?[0].name&lt;/code&gt;.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="language" /><summary type="html">This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you want a more thorough explanation on this, check out the Swift Language Guide.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.ytimg.com/vi/P2YZu9MwLaM/maxresdefault.jpg" /></entry><entry><title type="html">Where To Learn Async Callback and Futures</title><link href="http://iosjunkie.com/blog/where-to-learn-async-callback-and-futures/" rel="alternate" type="text/html" title="Where To Learn Async Callback and Futures" /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/where-to-learn-async-callback-and-futures</id><content type="html" xml:base="http://iosjunkie.com/blog/where-to-learn-async-callback-and-futures/">&lt;p&gt;One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be digging into. Most of this article is coming from his tutorial and I’ve also included his video in case anyone’s interested.&lt;/p&gt;
+&lt;p&gt;For more tips about optimizing compilation time, read &lt;a href=&quot;https://codeburst.io/optimizing-compilation-time-for-swift-code-e692376085a6&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>jules</name></author><summary type="html">I’ve had my Xcode projects in the HDD drive ever since. Today, I transferred them to my SSD thinking it would solve my problem. But yeah, I guess it would load my codes faster since it’s already loading my storyboard faster, but there’s a ton of things that Xcode would launch aside from just your code and whatever you’ve put in your project folder.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Pv7si.png" /></entry><entry><title type="html">Where To Learn Async Callback and Futures</title><link href="http://iosjunkie.com/blog/where-to-learn-async-callback-and-futures/" rel="alternate" type="text/html" title="Where To Learn Async Callback and Futures" /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/where-to-learn-async-callback-and-futures</id><content type="html" xml:base="http://iosjunkie.com/blog/where-to-learn-async-callback-and-futures/">&lt;p&gt;One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be digging into. Most of this article is coming from his tutorial and I’ve also included his video in case anyone’s interested.&lt;/p&gt;
 
 &lt;p&gt;Async is concurrent. It does not wait for something to finish for it to start working. When you hear async, think low priority, background, and fetching data. That much I know.&lt;/p&gt;
 
@@ -384,118 +399,4 @@ print(firstRoomName)
 
 &lt;p&gt;Considering Sean’s talk about his dealings in the SwiftUI realm with DesignCode, I’m now interested to see what I could learn and do too, myself. It took him about seven days to finish the course.&lt;/p&gt;
 
-&lt;p&gt;DesignCode’s course can be billed annually for $108, which will not renew automatically. But if you choose to subscribe for one month, it would cost you $15, which will renew monthly. So for me, it doesn’t look like I’m ready to make that commitment yet of taking his course. Maybe I’ll just look for free lessons out there and it’d be wise if you too. Unless you really want to learn the designs and animations part, you might find his course worth every penny.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swiftui" /><category term="swift" /><category term="sean" /><category term="allen" /><category term="youtuber" /><category term="designcode" /><category term="course" /><category term="learn" /><category term="Xcode" /><category term="build" /><category term="bootcamp" /><summary type="html">I’ve seen him talk about how he was hesitant to dive into learning Swift UI. I took his sentiment as my own because I don’t really see why I needed to.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/mqdefault.jpg" /></entry><entry><title type="html">Codable JSON Parsing</title><link href="http://iosjunkie.com/blog/codable-json-parsing/" rel="alternate" type="text/html" title="Codable JSON Parsing" /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/codable-json-parsing</id><content type="html" xml:base="http://iosjunkie.com/blog/codable-json-parsing/">&lt;p&gt;One of the reasons why you should learn this is, first, because you’re an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let’s look at the code done by &lt;a href=&quot;https://www.youtube.com/watch?v=Oj-2s0ALACE&amp;amp;list=WL&amp;amp;index=12&amp;amp;t=481s&quot;&gt;Code Pro&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let singleDictJSON = &quot;&quot;&quot;
-    {
-        &quot;foodName&quot;: &quot;Banana&quot;,
-        &quot;calories&quot;: 100
-    }
-&quot;&quot;&quot;.data(using: .utf8)!
-
-class Food: Codable {
-    let foodName: String
-    let calories: Int
-    
-    init( foodName: String, calories: Int ){
-        self.foodName = foodName
-        self.calories = calories
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We are going to decode the json dictionary above. It is in UTF8 for a reason. That is, it allows us to decode it into an object that is an instance of the class &lt;code class=&quot;highlighter-rouge&quot;&gt;Food&lt;/code&gt;. Another requirement for us to be able decode or encode is to make the class inherit &lt;code class=&quot;highlighter-rouge&quot;&gt;Codable&lt;/code&gt;. Decode is just a fancy way of saying “from json to swift object”.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let foodDecoder = JSONDecoder()
-
-do {
-    let foodResult = try foodDecoder.decode(Food.self, from: singleDictJSON)
-    print(foodResult.foodName)
-    print(foodResult.calories)
-} catch {
-    print(&quot;Failed to decode the food: \(error.localizedDescription)&quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Provided that singleDictJSON conforms to the &lt;code class=&quot;highlighter-rouge&quot;&gt;Food&lt;/code&gt; class then it should not throw an error. However say you removed calories and its value, it will throw an error when decoding it into a &lt;code class=&quot;highlighter-rouge&quot;&gt;Food&lt;/code&gt; object. If you stick to that, without a calories in the json, then you’d have to make the calories variable in your class optional, as well as the calories in the initializer. If this is the case, then &lt;code class=&quot;highlighter-rouge&quot;&gt;foodResult.calories&lt;/code&gt; will have a value of nil and will not throw an error if the json does not contain calories.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let apple = Food(foodName: &quot;Apple&quot;, calories: 80)
-let jsonEncoder = JSONEncoder()
-jsonEncoder.outputFormatting = .prettyPrinted
-
-do {
-    let jsonData = try jsonEncoder.encode(apple)
-    if let jsonString = String(data: jsonData, encoding: .utf8) {
-        print(jsonString)
-    }
-} catch {
-    print(&quot;Failed to decode the food: \(error.localizedDescription)&quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;What you see is just the reverse of the previous code. It’s pretty simple isn’t it? Encode is just another way of saying “from object to json”. &lt;code class=&quot;highlighter-rouge&quot;&gt;.prettyPrinted&lt;/code&gt; is just a writing option that uses white space and indentation to make the output more readable in the console as opposed to a more compact string. If you have no plans on using print on the jsonString, then you don’t have to make it pretty.&lt;/p&gt;
-
-&lt;p&gt;Here’s a more elaborate code, also taken from Code Pro’s &lt;a href=&quot;https://www.youtube.com/watch?v=Oj-2s0ALACE&amp;amp;list=WL&amp;amp;index=12&amp;amp;t=481s&quot;&gt;video tutorial&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let dogOwnerJSONData = &quot;&quot;&quot;
-[
-    {
-        &quot;name&quot;: &quot;Jameson&quot;,
-        &quot;age&quot;: 35,
-        &quot;dogs&quot;: [
-            {
-                &quot;dog_name&quot;: &quot;Bryce&quot;,
-                &quot;breed&quot;: &quot;Pug&quot;,
-                &quot;age&quot;: 7
-            },
-            {
-                &quot;dog_name&quot;: &quot;Furby&quot;,
-                &quot;breed&quot;: &quot;Golden Retriever&quot;,
-                &quot;age&quot;: 2
-            }
-        ]
-    },
-    {
-        &quot;name&quot;: &quot;Liza&quot;,
-        &quot;age&quot;: 30
-    }
-]
-&quot;&quot;&quot;.data(using: .utf8)!
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Woah! That’s a bigger structure with a more complex pattern. Here, one of the owners don’t actually own a dog. Not even one. That’s insane!&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct Dog: Codable {
-    let name: String
-    let breed: String
-    let age: Int
-    
-    private enum CodingKeys: String, CodingKey {
-        case name = &quot;dog_name&quot;
-        case breed
-        case age
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Woah! That’s even more insane. We’re using CodingKeys now to map to each attributes available for this struct. FYI, structs can also inherit from Codable. Why are we doing the CodingKeys enum? Well, that’s because the dog_name in our json isn’t compliant with the struct’s dog’s name attribute. It will throw an error if we don’t do anything about it. If you’re using CodingKeys, you can’t just map just the one with a different key in the json. Like I said, you have to map to each and every attribute in your struct.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct Owner: Codable {
-    let name: String
-    let age: Int
-    let dogs: [Dog]?
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;It’s a bit toned down now. &lt;code class=&quot;highlighter-rouge&quot;&gt;Dogs&lt;/code&gt; is now just an optional and it will do just fine if the owner doesn’t have a dog. No error will throw. It’s imperative to note that &lt;code class=&quot;highlighter-rouge&quot;&gt;dogs&lt;/code&gt; is an array here.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let dogOwnerDecoder = JSONDecoder()
-
-do {
-    let dogOwners = try dogOwnerDecoder.decode([Owner].self, from: dogOwnerJSONData)
-} catch {
-    print(&quot;Failed to decode the dog owners: \(error.localizedDescription)&quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This is familiar, but there’s one tiny difference. We have more than one owner in our json, hence we need an array of &lt;code class=&quot;highlighter-rouge&quot;&gt;Owner&lt;/code&gt; like this &lt;code class=&quot;highlighter-rouge&quot;&gt;[Owner].self&lt;/code&gt;. So that’s how you decode an array.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="codable" /><category term="decode" /><category term="encode" /><category term="SwiftyJSON" /><category term="CodingKeys" /><summary type="html">One of the reasons why you should learn this is, first, because you’re an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let’s look at the code done by Code Pro.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/codable-json-swift-how-to-770x400.jpg" /></entry></feed>
+&lt;p&gt;DesignCode’s course can be billed annually for $108, which will not renew automatically. But if you choose to subscribe for one month, it would cost you $15, which will renew monthly. So for me, it doesn’t look like I’m ready to make that commitment yet of taking his course. Maybe I’ll just look for free lessons out there and it’d be wise if you too. Unless you really want to learn the designs and animations part, you might find his course worth every penny.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swiftui" /><category term="swift" /><category term="sean" /><category term="allen" /><category term="youtuber" /><category term="designcode" /><category term="course" /><category term="learn" /><category term="Xcode" /><category term="build" /><category term="bootcamp" /><summary type="html">I’ve seen him talk about how he was hesitant to dive into learning Swift UI. I took his sentiment as my own because I don’t really see why I needed to.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/mqdefault.jpg" /></entry></feed>
