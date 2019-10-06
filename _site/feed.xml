@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-06T20:33:35+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Test</title><link href="http://iosjunkie.com/blog/test/" rel="alternate" type="text/html" title="Test" /><published>2019-10-06T00:00:00+08:00</published><updated>2019-10-06T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/test</id><content type="html" xml:base="http://iosjunkie.com/blog/test/">&lt;p&gt;Test&lt;/p&gt;</content><author><name>jules</name></author><summary type="html">Test</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/assets/images/Notifications_Top_2x.png" /></entry><entry><title type="html">How Static Is Used</title><link href="http://iosjunkie.com/blog/how-static-is-used/" rel="alternate" type="text/html" title="How Static Is Used" /><published>2019-10-06T00:00:00+08:00</published><updated>2019-10-06T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/how-static-is-used</id><content type="html" xml:base="http://iosjunkie.com/blog/how-static-is-used/">&lt;p&gt;Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-07T02:07:39+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Sophisticated Way To Use LocationManager Swift 5</title><link href="http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5/" rel="alternate" type="text/html" title="Sophisticated Way To Use LocationManager Swift 5" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5/">&lt;p&gt;This is the most elegant solution I found on how to retrieve location with CoreLocation.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import CoreLocation
+class ViewController: UIViewController {
+    
+    private let locationManager = CLLocationManager()
+    private let operationQueue = OperationQueue()
+
+    override func viewDidLoad() {
+		super.viewDidLoad()
+	
+		operationQueue.isSuspended = true
+		runLocationBlock {
+			if let location = self.locationManager.location {
+			}
+		}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;We must create a Location Manager first and foremost.&lt;/li&gt;
+  &lt;li&gt;We created an OperationQueue even though we only have one operation to execute, which is &lt;code class=&quot;highlighter-rouge&quot;&gt;runLocationBlock&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Suspend the operation or pause first to check if we are allowed to request location data.&lt;/li&gt;
+  &lt;li&gt;Whatever is in the &lt;code class=&quot;highlighter-rouge&quot;&gt;runLocationBlock&lt;/code&gt; will only run if &lt;code class=&quot;highlighter-rouge&quot;&gt;operationQueue&lt;/code&gt; is unsuspended but rest assured this function is already running.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;extension ViewController: CLLocationManagerDelegate {
+    private func configureLocationManager() {
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
+				
+        // requestLocation will take 10 seconds to run, but only requests location just once
+        locationManager.requestLocation()
+				
+        // startUpdatingLocation will fire up immediately
+        // locationManager.startUpdatingLocation()
+    }
+		
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(&quot;error&quot;)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        //If we're authorized to use location services, run all operations in the queue
+        // otherwise if we were denied access or restricted or location is not determined, cancel the operations
+				
+        if(status == .authorizedWhenInUse || status == .authorizedAlways) {
+            self.operationQueue.isSuspended = false
+        }else if(status == .denied || status == .restricted || status == .notDetermined){
+            self.operationQueue.cancelAllOperations()
+        }
+    }
+    
+    func runLocationBlock(callback: @escaping () -&amp;gt; ()) {
+        
+        //Get the current authorization status
+        let authState = CLLocationManager.authorizationStatus()
+        
+        //If we have permissions, start executing the commands immediately
+        // otherwise request permission
+        DispatchQueue.main.async {
+            if(authState == .authorizedAlways || authState == .authorizedWhenInUse) {
+                self.configureLocationManager()
+                self.operationQueue.isSuspended = false
+            }else{
+                //Request permission
+                self.locationManager.requestWhenInUseAuthorization()
+            }
+        }
+        
+        //Create a closure with the callback function so we can add it to the operationQueue
+        let block = {
+            DispatchQueue.main.async {
+                callback()
+            }
+        }
+        
+        //Add block to the queue to be executed asynchronously
+        self.operationQueue.addOperation(block)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;runlocationblock&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;RunLocationBlock&lt;/code&gt;&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;We know for one thing that &lt;code class=&quot;highlighter-rouge&quot;&gt;runLocationBlock&lt;/code&gt;’s operations is/are set suspended in the &lt;code class=&quot;highlighter-rouge&quot;&gt;ViewController&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;We want to know the authorization status first.&lt;/li&gt;
+  &lt;li&gt;If we are authorized, then let’s configure the &lt;code class=&quot;highlighter-rouge&quot;&gt;locationManager&lt;/code&gt; second then unsuspend, next, to allow our operationQueue to run all the blocks of operations it cointains.&lt;/li&gt;
+  &lt;li&gt;If we are not authorized, a request will be shown to the user using the app.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;block&lt;/code&gt; will contain the callback, which is whatever you put inside the &lt;code class=&quot;highlighter-rouge&quot;&gt;runLocationBlock { }&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;didchangeauthorization&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;DidChangeAuthorization&lt;/code&gt;&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;This is just like what we’ve seen inside &lt;code class=&quot;highlighter-rouge&quot;&gt;runLocationBlock&lt;/code&gt;, but we don’t request for authorization again. Instead, when denied/restricted or if the location was not determined, then the &lt;code class=&quot;highlighter-rouge&quot;&gt;operationQueue&lt;/code&gt; will not run operations that were added to it.&lt;/li&gt;
+  &lt;li&gt;This is only triggered after &lt;code class=&quot;highlighter-rouge&quot;&gt;self.locationManager.requestWhenInUseAuthorization()&lt;/code&gt; that you have seen inside the &lt;code class=&quot;highlighter-rouge&quot;&gt;RunLocationBlock&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;configurelocationmanager&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ConfigureLocationManager&lt;/code&gt;&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;locationManager.delegate = self&lt;/code&gt; this is the most essential part of setting up our locationManager. This allows our &lt;code class=&quot;highlighter-rouge&quot;&gt;ViewController&lt;/code&gt; to access protocol methods from &lt;code class=&quot;highlighter-rouge&quot;&gt;CLLocationManagerDelegate&lt;/code&gt; like &lt;code class=&quot;highlighter-rouge&quot;&gt;didChangeAuthorization&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;If the desiredAccuracy is not set, its default is &lt;code class=&quot;highlighter-rouge&quot;&gt;kCLLocationAccuracyBest&lt;/code&gt; for iOS/Mac OS. For watchOS, &lt;code class=&quot;highlighter-rouge&quot;&gt;kCLLocationAccuracyHundredMeters&lt;/code&gt;. This is how you want the location data to be as accurate. It is important to note that higher accuracy will require longer time to retrieve location data.
+    &lt;ol&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;kCLLocationAccuracyKilometer &lt;/code&gt; - within a kilometer&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;kCLLocationAccuracyThreeKilometers&lt;/code&gt; -within 3 kilometers. The higher, the better conservation of energy.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;kCLLocationAccuracyBestForNavigation&lt;/code&gt;- usually used in navigation apps. Least energy efficient.
+        &lt;ol&gt;
+          &lt;li&gt;locationManager.activityType = .automotiveNavigation&lt;/li&gt;
+          &lt;li&gt;locationManager.distanceFilter = 0&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;kCLLocationAccuracyNearestTenMeters&lt;/code&gt; - less energy efficient.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If you use &lt;code class=&quot;highlighter-rouge&quot;&gt;requestLocation()&lt;/code&gt;, it will only gather location data once. However, this takes 10 seconds as opposed to &lt;code class=&quot;highlighter-rouge&quot;&gt;startUpdatingLocation()&lt;/code&gt;, which fires immediately.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>jules</name></author><category term="" /><category term="location" /><category term="manager" /><category term="swift" /><category term="data" /><category term="corelocation" /><category term="operation" /><category term="queue" /><summary type="html">This is the most elegant solution I found on how to retrieve location with CoreLocation.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.stack.imgur.com/hDiMB.png" /></entry><entry><title type="html">How Static Is Used</title><link href="http://iosjunkie.com/blog/how-static-is-used/" rel="alternate" type="text/html" title="How Static Is Used" /><published>2019-10-06T00:00:00+08:00</published><updated>2019-10-06T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/how-static-is-used</id><content type="html" xml:base="http://iosjunkie.com/blog/how-static-is-used/">&lt;p&gt;Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial.&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/s2E5hVxQAZQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
