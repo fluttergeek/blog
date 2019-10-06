@@ -3,6 +3,7 @@ description: Demystifying complex instructions, tutorials, and a little bit more
 logo: assets/images/logo.png
 favicon: assets/images/favicon.ico
 baseurl: /blog
+url: http://iosjunkie.com
 disqus: iosjunkie
 email: zoom.flux@gmail.com
 include:
@@ -18,7 +19,7 @@ gem:
 authors:
   jules:
     name: Jules Lee
-    site: 'https://iosjunkie.github.io'
+    site: 'https://iosjunkie.com'
     avatar: /assets/images/avatar1.jpg
     bio: >-
       Hi, I am Jules, the author of iOS Junkie. Demystifying complex instructions
