@@ -11,13 +11,13 @@ tags:
 - messaging
 - featured
 - APNs
-image: assets/images/Notifications_Top_2x.png
+image: https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_709/https://buildfire.com/wp-content/uploads/2018/03/uber.png
 categories: Tutorial Swift Notification
 ---
 
 This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already have the GoogleService-Info.plist in your Xcode project. It is important because it contains your bundle identifier. Without Firebase knowing your bundle identifier, you can't proceed to enable Cloud messaging. 
 
-Let's get this one thing straight. We want to have a Push Notification on our device as a response to a change in the firebase database, and in order to do that, I'm using cloud functions. Cloud functions is a feature of Firebase that allows you to listen to change/s in the firebase database and trigger a response. The response we want is to send a notification. In Firebase's term, cloud messaging. That's a confusing term to interchange with `remote notification`. I know.
+Let's get this one thing straight. Push notification a.ka. Remote notification. We want to have a Push Notification on our device as a response to a change in the firebase database, and in order to do that, I'm using cloud functions. Cloud functions is a feature of Firebase that allows you to listen to change/s in the firebase database and trigger a response. The response we want is to send a notification. In Firebase's term, cloud messaging. That's a confusing term to interchange with `remote notification`. I know.
 
 Install this pod libraries first in addition to your preinstalled libraries with Firebase.
 ```

@@ -1,4 +1,142 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-07T03:26:22+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Sophisticated Way To Use LocationManager Swift 5</title><link href="http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5/" rel="alternate" type="text/html" title="Sophisticated Way To Use LocationManager Swift 5" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5/">&lt;p&gt;This is the most elegant solution I found on how to retrieve location with CoreLocation.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-08T03:38:36+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more on the iOS Swift stuff.</subtitle><entry><title type="html">Basic Implementation of Local Notifications</title><link href="http://iosjunkie.com/blog/basic-implementation-of-local-notifications/" rel="alternate" type="text/html" title="Basic Implementation of Local Notifications" /><published>2019-10-08T00:00:00+08:00</published><updated>2019-10-08T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/basic-implementation-of-local-notifications</id><content type="html" xml:base="http://iosjunkie.com/blog/basic-implementation-of-local-notifications/">&lt;p&gt;Let’s get one thing straight now baby. Local notifications is not the same as &lt;code class=&quot;highlighter-rouge&quot;&gt;Push&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;Remote&lt;/code&gt; notifications. They differ because local notifications don’t need triggers coming from outside the app. Either way, you’ll still need the &lt;code class=&quot;highlighter-rouge&quot;&gt;UNUserNotificationCenter&lt;/code&gt;, and for that, you need to import &lt;code class=&quot;highlighter-rouge&quot;&gt;UserNotifications&lt;/code&gt;. This is usually used in scheduling apps like alarm and todo-list.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// AppDelegate.swift
+import UserNotifications
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -&amp;gt; Bool {
+        // Override point for customization after application launch.
+        
+        if #available(iOS 10.0, *) {
+          // For iOS 10 display notification (sent via APNS)
+          UNUserNotificationCenter.current().delegate = self
+
+          let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+          UNUserNotificationCenter.current().requestAuthorization(
+            options: authOptions,
+            completionHandler: {_, _ in })
+        } else {
+          let settings: UIUserNotificationSettings =
+          UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+          application.registerUserNotificationSettings(settings)
+        }
+				
+        return ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We must have this in our AppDelegate.swift first. It asks permission from the user if he is okay yo receiving notifications from your app. That request will allow &lt;code class=&quot;highlighter-rouge&quot;&gt;alert, badge, and sound&lt;/code&gt;. Depending on how much you want the user to experience the notification. You can omit sound or the other types for example: &lt;code class=&quot;highlighter-rouge&quot;&gt;[.alert, .badge]&lt;/code&gt;. Next is the fun part, and you can choose to put it wherever your app needs it.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 1. Preparing our notification content
+let content = UNMutableNotificationContent()
+content.title = &quot;Hey kid&quot;
+content.body = &quot;Where's your parents?&quot;
+content.sound = UNNotificationSound.default()
+content.badge = 1
+
+// 2. Preparing when our notification would fire
+let date = Date().addingTimeInterval(5)
+let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+
+// 3. Preparing what argument will trigger the notification to come up
+let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+
+// 4. Combining all the preparations into one request
+let uuidString = UUID().uuidString
+let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+
+// 5. Finally, execute the request
+let center = UNUserNotificationCenter.current()
+center.add(request) { (err) in
+    guard err == nil else { return }
+    // Whatever you want to do after firing that badass notification
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;this-algorithm-is-broken-down-into-five-parts&quot;&gt;This algorithm is broken down into five parts.&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Create the content. That’s what the user can see in your notification.
+    &lt;ol&gt;
+      &lt;li&gt;The badge is the red circular thing on the top right corner of your app’s icon with the number of how many notifications were fired up.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Setting when to fire up the notification. If you print them out, this is how they’ll look like:
+    &lt;ol&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;8 Oct 2019 at 2:53 AM&quot;&lt;/code&gt; // darw&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;year: 2019 month: 10 day: 8 hour: 2 minute: 53 second: 26 isLeapMonth: false &lt;/code&gt; // dateComponents&lt;/li&gt;
+      &lt;li&gt;You can create your date component this way to be more specific about the date: &lt;code class=&quot;highlighter-rouge&quot;&gt;DateComponents(year: year, month: month, day: day)&lt;/code&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Create a trigger and add the &lt;code class=&quot;highlighter-rouge&quot;&gt;when&lt;/code&gt; to it. You can make it repeat its time interval by setting &lt;code class=&quot;highlighter-rouge&quot;&gt;repeat&lt;/code&gt; to true.&lt;/li&gt;
+  &lt;li&gt;It’s possible that there may be many requests of triggers, hence we needed that &lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt;. UUID() is one hell of a one liner that can give you a random string. You can use it anywhere actually. It gives off something like this: &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;31A7BADF-93F8-40A0-B642-DEDE7BD6179B\n&quot;&lt;/code&gt; if you print it.&lt;/li&gt;
+  &lt;li&gt;Finally we may now make the request appear more tangible and we need the current instance of our notification center to allow such a thing to happen.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;to-add-buttons-on-your-notification&quot;&gt;To add buttons on your notification&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.appboy.com/blog/wp-content/uploads/2017/05/Push-Action-Buttons-Example-4-300x169.png&quot; alt=&quot;buttons&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Add something like this to step 1: &lt;code class=&quot;highlighter-rouge&quot;&gt;content.categoryIdentifier = &quot;alarm&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Add something like this before step 5:
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let show = UNNotificationAction(identifier: &quot;show&quot;, title: &quot;Tell me more…&quot;, options: .foreground)
+let category = UNNotificationCategory(identifier: &quot;alarm&quot;, actions: [show], intentIdentifiers: [])
+center.setNotificationCategories([category])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And make sure your ViewController conforms to &lt;code class=&quot;highlighter-rouge&quot;&gt;UNUserNotificationCenterDelegate&lt;/code&gt; to catch the response coming off from the user’s chosen action on the button.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -&amp;gt; Void) {
+    // pull out the buried userInfo dictionary
+    let userInfo = response.notification.request.content.userInfo
+
+    if let customData = userInfo[&quot;customData&quot;] as? String {
+        print(&quot;Custom data received: \(customData)&quot;)
+
+        switch response.actionIdentifier {
+        case UNNotificationDefaultActionIdentifier:
+            // the user swiped to unlock
+            print(&quot;Default identifier&quot;)
+
+        case &quot;show&quot;:
+            // the user tapped our &quot;show more info…&quot; button
+            print(&quot;Show more information…&quot;)
+            break
+
+        default:
+            break
+        }
+    }
+
+    // you must call the completion handler when you're done
+    completionHandler()
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;https://www.youtube.com/watch?v=JuqQUP0pnZY&quot;&gt;CodeWithChris&lt;/a&gt; and &lt;a href=&quot;https://www.hackingwithswift.com/example-code/system/how-to-set-local-alerts-using-unnotificationcenter&quot;&gt;Paul Hudson @twostraws&lt;/a&gt; for making me understand how to actually do this.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="local" /><category term="notification" /><category term="push" /><category term="remote" /><category term="UNUsernotification" /><category term="newbies" /><category term="basic" /><summary type="html">Let’s get one thing straight now baby. Local notifications is not the same as Push/Remote notifications. They differ because local notifications don’t need triggers coming from outside the app. Either way, you’ll still need the UNUserNotificationCenter, and for that, you need to import UserNotifications. This is usually used in scheduling apps like alarm and todo-list.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Notifications_Top_2x.png" /></entry><entry><title type="html">Grand Central Dispatch (GCD): Where To Start Learning</title><link href="http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning/" rel="alternate" type="text/html" title="Grand Central Dispatch (GCD): Where To Start Learning" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning</id><content type="html" xml:base="http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning/">&lt;p&gt;I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;GCD is an API provided by apple to allow you to manage concurrent operations in a smooth way, in order to avoid freezing of your application and keep it always responsive for users. - Jaafar Barek&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hackernoon.com/swift-multi-threading-using-gcd-for-beginners-2581b7aa21cb&quot;&gt;Swift Multi-Threading using GCD For Beginners&lt;/a&gt;. This is just a brief article with great visual aids to simply start off learning DispatchQueue.&lt;/p&gt;
+
+&lt;p&gt;When you’re done with that, hold your breath and dive in two of these lakes. &lt;a href=&quot;https://dev.to/leogdion/asynchronous-multi-threaded-parallel-world-of-swift-4gjh&quot;&gt;Asynchronous Multi-Threaded Parallel World of Swift&lt;/a&gt; and &lt;a href=&quot;https://theswiftdev.com/2018/07/10/ultimate-grand-central-dispatch-tutorial-in-swift/&quot;&gt;Ultimate Grand Central Dispatch tutorial in Swift&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The former will first walk you through processing concepts and many visuals on how to use DispatchQueue, Semaphores, and SwiftUI’s combine in relation to asynchronous operations.&lt;/p&gt;
+
+&lt;p&gt;The latter is almost the same but with less visuals and no &lt;code class=&quot;highlighter-rouge&quot;&gt;combine&lt;/code&gt;. DispatchWorkItem and deadlocks is discussed which isn’t found in the former.&lt;/p&gt;
+
+&lt;p&gt;Both are really valuable resources for learning &lt;code class=&quot;highlighter-rouge&quot;&gt;GCD&lt;/code&gt;. It takes quite a while to grasp this simple concept but with broad applications, so I recommend reading on both to consolidate that chunk of knowledge. It is really intimidating to learn, since most of the time, programmers only usually use &lt;code class=&quot;highlighter-rouge&quot;&gt;background&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;I bet these resources are good for interviews too.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="grand" /><category term="central" /><category term="dispatch" /><category term="dispatchqueue" /><category term="barrier" /><category term="ultimate" /><category term="guide" /><category term="asynchronous" /><category term="operation" /><category term="swiftui" /><category term="combine" /><category term="framework" /><summary type="html">I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no. GCD is an API provided by apple to allow you to manage concurrent operations in a smooth way, in order to avoid freezing of your application and keep it always responsive for users. - Jaafar Barek</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://res.cloudinary.com/practicaldev/image/fetch/s--orob56V4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://learningswift.brightdigit.com/wp-content/uploads/sites/2/2019/09/ParallelConcurrency.001-1024x768.jpeg" /></entry><entry><title type="html">Where Is Assistant Editor Mode In Xcode 11</title><link href="http://iosjunkie.com/blog/assistant-editor-mode-in-xcode-11/" rel="alternate" type="text/html" title="Where Is Assistant Editor Mode In Xcode 11" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/assistant-editor-mode-in-xcode-11</id><content type="html" xml:base="http://iosjunkie.com/blog/assistant-editor-mode-in-xcode-11/">&lt;p&gt;Welcome to the world of Xcode 11 where it’s now confusing to find the assistant editor. Well, there it is. It is not in the same place anymore. On the top right corner of the storyboard, there’s this &lt;code class=&quot;highlighter-rouge&quot;&gt;Adjust Editor Options&lt;/code&gt; icon. Just click on that and choose &lt;code class=&quot;highlighter-rouge&quot;&gt;Assistant&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’m so used to the old icon that it used to be, but now it’s just a text only button that is not that easy to navigate to. But why? Are they really pushing developers to use SwiftUI and depend on the canvas instead of our dearest storyboard?&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="assistant" /><category term="editor" /><category term="view" /><category term="xcode" /><category term="where" /><summary type="html">Welcome to the world of Xcode 11 where it’s now confusing to find the assistant editor. Well, there it is. It is not in the same place anymore. On the top right corner of the storyboard, there’s this Adjust Editor Options icon. Just click on that and choose Assistant.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-07%20at%203.11.58%20AM.png" /></entry><entry><title type="html">Sophisticated Way To Use LocationManager Swift 5</title><link href="http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5/" rel="alternate" type="text/html" title="Sophisticated Way To Use LocationManager Swift 5" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/sophisticated-way-to-use-locationmanager-swift-5/">&lt;p&gt;This is the most elegant solution I found on how to retrieve location with CoreLocation.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import CoreLocation
 class ViewController: UIViewController {
@@ -112,24 +250,7 @@ class ViewController: UIViewController {
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;If you use &lt;code class=&quot;highlighter-rouge&quot;&gt;requestLocation()&lt;/code&gt;, it will only gather location data once. However, this takes 10 seconds as opposed to &lt;code class=&quot;highlighter-rouge&quot;&gt;startUpdatingLocation()&lt;/code&gt;, which fires immediately.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>jules</name></author><category term="" /><category term="location" /><category term="manager" /><category term="swift" /><category term="data" /><category term="corelocation" /><category term="operation" /><category term="queue" /><summary type="html">This is the most elegant solution I found on how to retrieve location with CoreLocation.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.stack.imgur.com/hDiMB.png" /></entry><entry><title type="html">Where Is Assistant Editor Mode In Xcode 11</title><link href="http://iosjunkie.com/blog/assistant-editor-mode-in-xcode-11/" rel="alternate" type="text/html" title="Where Is Assistant Editor Mode In Xcode 11" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/assistant-editor-mode-in-xcode-11</id><content type="html" xml:base="http://iosjunkie.com/blog/assistant-editor-mode-in-xcode-11/">&lt;p&gt;Welcome to the world of Xcode 11 where it’s now confusing to find the assistant editor. Well, there it is. It is not in the same place anymore. On the top right corner of the storyboard, there’s this &lt;code class=&quot;highlighter-rouge&quot;&gt;Adjust Editor Options&lt;/code&gt; icon. Just click on that and choose &lt;code class=&quot;highlighter-rouge&quot;&gt;Assistant&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;I’m so used to the old icon that it used to be, but now it’s just a text only button that is not that easy to navigate to. But why? Are they really pushing developers to use SwiftUI and depend on the canvas instead of our dearest storyboard?&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="assistant" /><category term="editor" /><category term="view" /><category term="xcode" /><category term="where" /><summary type="html">Welcome to the world of Xcode 11 where it’s now confusing to find the assistant editor. Well, there it is. It is not in the same place anymore. On the top right corner of the storyboard, there’s this Adjust Editor Options icon. Just click on that and choose Assistant.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-07%20at%203.11.58%20AM.png" /></entry><entry><title type="html">Grand Central Dispatch (GCD): Where To Start Learning</title><link href="http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning/" rel="alternate" type="text/html" title="Grand Central Dispatch (GCD): Where To Start Learning" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning</id><content type="html" xml:base="http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning/">&lt;p&gt;I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;GCD is an API provided by apple to allow you to manage concurrent operations in a smooth way, in order to avoid freezing of your application and keep it always responsive for users. - Jaafar Barek&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://hackernoon.com/swift-multi-threading-using-gcd-for-beginners-2581b7aa21cb&quot;&gt;Swift Multi-Threading using GCD For Beginners&lt;/a&gt;. This is just a brief article with great visual aids to simply start off learning DispatchQueue.&lt;/p&gt;
-
-&lt;p&gt;When you’re done with that, hold your breath and dive in two of these lakes. &lt;a href=&quot;https://dev.to/leogdion/asynchronous-multi-threaded-parallel-world-of-swift-4gjh&quot;&gt;Asynchronous Multi-Threaded Parallel World of Swift&lt;/a&gt; and &lt;a href=&quot;https://theswiftdev.com/2018/07/10/ultimate-grand-central-dispatch-tutorial-in-swift/&quot;&gt;Ultimate Grand Central Dispatch tutorial in Swift&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The former will first walk you through processing concepts and many visuals on how to use DispatchQueue, Semaphores, and SwiftUI’s combine in relation to asynchronous operations.&lt;/p&gt;
-
-&lt;p&gt;The latter is almost the same but with less visuals and no &lt;code class=&quot;highlighter-rouge&quot;&gt;combine&lt;/code&gt;. DispatchWorkItem and deadlocks is discussed which isn’t found in the former.&lt;/p&gt;
-
-&lt;p&gt;Both are really valuable resources for learning &lt;code class=&quot;highlighter-rouge&quot;&gt;GCD&lt;/code&gt;. It takes quite a while to grasp this simple concept but with broad applications, so I recommend reading on both to consolidate that chunk of knowledge. It is really intimidating to learn, since most of the time, programmers only usually use &lt;code class=&quot;highlighter-rouge&quot;&gt;background&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;I bet these resources are good for interviews too.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="grand" /><category term="central" /><category term="dispatch" /><category term="dispatchqueue" /><category term="barrier" /><category term="ultimate" /><category term="guide" /><category term="asynchronous" /><category term="operation" /><category term="swiftui" /><category term="combine" /><category term="framework" /><summary type="html">I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no. GCD is an API provided by apple to allow you to manage concurrent operations in a smooth way, in order to avoid freezing of your application and keep it always responsive for users. - Jaafar Barek</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://res.cloudinary.com/practicaldev/image/fetch/s--orob56V4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://learningswift.brightdigit.com/wp-content/uploads/sites/2/2019/09/ParallelConcurrency.001-1024x768.jpeg" /></entry><entry><title type="html">How Static Is Used</title><link href="http://iosjunkie.com/blog/how-static-is-used/" rel="alternate" type="text/html" title="How Static Is Used" /><published>2019-10-06T00:00:00+08:00</published><updated>2019-10-06T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/how-static-is-used</id><content type="html" xml:base="http://iosjunkie.com/blog/how-static-is-used/">&lt;p&gt;Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial.&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>jules</name></author><category term="" /><category term="location" /><category term="manager" /><category term="swift" /><category term="data" /><category term="corelocation" /><category term="operation" /><category term="queue" /><summary type="html">This is the most elegant solution I found on how to retrieve location with CoreLocation.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.stack.imgur.com/hDiMB.png" /></entry><entry><title type="html">How Static Is Used</title><link href="http://iosjunkie.com/blog/how-static-is-used/" rel="alternate" type="text/html" title="How Static Is Used" /><published>2019-10-06T00:00:00+08:00</published><updated>2019-10-06T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/how-static-is-used</id><content type="html" xml:base="http://iosjunkie.com/blog/how-static-is-used/">&lt;p&gt;Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial.&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/s2E5hVxQAZQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
@@ -320,12 +441,4 @@ class ViewController: UIViewController {
 
 &lt;p&gt;Considering Sean’s talk about his dealings in the SwiftUI realm with DesignCode, I’m now interested to see what I could learn and do too, myself. It took him about seven days to finish the course.&lt;/p&gt;
 
-&lt;p&gt;DesignCode’s course can be billed annually for $108, which will not renew automatically. But if you choose to subscribe for one month, it would cost you $15, which will renew monthly. So for me, it doesn’t look like I’m ready to make that commitment yet of taking his course. Maybe I’ll just look for free lessons out there and it’d be wise if you too. Unless you really want to learn the designs and animations part, you might find his course worth every penny.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swiftui" /><category term="swift" /><category term="sean" /><category term="allen" /><category term="youtuber" /><category term="designcode" /><category term="course" /><category term="learn" /><category term="Xcode" /><category term="build" /><category term="bootcamp" /><summary type="html">I’ve seen him talk about how he was hesitant to dive into learning Swift UI. I took his sentiment as my own because I don’t really see why I needed to.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/mqdefault.jpg" /></entry><entry><title type="html">Where Better To Understand Semaphores (Swift)</title><link href="http://iosjunkie.com/blog/where-better-to-understand-semaphores-swift/" rel="alternate" type="text/html" title="Where Better To Understand Semaphores (Swift)" /><published>2019-10-03T00:00:00+08:00</published><updated>2019-10-03T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/where-better-to-understand-semaphores-swift</id><content type="html" xml:base="http://iosjunkie.com/blog/where-better-to-understand-semaphores-swift/">&lt;p&gt;Thanks to Roy Kronenfeld’s &lt;a href=&quot;https://medium.com/@roykronenfeld/semaphores-in-swift-e296ea80f860&quot;&gt;Medium post&lt;/a&gt; for this explanation of how to use a semaphore, specifically, utilizing the counter: &lt;code class=&quot;highlighter-rouge&quot;&gt;let semaphore = DispatchSemaphore(value: 0)&lt;/code&gt;. Another &lt;a href=&quot;https://www.youtube.com/watch?v=6rJN_ECd1XM&quot;&gt;tutorial&lt;/a&gt; was made by &lt;code class=&quot;highlighter-rouge&quot;&gt;Let's Build That App&lt;/code&gt; but semaphore wasn’t covered in great detail, and I think it’s best if all iOS developers dive into the semaphore counters the way Roy did.&lt;/p&gt;
-
-&lt;p&gt;In Roy’s tutorial, it’s more on semaphore counters. But if you want to see semaphore in action, kindly refer to my &lt;a href=&quot;/blog/where-to-learn-async-callback-and-futures/&quot;&gt;previous post&lt;/a&gt; where it is applied on a &lt;code class=&quot;highlighter-rouge&quot;&gt;Futures&lt;/code&gt; function.&lt;/p&gt;
-
-&lt;p&gt;His sample analogy was most brilliant. If you don’t need to access a shared resource, feel free to use DispatchQueue. If you do, then you should consider &lt;code class=&quot;highlighter-rouge&quot;&gt;Semaphores&lt;/code&gt;. The shared resource here is the &lt;code class=&quot;highlighter-rouge&quot;&gt;iPad&lt;/code&gt; that 3 kids share. To cut the story short, there is only one iPad and our counter needs a value of only &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;.  Only one iPad can be shared among 3 kids at a time.&lt;/p&gt;
-
-&lt;p&gt;Another example of his is downloading songs. He wants 15 songs to be downloaded and he wants  to download 3 songs at a time. Therefore, you’ve guessed it, the counter is set to &lt;code class=&quot;highlighter-rouge&quot;&gt;3&lt;/code&gt;. The shared resource here is the downloading processes or threads, not the song.&lt;/p&gt;
-
-&lt;p&gt;If you want a more elaborate explanation on how this counting algorithm works, head on to his &lt;a href=&quot;https://medium.com/@roykronenfeld/semaphores-in-swift-e296ea80f860&quot;&gt;blog post&lt;/a&gt; for more.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="semaphore" /><category term="swift" /><category term="counter" /><category term="dispatchqueue" /><category term="centreal" /><category term="grand" /><category term="central" /><category term="dispatch" /><summary type="html">Thanks to Roy Kronenfeld’s Medium post for this explanation of how to use a semaphore, specifically, utilizing the counter: let semaphore = DispatchSemaphore(value: 0). Another tutorial was made by Let's Build That App but semaphore wasn’t covered in great detail, and I think it’s best if all iOS developers dive into the semaphore counters the way Roy did.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/1_7aP7xcLcB6cJ9wySieNNCA.gif" /></entry></feed>
+&lt;p&gt;DesignCode’s course can be billed annually for $108, which will not renew automatically. But if you choose to subscribe for one month, it would cost you $15, which will renew monthly. So for me, it doesn’t look like I’m ready to make that commitment yet of taking his course. Maybe I’ll just look for free lessons out there and it’d be wise if you too. Unless you really want to learn the designs and animations part, you might find his course worth every penny.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swiftui" /><category term="swift" /><category term="sean" /><category term="allen" /><category term="youtuber" /><category term="designcode" /><category term="course" /><category term="learn" /><category term="Xcode" /><category term="build" /><category term="bootcamp" /><summary type="html">I’ve seen him talk about how he was hesitant to dive into learning Swift UI. I took his sentiment as my own because I don’t really see why I needed to.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/mqdefault.jpg" /></entry></feed>
