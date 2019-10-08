@@ -27,9 +27,11 @@ Other than that, I'm satisfied with the app. I bought it for only a dollar. I'm 
 
 ## UPDATE:
 
-Thank to [u/Auttoh][reddit] for responding to my Reddit link post of this blog post. He gave me a tip on a similar app but not found on the app store. It's from a [github link][git]. Caprine is an unofficial and privacy-focused Facebook Messenger app with many useful features. As you can see, I didn't have to pixelate the names of my friends because they have this feature to hide names and avatars. It also allows you to follow the system's appearance of your mac. Say you are in dark mode, the app will also be in dark mode. If you changed your system's appearance to light mode, the app will also turn light mode. You can also choose to make its mode independent from the system's appearance.
+Thanks to [u/Auttoh][reddit] for responding on my Reddit link post of this blog post. He gave me a tip on a similar app but not found on the app store. It's from a [github link][git]. Caprine is an unofficial and privacy-focused Facebook Messenger app with many useful features. As you can see, I didn't have to pixelate the names of my friends because they have this feature to hide names and avatars. It also allows you to follow the system's appearance of your mac. Say you are in dark mode, the app will also be in dark mode. If you changed your system's appearance to light mode, the app will also turn light mode. You can also choose to make its mode independent from the system's appearance.
 
-There's also a compact mode on this which hides away the names if your window is tinier. Only pictures of your friends will be shown on the side.
+![caprine](/blog/assets/images/71862910_476156719779477_1624238644300611584_n.jpg)
+
+There's also a compact mode on this app which hides away the names if your window is tinier. Only pictures of your friends will be shown on the side.
 
 ![compact](https://github.com/sindresorhus/caprine/raw/master/media/screenshot-compact.png)
 
