@@ -1,4 +1,5 @@
 ---
+title: Native Messenger App For Mac OS (Review) vs Caprine
 image: assets/images/Screen%20Shot%202019-10-08%20at%207.52.43%20PM.png
 categories: Review
 tags:
@@ -9,7 +10,6 @@ tags:
 - app
 - messenger
 - facebook
-title: Native Messenger App For Mac OS (Review)
 ---
 
 I'm currently on Mojave and I just thought that it's time I use an app for messenger. It takes quite a while to load Facebook messenger on my Chrome browser. Maybe it's just my internet speed. So I looked for an app on the Mac App Store and there's not much apps out there for native Mac OS app look of Messenger. This is probably the only one out there. The only one I've found at least. I've scrolled deep enough to see there's no other like it. It has decent amount of stars as rating, but does it really live up to it?
@@ -24,3 +24,16 @@ What can I say? It really looks native, but it is half-baked. Here's why:
 5. The light mode is actually more gray than white.
 
 Other than that, I'm satisfied with the app. I bought it for only a dollar. I'm going to keep on using it because it's way faster than loading the messenger website.
+
+## UPDATE:
+
+Thank to [u/Auttoh][reddit] for responding to my Reddit link post of this blog post. He gave me a tip on a similar app but not found on the app store. It's from a [github link][git]. Caprine is an unofficial and privacy-focused Facebook Messenger app with many useful features. As you can see, I didn't have to pixelate the names of my friends because they have this feature to hide names and avatars. It also allows you to follow the system's appearance of your mac. Say you are in dark mode, the app will also be in dark mode. If you changed your system's appearance to light mode, the app will also turn light mode. You can also choose to make its mode independent from the system's appearance.
+
+There's also a compact mode on this which hides away the names if your window is tinier. Only pictures of your friends will be shown on the side.
+
+![compact](https://github.com/sindresorhus/caprine/raw/master/media/screenshot-compact.png)
+
+It looks way more sophisticated than `Chatmate` but it doesn't feel as snappy. It is build on javascript/`Electron` hence it is not native. Although, it looks native enough actually. There are still some features that load like a web page, like when choosing `stickers` or when loading a conversation from another friend. 
+
+[reddit]: https://www.reddit.com/r/macapps/comments/dezb0e/native_messenger_app_for_mac_os_review/
+[git]: https://github.com/sindresorhus/caprine/
