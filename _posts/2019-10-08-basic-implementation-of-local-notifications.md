@@ -131,4 +131,4 @@ Thanks to [CodeWithChris][chris] and [Paul Hudson @twostraws][paul] for making m
 
 [chris]: https://www.youtube.com/watch?v=JuqQUP0pnZY
 [paul]: https://www.hackingwithswift.com/example-code/system/how-to-set-local-alerts-using-unnotificationcenter
-[next]:
+[next]: /blog/notification-and-observer-the-basics/
