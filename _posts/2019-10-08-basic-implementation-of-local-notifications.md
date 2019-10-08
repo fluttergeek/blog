@@ -13,7 +13,7 @@ tags:
 - basic
 ---
 
-Let's get one thing straight now baby. Local notifications is not the same as `Push`/`Remote` notifications. They differ because local notifications don't need triggers coming from outside the app. Either way, you'll still need the `UNUserNotificationCenter`, and for that, you need to import `UserNotifications`. This is usually used in scheduling apps like alarm and todo-list.
+Let's get one thing straight now baby. Local notifications is not the same as `Push`/`Remote` notifications. It is also not the same as the Notification-Observer relationship which I will discuss [next][next]. They differ because local notifications don't need triggers coming from outside the app. Either way, you'll still need the `UNUserNotificationCenter`, and for that, you need to import `UserNotifications`. This is usually used in scheduling apps like alarm and todo-list.
 
 ```
 // AppDelegate.swift
@@ -131,3 +131,4 @@ Thanks to [CodeWithChris][chris] and [Paul Hudson @twostraws][paul] for making m
 
 [chris]: https://www.youtube.com/watch?v=JuqQUP0pnZY
 [paul]: https://www.hackingwithswift.com/example-code/system/how-to-set-local-alerts-using-unnotificationcenter
+[next]:

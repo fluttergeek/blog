@@ -23,8 +23,27 @@ His sample analogy was most brilliant. If you don't need to access a shared reso
 
 Another example of his is downloading songs. He wants 15 songs to be downloaded and he wants  to download 3 songs at a time. Therefore, you've guessed it, the counter is set to `3`. The shared resource here is the downloading processes or threads, not the song.
 
+You can use the semaphore in 2 different ways by [Wain from Stackoverflow][wain] :
+
+1. To limit the number of concurrent operations / requests / usages. In this case you start the semaphore at a positive value, like 4. The users each call wait and if resource is available they are allowed to continue. If not they are blocked. When each has finished with the resource they call signal. Just like the two examples given above.
+2. To say when work or a resource is ready and we want to proceed to main thread next. In this case you start the semaphore at 0. The creator calls signal when something is ready. Semaphores can be used when there’s an asynchronous API that you need to make synchronous, but you can’t modify it. The example and explanation below is from [Soroush Khanlou][sk]:
+
+```
+// on a background queue
+let semaphore = DispatchSemaphore(value: 0)
+doSomeExpensiveWorkAsynchronously(completionBlock: {
+	semaphore.signal()
+})
+semaphore.wait()
+//the expensive asynchronous work is now done after calling semaphore.wait()
+```
+
+Calling .wait() will block the main thread until .signal() is called. This means that .signal() must be called from a different thread, since the current thread is totally blocked. Further, you should never call .wait() from the main thread, only from background threads.
+
 If you want a more elaborate explanation on how this counting algorithm works, head on to his [blog post][roy] for more.
 
 [roy]: https://medium.com/@roykronenfeld/semaphores-in-swift-e296ea80f860
 [previous]: /blog/where-to-learn-async-callback-and-futures/
 [lbat]: https://www.youtube.com/watch?v=6rJN_ECd1XM
+[wain]: https://stackoverflow.com/questions/37154877/creating-semaphore-with-initial-value-of-0-make-issues-with-execution
+[sk]: http://khanlou.com/2016/04/the-GCD-handbook/
