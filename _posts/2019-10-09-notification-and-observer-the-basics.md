@@ -44,3 +44,19 @@ Now this is something you'd probably find in the `viewDidLoad` of your ViewCotro
 ```
 
 Never mind the content of my function. What is important here is you know how the selector's given function will actually look like. If you were wondering what is inside my function, it is simply just waiting for the trigger to call this function two times from maybe two different sources of thread that call the same trigger. When both threads are `done`, then we can sort the array's contents and tuck away the loader image.
+
+If your ViewController is done `observing`, and we disappear from this view or something, we should remove this observer like so:
+
+```
+deinit {
+    NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init("done"), object: nil)
+}
+```
+
+or like this 
+
+```
+override func viewDidDisappear(_ animated: Bool) {
+    NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init("done"), object: nil)
+}
+```
