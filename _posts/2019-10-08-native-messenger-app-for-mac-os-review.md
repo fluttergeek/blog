@@ -35,11 +35,13 @@ There's also a compact mode on this app which hides away the names if your windo
 
 ![compact](https://github.com/sindresorhus/caprine/raw/master/media/screenshot-compact.png)
 
-It looks way more sophisticated than `Chatmate` but it doesn't feel as snappy. It is build on javascript/`Electron` hence it is not native. Although, it looks native enough actually. There are still some features that load like a web page, like when choosing `stickers` or when loading a conversation from another friend. After a day of using it, I realized how long it takes to open the app. I see a dark empty window first for a maybe 15 to 30 seconds until t loads the messenger web page. [Goofy][goofy] is another unoffical Messenger mac app. It is also `Electron` based. It could be faster because it has much less features than `Caprine`, obviously. 
+It looks way more sophisticated than `Chatmate` but it doesn't feel as snappy. It is build on javascript/`Electron` hence it is not native. Although, it looks native enough actually. There are still some features that load like a web page, like when choosing `stickers` or when loading a conversation from another friend. After a day of using it, I realized how long it takes to open the app. I see a dark empty window first for a maybe 15 to 30 seconds until t loads the messenger web page. 
+
+[Goofy][goofy] is another unoffical Messenger mac app. It is also `Electron` based. It could be faster because it has much less features than `Caprine`, obviously. 
 
 ![goofy](https://www.goofyapp.com/img/screenshot.png)
 
-That's Goofy for you!
+That's Goofy for you! I haven't tried it, yet I assume it would look similar to `Caprine` too.
 
 Now here's something I'd like to introduce to you. I'm not sure what this is built on, but it is faster than `Caprine`, but I wish it had `Caprine's` awesome features. The only thing I love about it is that it loads much faster. Franz is the former Emperor of Austria - but also a messaging app that combines chat & messaging services into one application. [Franz][franz] currently supports Slack, WhatsApp, WeChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype and many more.
 
