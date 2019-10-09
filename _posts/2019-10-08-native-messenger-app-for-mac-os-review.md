@@ -47,7 +47,11 @@ Now here's something I'd like to introduce to you. I'm not sure what this is bui
 
 ![franz](https://meetfranz.com/static/images/franz-screenshot.png)
 
-It does not feel heavy on the system, but the messenger part is simply a web app of the official `Messenger`. Hence, it still isn't a native solution. How it feels when using the web app is the exact same feel when using `Franz` and I can say that it feels much master than `Caprine` when loading the stickers.
+It does not feel heavy on the system, but the messenger part is simply a web app of the official `Messenger`. Hence, it still isn't a native solution. How it feels when using the web app is the exact same feel when using `Franz` and I can say that it feels much master than `Caprine` when loading the stickers. The only downside I can find is that it just keeps asking you to purchase `Franz Professional`.
+
+![franzprofessional](/blog/assets/images/Screen%20Shot%202019-10-09%20at%2010.56.18%20PM.png)
+
+It went like this out of nowehere like a screensaver, and I waited 15 seconds for it to go back to messenger mode.
 
 [reddit]: https://www.reddit.com/r/macapps/comments/dezb0e/native_messenger_app_for_mac_os_review/
 [git]: https://github.com/sindresorhus/caprine/

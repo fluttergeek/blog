@@ -1,6 +1,6 @@
 ---
-image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBXD5o0JeyxP-5MmwSZO4lOrONruMPlZmrTRWonLxYsgx1iPYH
 title: Check If Online Swift 5
+image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBXD5o0JeyxP-5MmwSZO4lOrONruMPlZmrTRWonLxYsgx1iPYH
 tags:
 - ''
 - online
@@ -52,5 +52,8 @@ Singleton.sharedInstance.online { (err) in
 }
 ```
 
+There's a more elaborate article discussing how the `Network` framework can be used. Check [it][network] out.
+
 [ph]: https://www.hackingwithswift.com/example-code/networking/how-to-check-for-internet-connectivity-using-nwpathmonitor
 [previous]: https://stackoverflow.com/questions/30743408/check-for-internet-connection-with-swift
+[network]: https://medium.com/@rwbutler/nwpathmonitor-the-new-reachability-de101a5a8835
