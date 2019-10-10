@@ -1,44 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-10T01:44:14+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Notification And Observer: The Basics</title><link href="http://iosjunkie.com/blog/notification-and-observer-the-basics/" rel="alternate" type="text/html" title="Notification And Observer: The Basics" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/notification-and-observer-the-basics</id><content type="html" xml:base="http://iosjunkie.com/blog/notification-and-observer-the-basics/">&lt;p&gt;This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that notifies the observer:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-11T01:21:30+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Experience With Carthage As Opposed To Cocoapods</title><link href="http://iosjunkie.com/blog/experience-with-carthage/" rel="alternate" type="text/html" title="Experience With Carthage As Opposed To Cocoapods" /><published>2019-10-11T00:00:00+08:00</published><updated>2019-10-11T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/experience-with-carthage</id><content type="html" xml:base="http://iosjunkie.com/blog/experience-with-carthage/">&lt;p&gt;Cocoapods makes your build times slower and that’s why I’ve taken the liberty of trying Carthage. Well, from the instructions I’ve read in bigger frameworks like &lt;code class=&quot;highlighter-rouge&quot;&gt;Realm&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;FacebookCore/FacebookLogin&lt;/code&gt;, it is a daunting process. Which is why it took me this long to want to even bother with it. But for some smaller frameworks, it is almost similar to Cocoapod’s process, which I like better. Unfortunately, this arduous shift took painfully long to install the frameworks. Every time I add a new framework to my &lt;code class=&quot;highlighter-rouge&quot;&gt;Cartfile&lt;/code&gt; and update carthage, it downloads everything and installs everything over again. My gahd!&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Trigger/Notifier
-NotificationCenter.default.post(name: NSNotification.Name.init(&quot;done&quot;), object: nil)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Apart from that, I didn’t know that I had to take this extra step for each of the framework I’m using.&lt;/p&gt;
 
-&lt;p&gt;This will look for an observer that will allow you to send this trigger an action. It is looking for an observer named &lt;code class=&quot;highlighter-rouge&quot;&gt;done&lt;/code&gt;. Let’s create that too:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-11%20at%2012.38.52%20AM.png&quot; alt=&quot;IMPORTING&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Observer
-NotificationCenter.default.addObserver(self, selector: #selector(sortAndStopLoading(n:)), name: NSNotification.Name.init(&quot;done&quot;), object: nil)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;If I didn’t import all of them there, I’d get this error.&lt;/p&gt;
 
-&lt;p&gt;Now this is something you’d probably find in the &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; of your ViewCotroller. Just to create an observation to catch the trigger with the name &lt;code class=&quot;highlighter-rouge&quot;&gt;done&lt;/code&gt; and provides an action when the trigger has been called. Let’s create that action too:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-11%20at%2012.30.16%20AM.png&quot; alt=&quot;error&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Action
-@objc func sortAndStopLoading(n: NSNotification) {
-        done += 1
-        
-        if done == 2 {
-            print(&quot;reached&quot;)
-            self.sales = self.sales.sorted(by: {($0[&quot;number&quot;] as! Int) &amp;gt; ($1[&quot;number&quot;] as! Int)})
-            self.stopLoading()
-        }
-    }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;There were a few frameworks that just didn’t work with Carthage, those being:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;GMStepper - No carthage available&lt;/li&gt;
+  &lt;li&gt;BetterSegmentedControl - Error during Carthage installation&lt;/li&gt;
+  &lt;li&gt;Firebase - They will not be maintaining their Carthage archives anymore. They’d rather invest it on &lt;code class=&quot;highlighter-rouge&quot;&gt;Swift Package Manager&lt;/code&gt;, though I’d still have to look it up one day.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;Never mind the content of my function. What is important here is you know how the selector’s given function will actually look like. If you were wondering what is inside my function, it is simply just waiting for the trigger to call this function two times from maybe two different sources of thread that call the same trigger. When both threads are &lt;code class=&quot;highlighter-rouge&quot;&gt;done&lt;/code&gt;, then we can sort the array’s contents and tuck away the loader image.&lt;/p&gt;
+&lt;p&gt;For those three, I maintained the use of Cocoapods. It can work hand in hand with Carthage.&lt;/p&gt;
 
-&lt;p&gt;If your ViewController is done &lt;code class=&quot;highlighter-rouge&quot;&gt;observing&lt;/code&gt;, and we disappear from this view or something, we should remove this observer like so:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deinit {
-    NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init(&quot;done&quot;), object: nil)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;or like this&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;override func viewDidDisappear(_ animated: Bool) {
-    NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init(&quot;done&quot;), object: nil)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swift" /><category term="notification" /><category term="observer" /><category term="push" /><category term="local" /><category term="remote" /><category term="trigger" /><summary type="html">This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that notifies the observer:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/1_Ca69vjmxQIdkOfW-O6hZaA.png" /></entry><entry><title type="html">Sign Out Firebase And Remove Access Token</title><link href="http://iosjunkie.com/blog/sign-out-firebase-and-remove-access-token/" rel="alternate" type="text/html" title="Sign Out Firebase And Remove Access Token" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/sign-out-firebase-and-remove-access-token</id><content type="html" xml:base="http://iosjunkie.com/blog/sign-out-firebase-and-remove-access-token/">&lt;p&gt;I call the &lt;code class=&quot;highlighter-rouge&quot;&gt;signOut()&lt;/code&gt; to sign out, but there’s really a lot of things going on inside my call. I’m not sure which is the correct way to do this yet, but what I’m trying to achieve is once I’m signed off, my login view will not automatically sign me back in. My login view checks if the access token contains a token, and if it does, then automatically sign me in and performSegue.&lt;/p&gt;
+&lt;p&gt;I’m not sure I’ve noticed any changes, because Firebase is the heaviest framework I have and it is installed with Cocoapods, thereby still making my build time really slow. Apart from that, I don’t really see the rest of the frameworks build anymore. I guess that’s an improvement.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="carthage" /><category term="swift" /><category term="cocoapods" /><category term="cocoapod" /><category term="pod" /><category term="import" /><category term="libraries" /><category term="framework" /><category term="bettersegmentedcontrol" /><category term="gmstepper" /><summary type="html">Cocoapods makes your build times slower and that’s why I’ve taken the liberty of trying Carthage. Well, from the instructions I’ve read in bigger frameworks like Realm and FacebookCore/FacebookLogin, it is a daunting process. Which is why it took me this long to want to even bother with it. But for some smaller frameworks, it is almost similar to Cocoapod’s process, which I like better. Unfortunately, this arduous shift took painfully long to install the frameworks. Every time I add a new framework to my Cartfile and update carthage, it downloads everything and installs everything over again. My gahd!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://koenig-media.raywenderlich.com/uploads/2017/08/Carthage-feature-2.png" /></entry><entry><title type="html">Sign Out Firebase And Remove Access Token</title><link href="http://iosjunkie.com/blog/sign-out-firebase-and-remove-access-token/" rel="alternate" type="text/html" title="Sign Out Firebase And Remove Access Token" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/sign-out-firebase-and-remove-access-token</id><content type="html" xml:base="http://iosjunkie.com/blog/sign-out-firebase-and-remove-access-token/">&lt;p&gt;I call the &lt;code class=&quot;highlighter-rouge&quot;&gt;signOut()&lt;/code&gt; to sign out, but there’s really a lot of things going on inside my call. I’m not sure which is the correct way to do this yet, but what I’m trying to achieve is once I’m signed off, my login view will not automatically sign me back in. My login view checks if the access token contains a token, and if it does, then automatically sign me in and performSegue.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func logOut(completion:@escaping(_ errorOccured: Bool) -&amp;gt; Void)  {
     let firebaseAuth = Auth.auth()
@@ -79,7 +58,47 @@ NotificationCenter.default.addObserver(self, selector: #selector(sortAndStopLoad
 
 &lt;p&gt;I’m only trying to remove the access token and make sure it is empty before I perform the segue.&lt;/p&gt;
 
-&lt;p&gt;So far this works for me, but then I’ll have to call &lt;code class=&quot;highlighter-rouge&quot;&gt;AccessToken.refreshCurrentAccessToken&lt;/code&gt; again in my login view to make sure access token is nil by the time I’m signed out. If I omitted that, my access token still contains the token. It is redudant to call &lt;code class=&quot;highlighter-rouge&quot;&gt;AccessToken.refreshCurrentAccessToken&lt;/code&gt; again ni both views but so far this is the only thing that works for me now.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="firebase" /><category term="sign" /><category term="out" /><category term="feature" /><category term="access" /><category term="token" /><category term="defer" /><category term="login" /><summary type="html">I call the signOut() to sign out, but there’s really a lot of things going on inside my call. I’m not sure which is the correct way to do this yet, but what I’m trying to achieve is once I’m signed off, my login view will not automatically sign me back in. My login view checks if the access token contains a token, and if it does, then automatically sign me in and performSegue.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.hasura.io/content/images/2019/03/rawpixel-783430-unsplash-1.jpg" /></entry><entry><title type="html">Check If Online Swift 5</title><link href="http://iosjunkie.com/blog/check-if-online-swift-5/" rel="alternate" type="text/html" title="Check If Online Swift 5" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/check-if-online-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/check-if-online-swift-5/">&lt;p&gt;Thanks to &lt;a href=&quot;https://www.hackingwithswift.com/example-code/networking/how-to-check-for-internet-connectivity-using-nwpathmonitor&quot;&gt;Paul Hudson @twostraws&lt;/a&gt; for the informative knowledge on how to check for internet connection. Let me remind you that this solution is available since iOS 12.0. WWDC in June 2018 introduced the Network framework available from iOS 12 onwards which includes the NWPathMonitor class, which we will be using in this tutorial. Here’s a straight forward example of the basic implementation on how to check for internet connection.&lt;/p&gt;
+&lt;p&gt;So far this works for me, but then I’ll have to call &lt;code class=&quot;highlighter-rouge&quot;&gt;AccessToken.refreshCurrentAccessToken&lt;/code&gt; again in my login view to make sure access token is nil by the time I’m signed out. If I omitted that, my access token still contains the token. It is redudant to call &lt;code class=&quot;highlighter-rouge&quot;&gt;AccessToken.refreshCurrentAccessToken&lt;/code&gt; again ni both views but so far this is the only thing that works for me now.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="firebase" /><category term="sign" /><category term="out" /><category term="feature" /><category term="access" /><category term="token" /><category term="defer" /><category term="login" /><summary type="html">I call the signOut() to sign out, but there’s really a lot of things going on inside my call. I’m not sure which is the correct way to do this yet, but what I’m trying to achieve is once I’m signed off, my login view will not automatically sign me back in. My login view checks if the access token contains a token, and if it does, then automatically sign me in and performSegue.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.hasura.io/content/images/2019/03/rawpixel-783430-unsplash-1.jpg" /></entry><entry><title type="html">Notification And Observer: The Basics</title><link href="http://iosjunkie.com/blog/notification-and-observer-the-basics/" rel="alternate" type="text/html" title="Notification And Observer: The Basics" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/notification-and-observer-the-basics</id><content type="html" xml:base="http://iosjunkie.com/blog/notification-and-observer-the-basics/">&lt;p&gt;This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that notifies the observer:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Trigger/Notifier
+NotificationCenter.default.post(name: NSNotification.Name.init(&quot;done&quot;), object: nil)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This will look for an observer that will allow you to send this trigger an action. It is looking for an observer named &lt;code class=&quot;highlighter-rouge&quot;&gt;done&lt;/code&gt;. Let’s create that too:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Observer
+NotificationCenter.default.addObserver(self, selector: #selector(sortAndStopLoading(n:)), name: NSNotification.Name.init(&quot;done&quot;), object: nil)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now this is something you’d probably find in the &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; of your ViewCotroller. Just to create an observation to catch the trigger with the name &lt;code class=&quot;highlighter-rouge&quot;&gt;done&lt;/code&gt; and provides an action when the trigger has been called. Let’s create that action too:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Action
+@objc func sortAndStopLoading(n: NSNotification) {
+        done += 1
+        
+        if done == 2 {
+            print(&quot;reached&quot;)
+            self.sales = self.sales.sorted(by: {($0[&quot;number&quot;] as! Int) &amp;gt; ($1[&quot;number&quot;] as! Int)})
+            self.stopLoading()
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Never mind the content of my function. What is important here is you know how the selector’s given function will actually look like. If you were wondering what is inside my function, it is simply just waiting for the trigger to call this function two times from maybe two different sources of thread that call the same trigger. When both threads are &lt;code class=&quot;highlighter-rouge&quot;&gt;done&lt;/code&gt;, then we can sort the array’s contents and tuck away the loader image.&lt;/p&gt;
+
+&lt;p&gt;If your ViewController is done &lt;code class=&quot;highlighter-rouge&quot;&gt;observing&lt;/code&gt;, and we disappear from this view or something, we should remove this observer like so:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deinit {
+    NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init(&quot;done&quot;), object: nil)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or like this&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;override func viewDidDisappear(_ animated: Bool) {
+    NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init(&quot;done&quot;), object: nil)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swift" /><category term="notification" /><category term="observer" /><category term="push" /><category term="local" /><category term="remote" /><category term="trigger" /><summary type="html">This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that notifies the observer:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/1_Ca69vjmxQIdkOfW-O6hZaA.png" /></entry><entry><title type="html">Check If Online Swift 5</title><link href="http://iosjunkie.com/blog/check-if-online-swift-5/" rel="alternate" type="text/html" title="Check If Online Swift 5" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/check-if-online-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/check-if-online-swift-5/">&lt;p&gt;Thanks to &lt;a href=&quot;https://www.hackingwithswift.com/example-code/networking/how-to-check-for-internet-connectivity-using-nwpathmonitor&quot;&gt;Paul Hudson @twostraws&lt;/a&gt; for the informative knowledge on how to check for internet connection. Let me remind you that this solution is available since iOS 12.0. WWDC in June 2018 introduced the Network framework available from iOS 12 onwards which includes the NWPathMonitor class, which we will be using in this tutorial. Here’s a straight forward example of the basic implementation on how to check for internet connection.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import Network
 private let monitor = NWPathMonitor()
@@ -405,13 +424,7 @@ class ViewController: UIViewController {
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;If you use &lt;code class=&quot;highlighter-rouge&quot;&gt;requestLocation()&lt;/code&gt;, it will only gather location data once. However, this takes 10 seconds as opposed to &lt;code class=&quot;highlighter-rouge&quot;&gt;startUpdatingLocation()&lt;/code&gt;, which fires immediately.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>jules</name></author><category term="" /><category term="location" /><category term="manager" /><category term="swift" /><category term="data" /><category term="corelocation" /><category term="operation" /><category term="queue" /><summary type="html">This is the most elegant solution I found on how to retrieve location with CoreLocation.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.stack.imgur.com/hDiMB.png" /></entry><entry><title type="html">Where Is Assistant Editor Mode In Xcode 11</title><link href="http://iosjunkie.com/blog/assistant-editor-mode-in-xcode-11/" rel="alternate" type="text/html" title="Where Is Assistant Editor Mode In Xcode 11" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/assistant-editor-mode-in-xcode-11</id><content type="html" xml:base="http://iosjunkie.com/blog/assistant-editor-mode-in-xcode-11/">&lt;p&gt;Welcome to the world of Xcode 11 where it’s now confusing to find the assistant editor. Well, there it is. It is not in the same place anymore. On the top right corner of the storyboard, there’s this &lt;code class=&quot;highlighter-rouge&quot;&gt;Adjust Editor Options&lt;/code&gt; icon. Just click on that and choose &lt;code class=&quot;highlighter-rouge&quot;&gt;Assistant&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;I’m so used to the old icon that it used to be, but now it’s just a text only button that is not that easy to navigate to. But why? Are they really pushing developers to use SwiftUI and depend on the canvas instead of our dearest storyboard?&lt;/p&gt;
-
-&lt;p&gt;UPDATE: I thought I was the only one who put up an instruction for this. Well, here’s a better visual on how to really find it.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/rTn02yqIj6w&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="" /><category term="assistant" /><category term="editor" /><category term="view" /><category term="xcode" /><category term="where" /><summary type="html">Welcome to the world of Xcode 11 where it’s now confusing to find the assistant editor. Well, there it is. It is not in the same place anymore. On the top right corner of the storyboard, there’s this Adjust Editor Options icon. Just click on that and choose Assistant.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-07%20at%203.11.58%20AM.png" /></entry><entry><title type="html">Grand Central Dispatch (GCD): Where To Start Learning</title><link href="http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning/" rel="alternate" type="text/html" title="Grand Central Dispatch (GCD): Where To Start Learning" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning</id><content type="html" xml:base="http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning/">&lt;p&gt;I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no.&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>jules</name></author><category term="" /><category term="location" /><category term="manager" /><category term="swift" /><category term="data" /><category term="corelocation" /><category term="operation" /><category term="queue" /><summary type="html">This is the most elegant solution I found on how to retrieve location with CoreLocation.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.stack.imgur.com/hDiMB.png" /></entry><entry><title type="html">Grand Central Dispatch (GCD): Where To Start Learning</title><link href="http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning/" rel="alternate" type="text/html" title="Grand Central Dispatch (GCD): Where To Start Learning" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning</id><content type="html" xml:base="http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning/">&lt;p&gt;I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;GCD is an API provided by apple to allow you to manage concurrent operations in a smooth way, in order to avoid freezing of your application and keep it always responsive for users. - Jaafar Barek&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -426,85 +439,10 @@ class ViewController: UIViewController {
 
 &lt;p&gt;Both are really valuable resources for learning &lt;code class=&quot;highlighter-rouge&quot;&gt;GCD&lt;/code&gt;. It takes quite a while to grasp this simple concept but with broad applications, so I recommend reading on both to consolidate that chunk of knowledge. It is really intimidating to learn, since most of the time, programmers only usually use &lt;code class=&quot;highlighter-rouge&quot;&gt;background&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;I bet these resources are good for interviews too.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="grand" /><category term="central" /><category term="dispatch" /><category term="dispatchqueue" /><category term="barrier" /><category term="ultimate" /><category term="guide" /><category term="asynchronous" /><category term="operation" /><category term="swiftui" /><category term="combine" /><category term="framework" /><summary type="html">I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no. GCD is an API provided by apple to allow you to manage concurrent operations in a smooth way, in order to avoid freezing of your application and keep it always responsive for users. - Jaafar Barek</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://res.cloudinary.com/practicaldev/image/fetch/s--orob56V4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://learningswift.brightdigit.com/wp-content/uploads/sites/2/2019/09/ParallelConcurrency.001-1024x768.jpeg" /></entry><entry><title type="html">How Static Is Used</title><link href="http://iosjunkie.com/blog/how-static-is-used/" rel="alternate" type="text/html" title="How Static Is Used" /><published>2019-10-06T00:00:00+08:00</published><updated>2019-10-06T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/how-static-is-used</id><content type="html" xml:base="http://iosjunkie.com/blog/how-static-is-used/">&lt;p&gt;Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial.&lt;/p&gt;
+&lt;p&gt;I bet these resources are good for interviews too.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="grand" /><category term="central" /><category term="dispatch" /><category term="dispatchqueue" /><category term="barrier" /><category term="ultimate" /><category term="guide" /><category term="asynchronous" /><category term="operation" /><category term="swiftui" /><category term="combine" /><category term="framework" /><summary type="html">I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no. GCD is an API provided by apple to allow you to manage concurrent operations in a smooth way, in order to avoid freezing of your application and keep it always responsive for users. - Jaafar Barek</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://res.cloudinary.com/practicaldev/image/fetch/s--orob56V4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://learningswift.brightdigit.com/wp-content/uploads/sites/2/2019/09/ParallelConcurrency.001-1024x768.jpeg" /></entry><entry><title type="html">Where Is Assistant Editor Mode In Xcode 11</title><link href="http://iosjunkie.com/blog/assistant-editor-mode-in-xcode-11/" rel="alternate" type="text/html" title="Where Is Assistant Editor Mode In Xcode 11" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/assistant-editor-mode-in-xcode-11</id><content type="html" xml:base="http://iosjunkie.com/blog/assistant-editor-mode-in-xcode-11/">&lt;p&gt;Welcome to the world of Xcode 11 where it’s now confusing to find the assistant editor. Well, there it is. It is not in the same place anymore. On the top right corner of the storyboard, there’s this &lt;code class=&quot;highlighter-rouge&quot;&gt;Adjust Editor Options&lt;/code&gt; icon. Just click on that and choose &lt;code class=&quot;highlighter-rouge&quot;&gt;Assistant&lt;/code&gt;.&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/s2E5hVxQAZQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;I’m so used to the old icon that it used to be, but now it’s just a text only button that is not that easy to navigate to. But why? Are they really pushing developers to use SwiftUI and depend on the canvas instead of our dearest storyboard?&lt;/p&gt;
 
-&lt;p&gt;There’s just one hiccup here that might confuse the newbies. Sean used the term &lt;code class=&quot;highlighter-rouge&quot;&gt;Type&lt;/code&gt; and the struct’s name interchangeably.&lt;/p&gt;
+&lt;p&gt;UPDATE: I thought I was the only one who put up an instruction for this. Well, here’s a better visual on how to really find it.&lt;/p&gt;
 
-&lt;p&gt;Let’s have at it one more time:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct Video {
-    static let creator = &quot;iOS Junkie&quot;
-    
-    var title: String
-    var viewCount: Int
-}
-
-let tutorial = Video(title: &quot;Static&quot;, viewCount: 1000)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;Type&lt;/code&gt; mentioned by Sean is the &lt;code class=&quot;highlighter-rouge&quot;&gt;Video&lt;/code&gt; struct, which owns the creator. Say you access the creator via &lt;code class=&quot;highlighter-rouge&quot;&gt;Video.creator&lt;/code&gt; without creating a &lt;code class=&quot;highlighter-rouge&quot;&gt;Video()&lt;/code&gt; object, then it is a &lt;code class=&quot;highlighter-rouge&quot;&gt;type&lt;/code&gt; and not an &lt;code class=&quot;highlighter-rouge&quot;&gt;instance&lt;/code&gt; like tutorial. &lt;code class=&quot;highlighter-rouge&quot;&gt;tutorial&lt;/code&gt; is assigned an instance of &lt;code class=&quot;highlighter-rouge&quot;&gt;Video()&lt;/code&gt; object.&lt;/p&gt;
-
-&lt;p&gt;If you’re curious whether &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt; can be accessed this like this &lt;code class=&quot;highlighter-rouge&quot;&gt;Video.title&lt;/code&gt;, then no. Even if it is pre-initialized a value, it will give out an error saying: &lt;code class=&quot;highlighter-rouge&quot;&gt;Instance member 'title' cannot be used on type 'Helper'&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;You’ll want to use static for a reason like you might not want to create an object to access its properies or methods making it possible to directly access the struct &lt;code class=&quot;highlighter-rouge&quot;&gt;Vlog&lt;/code&gt;’s properties without creating an object. Static can also be applied to a method, which allows you to do something like &lt;code class=&quot;highlighter-rouge&quot;&gt;Video.play()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;It’s also important to note that you can replace the creator’s value just by assigning it a new value this way:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Video.creator = &quot;Sean Allen&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The next time you access &lt;code class=&quot;highlighter-rouge&quot;&gt;Video.creator&lt;/code&gt; or create an object with &lt;code class=&quot;highlighter-rouge&quot;&gt;Video()&lt;/code&gt;, the creator will be &lt;code class=&quot;highlighter-rouge&quot;&gt;Sean Allen&lt;/code&gt; by then.&lt;/p&gt;
-
-&lt;p&gt;Now that we’re talking about static, there’s another way to access computed properties and methods of a construct without making an object. This is from Kilo Loco:&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/CV0czLueGeI&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Helper {
-    // Static - allowed in structs and classes
-    static var staticStoredProperty = &quot;Static Stored Property&quot;
-    static var staticComputedProperty: String {
-        return &quot;Static computed property&quot;
-    }
-    
-    static func staticMethod() {
-        print(&quot;Static Method&quot;)
-    }
-    
-    // Class - only allows within classes, not structs
-    class var classComputedProperty: String {
-        return &quot;Class computed property&quot;
-    }
-    
-    class func classMethod() {
-        print(&quot;class method&quot;)
-    }
-}
-
-class SubHelper : Helper {
-    override class var classComputedProperty: String {
-        return &quot;subClassed computed property&quot;
-    }
-    
-    override class func classMethod() {
-        print(&quot;subclassed method&quot;)
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Aside from &lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt;, you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;class&lt;/code&gt; in exchange. No! Not the class construct. I’m talking about class type. It works almost similarly to static. However, you cannot store a property like you would with &lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt;. With &lt;code class=&quot;highlighter-rouge&quot;&gt;class&lt;/code&gt;, you can do something that &lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt; too can’t do. You can override computed properties and methods as you can see inside the the &lt;code class=&quot;highlighter-rouge&quot;&gt;SubHelper&lt;/code&gt; class.&lt;/p&gt;
-
-&lt;p&gt;It is important to note that you cannot use the &lt;code class=&quot;highlighter-rouge&quot;&gt;class&lt;/code&gt; type inside a &lt;code class=&quot;highlighter-rouge&quot;&gt;struct&lt;/code&gt;, only inside classes.&lt;/p&gt;
-
-&lt;p&gt;These are all valid ways to access properties and methods given the code above:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Helper.staticStoredProperty
-Helper.staticComputedProperty
-Helper.staticMethod()
-
-Helper.classComputedProperty
-Helper.classMethod()
-
-SubHelper.classComputedProperty
-SubHelper.classMethod()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swift" /><category term="data" /><category term="structure" /><category term="static" /><category term="struct" /><category term="class" /><category term="construct" /><category term="type" /><summary type="html">Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.ytimg.com/vi/s2E5hVxQAZQ/hqdefault.jpg" /></entry></feed>
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/rTn02yqIj6w&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="" /><category term="assistant" /><category term="editor" /><category term="view" /><category term="xcode" /><category term="where" /><summary type="html">Welcome to the world of Xcode 11 where it’s now confusing to find the assistant editor. Well, there it is. It is not in the same place anymore. On the top right corner of the storyboard, there’s this Adjust Editor Options icon. Just click on that and choose Assistant.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-07%20at%203.11.58%20AM.png" /></entry></feed>
