@@ -18,6 +18,7 @@ Thanks to [Paul Hudson @twostraws][ph] for the informative knowledge on how to c
 ```
 import Network
 private let monitor = NWPathMonitor()
+monitor.start(queue: queue)
 monitor.pathUpdateHandler = { path in
     if path.status == .satisfied {
         print("Online")
@@ -31,18 +32,26 @@ Now, I created something to allow me to check for the internet connection in dif
 
 ```
 func online(completion: @escaping (Bool) -> Void) {
+    let monitor = NWPathMonitor()
+    let queue = DispatchQueue.global(qos: .background)
+    monitor.start(queue: queue)
     monitor.pathUpdateHandler = { path in
+      var err = true
+      defer {
+        completion(err)
+        monitor.cancel()
+      }
       if path.status == .satisfied {
-        completion(true)
+        err = false
       } else {
         self.showError(message: "Offline! :(")
-        completion(false)
+        err = true
       }
     }
 }
 ```
 
-I created this inside a singleton class which allows me to call this method simply, anywhere, like this:
+Note that the we have to cancel the network monitoring that's been in the background thread, if you want to stop checking for the internet connection. If you don't cancel it, every time the connectivity changes, your monitor.pathUpdateHandler will execute itself again. I created this inside a singleton which allows me to call this method simply, anywhere, like this:
 
 ```
 Singleton.sharedInstance.online { (err) in

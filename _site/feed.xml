@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-11T01:21:30+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Experience With Carthage As Opposed To Cocoapods</title><link href="http://iosjunkie.com/blog/experience-with-carthage/" rel="alternate" type="text/html" title="Experience With Carthage As Opposed To Cocoapods" /><published>2019-10-11T00:00:00+08:00</published><updated>2019-10-11T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/experience-with-carthage</id><content type="html" xml:base="http://iosjunkie.com/blog/experience-with-carthage/">&lt;p&gt;Cocoapods makes your build times slower and that’s why I’ve taken the liberty of trying Carthage. Well, from the instructions I’ve read in bigger frameworks like &lt;code class=&quot;highlighter-rouge&quot;&gt;Realm&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;FacebookCore/FacebookLogin&lt;/code&gt;, it is a daunting process. Which is why it took me this long to want to even bother with it. But for some smaller frameworks, it is almost similar to Cocoapod’s process, which I like better. Unfortunately, this arduous shift took painfully long to install the frameworks. Every time I add a new framework to my &lt;code class=&quot;highlighter-rouge&quot;&gt;Cartfile&lt;/code&gt; and update carthage, it downloads everything and installs everything over again. My gahd!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-11T01:43:42+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Experience With Carthage As Opposed To Cocoapods</title><link href="http://iosjunkie.com/blog/experience-with-carthage/" rel="alternate" type="text/html" title="Experience With Carthage As Opposed To Cocoapods" /><published>2019-10-11T00:00:00+08:00</published><updated>2019-10-11T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/experience-with-carthage</id><content type="html" xml:base="http://iosjunkie.com/blog/experience-with-carthage/">&lt;p&gt;Cocoapods makes your build times slower and that’s why I’ve taken the liberty of trying Carthage. Well, from the instructions I’ve read in bigger frameworks like &lt;code class=&quot;highlighter-rouge&quot;&gt;Realm&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;FacebookCore/FacebookLogin&lt;/code&gt;, it is a daunting process. Which is why it took me this long to want to even bother with it. But for some smaller frameworks, it is almost similar to Cocoapod’s process, which I like better. Unfortunately, this arduous shift took painfully long to install the frameworks. Every time I add a new framework to my &lt;code class=&quot;highlighter-rouge&quot;&gt;Cartfile&lt;/code&gt; and update carthage, it downloads everything and installs everything over again. My gahd!&lt;/p&gt;
 
 &lt;p&gt;Apart from that, I didn’t know that I had to take this extra step for each of the framework I’m using.&lt;/p&gt;
 
@@ -102,6 +102,7 @@ NotificationCenter.default.addObserver(self, selector: #selector(sortAndStopLoad
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import Network
 private let monitor = NWPathMonitor()
+monitor.start(queue: queue)
 monitor.pathUpdateHandler = { path in
     if path.status == .satisfied {
         print(&quot;Online&quot;)
@@ -114,18 +115,26 @@ monitor.pathUpdateHandler = { path in
 &lt;p&gt;Now, I created something to allow me to check for the internet connection in different parts of my project without having to &lt;code class=&quot;highlighter-rouge&quot;&gt;import Network&lt;/code&gt; all the damn time.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func online(completion: @escaping (Bool) -&amp;gt; Void) {
+    let monitor = NWPathMonitor()
+    let queue = DispatchQueue.global(qos: .background)
+    monitor.start(queue: queue)
     monitor.pathUpdateHandler = { path in
+      var err = true
+      defer {
+        completion(err)
+        monitor.cancel()
+      }
       if path.status == .satisfied {
-        completion(true)
+        err = false
       } else {
         self.showError(message: &quot;Offline! :(&quot;)
-        completion(false)
+        err = true
       }
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;I created this inside a singleton class which allows me to call this method simply, anywhere, like this:&lt;/p&gt;
+&lt;p&gt;Note that the we have to cancel the network monitoring that’s been in the background thread, if you want to stop checking for the internet connection. If you don’t cancel it, every time the connectivity changes, your monitor.pathUpdateHandler will execute itself again. I created this inside a singleton which allows me to call this method simply, anywhere, like this:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Singleton.sharedInstance.online { (err) in
     guard err == false else { return }
