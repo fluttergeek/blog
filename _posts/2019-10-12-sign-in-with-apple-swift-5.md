@@ -1,5 +1,5 @@
 ---
-title: Sign In With Apple Swift 5
+title: Sign In With Apple Swift 5 Tutorial
 image: assets/images/Screen%20Shot%202019-10-12%20at%201.09.03%20PM.png
 tags:
 - ''
@@ -60,7 +60,7 @@ That's basically what you'll need to make the button appear. Now let's make it f
     let request = provider.createRequest()
     request.requestScopes = [.fulName, .email]
 		
-		let controller = ASAuthorizationController(authorizationRequests: [request])
+    let controller = ASAuthorizationController(authorizationRequests: [request])
     controller.delegate = self
     controller.presentationContextProvider = self
     controller.performRequest()
