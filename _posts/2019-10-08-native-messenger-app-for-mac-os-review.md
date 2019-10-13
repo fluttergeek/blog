@@ -41,17 +41,17 @@ It looks way more sophisticated than `Chatmate` but it doesn't feel as snappy. I
 
 ![goofy](https://www.goofyapp.com/img/screenshot.png)
 
-That's Goofy for you! I haven't tried it, yet I assume it would look similar to `Caprine` too.
+That's Goofy for you! Now that I've tried `Goofy` too, I can say it really is much lighter. The whole thing after logging in is just a browser. It looks similar to `Caprine` actually but as I said, way way less features. This is the lightest among other non-native Messengers. 
 
 Now here's something I'd like to introduce to you. I'm not sure what this is built on, but it is faster than `Caprine`, but I wish it had `Caprine's` awesome features. The only thing I love about it is that it loads much faster. Franz is the former Emperor of Austria - but also a messaging app that combines chat & messaging services into one application. [Franz][franz] currently supports Slack, WhatsApp, WeChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype and many more.
 
 ![franz](https://meetfranz.com/static/images/franz-screenshot.png)
 
-It does not feel heavy on the system, but the messenger part is simply a web app of the official `Messenger`. Hence, it still isn't a native solution. How it feels when using the web app is the exact same feel when using `Franz` and I can say that it feels much master than `Caprine` when loading the stickers. The only downside I can find is that it just keeps asking you to purchase `Franz Professional`.
+It feels lighter than Caprine, but the messenger part is simply a web app of the official `Messenger`. Hence, it still isn't a native solution. How it feels when using the web app is the exact same feel when using `Franz` and I can say that it feels much master than `Caprine` when loading the stickers. The only downside I can find is that it just keeps asking you to purchase `Franz Professional`.
 
 ![franzprofessional](/blog/assets/images/Screen%20Shot%202019-10-09%20at%2010.56.18%20PM.png)
 
-It went like this out of nowehere like a screensaver, and I waited 15 seconds for it to go back to messenger mode.
+It went like this out of nowehere like a screensaver, and I waited 10 seconds for it to go back to messenger mode. It basically does this every time you open up `Franz`.
 
 [reddit]: https://www.reddit.com/r/macapps/comments/dezb0e/native_messenger_app_for_mac_os_review/
 [git]: https://github.com/sindresorhus/caprine/
