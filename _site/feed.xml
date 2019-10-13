@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-13T01:45:56+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Sign In With Apple Swift 5 Tutorial</title><link href="http://iosjunkie.com/blog/sign-in-with-apple-swift-5/" rel="alternate" type="text/html" title="Sign In With Apple Swift 5 Tutorial" /><published>2019-10-12T00:00:00+08:00</published><updated>2019-10-12T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/sign-in-with-apple-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/sign-in-with-apple-swift-5/">&lt;p&gt;First of all, a big thanks to Kilo Loco’s &lt;a href=&quot;https://www.youtube.com/watch?v=vuygdr0EcGM&quot;&gt;tutorial&lt;/a&gt;. Check it out. Not only is this feature available for iOS 13 up, it’s also available for Mac OS 10.15.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-14T03:00:11+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Enums For Beginners</title><link href="http://iosjunkie.com/blog/enums/" rel="alternate" type="text/html" title="Enums For Beginners" /><published>2019-10-13T00:00:00+08:00</published><updated>2019-10-13T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/enums</id><content type="html" xml:base="http://iosjunkie.com/blog/enums/">&lt;p&gt;Enums can be confusing for everybody, especially the newbies. I mean, why use those when you can just create variables and constructs. It does the same right? Some claim that they use enum to make their code type-safe, error free and easy to use. I guess that would be true if an app is becoming perplexingly complex.&lt;/p&gt;
+
+&lt;p&gt;In basic form, it can look like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;enum Directions {
+    case North
+    case South
+    case East
+    case West
+}
+ 
+ 
+// Defining multiple cases on a single line
+ 
+enum Directions { 
+    case North, South, East, West 
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Cool, so what then? How and why would you want to use those? After calling forth &lt;code class=&quot;highlighter-rouge&quot;&gt;Directions.North&lt;/code&gt; with a &lt;code class=&quot;highlighter-rouge&quot;&gt;print&lt;/code&gt;, you’ll just see this in the console &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;North\n&quot;&lt;/code&gt;. You might wonder why is this even useful? It’s like calling a variable inside of a struct type.&lt;/p&gt;
+
+&lt;p&gt;Let’s move on to Raw Values. We now know that cases will return a string. Aside from it, it can also return a &lt;code class=&quot;highlighter-rouge&quot;&gt;rawValue&lt;/code&gt;. Just how do we do that? It’s easy, just inherit from a type by doing something like this: &lt;code class=&quot;highlighter-rouge&quot;&gt;enum Directions: Int&lt;/code&gt;. Now when you print(&lt;code class=&quot;highlighter-rouge&quot;&gt;Directions.North.rawValue&lt;/code&gt;), you’ll get &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;. It’s just like Directions became some sort of array and North is indexed at &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;.  Here’s another example for that:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;enum AnimationCurve: Int {
+    case easeInOut, easeIn, easeOut, linear
+}
+
+print(AnimationCurve.easeIn.rawValue)
+// &quot;1\n&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The next example will not be able to inherit from types to call &lt;code class=&quot;highlighter-rouge&quot;&gt;rawValues&lt;/code&gt; from cases.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;enum Directions {
+    case North(String)
+    case South(latitude: Double, longitude: Double)
+    case East(String)
+    case West(String)
+}
+ 
+var digitalCompass = Directions.South(latitude: -120.83, longitude: 37.0)
+print(digitalCompass)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;When printed, this will give a value of &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;South(latitude: -120.83, longitude: 37.0)\n&quot;&lt;/code&gt;. Neat huh? So, basically it’s a string. Cases are a f***ing string with like no spaces because they are also variable names at the same time! Genius!&lt;/p&gt;
+
+&lt;p&gt;How do we get the values inside of the parenthesis? Is there some kind of rawValue mechanism we can use for this? As a matter of fact, there is! We can print a form of string from the values inside of these parentheses. If you trust me on this, we can print out &lt;code class=&quot;highlighter-rouge&quot;&gt;Latitude is 0.5, while longitude is 0.6&lt;/code&gt; just by printing &lt;code class=&quot;highlighter-rouge&quot;&gt;print(Directions.South(latitude: 0.5, longitude: 0.6).description)&lt;/code&gt;. We just have to extend this enum like it’s some kind of construct and create a computed property, we chose to use the word &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt; as you can see. It can be anything actually.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;extension Directions {
+    var description: String {
+        switch self {
+        case .North(let direction):
+            return direction
+        case .South(let latitude, let longitude):
+            return &quot;Latitude is \(latitude), while longitude is \(longitude)&quot;
+        case .East(let isItReally):
+            return &quot;The direction is \(isItReally)&quot;
+        case .West(let westeros):
+            return &quot;King's landing is in \(westeros)&quot;
+        }
+    }
+}
+
+print(Directions.South(latitude: 0.5, longitude: 0.6).description)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There’s another way to simply do this without having to call the computed property &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt; directly. We can inherit this extension from CustomStringConvertible, like this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;extension Directions: CustomStringConvertible {
+    var description: String {
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;, but the computed property should be &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt;. If you use another variable name instead of it, then you will not be able to use &lt;code class=&quot;highlighter-rouge&quot;&gt;CustomStringConvertible&lt;/code&gt;’s feature.&lt;/p&gt;
+
+&lt;p&gt;Now all you have to do to get the same result is print out &lt;code class=&quot;highlighter-rouge&quot;&gt;Directions.South(latitude: 0.5, longitude: 0.6)&lt;/code&gt; without the &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt; after it.&lt;/p&gt;
+
+&lt;p&gt;That’s the idea of how to return strings out of enums with parentheses. The &lt;code class=&quot;highlighter-rouge&quot;&gt;let latitude, let longitude&lt;/code&gt; are just arguments. If you’ve noticed, it can actually be named anything too.&lt;/p&gt;
+
+&lt;p&gt;Now that we know how to work with enums. There are other things you can do with it too, like comparing complex enum’s value to a smilar type of enum. This is a tutorial by &lt;code class=&quot;highlighter-rouge&quot;&gt;Károly Nyisztor&lt;/code&gt; and it teaches just that.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/XsXE3SlzpM4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;https://becodable.com/swift-enum/&quot;&gt;BeCodable&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=XsXE3SlzpM4&quot;&gt;Károly Nyisztor&lt;/a&gt; and &lt;a href=&quot;https://www.avanderlee.com/swift/enumerations/&quot;&gt;Antoine v.d. SwiftLee 🚀&lt;/a&gt;. The examples come from their posts.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="enums" /><category term="swift" /><category term="tutorial" /><summary type="html">Enums can be confusing for everybody, especially the newbies. I mean, why use those when you can just create variables and constructs. It does the same right? Some claim that they use enum to make their code type-safe, error free and easy to use. I guess that would be true if an app is becoming perplexingly complex.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://becodable.com/wp-content/uploads/2018/09/Swift-Enum.jpg" /></entry><entry><title type="html">Sign In With Apple Swift 5 Tutorial</title><link href="http://iosjunkie.com/blog/sign-in-with-apple-swift-5/" rel="alternate" type="text/html" title="Sign In With Apple Swift 5 Tutorial" /><published>2019-10-12T00:00:00+08:00</published><updated>2019-10-12T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/sign-in-with-apple-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/sign-in-with-apple-swift-5/">&lt;p&gt;First of all, a big thanks to Kilo Loco’s &lt;a href=&quot;https://www.youtube.com/watch?v=vuygdr0EcGM&quot;&gt;tutorial&lt;/a&gt;. Check it out. Not only is this feature available for iOS 13 up, it’s also available for Mac OS 10.15.&lt;/p&gt;
 
 &lt;p&gt;This is my favorite feature in iOS 13. Being able to sign in with the option of privacy. Why is that? Well if you use this feature in your app, your user will be able to use a dummy name and a garbage email address. The garbage email address generated by Apple will forward emails to the email associated with the user’s Apple ID. It’s not necessarily the user’s @icloud.com email. It could be his gmail. And of course, the user doesn’t have to change his name to something else and he can opt to use the Apple associated email. As of now, the only information this feature can use are full name and email.&lt;/p&gt;
 
@@ -169,7 +250,47 @@ appleIDProvider.getCredentialState(forUserID: userIdentifier) { (credentialState
 
 &lt;p&gt;I’m only trying to remove the access token and make sure it is empty before I perform the segue.&lt;/p&gt;
 
-&lt;p&gt;So far this works for me, but then I’ll have to call &lt;code class=&quot;highlighter-rouge&quot;&gt;AccessToken.refreshCurrentAccessToken&lt;/code&gt; again in my login view to make sure access token is nil by the time I’m signed out. If I omitted that, my access token still contains the token. It is redudant to call &lt;code class=&quot;highlighter-rouge&quot;&gt;AccessToken.refreshCurrentAccessToken&lt;/code&gt; again ni both views but so far this is the only thing that works for me now.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="firebase" /><category term="sign" /><category term="out" /><category term="feature" /><category term="access" /><category term="token" /><category term="defer" /><category term="login" /><summary type="html">I call the signOut() to sign out, but there’s really a lot of things going on inside my call. I’m not sure which is the correct way to do this yet, but what I’m trying to achieve is once I’m signed off, my login view will not automatically sign me back in. My login view checks if the access token contains a token, and if it does, then automatically sign me in and performSegue.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.hasura.io/content/images/2019/03/rawpixel-783430-unsplash-1.jpg" /></entry><entry><title type="html">Check If Online Swift 5</title><link href="http://iosjunkie.com/blog/check-if-online-swift-5/" rel="alternate" type="text/html" title="Check If Online Swift 5" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/check-if-online-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/check-if-online-swift-5/">&lt;p&gt;Thanks to &lt;a href=&quot;https://www.hackingwithswift.com/example-code/networking/how-to-check-for-internet-connectivity-using-nwpathmonitor&quot;&gt;Paul Hudson @twostraws&lt;/a&gt; for the informative knowledge on how to check for internet connection. Let me remind you that this solution is available since iOS 12.0. WWDC in June 2018 introduced the Network framework available from iOS 12 onwards which includes the NWPathMonitor class, which we will be using in this tutorial. Here’s a straight forward example of the basic implementation on how to check for internet connection.&lt;/p&gt;
+&lt;p&gt;So far this works for me, but then I’ll have to call &lt;code class=&quot;highlighter-rouge&quot;&gt;AccessToken.refreshCurrentAccessToken&lt;/code&gt; again in my login view to make sure access token is nil by the time I’m signed out. If I omitted that, my access token still contains the token. It is redudant to call &lt;code class=&quot;highlighter-rouge&quot;&gt;AccessToken.refreshCurrentAccessToken&lt;/code&gt; again ni both views but so far this is the only thing that works for me now.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="firebase" /><category term="sign" /><category term="out" /><category term="feature" /><category term="access" /><category term="token" /><category term="defer" /><category term="login" /><summary type="html">I call the signOut() to sign out, but there’s really a lot of things going on inside my call. I’m not sure which is the correct way to do this yet, but what I’m trying to achieve is once I’m signed off, my login view will not automatically sign me back in. My login view checks if the access token contains a token, and if it does, then automatically sign me in and performSegue.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.hasura.io/content/images/2019/03/rawpixel-783430-unsplash-1.jpg" /></entry><entry><title type="html">Notification And Observer: The Basics</title><link href="http://iosjunkie.com/blog/notification-and-observer-the-basics/" rel="alternate" type="text/html" title="Notification And Observer: The Basics" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/notification-and-observer-the-basics</id><content type="html" xml:base="http://iosjunkie.com/blog/notification-and-observer-the-basics/">&lt;p&gt;This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that notifies the observer:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Trigger/Notifier
+NotificationCenter.default.post(name: NSNotification.Name.init(&quot;done&quot;), object: nil)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This will look for an observer that will allow you to send this trigger an action. It is looking for an observer named &lt;code class=&quot;highlighter-rouge&quot;&gt;done&lt;/code&gt;. Let’s create that too:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Observer
+NotificationCenter.default.addObserver(self, selector: #selector(sortAndStopLoading(n:)), name: NSNotification.Name.init(&quot;done&quot;), object: nil)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now this is something you’d probably find in the &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; of your ViewCotroller. Just to create an observation to catch the trigger with the name &lt;code class=&quot;highlighter-rouge&quot;&gt;done&lt;/code&gt; and provides an action when the trigger has been called. Let’s create that action too:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Action
+@objc func sortAndStopLoading(n: NSNotification) {
+        done += 1
+        
+        if done == 2 {
+            print(&quot;reached&quot;)
+            self.sales = self.sales.sorted(by: {($0[&quot;number&quot;] as! Int) &amp;gt; ($1[&quot;number&quot;] as! Int)})
+            self.stopLoading()
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Never mind the content of my function. What is important here is you know how the selector’s given function will actually look like. If you were wondering what is inside my function, it is simply just waiting for the trigger to call this function two times from maybe two different sources of thread that call the same trigger. When both threads are &lt;code class=&quot;highlighter-rouge&quot;&gt;done&lt;/code&gt;, then we can sort the array’s contents and tuck away the loader image.&lt;/p&gt;
+
+&lt;p&gt;If your ViewController is done &lt;code class=&quot;highlighter-rouge&quot;&gt;observing&lt;/code&gt;, and we disappear from this view or something, we should remove this observer like so:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deinit {
+    NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init(&quot;done&quot;), object: nil)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or like this&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;override func viewDidDisappear(_ animated: Bool) {
+    NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init(&quot;done&quot;), object: nil)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swift" /><category term="notification" /><category term="observer" /><category term="push" /><category term="local" /><category term="remote" /><category term="trigger" /><summary type="html">This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that notifies the observer:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/1_Ca69vjmxQIdkOfW-O6hZaA.png" /></entry><entry><title type="html">Check If Online Swift 5</title><link href="http://iosjunkie.com/blog/check-if-online-swift-5/" rel="alternate" type="text/html" title="Check If Online Swift 5" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/check-if-online-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/check-if-online-swift-5/">&lt;p&gt;Thanks to &lt;a href=&quot;https://www.hackingwithswift.com/example-code/networking/how-to-check-for-internet-connectivity-using-nwpathmonitor&quot;&gt;Paul Hudson @twostraws&lt;/a&gt; for the informative knowledge on how to check for internet connection. Let me remind you that this solution is available since iOS 12.0. WWDC in June 2018 introduced the Network framework available from iOS 12 onwards which includes the NWPathMonitor class, which we will be using in this tutorial. Here’s a straight forward example of the basic implementation on how to check for internet connection.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import Network
 private let monitor = NWPathMonitor()
@@ -214,47 +335,48 @@ monitor.pathUpdateHandler = { path in
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;There’s a more elaborate article discussing how the &lt;code class=&quot;highlighter-rouge&quot;&gt;Network&lt;/code&gt; framework can be used. Check &lt;a href=&quot;https://medium.com/@rwbutler/nwpathmonitor-the-new-reachability-de101a5a8835&quot;&gt;it&lt;/a&gt; out.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="online" /><category term="swift" /><category term="check" /><category term="internet" /><category term="connection" /><category term="available" /><category term="offline" /><summary type="html">Thanks to Paul Hudson @twostraws for the informative knowledge on how to check for internet connection. Let me remind you that this solution is available since iOS 12.0. WWDC in June 2018 introduced the Network framework available from iOS 12 onwards which includes the NWPathMonitor class, which we will be using in this tutorial. Here’s a straight forward example of the basic implementation on how to check for internet connection.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBXD5o0JeyxP-5MmwSZO4lOrONruMPlZmrTRWonLxYsgx1iPYH" /></entry><entry><title type="html">Notification And Observer: The Basics</title><link href="http://iosjunkie.com/blog/notification-and-observer-the-basics/" rel="alternate" type="text/html" title="Notification And Observer: The Basics" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/notification-and-observer-the-basics</id><content type="html" xml:base="http://iosjunkie.com/blog/notification-and-observer-the-basics/">&lt;p&gt;This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that notifies the observer:&lt;/p&gt;
+&lt;p&gt;There’s a more elaborate article discussing how the &lt;code class=&quot;highlighter-rouge&quot;&gt;Network&lt;/code&gt; framework can be used. Check &lt;a href=&quot;https://medium.com/@rwbutler/nwpathmonitor-the-new-reachability-de101a5a8835&quot;&gt;it&lt;/a&gt; out.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="online" /><category term="swift" /><category term="check" /><category term="internet" /><category term="connection" /><category term="available" /><category term="offline" /><summary type="html">Thanks to Paul Hudson @twostraws for the informative knowledge on how to check for internet connection. Let me remind you that this solution is available since iOS 12.0. WWDC in June 2018 introduced the Network framework available from iOS 12 onwards which includes the NWPathMonitor class, which we will be using in this tutorial. Here’s a straight forward example of the basic implementation on how to check for internet connection.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBXD5o0JeyxP-5MmwSZO4lOrONruMPlZmrTRWonLxYsgx1iPYH" /></entry><entry><title type="html">Native Messenger App For Mac OS (Review) vs Caprine vs Goofy vs Franz</title><link href="http://iosjunkie.com/blog/native-messenger-app-for-mac-os-review/" rel="alternate" type="text/html" title="Native Messenger App For Mac OS (Review) vs Caprine vs Goofy vs Franz" /><published>2019-10-08T00:00:00+08:00</published><updated>2019-10-08T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/native-messenger-app-for-mac-os-review</id><content type="html" xml:base="http://iosjunkie.com/blog/native-messenger-app-for-mac-os-review/">&lt;p&gt;I’m currently on Mojave and I just thought that it’s time I use an app for messenger. It takes quite a while to load Facebook messenger on my Chrome browser. Maybe it’s just my internet speed. So I looked for an app on the Mac App Store and there’s not much apps out there for native Mac OS app look of Messenger. This is probably the only one out there. The only one I’ve found at least. I’ve scrolled deep enough to see there’s no other like it. It has decent amount of stars as rating, but does it really live up to it?&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Trigger/Notifier
-NotificationCenter.default.post(name: NSNotification.Name.init(&quot;done&quot;), object: nil)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen_Shot_2019-10-08_at_7_52_32_PM.png&quot; alt=&quot;chatmate&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This will look for an observer that will allow you to send this trigger an action. It is looking for an observer named &lt;code class=&quot;highlighter-rouge&quot;&gt;done&lt;/code&gt;. Let’s create that too:&lt;/p&gt;
+&lt;p&gt;What can I say? It really looks native, but it is half-baked. Here’s why:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The login fields look alright, but the placeholder doesn’t say the username can be accepted too. It’s just &lt;code class=&quot;highlighter-rouge&quot;&gt;Email&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;phone number&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;The login button is especially horrible looking. Just a plane white button with no rounded edges. Its font is too thin and the spacing around the text of the button is just not well thought of.&lt;/li&gt;
+  &lt;li&gt;As you can see on the photo, the user’s icon is overlapping the window frame’s buttons.&lt;/li&gt;
+  &lt;li&gt;Some text like &lt;code class=&quot;highlighter-rouge&quot;&gt;Chat&lt;/code&gt; is meant to be brighter on this dark mode. It definitely looks more suited to the light mode.&lt;/li&gt;
+  &lt;li&gt;The light mode is actually more gray than white.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Observer
-NotificationCenter.default.addObserver(self, selector: #selector(sortAndStopLoading(n:)), name: NSNotification.Name.init(&quot;done&quot;), object: nil)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Other than that, I’m satisfied with the app. I bought it for only a dollar. I’m going to keep on using it because it’s way faster than loading the messenger website.&lt;/p&gt;
 
-&lt;p&gt;Now this is something you’d probably find in the &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad&lt;/code&gt; of your ViewCotroller. Just to create an observation to catch the trigger with the name &lt;code class=&quot;highlighter-rouge&quot;&gt;done&lt;/code&gt; and provides an action when the trigger has been called. Let’s create that action too:&lt;/p&gt;
+&lt;h2 id=&quot;update&quot;&gt;UPDATE:&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Action
-@objc func sortAndStopLoading(n: NSNotification) {
-        done += 1
-        
-        if done == 2 {
-            print(&quot;reached&quot;)
-            self.sales = self.sales.sorted(by: {($0[&quot;number&quot;] as! Int) &amp;gt; ($1[&quot;number&quot;] as! Int)})
-            self.stopLoading()
-        }
-    }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://www.reddit.com/r/macapps/comments/dezb0e/native_messenger_app_for_mac_os_review/&quot;&gt;u/Auttoh&lt;/a&gt; and &lt;a href=&quot;https://www.reddit.com/r/macapps/comments/dezb0e/native_messenger_app_for_mac_os_review/&quot;&gt;aadillyas&lt;/a&gt; for responding on my Reddit link post of this blog post. They both gave me a tip on a similar app but not found on the app store. It’s from a &lt;a href=&quot;https://github.com/sindresorhus/caprine/&quot;&gt;github link&lt;/a&gt;. Caprine is an unofficial and privacy-focused Facebook Messenger app with many useful features. As you can see, I didn’t have to pixelate the names of my friends because they have this feature to hide names and avatars. It also allows you to follow the system’s appearance of your mac. Say you are in dark mode, the app will also be in dark mode. If you changed your system’s appearance to light mode, the app will also turn light mode. You can also choose to make its mode independent from the system’s appearance.&lt;/p&gt;
 
-&lt;p&gt;Never mind the content of my function. What is important here is you know how the selector’s given function will actually look like. If you were wondering what is inside my function, it is simply just waiting for the trigger to call this function two times from maybe two different sources of thread that call the same trigger. When both threads are &lt;code class=&quot;highlighter-rouge&quot;&gt;done&lt;/code&gt;, then we can sort the array’s contents and tuck away the loader image.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-09%20at%204.28.52%20AM.png&quot; alt=&quot;caprine&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;If your ViewController is done &lt;code class=&quot;highlighter-rouge&quot;&gt;observing&lt;/code&gt;, and we disappear from this view or something, we should remove this observer like so:&lt;/p&gt;
+&lt;p&gt;There’s also a compact mode on this app which hides away the names if your window is tinier. Only pictures of your friends will be shown on the side.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deinit {
-    NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init(&quot;done&quot;), object: nil)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/sindresorhus/caprine/raw/master/media/screenshot-compact.png&quot; alt=&quot;compact&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;or like this&lt;/p&gt;
+&lt;p&gt;It looks way more sophisticated than &lt;code class=&quot;highlighter-rouge&quot;&gt;Chatmate&lt;/code&gt; but it doesn’t feel as snappy. It is build on javascript/&lt;code class=&quot;highlighter-rouge&quot;&gt;Electron&lt;/code&gt; hence it is not native. Although, it looks native enough actually. There are still some features that load like a web page, like when choosing &lt;code class=&quot;highlighter-rouge&quot;&gt;stickers&lt;/code&gt; or when loading a conversation from another friend. After a day of using it, I realized how long it takes to open the app. I see a dark empty window first for a maybe 15 to 30 seconds until t loads the messenger web page.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;override func viewDidDisappear(_ animated: Bool) {
-    NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init(&quot;done&quot;), object: nil)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swift" /><category term="notification" /><category term="observer" /><category term="push" /><category term="local" /><category term="remote" /><category term="trigger" /><summary type="html">This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that notifies the observer:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/1_Ca69vjmxQIdkOfW-O6hZaA.png" /></entry><entry><title type="html">My First Post On Reddit</title><link href="http://iosjunkie.com/blog/my-first-post-on-reddit/" rel="alternate" type="text/html" title="My First Post On Reddit" /><published>2019-10-08T00:00:00+08:00</published><updated>2019-10-08T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/my-first-post-on-reddit</id><content type="html" xml:base="http://iosjunkie.com/blog/my-first-post-on-reddit/">&lt;p&gt;YouTube has been recommeding me blog tips and I’ve recently been keen on trying to get views on this blog. Today, my blog is still not indexed by google, but my half-baked portfolio &lt;code class=&quot;highlighter-rouge&quot;&gt;iosjunkie.com&lt;/code&gt; is. Which is weird.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.goofyapp.com/&quot;&gt;Goofy&lt;/a&gt; is another unoffical Messenger mac app. It is also &lt;code class=&quot;highlighter-rouge&quot;&gt;Electron&lt;/code&gt; based. It could be faster because it has much less features than &lt;code class=&quot;highlighter-rouge&quot;&gt;Caprine&lt;/code&gt;, obviously.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.goofyapp.com/img/screenshot.png&quot; alt=&quot;goofy&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s Goofy for you! I haven’t tried it, yet I assume it would look similar to &lt;code class=&quot;highlighter-rouge&quot;&gt;Caprine&lt;/code&gt; too.&lt;/p&gt;
+
+&lt;p&gt;Now here’s something I’d like to introduce to you. I’m not sure what this is built on, but it is faster than &lt;code class=&quot;highlighter-rouge&quot;&gt;Caprine&lt;/code&gt;, but I wish it had &lt;code class=&quot;highlighter-rouge&quot;&gt;Caprine's&lt;/code&gt; awesome features. The only thing I love about it is that it loads much faster. Franz is the former Emperor of Austria - but also a messaging app that combines chat &amp;amp; messaging services into one application. &lt;a href=&quot;https://meetfranz.com/&quot;&gt;Franz&lt;/a&gt; currently supports Slack, WhatsApp, WeChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype and many more.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://meetfranz.com/static/images/franz-screenshot.png&quot; alt=&quot;franz&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It does not feel heavy on the system, but the messenger part is simply a web app of the official &lt;code class=&quot;highlighter-rouge&quot;&gt;Messenger&lt;/code&gt;. Hence, it still isn’t a native solution. How it feels when using the web app is the exact same feel when using &lt;code class=&quot;highlighter-rouge&quot;&gt;Franz&lt;/code&gt; and I can say that it feels much master than &lt;code class=&quot;highlighter-rouge&quot;&gt;Caprine&lt;/code&gt; when loading the stickers. The only downside I can find is that it just keeps asking you to purchase &lt;code class=&quot;highlighter-rouge&quot;&gt;Franz Professional&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-09%20at%2010.56.18%20PM.png&quot; alt=&quot;franzprofessional&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It went like this out of nowehere like a screensaver, and I waited 15 seconds for it to go back to messenger mode.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="review" /><category term="mac" /><category term="os" /><category term="app" /><category term="messenger" /><category term="facebook" /><summary type="html">I’m currently on Mojave and I just thought that it’s time I use an app for messenger. It takes quite a while to load Facebook messenger on my Chrome browser. Maybe it’s just my internet speed. So I looked for an app on the Mac App Store and there’s not much apps out there for native Mac OS app look of Messenger. This is probably the only one out there. The only one I’ve found at least. I’ve scrolled deep enough to see there’s no other like it. It has decent amount of stars as rating, but does it really live up to it?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-08%20at%207.52.43%20PM.png" /></entry><entry><title type="html">My First Post On Reddit</title><link href="http://iosjunkie.com/blog/my-first-post-on-reddit/" rel="alternate" type="text/html" title="My First Post On Reddit" /><published>2019-10-08T00:00:00+08:00</published><updated>2019-10-08T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/my-first-post-on-reddit</id><content type="html" xml:base="http://iosjunkie.com/blog/my-first-post-on-reddit/">&lt;p&gt;YouTube has been recommeding me blog tips and I’ve recently been keen on trying to get views on this blog. Today, my blog is still not indexed by google, but my half-baked portfolio &lt;code class=&quot;highlighter-rouge&quot;&gt;iosjunkie.com&lt;/code&gt; is. Which is weird.&lt;/p&gt;
 
 &lt;p&gt;One of the tips of some YouTuber was to post your links on &lt;code class=&quot;highlighter-rouge&quot;&gt;Reddit&lt;/code&gt;. I was hesitant at first because I felt like it would be kind of like spamming on the internet, but that YouTuber said that it would help index my blog faster, and so I did. So, it happens that there are three ways to post on Reddit, just like the numerous ways to post on Facebook. You can post a &lt;code class=&quot;highlighter-rouge&quot;&gt;link, image, or a text&lt;/code&gt;. No wonder I’ve been seeing so many links only posts on Reddit. I thought they were spammy.&lt;/p&gt;
 
@@ -389,60 +511,4 @@ center.setNotificationCategories([category])
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Thanks to &lt;a href=&quot;https://www.youtube.com/watch?v=JuqQUP0pnZY&quot;&gt;CodeWithChris&lt;/a&gt; and &lt;a href=&quot;https://www.hackingwithswift.com/example-code/system/how-to-set-local-alerts-using-unnotificationcenter&quot;&gt;Paul Hudson @twostraws&lt;/a&gt; for making me understand how to actually do this.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="local" /><category term="notification" /><category term="push" /><category term="remote" /><category term="UNUsernotification" /><category term="newbies" /><category term="basic" /><summary type="html">Let’s get one thing straight now baby. Local notifications is not the same as Push/Remote notifications. It is also not the same as the Notification-Observer relationship which I will discuss next. They differ because local notifications don’t need triggers coming from outside the app. Either way, you’ll still need the UNUserNotificationCenter, and for that, you need to import UserNotifications. This is usually used in scheduling apps like alarm and todo-list.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Notifications_Top_2x.png" /></entry><entry><title type="html">Native Messenger App For Mac OS (Review) vs Caprine vs Goofy vs Franz</title><link href="http://iosjunkie.com/blog/native-messenger-app-for-mac-os-review/" rel="alternate" type="text/html" title="Native Messenger App For Mac OS (Review) vs Caprine vs Goofy vs Franz" /><published>2019-10-08T00:00:00+08:00</published><updated>2019-10-08T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/native-messenger-app-for-mac-os-review</id><content type="html" xml:base="http://iosjunkie.com/blog/native-messenger-app-for-mac-os-review/">&lt;p&gt;I’m currently on Mojave and I just thought that it’s time I use an app for messenger. It takes quite a while to load Facebook messenger on my Chrome browser. Maybe it’s just my internet speed. So I looked for an app on the Mac App Store and there’s not much apps out there for native Mac OS app look of Messenger. This is probably the only one out there. The only one I’ve found at least. I’ve scrolled deep enough to see there’s no other like it. It has decent amount of stars as rating, but does it really live up to it?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen_Shot_2019-10-08_at_7_52_32_PM.png&quot; alt=&quot;chatmate&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;What can I say? It really looks native, but it is half-baked. Here’s why:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;The login fields look alright, but the placeholder doesn’t say the username can be accepted too. It’s just &lt;code class=&quot;highlighter-rouge&quot;&gt;Email&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;phone number&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;The login button is especially horrible looking. Just a plane white button with no rounded edges. Its font is too thin and the spacing around the text of the button is just not well thought of.&lt;/li&gt;
-  &lt;li&gt;As you can see on the photo, the user’s icon is overlapping the window frame’s buttons.&lt;/li&gt;
-  &lt;li&gt;Some text like &lt;code class=&quot;highlighter-rouge&quot;&gt;Chat&lt;/code&gt; is meant to be brighter on this dark mode. It definitely looks more suited to the light mode.&lt;/li&gt;
-  &lt;li&gt;The light mode is actually more gray than white.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Other than that, I’m satisfied with the app. I bought it for only a dollar. I’m going to keep on using it because it’s way faster than loading the messenger website.&lt;/p&gt;
-
-&lt;h2 id=&quot;update&quot;&gt;UPDATE:&lt;/h2&gt;
-
-&lt;p&gt;Thanks to &lt;a href=&quot;https://www.reddit.com/r/macapps/comments/dezb0e/native_messenger_app_for_mac_os_review/&quot;&gt;u/Auttoh&lt;/a&gt; and &lt;a href=&quot;https://www.reddit.com/r/macapps/comments/dezb0e/native_messenger_app_for_mac_os_review/&quot;&gt;aadillyas&lt;/a&gt; for responding on my Reddit link post of this blog post. They both gave me a tip on a similar app but not found on the app store. It’s from a &lt;a href=&quot;https://github.com/sindresorhus/caprine/&quot;&gt;github link&lt;/a&gt;. Caprine is an unofficial and privacy-focused Facebook Messenger app with many useful features. As you can see, I didn’t have to pixelate the names of my friends because they have this feature to hide names and avatars. It also allows you to follow the system’s appearance of your mac. Say you are in dark mode, the app will also be in dark mode. If you changed your system’s appearance to light mode, the app will also turn light mode. You can also choose to make its mode independent from the system’s appearance.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-09%20at%204.28.52%20AM.png&quot; alt=&quot;caprine&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There’s also a compact mode on this app which hides away the names if your window is tinier. Only pictures of your friends will be shown on the side.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/sindresorhus/caprine/raw/master/media/screenshot-compact.png&quot; alt=&quot;compact&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It looks way more sophisticated than &lt;code class=&quot;highlighter-rouge&quot;&gt;Chatmate&lt;/code&gt; but it doesn’t feel as snappy. It is build on javascript/&lt;code class=&quot;highlighter-rouge&quot;&gt;Electron&lt;/code&gt; hence it is not native. Although, it looks native enough actually. There are still some features that load like a web page, like when choosing &lt;code class=&quot;highlighter-rouge&quot;&gt;stickers&lt;/code&gt; or when loading a conversation from another friend. After a day of using it, I realized how long it takes to open the app. I see a dark empty window first for a maybe 15 to 30 seconds until t loads the messenger web page.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.goofyapp.com/&quot;&gt;Goofy&lt;/a&gt; is another unoffical Messenger mac app. It is also &lt;code class=&quot;highlighter-rouge&quot;&gt;Electron&lt;/code&gt; based. It could be faster because it has much less features than &lt;code class=&quot;highlighter-rouge&quot;&gt;Caprine&lt;/code&gt;, obviously.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.goofyapp.com/img/screenshot.png&quot; alt=&quot;goofy&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;That’s Goofy for you! I haven’t tried it, yet I assume it would look similar to &lt;code class=&quot;highlighter-rouge&quot;&gt;Caprine&lt;/code&gt; too.&lt;/p&gt;
-
-&lt;p&gt;Now here’s something I’d like to introduce to you. I’m not sure what this is built on, but it is faster than &lt;code class=&quot;highlighter-rouge&quot;&gt;Caprine&lt;/code&gt;, but I wish it had &lt;code class=&quot;highlighter-rouge&quot;&gt;Caprine's&lt;/code&gt; awesome features. The only thing I love about it is that it loads much faster. Franz is the former Emperor of Austria - but also a messaging app that combines chat &amp;amp; messaging services into one application. &lt;a href=&quot;https://meetfranz.com/&quot;&gt;Franz&lt;/a&gt; currently supports Slack, WhatsApp, WeChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype and many more.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://meetfranz.com/static/images/franz-screenshot.png&quot; alt=&quot;franz&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It does not feel heavy on the system, but the messenger part is simply a web app of the official &lt;code class=&quot;highlighter-rouge&quot;&gt;Messenger&lt;/code&gt;. Hence, it still isn’t a native solution. How it feels when using the web app is the exact same feel when using &lt;code class=&quot;highlighter-rouge&quot;&gt;Franz&lt;/code&gt; and I can say that it feels much master than &lt;code class=&quot;highlighter-rouge&quot;&gt;Caprine&lt;/code&gt; when loading the stickers. The only downside I can find is that it just keeps asking you to purchase &lt;code class=&quot;highlighter-rouge&quot;&gt;Franz Professional&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-09%20at%2010.56.18%20PM.png&quot; alt=&quot;franzprofessional&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It went like this out of nowehere like a screensaver, and I waited 15 seconds for it to go back to messenger mode.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="review" /><category term="mac" /><category term="os" /><category term="app" /><category term="messenger" /><category term="facebook" /><summary type="html">I’m currently on Mojave and I just thought that it’s time I use an app for messenger. It takes quite a while to load Facebook messenger on my Chrome browser. Maybe it’s just my internet speed. So I looked for an app on the Mac App Store and there’s not much apps out there for native Mac OS app look of Messenger. This is probably the only one out there. The only one I’ve found at least. I’ve scrolled deep enough to see there’s no other like it. It has decent amount of stars as rating, but does it really live up to it?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-08%20at%207.52.43%20PM.png" /></entry><entry><title type="html">Grand Central Dispatch (GCD): Where To Start Learning</title><link href="http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning/" rel="alternate" type="text/html" title="Grand Central Dispatch (GCD): Where To Start Learning" /><published>2019-10-07T00:00:00+08:00</published><updated>2019-10-07T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning</id><content type="html" xml:base="http://iosjunkie.com/blog/grand-central-dispatch-gcd-where-to-start-learning/">&lt;p&gt;I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;GCD is an API provided by apple to allow you to manage concurrent operations in a smooth way, in order to avoid freezing of your application and keep it always responsive for users. - Jaafar Barek&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://hackernoon.com/swift-multi-threading-using-gcd-for-beginners-2581b7aa21cb&quot;&gt;Swift Multi-Threading using GCD For Beginners&lt;/a&gt;. This is just a brief article with great visual aids to simply start off learning DispatchQueue.&lt;/p&gt;
-
-&lt;p&gt;When you’re done with that, hold your breath and dive in two of these lakes. &lt;a href=&quot;https://dev.to/leogdion/asynchronous-multi-threaded-parallel-world-of-swift-4gjh&quot;&gt;Asynchronous Multi-Threaded Parallel World of Swift&lt;/a&gt; and &lt;a href=&quot;https://theswiftdev.com/2018/07/10/ultimate-grand-central-dispatch-tutorial-in-swift/&quot;&gt;Ultimate Grand Central Dispatch tutorial in Swift&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The former will first walk you through processing concepts and many visuals on how to use DispatchQueue, Semaphores, and SwiftUI’s combine in relation to asynchronous operations.&lt;/p&gt;
-
-&lt;p&gt;The latter is almost the same but with less visuals and no &lt;code class=&quot;highlighter-rouge&quot;&gt;combine&lt;/code&gt;. DispatchWorkItem and deadlocks is discussed which isn’t found in the former.&lt;/p&gt;
-
-&lt;p&gt;Both are really valuable resources for learning &lt;code class=&quot;highlighter-rouge&quot;&gt;GCD&lt;/code&gt;. It takes quite a while to grasp this simple concept but with broad applications, so I recommend reading on both to consolidate that chunk of knowledge. It is really intimidating to learn, since most of the time, programmers only usually use &lt;code class=&quot;highlighter-rouge&quot;&gt;background&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;I bet these resources are good for interviews too.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="grand" /><category term="central" /><category term="dispatch" /><category term="dispatchqueue" /><category term="barrier" /><category term="ultimate" /><category term="guide" /><category term="asynchronous" /><category term="operation" /><category term="swiftui" /><category term="combine" /><category term="framework" /><summary type="html">I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no. GCD is an API provided by apple to allow you to manage concurrent operations in a smooth way, in order to avoid freezing of your application and keep it always responsive for users. - Jaafar Barek</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://res.cloudinary.com/practicaldev/image/fetch/s--orob56V4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://learningswift.brightdigit.com/wp-content/uploads/sites/2/2019/09/ParallelConcurrency.001-1024x768.jpeg" /></entry></feed>
+&lt;p&gt;Thanks to &lt;a href=&quot;https://www.youtube.com/watch?v=JuqQUP0pnZY&quot;&gt;CodeWithChris&lt;/a&gt; and &lt;a href=&quot;https://www.hackingwithswift.com/example-code/system/how-to-set-local-alerts-using-unnotificationcenter&quot;&gt;Paul Hudson @twostraws&lt;/a&gt; for making me understand how to actually do this.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="local" /><category term="notification" /><category term="push" /><category term="remote" /><category term="UNUsernotification" /><category term="newbies" /><category term="basic" /><summary type="html">Let’s get one thing straight now baby. Local notifications is not the same as Push/Remote notifications. It is also not the same as the Notification-Observer relationship which I will discuss next. They differ because local notifications don’t need triggers coming from outside the app. Either way, you’ll still need the UNUserNotificationCenter, and for that, you need to import UserNotifications. This is usually used in scheduling apps like alarm and todo-list.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Notifications_Top_2x.png" /></entry></feed>
