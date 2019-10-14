@@ -17,7 +17,7 @@ The process of adding a framework to your project with SwiftPM is pretty straigh
 
 That wasn't so hard was it? No more typing on that freaking terminal or creating a `Podfile` or a `Cartfile`. Everything is handed to you by Xcode now. And like, basically, everyone can easily create their own packages and push them to github. I never really had any idea how those pods came to be published or approved after being made by their creators, but this time everyone gets to be creator >:)
 
-And while there's a `cocoapods.org`, there's also [swiftpack.co][spm] to look for existing packages. Alamofire and SwiftyJSON are some of the familiar packages listed in that repository.
+And while there's a `cocoapods.org`, there's also [swiftpack.co][spm] to look for existing packages. Alamofire and SwiftyJSON are some of the familiar packages listed in that repository. However, there are still plenty of packages that you might need that are not yet supporting SPM. I have this project with more than 10 dependencies, but only one of them supports SPM and that is `Cosmos`.
 
 There's a ridiculously simple explanation on how to create a `Swift Package`:
 

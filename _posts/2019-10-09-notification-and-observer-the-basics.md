@@ -60,3 +60,17 @@ override func viewDidDisappear(_ animated: Bool) {
     NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init("done"), object: nil)
 }
 ```
+
+Don't you know? There's another way to make an observer that does not involve calling another function to make an action `action`. It calls the action inside its closure:
+
+```
+NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "done"), object: nil, queue: .main { [weak self] (notification) in
+     done += 1
+        
+     if done == 2 {
+        print("reached")
+        self.sales = self.sales.sorted(by: {($0["number"] as! Int) > ($1["number"] as! Int)})
+        self.stopLoading()
+     }
+}
+```
