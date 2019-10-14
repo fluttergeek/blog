@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-14T06:47:43+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Enums For Beginners</title><link href="http://iosjunkie.com/blog/enums/" rel="alternate" type="text/html" title="Enums For Beginners" /><published>2019-10-13T00:00:00+08:00</published><updated>2019-10-13T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/enums</id><content type="html" xml:base="http://iosjunkie.com/blog/enums/">&lt;p&gt;Enums can be confusing for everybody, especially the newbies. I mean, why use those when you can just create variables and constructs. It does the same right? Some claim that they use enum to make their code type-safe, error free and easy to use. I guess that would be true if an app is becoming perplexingly complex.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-14T13:45:59+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Enums For Beginners</title><link href="http://iosjunkie.com/blog/enums/" rel="alternate" type="text/html" title="Enums For Beginners" /><published>2019-10-13T00:00:00+08:00</published><updated>2019-10-13T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/enums</id><content type="html" xml:base="http://iosjunkie.com/blog/enums/">&lt;p&gt;Enums can be confusing for everybody, especially the newbies. I mean, why use those when you can just create variables and constructs. It does the same right? Some claim that they use enum to make their code type-safe, error free and easy to use. I guess that would be true if an app is becoming perplexingly complex.&lt;/p&gt;
 
 &lt;p&gt;In basic form, it can look like this:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;enum Directions {
-    case North
-    case South
-    case East
-    case West
+    case north
+    case south
+    case east
+    case west
 }
  
  
 // Defining multiple cases on a single line
  
 enum Directions { 
-    case North, South, East, West 
+    case north, south, east, west 
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Cool, so what then? How and why would you want to use those? After calling forth &lt;code class=&quot;highlighter-rouge&quot;&gt;Directions.North&lt;/code&gt; with a &lt;code class=&quot;highlighter-rouge&quot;&gt;print&lt;/code&gt;, you’ll just see this in the console &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;North\n&quot;&lt;/code&gt;. You might wonder why is this even useful? It’s like calling a variable inside of a struct type.&lt;/p&gt;
+&lt;p&gt;Cool, so what then? How and why would you want to use those? After calling forth &lt;code class=&quot;highlighter-rouge&quot;&gt;Directions.north&lt;/code&gt; with a &lt;code class=&quot;highlighter-rouge&quot;&gt;print&lt;/code&gt;, you’ll just see this in the console &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;north\n&quot;&lt;/code&gt;. You might wonder why is this even useful? It’s like calling a variable inside of a struct type.&lt;/p&gt;
 
-&lt;p&gt;Let’s move on to Raw Values. We now know that cases will return a string. Aside from it, it can also return a &lt;code class=&quot;highlighter-rouge&quot;&gt;rawValue&lt;/code&gt;. Just how do we do that? It’s easy, just inherit from a type by doing something like this: &lt;code class=&quot;highlighter-rouge&quot;&gt;enum Directions: Int&lt;/code&gt;. Now when you print(&lt;code class=&quot;highlighter-rouge&quot;&gt;Directions.North.rawValue&lt;/code&gt;), you’ll get &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;. It’s just like Directions became some sort of array and North is indexed at &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;.  Here’s another example for that:&lt;/p&gt;
+&lt;p&gt;Let’s move on to Raw Values. We now know that cases will return a string. Aside from it, it can also return a &lt;code class=&quot;highlighter-rouge&quot;&gt;rawValue&lt;/code&gt;. Just how do we do that? It’s easy, just inherit from a type by doing something like this: &lt;code class=&quot;highlighter-rouge&quot;&gt;enum Directions: Int&lt;/code&gt;. Now when you print(&lt;code class=&quot;highlighter-rouge&quot;&gt;Directions.north.rawValue&lt;/code&gt;), you’ll get &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;. It’s just like Directions became some sort of array and north is indexed at &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;.  Here’s another example for that:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;enum AnimationCurve: Int {
     case easeInOut, easeIn, easeOut, linear
@@ -32,36 +32,36 @@ print(AnimationCurve.easeIn.rawValue)
 &lt;p&gt;The next example will not be able to inherit from types to call &lt;code class=&quot;highlighter-rouge&quot;&gt;rawValues&lt;/code&gt; from cases.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;enum Directions {
-    case North(String)
-    case South(latitude: Double, longitude: Double)
-    case East(String)
-    case West(String)
+    case north(String)
+    case south(latitude: Double, longitude: Double)
+    case east(String)
+    case west(String)
 }
  
-var digitalCompass = Directions.South(latitude: -120.83, longitude: 37.0)
+var digitalCompass = Directions.south(latitude: -120.83, longitude: 37.0)
 print(digitalCompass)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;When printed, this will give a value of &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;South(latitude: -120.83, longitude: 37.0)\n&quot;&lt;/code&gt;. Neat huh? So, basically it’s a string. Cases are a f***ing string with like no spaces because they are also variable names at the same time! Genius!&lt;/p&gt;
+&lt;p&gt;When printed, this will give a value of &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;south(latitude: -120.83, longitude: 37.0)\n&quot;&lt;/code&gt;. Neat huh? So, basically it’s a string. Cases are a f***ing string with like no spaces because they are also variable names at the same time! Genius!&lt;/p&gt;
 
-&lt;p&gt;How do we get the values inside of the parenthesis? Is there some kind of rawValue mechanism we can use for this? As a matter of fact, there is! We can print a form of string from the values inside of these parentheses. If you trust me on this, we can print out &lt;code class=&quot;highlighter-rouge&quot;&gt;Latitude is 0.5, while longitude is 0.6&lt;/code&gt; just by printing &lt;code class=&quot;highlighter-rouge&quot;&gt;print(Directions.South(latitude: 0.5, longitude: 0.6).description)&lt;/code&gt;. We just have to extend this enum like it’s some kind of construct and create a computed property, we chose to use the word &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt; as you can see. It can be anything actually.&lt;/p&gt;
+&lt;p&gt;How do we get the values inside of the parenthesis? Is there some kind of rawValue mechanism we can use for this? As a matter of fact, there is! We can print a form of string from the values inside of these parentheses. If you trust me on this, we can print out &lt;code class=&quot;highlighter-rouge&quot;&gt;Latitude is 0.5, while longitude is 0.6&lt;/code&gt; just by printing &lt;code class=&quot;highlighter-rouge&quot;&gt;print(Directions.south(latitude: 0.5, longitude: 0.6).description)&lt;/code&gt;. We just have to extend this enum like it’s some kind of construct and create a computed property, we chose to use the word &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt; as you can see. It can be anything actually.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;extension Directions {
     var description: String {
         switch self {
-        case .North(let direction):
+        case .sorth(let direction):
             return direction
-        case .South(let latitude, let longitude):
+        case .south(let latitude, let longitude):
             return &quot;Latitude is \(latitude), while longitude is \(longitude)&quot;
-        case .East(let isItReally):
+        case .east(let isItReally):
             return &quot;The direction is \(isItReally)&quot;
-        case .West(let westeros):
+        case .west(let westeros):
             return &quot;King's landing is in \(westeros)&quot;
         }
     }
 }
 
-print(Directions.South(latitude: 0.5, longitude: 0.6).description)
+print(Directions.south(latitude: 0.5, longitude: 0.6).description)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;There’s another way to simply do this without having to call the computed property &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt; directly. We can inherit this extension from CustomStringConvertible, like this:&lt;/p&gt;
@@ -71,7 +71,7 @@ print(Directions.South(latitude: 0.5, longitude: 0.6).description)
 
 &lt;p&gt;, but the computed property should be &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt;. If you use another variable name instead of it, then you will not be able to use &lt;code class=&quot;highlighter-rouge&quot;&gt;CustomStringConvertible&lt;/code&gt;’s feature.&lt;/p&gt;
 
-&lt;p&gt;Now all you have to do to get the same result is print out &lt;code class=&quot;highlighter-rouge&quot;&gt;Directions.South(latitude: 0.5, longitude: 0.6)&lt;/code&gt; without the &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt; after it.&lt;/p&gt;
+&lt;p&gt;Now all you have to do to get the same result is print out &lt;code class=&quot;highlighter-rouge&quot;&gt;Directions.south(latitude: 0.5, longitude: 0.6)&lt;/code&gt; without the &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt; after it.&lt;/p&gt;
 
 &lt;p&gt;That’s the idea of how to return strings out of enums with parentheses. The &lt;code class=&quot;highlighter-rouge&quot;&gt;let latitude, let longitude&lt;/code&gt; are just parameter names. If you’ve noticed, it can actually be named anything too.&lt;/p&gt;
 
