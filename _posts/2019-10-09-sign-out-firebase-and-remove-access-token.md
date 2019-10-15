@@ -31,7 +31,7 @@ func logOut(completion:@escaping(_ errorOccured: Bool) -> Void)  {
 ```
 
 This is how my closure function looks like before I try to remove the access token in the next function that you'll see. 
-* If it tried to `signOut()` successfully,  there will be no error, otherwise there will be. 
+* If it tried to `Auth.auth().signOut()` successfully,  there will be no error, otherwise there will be. 
 * The error's boolean value will be passed to my completion block which will happen after the function scope will be exited.
 
 ```
