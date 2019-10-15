@@ -20,7 +20,7 @@ Most articles regarding this are overwhelming and I'm about to make it easier. T
  
 In his tutorial, there are two views. One trying to present the other, the other view has a button to go back to the first view. 
 
-His objective in this tutorial was to simply demonstrate that the presented view will be deinitialized by the use of `[weak self]` or by `[unowned self]` when popping back to the previous view. His closures are a bit too advanced to understand, so let's make it more conceptual than actual.
+His objective in this tutorial was to simply demonstrate how the presented view is removed from memory when popping back to the previous view by the use of `[weak self]` or by `[unowned self]`. His closures are a bit too advanced to understand, so let's make it more conceptual than actual.
  
 Say this is the presented view. 
 ```

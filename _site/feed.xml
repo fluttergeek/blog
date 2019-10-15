@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-15T04:18:55+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Using Vertical Mouse: My Take</title><link href="http://iosjunkie.com/blog/using-vertical-mouse-my-take/" rel="alternate" type="text/html" title="Using Vertical Mouse: My Take" /><published>2019-10-15T00:00:00+08:00</published><updated>2019-10-15T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/using-vertical-mouse-my-take</id><content type="html" xml:base="http://iosjunkie.com/blog/using-vertical-mouse-my-take/">&lt;p&gt;I bought the &lt;code class=&quot;highlighter-rouge&quot;&gt;Wireless Vertical Mouse Game 800/1600/2400DPI Mice 2-Button&lt;/code&gt; a couple of weeks ago and it just a arrived a week ago. I bought mine in &lt;a href=&quot;https://shopee.ph/product/76803954/1920543944&quot;&gt;Shopee&lt;/a&gt;. It’s a marketplace here in the Philippines. I bought it for only Php 445 including freight. That’s like almost USD 10. This is brandless and it charges like how you charge with your phone. I guess its battery lasts for a week, or maybe it just turned off. It says in Shopee that it should last more than a month. So, I just recharged mine again today.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-15T09:59:52+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Context Menu in SwiftUI</title><link href="http://iosjunkie.com/blog/context-menu-in-swiftui/" rel="alternate" type="text/html" title="Context Menu in SwiftUI" /><published>2019-10-15T00:00:00+08:00</published><updated>2019-10-15T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/context-menu-in-swiftui</id><content type="html" xml:base="http://iosjunkie.com/blog/context-menu-in-swiftui/">&lt;p&gt;This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns out they work within the app too.&lt;/p&gt;
+
+&lt;p&gt;It simply works like alertsheet. Like alertsheet, it is a collection of buttons but now with images attached to them too. The action is also encapsulated within the button. The best part is you no longer have to use a nasty looking closure to make that happen.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        Image(&quot;pic&quot;).resizable().frame(height: 300)
+            .cornerRadius(20).padding()
+            .contextMenu {
+                VStack {
+                    Button(action: {
+                        print(&quot;save&quot;)
+                    }) {
+                        HStack {
+                            Image(systemName: &quot;folder.fill&quot;)
+                            Text(&quot;Save To Gallery&quot;)
+                        }
+                    }
+                    Button(action: {
+                        print(&quot;send&quot;)
+                    }) {
+                        HStack {
+                            Image(systemName: &quot;paperplane.fill&quot;)
+                            Text(&quot;Send&quot;)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You could not only use it in images, but also with labels among other things. These things are probably not solid yet, so they might crash your app.&lt;/p&gt;
+
+&lt;p&gt;Now everything looks cleaner than building one on UIKit. It’s just that these brackets kind of make me dizzy. But don’t fret, you can compartmentalize these things with your programming prowess.&lt;/p&gt;
+
+&lt;p&gt;Example was taken from &lt;code class=&quot;highlighter-rouge&quot;&gt;KAVSOFT&lt;/code&gt;:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/NgXHemwSFIQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="" /><category term="context" /><category term="menu" /><category term="swiftui" /><summary type="html">This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns out they work within the app too.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-15%20at%209.16.42%20AM.png" /></entry><entry><title type="html">Using Vertical Mouse: My Take</title><link href="http://iosjunkie.com/blog/using-vertical-mouse-my-take/" rel="alternate" type="text/html" title="Using Vertical Mouse: My Take" /><published>2019-10-15T00:00:00+08:00</published><updated>2019-10-15T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/using-vertical-mouse-my-take</id><content type="html" xml:base="http://iosjunkie.com/blog/using-vertical-mouse-my-take/">&lt;p&gt;I bought the &lt;code class=&quot;highlighter-rouge&quot;&gt;Wireless Vertical Mouse Game 800/1600/2400DPI Mice 2-Button&lt;/code&gt; a couple of weeks ago and it just a arrived a week ago. I bought mine in &lt;a href=&quot;https://shopee.ph/product/76803954/1920543944&quot;&gt;Shopee&lt;/a&gt;. It’s a marketplace here in the Philippines. I bought it for only Php 445 including freight. That’s like almost USD 10. This is brandless and it charges like how you charge with your phone. I guess its battery lasts for a week, or maybe it just turned off. It says in Shopee that it should last more than a month. So, I just recharged mine again today.&lt;/p&gt;
 
 &lt;p&gt;Does it fix the arm strain problem?&lt;/p&gt;
 
@@ -14,7 +54,7 @@
 
 &lt;p&gt;In his tutorial, there are two views. One trying to present the other, the other view has a button to go back to the first view.&lt;/p&gt;
 
-&lt;p&gt;His objective in this tutorial was to simply demonstrate that the presented view will be deinitialized by the use of &lt;code class=&quot;highlighter-rouge&quot;&gt;[weak self]&lt;/code&gt; or by &lt;code class=&quot;highlighter-rouge&quot;&gt;[unowned self]&lt;/code&gt; when popping back to the previous view. His closures are a bit too advanced to understand, so let’s make it more conceptual than actual.&lt;/p&gt;
+&lt;p&gt;His objective in this tutorial was to simply demonstrate how the presented view is removed from memory when popping back to the previous view by the use of &lt;code class=&quot;highlighter-rouge&quot;&gt;[weak self]&lt;/code&gt; or by &lt;code class=&quot;highlighter-rouge&quot;&gt;[unowned self]&lt;/code&gt;. His closures are a bit too advanced to understand, so let’s make it more conceptual than actual.&lt;/p&gt;
 
 &lt;p&gt;Say this is the presented view.&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class 2ndView: View {
@@ -381,49 +421,4 @@ NotificationCenter.default.addObserver(self, selector: #selector(sortAndStopLoad
         self.stopLoading()
      }
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swift" /><category term="notification" /><category term="observer" /><category term="push" /><category term="local" /><category term="remote" /><category term="trigger" /><summary type="html">This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that notifies the observer:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/1_Ca69vjmxQIdkOfW-O6hZaA.png" /></entry><entry><title type="html">Check If Online Swift 5</title><link href="http://iosjunkie.com/blog/check-if-online-swift-5/" rel="alternate" type="text/html" title="Check If Online Swift 5" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/check-if-online-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/check-if-online-swift-5/">&lt;p&gt;Thanks to &lt;a href=&quot;https://www.hackingwithswift.com/example-code/networking/how-to-check-for-internet-connectivity-using-nwpathmonitor&quot;&gt;Paul Hudson @twostraws&lt;/a&gt; for the informative knowledge on how to check for internet connection. Let me remind you that this solution is available since iOS 12.0. WWDC in June 2018 introduced the Network framework available from iOS 12 onwards which includes the NWPathMonitor class, which we will be using in this tutorial. Here’s a straight forward example of the basic implementation on how to check for internet connection.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import Network
-private let monitor = NWPathMonitor()
-monitor.start(queue: queue)
-monitor.pathUpdateHandler = { path in
-    if path.status == .satisfied {
-        print(&quot;Online&quot;)
-    } else {
-        print(&quot;Offline)
-    }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;It’s so much shorter than the previous baffling solutions that you can find on stackoverflow. &lt;a href=&quot;https://stackoverflow.com/questions/30743408/check-for-internet-connection-with-swift&quot;&gt;Previous solutions&lt;/a&gt; had to be particular about the connectivity. If it’s coming from a WiFi, 4G, 3G or cellular data. My previous way of checking the internet connection was to use &lt;code class=&quot;highlighter-rouge&quot;&gt;Alamofire&lt;/code&gt;’s network reachability feature which was way simpler than the other solutions, but I added a library that only uses this one feature. Hence, longer build time for something thatI didn’t necessarily need. Now you don’t even have to worry for the most part. It’s just that simple code that allows you to check for internet connectivity.&lt;/p&gt;
-
-&lt;p&gt;Now, I created something to allow me to check for the internet connection in different parts of my project without having to &lt;code class=&quot;highlighter-rouge&quot;&gt;import Network&lt;/code&gt; all the damn time.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;func online(completion: @escaping (Bool) -&amp;gt; Void) {
-    let monitor = NWPathMonitor()
-    let queue = DispatchQueue.global(qos: .background)
-    monitor.start(queue: queue)
-    monitor.pathUpdateHandler = { path in
-      var err = true
-      defer {
-        completion(err)
-        monitor.cancel()
-      }
-      if path.status == .satisfied {
-        err = false
-      } else {
-        self.showError(message: &quot;Offline! :(&quot;)
-        err = true
-      }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Note that the we have to cancel the network monitoring that’s been in the background thread, if you want to stop checking for the internet connection. If you don’t cancel it, every time the connectivity changes, your monitor.pathUpdateHandler will execute itself again. I created this inside a singleton which allows me to call this method simply, anywhere, like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Singleton.sharedInstance.online { (err) in
-    guard err == false else { return }
-		
-    // Do whatever online
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;There’s a more elaborate article discussing how the &lt;code class=&quot;highlighter-rouge&quot;&gt;Network&lt;/code&gt; framework can be used. Check &lt;a href=&quot;https://medium.com/@rwbutler/nwpathmonitor-the-new-reachability-de101a5a8835&quot;&gt;it&lt;/a&gt; out.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="online" /><category term="swift" /><category term="check" /><category term="internet" /><category term="connection" /><category term="available" /><category term="offline" /><summary type="html">Thanks to Paul Hudson @twostraws for the informative knowledge on how to check for internet connection. Let me remind you that this solution is available since iOS 12.0. WWDC in June 2018 introduced the Network framework available from iOS 12 onwards which includes the NWPathMonitor class, which we will be using in this tutorial. Here’s a straight forward example of the basic implementation on how to check for internet connection.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBXD5o0JeyxP-5MmwSZO4lOrONruMPlZmrTRWonLxYsgx1iPYH" /></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jules</name></author><category term="" /><category term="featured" /><category term="swift" /><category term="notification" /><category term="observer" /><category term="push" /><category term="local" /><category term="remote" /><category term="trigger" /><summary type="html">This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that notifies the observer:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/1_Ca69vjmxQIdkOfW-O6hZaA.png" /></entry></feed>
