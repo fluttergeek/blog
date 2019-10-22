@@ -18,7 +18,7 @@ It took risk to buy a fake product not knowing what condition it is in. The prod
 
 The sound is great. It fits perfectly. I can't tell it apart from an original one because I never had one. If the music is loud, it is enough to cancel the noise outside.
 
-One of the downsides is that I can't max it out. The sound distorts when the bass is very heavy. Like I have this surround sound effect on my phone. When turned on, it looks like my airpods can't handle that bass. Its not to say it isn't capable of bass. It is capable and sounds magnificent when the surround sound effect is turned off. I can still play some loud party music and the music would be crisp still. It just can't handle the very loud bass ones or the kind of base that scatters too much. I don't think I've described it right. 
+One of the downsides is that I can't max it out. The sound distorts when the bass is very heavy. Like I have this surround sound effect on my phone. When turned on, it looks like my airpods can't handle that bass. Its not to say it isn't capable of bass. It is capable and sounds magnificent when the surround sound effect is turned off. I can still play some loud party music and the music would be crisp still. It just can't handle the very loud bass or the kind of bass that scatters too much. I don't think I've described it right. 
 
 Another downside would be the latency. It lags when I play a video on streaming sites or even on a downloaded video. It doesn't delay too much, sometimes it can be negligible.
 
