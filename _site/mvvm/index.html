@@ -4,20 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Privacy Policy | iOS Junkie</title>
+    <title>Taking A Look At MVVM | iOS Junkie</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Privacy Policy | iOS Junkie</title>
+<title>Taking A Look At MVVM | iOS Junkie</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Privacy Policy" />
+<meta property="og:title" content="Taking A Look At MVVM" />
+<meta name="author" content="jules" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work." />
-<meta property="og:description" content="Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work." />
-<link rel="canonical" href="http://iosjunkie.com/blog/privacy-policy.html" />
-<meta property="og:url" content="http://iosjunkie.com/blog/privacy-policy.html" />
+<meta name="description" content="There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: model, view model, and controller. There’s an extra in Brian Voong’s example." />
+<meta property="og:description" content="There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: model, view model, and controller. There’s an extra in Brian Voong’s example." />
+<link rel="canonical" href="http://iosjunkie.com/blog/mvvm/" />
+<meta property="og:url" content="http://iosjunkie.com/blog/mvvm/" />
 <meta property="og:site_name" content="iOS Junkie" />
+<meta property="og:image" content="https://www.iosapptemplates.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-17-at-8.25.44-PM.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-26T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.","@type":"WebPage","url":"http://iosjunkie.com/blog/privacy-policy.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://iosjunkie.com/blog/assets/images/logo.png"}},"headline":"Privacy Policy","@context":"http://schema.org"}</script>
+{"description":"There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: model, view model, and controller. There’s an extra in Brian Voong’s example.","@type":"BlogPosting","url":"http://iosjunkie.com/blog/mvvm/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://iosjunkie.com/blog/assets/images/logo.png"},"name":"jules"},"image":"https://www.iosapptemplates.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-17-at-8.25.44-PM.png","headline":"Taking A Look At MVVM","dateModified":"2019-10-26T00:00:00+08:00","datePublished":"2019-10-26T00:00:00+08:00","author":{"@type":"Person","name":"jules"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://iosjunkie.com/blog/mvvm/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -100,7 +104,7 @@ var documents = [{
     "id": 2,
     "url": "http://iosjunkie.com/blog/posts/2019-01-19-markup-example/",
     "title": "Markdown Example",
-    "body": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. Something. To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post. ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: def print_hi(name) puts  Hi, #{name} endprint_hi('Tom')#=&gt; prints 'Hi, Tom' to STDOUT. Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk. "
+    "body": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. Something. To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post. ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: {% highlight ruby %}def print_hi(name) puts “Hi, #{name}”endprint_hi(‘Tom’)#=&gt; prints ‘Hi, Tom’ to STDOUT. {% endhighlight %} Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk. "
     }, {
     "id": 3,
     "url": "http://iosjunkie.com/blog/posts/2019-01-20-quick-start-guide/",
@@ -175,7 +179,7 @@ var documents = [{
     "id": 17,
     "url": "http://iosjunkie.com/blog/posts/2019-02-04-welcome-to-jekyll/",
     "title": "Welcome to Jekyll!",
-    "body": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post. ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: def print_hi(name) puts  Hi, #{name} endprint_hi('Tom')#=&gt; prints 'Hi, Tom' to STDOUT. Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk. "
+    "body": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post. ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: {% highlight ruby %}def print_hi(name) puts “Hi, #{name}”endprint_hi(‘Tom’)#=&gt; prints ‘Hi, Tom’ to STDOUT. {% endhighlight %} Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk. "
     }, {
     "id": 18,
     "url": "http://iosjunkie.com/blog/about.html",
@@ -185,27 +189,27 @@ var documents = [{
     "id": 19,
     "url": "http://iosjunkie.com/blog/author-sal.html",
     "title": "Jules Lee",
-    "body": "                        Jules Lee Follow:                                                    Posts by Jules Lee:               "
+    "body": "                        {{page. title}} Follow:         {{ site. authors. sal. site }}         {{ site. authors. sal. bio }}                                   Posts by {{page. title}}:       {% assign posts = site. posts | where: author , sal  %}      {% for post in posts %}      {% include main-loop-card. html %}      {% endfor %}  "
     }, {
     "id": 20,
     "url": "http://iosjunkie.com/blog/authors-list.html",
     "title": "Authors",
-    "body": "Authors:                                             Jules Lee :       (View Posts)      Hi, I am Jules, the author of iOS Junkie. Demystifying complex instructions from the internet.                           &nbsp;       &nbsp;                                      "
+    "body": "{{page. title}}:     {% for author in site. authors %}                                         {{ author[1]. name }} :       (View Posts)      {{ author[1]. bio }}                          &nbsp;       &nbsp;                                    {% endfor %}  "
     }, {
     "id": 21,
     "url": "http://iosjunkie.com/blog/categories.html",
     "title": "Categories",
-    "body": "          Categories               Jekyll:                                  		Use Jekyll Manager Instead of Jekyll Admin	: 		  I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m. . . 	 			In 				Jekyll, 				Admin, 				Manager, 								Sep 30, 2019						                                 		A Free Blog Using Mundana Jekyll Theme In Github Pages	: 		  This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi. . . 	 			In 				Jekyll, 				Tutorial, 				Admin, 								Sep 27, 2019						                              Tutorial:                                  		Taking A Look At MVVM	: 		  There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: model, view model, and controlle. . . 	 			In 				Tutorial, 				Swift, 								Oct 26, 2019						                                 		Sharing UserDefault Between Apps	: 		  I just discovered a way for two apps to communicate with each other with the use of UserDefaults. I thought that UserDefault is only available locally in the app. Sandboxed in its own. . . 	 			In 				Tutorial, 				Swift, 								Oct 22, 2019						                                 		Weak Self vs Unowned Self	: 		  Most articles regarding this are overwhelming and I’m about to make it easier. This is based on Brian Voong’s tutorial. I urge you to watch the video too because, essentially, that is. . . 	 			In 				Tutorial, 				Swift, 								Oct 15, 2019						                                 		Context Menu in SwiftUI	: 		  This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns o. . . 	 			In 				Tutorial, 				SwiftUI, 								Oct 15, 2019						                                 		Enums For Beginners	: 		  Enums can be confusing for everybody, especially the newbies. I mean, why use those when you can just create variables and constructs. It does the same right? Some claim that they use. . . 	 			In 				Tutorial, 				Swift, 								Oct 13, 2019						                                 		Sign In With Apple Swift 5 Tutorial	: 		  First of all, a big thanks to Kilo Loco’s tutorial. Check it out. Not only is this feature available for iOS 13 up, it’s also available for Mac OS 10. 15. 	 			In 				Tutorial, 				Swift, 								Oct 12, 2019						                                 		Can You Design iOS Apps If You're Not A Designer?	: 		  I’m in no position to give any advise on creating designs because I’ve never been a designer. I only code my way through Xcode and I’ve only begun trying to deploy an app on the App S. . . 	 			In 				Tutorial, 				Design, 								Oct 11, 2019						                                 		Sign Out Firebase And Remove Access Token	: 		  I call the signOut() to sign out, but there’s really a lot of things going on inside my call. I’m not sure which is the correct way to do this yet, but what I’m trying to achieve is o. . . 	 			In 				Tutorial, 				Swift, 				Firebase, 								Oct 09, 2019						                                 		Notification And Observer: The Basics	: 		  This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that not. . . 	 			In 				Tutorial, 				Swift, 								Oct 09, 2019						                                 		Check If Online Swift 5	: 		  Thanks to Paul Hudson @twostraws for the informative knowledge on how to check for internet connection. Let me remind you that this solution is available since iOS 12. 0. WWDC in June . . . 	 			In 				Tutorial, 				Swift, 								Oct 09, 2019						                                 		Basic Implementation of Local Notifications	: 		  Let’s get one thing straight now baby. Local notifications is not the same as Push/Remote notifications. It is also not the same as the Notification-Observer relationship which I will. . . 	 			In 				Tutorial, 				Swift, 								Oct 08, 2019						                                 		Sophisticated Way To Use LocationManager Swift 5	: 		  This is the most elegant solution I found on how to retrieve location with CoreLocation. 	 			In 				Tutorial, 				Swift, 				CoreLocation, 								Oct 07, 2019						                                 		Where Is Assistant Editor Mode In Xcode 11	: 		  Welcome to the world of Xcode 11 where it’s now confusing to find the assistant editor. Well, there it is. It is not in the same place anymore. On the top right corner of the storyboa. . . 	 			In 				Tutorial, 				Xcode, 								Oct 07, 2019						                                 		How Static Is Used	: 		  Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial. 	 			In 				Tutorial, 				Swift, 								Oct 06, 2019						                                 		Swift: If Let vs. Guard Let	: 		  This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you. . . 	 			In 				Tutorial, 				Swift, 								Oct 04, 2019						                                 		MapKit Theme Style Overlay Swift 5	: 		  You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, wha. . . 	 			In 				Tutorial, 				MapKit, 				Swift, 								Oct 04, 2019						                                 		You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs. 	: 		  You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The p. . . 	 			In 				Tutorial, 				Mac, 								Oct 03, 2019						                                 		Where To Learn Async Callback and Futures	: 		  One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be diggin. . . 	 			In 				Tutorial, 				Swift, 								Oct 03, 2019						                                 		Where Better To Understand Semaphores (Swift)	: 		  Thanks to Roy Kronenfeld’s Medium post for this explanation of how to use a semaphore, specifically, utilizing the counter: let semaphore = DispatchSemaphore(value: 0). Another tutori. . . 	 			In 				Tutorial, 				Swift, 								Oct 03, 2019						                                 		Codable JSON Parsing	: 		  One of the reasons why you should learn this is, first, because you’re an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let’s look a. . . 	 			In 				Tutorial, 				Swift, 								Oct 03, 2019						                                 		Why I Prefer Cloud Firestore Than Realtime Database	: 		  This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and . . . 	 			In 				Tutorial, 				Firestore, 				Firebase, 								Oct 02, 2019						                                 		@State to @ObjectBinding Modifier	: 		  Notice how Scott changed from @State to @ObjectBinding. He started discussing BindableObject at 5:17. That’s because you can only use @State with local properties in the struct view. . . . 	 			In 				Tutorial, 				SwiftUI, 								Oct 02, 2019						                                 		A Better EmptyView In An Empty CollectionView	: 		  One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. . . 	 			In 				Tutorial, 				Improvise, 								Oct 02, 2019						                                 		Using Cloud Functions To Create Remote Notifications With Firebase In Swift 5 and Javascript	: 		  This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already hav. . . 	 			In 				Tutorial, 				Swift, 				Notification, 								Oct 01, 2019						                                 		!= VS. NOT Filter In Realm Swift	: 		  Instead of using != as your not equal, you can or should use NOT instead. I’m writing this post because I just can’t seem != to work as part of my predicate. I was struggling to find . . . 	 			In 				Tutorial, 								Sep 30, 2019						                                 		Sublime 3 In BUNDLER_EDITOR	: 		  First, let’s create a symlink:	 			In 				Tutorial, 				Sublime, 								Sep 30, 2019						                                 		Eureka LocationRow	: 		  If you’re a newbie on this, you might not actually figure this out quick. Apparently, it’s only a quick tour to the example project in Eureka. Particularly in CustomCells. swift. Just . . . 	 			In 				Tutorial, 								Sep 29, 2019						                                 		Custom Table Cell With SwiftUI	: 		  First of all, thanks to Scott Smith for helping me understand this. I know it can be another learning curve to start learning SwiftUI if you’ve only begun diving into becoming an iOS . . . 	 			In 				Tutorial, 								Sep 28, 2019						                                 		A Free Blog Using Mundana Jekyll Theme In Github Pages	: 		  This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi. . . 	 			In 				Jekyll, 				Tutorial, 				Admin, 								Sep 27, 2019						                              Admin:                                  		Use Jekyll Manager Instead of Jekyll Admin	: 		  I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m. . . 	 			In 				Jekyll, 				Admin, 				Manager, 								Sep 30, 2019						                                 		A Free Blog Using Mundana Jekyll Theme In Github Pages	: 		  This might be too technical for a non computer savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi. . . 	 			In 				Jekyll, 				Tutorial, 				Admin, 								Sep 27, 2019						                              Publish:                                  		Issues With My First App Store Connect Submission	: 		  It was my first app submission to the app store. I mean, well, I hadn’t submitted it for review yet, but it already detected a couple of issues that needs dealing with. I uploaded it . . . 	 			In 				Publish, 								Sep 27, 2019						                              Sublime:                                  		Sublime 3 In BUNDLER_EDITOR	: 		  First, let’s create a symlink:	 			In 				Tutorial, 				Sublime, 								Sep 30, 2019						                              Manager:                                  		Use Jekyll Manager Instead of Jekyll Admin	: 		  I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m. . . 	 			In 				Jekyll, 				Admin, 				Manager, 								Sep 30, 2019						                              Swift:                                  		Taking A Look At MVVM	: 		  There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: model, view model, and controlle. . . 	 			In 				Tutorial, 				Swift, 								Oct 26, 2019						                                 		Sharing UserDefault Between Apps	: 		  I just discovered a way for two apps to communicate with each other with the use of UserDefaults. I thought that UserDefault is only available locally in the app. Sandboxed in its own. . . 	 			In 				Tutorial, 				Swift, 								Oct 22, 2019						                                 		Weak Self vs Unowned Self	: 		  Most articles regarding this are overwhelming and I’m about to make it easier. This is based on Brian Voong’s tutorial. I urge you to watch the video too because, essentially, that is. . . 	 			In 				Tutorial, 				Swift, 								Oct 15, 2019						                                 		Enums For Beginners	: 		  Enums can be confusing for everybody, especially the newbies. I mean, why use those when you can just create variables and constructs. It does the same right? Some claim that they use. . . 	 			In 				Tutorial, 				Swift, 								Oct 13, 2019						                                 		Sign In With Apple Swift 5 Tutorial	: 		  First of all, a big thanks to Kilo Loco’s tutorial. Check it out. Not only is this feature available for iOS 13 up, it’s also available for Mac OS 10. 15. 	 			In 				Tutorial, 				Swift, 								Oct 12, 2019						                                 		Sign Out Firebase And Remove Access Token	: 		  I call the signOut() to sign out, but there’s really a lot of things going on inside my call. I’m not sure which is the correct way to do this yet, but what I’m trying to achieve is o. . . 	 			In 				Tutorial, 				Swift, 				Firebase, 								Oct 09, 2019						                                 		Notification And Observer: The Basics	: 		  This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that not. . . 	 			In 				Tutorial, 				Swift, 								Oct 09, 2019						                                 		Check If Online Swift 5	: 		  Thanks to Paul Hudson @twostraws for the informative knowledge on how to check for internet connection. Let me remind you that this solution is available since iOS 12. 0. WWDC in June . . . 	 			In 				Tutorial, 				Swift, 								Oct 09, 2019						                                 		Basic Implementation of Local Notifications	: 		  Let’s get one thing straight now baby. Local notifications is not the same as Push/Remote notifications. It is also not the same as the Notification-Observer relationship which I will. . . 	 			In 				Tutorial, 				Swift, 								Oct 08, 2019						                                 		Sophisticated Way To Use LocationManager Swift 5	: 		  This is the most elegant solution I found on how to retrieve location with CoreLocation. 	 			In 				Tutorial, 				Swift, 				CoreLocation, 								Oct 07, 2019						                                 		Grand Central Dispatch (GCD): Where To Start Learning	: 		  I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no.  GCD is an. . . 	 			In 				Reference, 				Swift, 								Oct 07, 2019						                                 		How Static Is Used	: 		  Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial. 	 			In 				Tutorial, 				Swift, 								Oct 06, 2019						                                 		Take Your Swift Data Structures Knowledge To The Next Level	: 		  I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen’s Swift News. Though I wouldn’t recommended relying on this alone, in case you . . . 	 			In 				Reference, 				Swift, 								Oct 05, 2019						                                 		Swift: If Let vs. Guard Let	: 		  This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you. . . 	 			In 				Tutorial, 				Swift, 								Oct 04, 2019						                                 		MapKit Theme Style Overlay Swift 5	: 		  You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, wha. . . 	 			In 				Tutorial, 				MapKit, 				Swift, 								Oct 04, 2019						                                 		Where To Learn Async Callback and Futures	: 		  One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be diggin. . . 	 			In 				Tutorial, 				Swift, 								Oct 03, 2019						                                 		Where Better To Understand Semaphores (Swift)	: 		  Thanks to Roy Kronenfeld’s Medium post for this explanation of how to use a semaphore, specifically, utilizing the counter: let semaphore = DispatchSemaphore(value: 0). Another tutori. . . 	 			In 				Tutorial, 				Swift, 								Oct 03, 2019						                                 		Codable JSON Parsing	: 		  One of the reasons why you should learn this is, first, because you’re an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let’s look a. . . 	 			In 				Tutorial, 				Swift, 								Oct 03, 2019						                                 		Using Cloud Functions To Create Remote Notifications With Firebase In Swift 5 and Javascript	: 		  This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already hav. . . 	 			In 				Tutorial, 				Swift, 				Notification, 								Oct 01, 2019						                              Notification:                                  		Using Cloud Functions To Create Remote Notifications With Firebase In Swift 5 and Javascript	: 		  This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already hav. . . 	 			In 				Tutorial, 				Swift, 				Notification, 								Oct 01, 2019						                              Improvise:                                  		A Better EmptyView In An Empty CollectionView	: 		  One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. . . 	 			In 				Tutorial, 				Improvise, 								Oct 02, 2019						                              SwiftUI:                                  		Context Menu in SwiftUI	: 		  This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns o. . . 	 			In 				Tutorial, 				SwiftUI, 								Oct 15, 2019						                                 		@State to @ObjectBinding Modifier	: 		  Notice how Scott changed from @State to @ObjectBinding. He started discussing BindableObject at 5:17. That’s because you can only use @State with local properties in the struct view. . . . 	 			In 				Tutorial, 				SwiftUI, 								Oct 02, 2019						                              Portfolio:                                  		Top 5 Github Pages Portfolio Templates	: 		  As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of thes. . . 	 			In 				Portfolio, 				Github, 				Pages, 								Oct 02, 2019						                              Github:                                  		Top 5 Github Pages Portfolio Templates	: 		  As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of thes. . . 	 			In 				Portfolio, 				Github, 				Pages, 								Oct 02, 2019						                              Pages:                                  		Top 5 Github Pages Portfolio Templates	: 		  As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of thes. . . 	 			In 				Portfolio, 				Github, 				Pages, 								Oct 02, 2019						                              Firestore:                                  		Why I Prefer Cloud Firestore Than Realtime Database	: 		  This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and . . . 	 			In 				Tutorial, 				Firestore, 				Firebase, 								Oct 02, 2019						                              Firebase:                                  		Sign Out Firebase And Remove Access Token	: 		  I call the signOut() to sign out, but there’s really a lot of things going on inside my call. I’m not sure which is the correct way to do this yet, but what I’m trying to achieve is o. . . 	 			In 				Tutorial, 				Swift, 				Firebase, 								Oct 09, 2019						                                 		Why I Prefer Cloud Firestore Than Realtime Database	: 		  This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and . . . 	 			In 				Tutorial, 				Firestore, 				Firebase, 								Oct 02, 2019						                              Promotion:                                  		Sean Allen Finally Learns SwiftUI	: 		  I’ve seen him talk about how he was hesitant to dive into learning Swift UI. I took his sentiment as my own because I don’t really see why I needed to. 	 			In 				Promotion, 								Oct 03, 2019						                              Mac:                                  		You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs. 	: 		  You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The p. . . 	 			In 				Tutorial, 				Mac, 								Oct 03, 2019						                              MapKit:                                  		MapKit Theme Style Overlay Swift 5	: 		  You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, wha. . . 	 			In 				Tutorial, 				MapKit, 				Swift, 								Oct 04, 2019						                              Reference:                                  		Grand Central Dispatch (GCD): Where To Start Learning	: 		  I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no.  GCD is an. . . 	 			In 				Reference, 				Swift, 								Oct 07, 2019						                                 		Take Your Swift Data Structures Knowledge To The Next Level	: 		  I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen’s Swift News. Though I wouldn’t recommended relying on this alone, in case you . . . 	 			In 				Reference, 				Swift, 								Oct 05, 2019						                              Xcode:                                  		Experience With Carthage As Opposed To Cocoapods	: 		  Cocoapods makes your build times slower and that’s why I’ve taken the liberty of trying Carthage. Well, from the instructions I’ve read in bigger frameworks like Realm and FacebookCor. . . 	 			In 				Review, 				Xcode, 								Oct 11, 2019						                                 		Where Is Assistant Editor Mode In Xcode 11	: 		  Welcome to the world of Xcode 11 where it’s now confusing to find the assistant editor. Well, there it is. It is not in the same place anymore. On the top right corner of the storyboa. . . 	 			In 				Tutorial, 				Xcode, 								Oct 07, 2019						                              CoreLocation:                                  		Sophisticated Way To Use LocationManager Swift 5	: 		  This is the most elegant solution I found on how to retrieve location with CoreLocation. 	 			In 				Tutorial, 				Swift, 				CoreLocation, 								Oct 07, 2019						                              Review:                                  		Fake Airpods i500 TWS Review	: 		  I bought a pair of Apple Fake Airpods on Shopee for Php 1060 including shipping. Yes, that’s right! I bought it cheap. It’s around $20 and it’s worthy, I might add. 	 			In 				Review, 								Oct 21, 2019						                                 		Using Vertical Mouse: My Take	: 		  I bought the Wireless Vertical Mouse Game 800/1600/2400DPI Mice 2-Button a couple of weeks ago and it just a arrived a week ago. I bought mine in Shopee. It’s a marketplace here in th. . . 	 			In 				Review, 				Health, 								Oct 15, 2019						                                 		Let's Start Using Swift Package Manager	: 		  The first time I encountered the word Swift Package Manager was just a few days ago while searching for alternative ways to install the Firebase framework in my project. I thought Car. . . 	 			In 				Review, 								Oct 14, 2019						                                 		Experience With Carthage As Opposed To Cocoapods	: 		  Cocoapods makes your build times slower and that’s why I’ve taken the liberty of trying Carthage. Well, from the instructions I’ve read in bigger frameworks like Realm and FacebookCor. . . 	 			In 				Review, 				Xcode, 								Oct 11, 2019						                                 		Native Messenger App For Mac OS (Review) vs Caprine vs Goofy vs Franz	: 		  I’m currently on Mojave and I just thought that it’s time I use an app for messenger. It takes quite a while to load Facebook messenger on my Chrome browser. Maybe it’s just my intern. . . 	 			In 				Review, 								Oct 08, 2019						                                 		My First Post On Reddit	: 		  YouTube has been recommeding me blog tips and I’ve recently been keen on trying to get views on this blog. Today, my blog is still not indexed by google, but my half-baked portfolio i. . . 	 			In 				Review, 				Blog, 								Oct 08, 2019						                              Blog:                                  		My First Post On Reddit	: 		  YouTube has been recommeding me blog tips and I’ve recently been keen on trying to get views on this blog. Today, my blog is still not indexed by google, but my half-baked portfolio i. . . 	 			In 				Review, 				Blog, 								Oct 08, 2019						                              Design:                                  		Can You Design iOS Apps If You're Not A Designer?	: 		  I’m in no position to give any advise on creating designs because I’ve never been a designer. I only code my way through Xcode and I’ve only begun trying to deploy an app on the App S. . . 	 			In 				Tutorial, 				Design, 								Oct 11, 2019						                              Health:                                  		Using Vertical Mouse: My Take	: 		  I bought the Wireless Vertical Mouse Game 800/1600/2400DPI Mice 2-Button a couple of weeks ago and it just a arrived a week ago. I bought mine in Shopee. It’s a marketplace here in th. . . 	 			In 				Review, 				Health, 								Oct 15, 2019						                                             Featured:    				                                          Notification And Observer: The Basics                          In                     Tutorial,                     Swift,                                                                                           My First Post On Reddit                          In                     Review,                     Blog,                                                                                           How Static Is Used                          In                     Tutorial,                     Swift,                                                                                           MapKit Theme Style Overlay Swift 5                          In                     Tutorial,                     MapKit,                     Swift,                                                                                           Where Better To Understand Semaphores (Swift)                          In                     Tutorial,                     Swift,                                                                                           Sean Allen Finally Learns SwiftUI                          In                     Promotion,                                                                                           A Better EmptyView In An Empty CollectionView                          In                     Tutorial,                     Improvise,                                                                                           Using Cloud Functions To Create Remote Notifications With Firebase In Swift 5 and Javascript                          In                     Tutorial,                     Swift,                     Notification,                                                                                           Use Jekyll Manager Instead of Jekyll Admin                          In                     Jekyll,                     Admin,                     Manager,                                                                                           Eureka LocationRow                          In                     Tutorial,                                                                                           Issues With My First App Store Connect Submission                          In                     Publish,                                                                                           A Free Blog Using Mundana Jekyll Theme In Github Pages                          In                     Jekyll,                     Tutorial,                     Admin,                                                                   "
+    "body": "          Categories          {% for category in site. categories %}     {{ category[0] }}:           {% assign pages_list = category[1] %}    {% for post in pages_list %}    {% if post. title != null %}     {% if group == null or group == post. group %}           {% include main-loop-card. html %}     {% endif %}    {% endif %}    {% endfor %}    {% assign pages_list = nil %}    {% assign group = nil %}    {% endfor %}                  {% include sidebar-featured. html %}          "
     }, {
     "id": 22,
     "url": "http://iosjunkie.com/blog/contact.html",
     "title": "Contact",
-    "body": "  Please send your message to iOS Junkie. We will reply as soon as possible!   "
+    "body": "  Please send your message to {{site. name}}. We will reply as soon as possible!   "
     }, {
     "id": 23,
     "url": "http://iosjunkie.com/blog/",
     "title": "iOS Junkie",
-    "body": "                                  Taking A Look At MVVM  :       There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their co. . .               In                 Tutorial,                 Swift,                                        Oct 26, 2019                                                                                                                             Sharing UserDefault Between Apps          :                       In                         Tutorial,                         Swift,                                                                  Oct 22, 2019                                                                                                                                     Fake Airpods i500 TWS Review          :                       In                         Review,                                                                  Oct 21, 2019                                                                                                                                    Weak Self vs Unowned Self          :                       In                         Tutorial,                         Swift,                                                                  Oct 15, 2019                                                                         All Stories:                   		Taking A Look At MVVM	: 		  There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: model, view model, and controlle. . . 	 			In 				Tutorial, 				Swift, 								Oct 26, 2019						                  		Sharing UserDefault Between Apps	: 		  I just discovered a way for two apps to communicate with each other with the use of UserDefaults. I thought that UserDefault is only available locally in the app. Sandboxed in its own. . . 	 			In 				Tutorial, 				Swift, 								Oct 22, 2019						                  		Fake Airpods i500 TWS Review	: 		  I bought a pair of Apple Fake Airpods on Shopee for Php 1060 including shipping. Yes, that’s right! I bought it cheap. It’s around $20 and it’s worthy, I might add. 	 			In 				Review, 								Oct 21, 2019						                  		Weak Self vs Unowned Self	: 		  Most articles regarding this are overwhelming and I’m about to make it easier. This is based on Brian Voong’s tutorial. I urge you to watch the video too because, essentially, that is. . . 	 			In 				Tutorial, 				Swift, 								Oct 15, 2019						                  		Using Vertical Mouse: My Take	: 		  I bought the Wireless Vertical Mouse Game 800/1600/2400DPI Mice 2-Button a couple of weeks ago and it just a arrived a week ago. I bought mine in Shopee. It’s a marketplace here in th. . . 	 			In 				Review, 				Health, 								Oct 15, 2019						                  		Context Menu in SwiftUI	: 		  This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns o. . . 	 			In 				Tutorial, 				SwiftUI, 								Oct 15, 2019						                  		Let's Start Using Swift Package Manager	: 		  The first time I encountered the word Swift Package Manager was just a few days ago while searching for alternative ways to install the Firebase framework in my project. I thought Car. . . 	 			In 				Review, 								Oct 14, 2019						                  		Enums For Beginners	: 		  Enums can be confusing for everybody, especially the newbies. I mean, why use those when you can just create variables and constructs. It does the same right? Some claim that they use. . . 	 			In 				Tutorial, 				Swift, 								Oct 13, 2019						                  		Sign In With Apple Swift 5 Tutorial	: 		  First of all, a big thanks to Kilo Loco’s tutorial. Check it out. Not only is this feature available for iOS 13 up, it’s also available for Mac OS 10. 15. 	 			In 				Tutorial, 				Swift, 								Oct 12, 2019						                  		Experience With Carthage As Opposed To Cocoapods	: 		  Cocoapods makes your build times slower and that’s why I’ve taken the liberty of trying Carthage. Well, from the instructions I’ve read in bigger frameworks like Realm and FacebookCor. . . 	 			In 				Review, 				Xcode, 								Oct 11, 2019						                                                &laquo;                              1                               2                               3                               4                               5                              Next &raquo;                                          Featured:    				                                          Notification And Observer: The Basics                          In                     Tutorial,                     Swift,                                                                                           My First Post On Reddit                          In                     Review,                     Blog,                                                                                           How Static Is Used                          In                     Tutorial,                     Swift,                                                                                           MapKit Theme Style Overlay Swift 5                          In                     Tutorial,                     MapKit,                     Swift,                                                                                           Where Better To Understand Semaphores (Swift)                          In                     Tutorial,                     Swift,                                                                                           Sean Allen Finally Learns SwiftUI                          In                     Promotion,                                                                                           A Better EmptyView In An Empty CollectionView                          In                     Tutorial,                     Improvise,                                                                                           Using Cloud Functions To Create Remote Notifications With Firebase In Swift 5 and Javascript                          In                     Tutorial,                     Swift,                     Notification,                                                                                           Use Jekyll Manager Instead of Jekyll Admin                          In                     Jekyll,                     Admin,                     Manager,                                                                                           Eureka LocationRow                          In                     Tutorial,                                                                                           Issues With My First App Store Connect Submission                          In                     Publish,                                                                                           A Free Blog Using Mundana Jekyll Theme In Github Pages                          In                     Jekyll,                     Tutorial,                     Admin,                                                               "
+    "body": "  {% if page. url ==  /  %}            {% assign latest_post = site. posts[0] %}          &lt;div class= topfirstimage  style= background-image: url({% if latest_post. image contains  ://  %}{{ latest_post. image }}{% else %} {{site. baseurl}}/{{ latest_post. image}}{% endif %}); height: 200px;  background-size: cover;  background-repeat: no-repeat; &gt;&lt;/div&gt;           {{ latest_post. title }}  :       {{ latest_post. excerpt | strip_html | strip_newlines | truncate: 136 }}               In         {% for category in latest_post. categories %}        {{ category }},         {% endfor %}                                {{ latest_post. date | date: '%b %d, %Y' }}                            {%- assign second_post = site. posts[1] -%}                        {% if second_post. image %}                         &lt;img class= w-100  src= {% if second_post. image contains  ://  %}{{ second_post. image }}{% else %}{{ second_post. image | absolute_url }}{% endif %}  alt= {{ second_post. title }} &gt;                        {% endif %}                                    {{ second_post. title }}          :                       In             {% for category in second_post. categories %}            {{ category }},             {% endfor %}                                                      {{ second_post. date | date: '%b %d, %Y' }}                                    {%- assign third_post = site. posts[2] -%}                        {% if third_post. image %}                         &lt;img class= w-100  src= {% if third_post. image contains  ://  %}{{ third_post. image }}{% else %}{{site. baseurl}}/{{ third_post. image }}{% endif %}  alt= {{ third_post. title }} &gt;                        {% endif %}                                    {{ third_post. title }}          :                       In             {% for category in third_post. categories %}            {{ category }},             {% endfor %}                                                      {{ third_post. date | date: '%b %d, %Y' }}                                    {%- assign fourth_post = site. posts[3] -%}                        {% if fourth_post. image %}                        &lt;img class= w-100  src= {% if fourth_post. image contains  ://  %}{{ fourth_post. image }}{% else %}{{site. baseurl}}/{{ fourth_post. image }}{% endif %}  alt= {{ fourth_post. title }} &gt;                        {% endif %}                                    {{ fourth_post. title }}          :                       In             {% for category in fourth_post. categories %}            {{ category }},             {% endfor %}                                                      {{ fourth_post. date | date: '%b %d, %Y' }}                                  {% for post in site. posts %} {% if post. tags contains  sticky  %}                    {{post. title}}                  {{ post. excerpt | strip_html | strip_newlines | truncate: 136 }}                 Read More            	             {% endif %}{% endfor %}  {% endif %}                All Stories:         {% for post in paginator. posts %}          {% include main-loop-card. html %}        {% endfor %}                   {% if paginator. total_pages &gt; 1 %}              {% if paginator. previous_page %}        &laquo; Prev       {% else %}        &laquo;       {% endif %}       {% for page in (1. . paginator. total_pages) %}        {% if page == paginator. page %}        {{ page }}        {% elsif page == 1 %}        {{ page }}        {% else %}        {{ page }}        {% endif %}       {% endfor %}       {% if paginator. next_page %}        Next &raquo;       {% else %}        &raquo;       {% endif %}            {% endif %}                     {% include sidebar-featured. html %}      "
     }, {
     "id": 24,
     "url": "http://iosjunkie.com/blog/legends.html",
@@ -215,7 +219,7 @@ var documents = [{
     "id": 25,
     "url": "http://iosjunkie.com/blog/privacy-policy.html",
     "title": "Privacy Policy",
-    "body": "“iOS Junkie” takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used. Collection of Routine Information: This website track basic information about their visitors. This information includes, but is not limited to, IP addresses, browser details, timestamps and referring pages. None of this information can personally identify specific visitor to this website. The information is tracked for routine administration and maintenance purposes. Cookies: Where necessary, this website uses cookies to store information about a visitor’s preferences and history in order to better serve the visitor and/or present the visitor with customized content. Advertisement and Other Third Parties: Advertising partners and other third parties may use cookies, scripts and/or web beacons to track visitor activities on this website in order to display advertisements and other useful information. Such tracking is done directly by the third parties through their own servers and is subject to their own privacy policies. This website has no access or control over these cookies, scripts and/or web beacons that may be used by third parties. Learn how to opt out of Google’s cookie usage. Links to Third Party Websites: We have included links on this website for your use and reference. We are not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from our own. Security: The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security. Changes To This Privacy Policy: This Privacy Policy is effective and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page. We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website. Contact Information: For any questions or concerns regarding the privacy policy, please contact us here. "
+    "body": "”{{site. name}}” takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used. Collection of Routine Information: This website track basic information about their visitors. This information includes, but is not limited to, IP addresses, browser details, timestamps and referring pages. None of this information can personally identify specific visitor to this website. The information is tracked for routine administration and maintenance purposes. Cookies: Where necessary, this website uses cookies to store information about a visitor’s preferences and history in order to better serve the visitor and/or present the visitor with customized content. Advertisement and Other Third Parties: Advertising partners and other third parties may use cookies, scripts and/or web beacons to track visitor activities on this website in order to display advertisements and other useful information. Such tracking is done directly by the third parties through their own servers and is subject to their own privacy policies. This website has no access or control over these cookies, scripts and/or web beacons that may be used by third parties. Learn how to opt out of Google’s cookie usage. Links to Third Party Websites: We have included links on this website for your use and reference. We are not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from our own. Security: The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security. Changes To This Privacy Policy: This Privacy Policy is effective and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page. We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website. Contact Information: For any questions or concerns regarding the privacy policy, please contact us here. "
     }, {
     "id": 26,
     "url": "http://iosjunkie.com/blog/tags.html",
@@ -523,45 +527,276 @@ function lunr_search(term) {
 
     <!-- Content -->
     <main role="main" class="site-content">
-        <div class="container">
-<h3 class="font-weight-bold spanborder"><span>Privacy Policy</span></h3>
-<div class="page-content">
-<p>“iOS Junkie” takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used.</p>
-
-<h4 id="collection-of-routine-information">Collection of Routine Information</h4>
-
-<p>This website track basic information about their visitors. This information includes, but is not limited to, IP addresses, browser details, timestamps and referring pages. None of this information can personally identify specific visitor to this website. The information is tracked for routine administration and maintenance purposes.</p>
-
-<h4 id="cookies">Cookies</h4>
-
-<p>Where necessary, this website uses cookies to store information about a visitor’s preferences and history in order to better serve the visitor and/or present the visitor with customized content.</p>
-
-<h4 id="advertisement-and-other-third-parties">Advertisement and Other Third Parties</h4>
-
-<p>Advertising partners and other third parties may use cookies, scripts and/or web beacons to track visitor activities on this website in order to display advertisements and other useful information. Such tracking is done directly by the third parties through their own servers and is subject to their own privacy policies. This website has no access or control over these cookies, scripts and/or web beacons that may be used by third parties. Learn how to <a href="http://www.google.com/privacy_ads.html">opt out of Google’s cookie usage</a>.</p>
-
-<h4 id="links-to-third-party-websites">Links to Third Party Websites</h4>
-
-<p>We have included links on this website for your use and reference. We are not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from our own.</p>
-
-<h4 id="security">Security</h4>
-
-<p>The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
-
-<h4 id="changes-to-this-privacy-policy">Changes To This Privacy Policy</h4>
-
-<p>This Privacy Policy is effective and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.</p>
-
-<p>We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website.</p>
-
-<h4 id="contact-information">Contact Information</h4>
-
-<p>For any questions or concerns regarding the privacy policy, please <a href="/blog/contact.html">contact us here</a>.</p>
-
-<!-- Comments -->
-
+        
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+		<div class="h-100 tofront">
+			<div class="row  justify-content-between ">
+				<div class=" col-md-6  pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+					<p class="text-uppercase font-weight-bold">
+                        <span class="catlist">
+						
+                          <a class="sscroll text-danger" href="/blog/categories.html#tutorial">tutorial</a><span class="sep">, </span>
+                        
+                          <a class="sscroll text-danger" href="/blog/categories.html#swift">swift</a><span class="sep">, </span>
+                        
+                        </span>
+					</p>
+					<h1 class="display-4 mb-4 article-headline">Taking A Look At MVVM</h1>
+					<div class="d-flex align-items-center">
+                        
+                        <img class="rounded-circle" src="/blog//assets/images/avatar1.jpg" alt="Jules Lee" width="70"/>
+                        
+						<small class="ml-3"> Jules Lee <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
+                            <span class="text-muted d-block mt-1">Oct 26, 2019 · <span class="reading-time">
+  
+  
+    3 mins read
+  
+</span>
+    </span>
+						</small>
+					</div>
+				</div>
+                
+				<div class="col-md-6 pr-0 align-self-center">
+					<img class="rounded" src="https://www.iosapptemplates.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-17-at-8.25.44-PM.png" alt="Taking A Look At MVVM">
+				</div>
+                
+			</div>
+		</div>
+	</div>
 </div>
+
+
+
+
+
+<div class="container-lg pt-4 pb-4">
+	<div class="row justify-content-center">
+        
+        
+        <!-- Share -->
+		<div class="col-lg-2 pr-4 mb-4 col-md-12">
+			<div class="sticky-top sticky-top-offset text-center">
+				<div class="text-muted">
+					Share this
+				</div>
+				<div class="share d-inline-block">
+					<!-- AddToAny BEGIN -->
+					<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+						<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+						<a class="a2a_button_facebook"></a>
+						<a class="a2a_button_twitter"></a>
+					</div>
+					<script async src="https://static.addtoany.com/menu/page.js"></script>
+					<!-- AddToAny END -->
+				</div>
+			</div>
+		</div>
+        
+        
+		<div class="col-md-12 col-lg-8">
+            
+            <!-- Article -->
+			<article class="article-post">                
+			<p>There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: <code class="highlighter-rouge">model</code>, <code class="highlighter-rouge">view model</code>, and <code class="highlighter-rouge">controller</code>. There’s an extra in Brian Voong’s example.</p>
+
+<h3 id="first-from-brian-voong">First from Brian Voong</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Course.swift
+struct Course: Decodable {
+    id : int
+    name: String
+    number_of_lessons: Int
+}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// CourseViewModel.swift
+struct CourseViewModel {
+    let name: String
+    let detailTextString: String
+    let accessoryType: UITableViewCellAccessoryType
+		
+    // Dependency Injection (DI)
+    init(course: Course) {
+        self.name = course.name
+				
+        if course.number_of_lessons &gt; 35 {
+            detailTextString = "Lessons 30+ Check it Out!"
+            accessoryType = .detailDisclosureButton
+        else {
+            detailTextString = "Lessons: \(course.number_of_lessons)"
+            accessoryType = .none
+        }
+    }
+}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// CourseCell.swift
+class CourseCell: UITableViewCell {
+    var courseViewModel: CourseViewModel! {
+        didSet {
+           textLabel?.text = courseViewModel.name
+           detailTextLabel?.text = courseViewModel.detailTextString
+           accessoryType = courseViewModel.accessryType
+        }
+}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// CoursesController.swift
+fileprivate func fetchData() {
+    Service.shared.fetchCourses { (courses, err) in
+        if let err = err { return }
+        
+        self.courseViewModels = courses?.map({ return CourseViewModel(course: $0)}) ?? []
+        self.tableView.reloadData()
+}
+</code></pre></div></div>
+
+<p>This fetchData function is only available inside CoursesController.swift file, because it is a fileprivate. Brian Voong created a <code class="highlighter-rouge">Service.swift</code> file from where this closure comes from which is not a relevant topic for this post. When accessed accordingly, it can be available to any classes but within CoursesController.swift file. But that’s not what we’re here to talk about. This function calls an API that returns us the courses, which is of type Course. Inside the closure, it is taking that <code class="highlighter-rouge">courses</code> array into a CourseViewModel array. The CourseViewModel array will then be the data source of the <code class="highlighter-rouge">tableView</code>.</p>
+
+<h3 id="second-is-from-rebeloper">Second is from Rebeloper</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// User.swift
+struct User {
+    let name: String
+    let age: Int
+    backgroundColor: UIColor
+		
+    init(name: String, age: Int, backgroundColor: UIColor) {
+        self.name = name
+        self.age = age
+        self.backgrouundColor = backgroundColor
+    }
+}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// RootViewModel.swift
+class RootViewModel {
+    let user: User
+    
+    init(user: User) {
+        self.user = user
+    }
+}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// RootViewController.swift
+var viewModel: RootViewModel! {
+    didSet {
+        view.backgroundColor = viewModel.user.backgroundColor
+        navigationItem.title = "\(viewModel.user.name), \(viewModel.user.age)"
+    }
+}
+
+viewDidLoad() {
+    let user = User(name: "Alex", age: 36, backgroundColor: .white)
+    viewModel = RootViewModel(user: user)
+}
+</code></pre></div></div>
+
+<p>Here, you won’t see a <code class="highlighter-rouge">tableView</code>. Good! Cause maybe you though we need a table to do the MVVM.</p>
+
+<p>I think Rebeloper’s code doesn’t really bring out the need for MVVM. We can see how he accessed the <code class="highlighter-rouge">User</code> model inside the view controller. While in Brian’s example, he did the same thing but indirectly. But anyway, I guess that’s how it works. Just another construct that looks similar to a <code class="highlighter-rouge">Model</code>.</p>
+
+<h3 id="take">Take</h3>
+
+<p>Both examples almost have the same objective.</p>
+
+<p>To separate the view logic from the model logic and vice versa by creating an intermediary called a <code class="highlighter-rouge">ViewModel</code>.</p>
+
+<p>Why should we do this? Who knows. I know MVC makes sense, but I don’t know how this does. We still have the controller and it makes it all the more confusing because it doesn’t say <code class="highlighter-rouge">MVVMC</code>.</p>
+
+<p>Hold on, let’s find a better example to see why MVVM is talked about by developers. These examples don’t exaggerate enough why we need to use MVVM. It looks pretty redundant. This here is an example by <a href="https://www.youtube.com/watch?v=nAI-BI-_YWs">iOS Quickstart</a>:</p>
+
+<p><img src="/blog/assets/images/Screen%20Shot%202019-10-26%20at%208.16.49%20PM.png" alt="mvvm" /></p>
+
+<p>Now it’s starting to make sense. These static functions inside this ViewModel are called <code class="highlighter-rouge">Translation Codes</code>. Blame <code class="highlighter-rouge">iOS Quickstart</code> if I’m wrong about that. Without the MVVM architecture, we’ll be putting these translation codes inside our view controller and it gets messier there. The <code class="highlighter-rouge">VM</code> of MVVM is just another way to create another file or folder to store the mess elsewhere if you consider these translation codes a mess, because I do.</p>
+
+                
+			</article>
+			
+			<!-- Tags -->
+			<div class="mb-4">
+				<span class="taglist">
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#"></a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#swift">swift</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#model">model</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#view">view</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#controller">controller</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#viewmodel">viewmodel</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#brian">brian</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#voong">voong</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#rebeloper">rebeloper</a>
+				
+				</span>
+			</div>
+ 
+            <!-- Mailchimp Subscribe Form -->
+            
+            
+            
+             <!-- Author Box -->
+                				
+				<div class="row mt-5">
+					<div class="col-md-2 align-self-center">
+                         
+                        <img class="rounded-circle" src="/blog//assets/images/avatar1.jpg" alt="Jules Lee" width="90"/>
+                         
+					</div>
+					<div class="col-md-10">		
+                        <h5 class="font-weight-bold">Written by Jules Lee </h5>
+						Hi, I am Jules, the author of iOS Junkie. Demystifying complex instructions from the internet.					
+					</div>
+				</div>				
+                
+            
+            <!-- Comments -->
+            
+                <!--  Don't edit anything here. Set your disqus id in _config.yml -->
+
+<div id="comments" class="mt-5">
+    <div id="disqus_thread">
+    </div>
+    <script type="text/javascript">
+        var disqus_shortname = 'iosjunkie'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>
+    Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
 </div>
+            
+            
+		</div>
+        
+        
+	</div>
+</div>
+
+
+<!-- Aletbar Prev/Next -->
+<div class="alertbar">
+    <div class="container">
+        <div class="row prevnextlinks small font-weight-bold">
+          
+            <div class="col-md-6 rightborder pl-0">
+                <a class="text-dark" href="/blog/sharing-userdefault-between-apps/"> <img height="30px" class="mr-1" src="/blog/https://miro.medium.com/max/6000/1*7Zy2OC1nxK-BqmDbGxtPDg.png">  Sharing UserDefault Between Apps</a>
+            </div>
+          
+          
+        </div>
+    </div>
+</div>
+
     </main>
 
 
@@ -578,7 +813,7 @@ function lunr_search(term) {
         <div class="container">
         <div class="row align-items-center justify-content-between">
             <div>
-                <span class="navbar-brand mr-2 mb-0"><strong>Privacy Policy</strong></span>
+                <span class="navbar-brand mr-2 mb-0"><strong>Taking A Look At MVVM</strong></span>
                 <span>Copyright © <script>document.write(new Date().getFullYear())</script>.</span>
 
                 <!--  Github Repo Star Btn-->

@@ -1,4 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-22T15:42:54+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Sharing UserDefault Between Apps</title><link href="http://iosjunkie.com/blog/sharing-userdefault-between-apps/" rel="alternate" type="text/html" title="Sharing UserDefault Between Apps" /><published>2019-10-22T00:00:00+08:00</published><updated>2019-10-22T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/sharing-userdefault-between-apps</id><content type="html" xml:base="http://iosjunkie.com/blog/sharing-userdefault-between-apps/">&lt;p&gt;I just discovered a way for two apps to communicate with each other with the use of UserDefaults. I thought that UserDefault is only available locally in the app. Sandboxed in its own environment.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-26T20:37:33+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Taking A Look At MVVM</title><link href="http://iosjunkie.com/blog/mvvm/" rel="alternate" type="text/html" title="Taking A Look At MVVM" /><published>2019-10-26T00:00:00+08:00</published><updated>2019-10-26T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/mvvm</id><content type="html" xml:base="http://iosjunkie.com/blog/mvvm/">&lt;p&gt;There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: &lt;code class=&quot;highlighter-rouge&quot;&gt;model&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;view model&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;controller&lt;/code&gt;. There’s an extra in Brian Voong’s example.&lt;/p&gt;
+
+&lt;h3 id=&quot;first-from-brian-voong&quot;&gt;First from Brian Voong&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Course.swift
+struct Course: Decodable {
+    id : int
+    name: String
+    number_of_lessons: Int
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// CourseViewModel.swift
+struct CourseViewModel {
+    let name: String
+    let detailTextString: String
+    let accessoryType: UITableViewCellAccessoryType
+		
+    // Dependency Injection (DI)
+    init(course: Course) {
+        self.name = course.name
+				
+        if course.number_of_lessons &amp;gt; 35 {
+            detailTextString = &quot;Lessons 30+ Check it Out!&quot;
+            accessoryType = .detailDisclosureButton
+        else {
+            detailTextString = &quot;Lessons: \(course.number_of_lessons)&quot;
+            accessoryType = .none
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// CourseCell.swift
+class CourseCell: UITableViewCell {
+    var courseViewModel: CourseViewModel! {
+        didSet {
+           textLabel?.text = courseViewModel.name
+           detailTextLabel?.text = courseViewModel.detailTextString
+           accessoryType = courseViewModel.accessryType
+        }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// CoursesController.swift
+fileprivate func fetchData() {
+    Service.shared.fetchCourses { (courses, err) in
+        if let err = err { return }
+        
+        self.courseViewModels = courses?.map({ return CourseViewModel(course: $0)}) ?? []
+        self.tableView.reloadData()
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This fetchData function is only available inside CoursesController.swift file, because it is a fileprivate. Brian Voong created a &lt;code class=&quot;highlighter-rouge&quot;&gt;Service.swift&lt;/code&gt; file from where this closure comes from which is not a relevant topic for this post. When accessed accordingly, it can be available to any classes but within CoursesController.swift file. But that’s not what we’re here to talk about. This function calls an API that returns us the courses, which is of type Course. Inside the closure, it is taking that &lt;code class=&quot;highlighter-rouge&quot;&gt;courses&lt;/code&gt; array into a CourseViewModel array. The CourseViewModel array will then be the data source of the &lt;code class=&quot;highlighter-rouge&quot;&gt;tableView&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;second-is-from-rebeloper&quot;&gt;Second is from Rebeloper&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// User.swift
+struct User {
+    let name: String
+    let age: Int
+    backgroundColor: UIColor
+		
+    init(name: String, age: Int, backgroundColor: UIColor) {
+        self.name = name
+        self.age = age
+        self.backgrouundColor = backgroundColor
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// RootViewModel.swift
+class RootViewModel {
+    let user: User
+    
+    init(user: User) {
+        self.user = user
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// RootViewController.swift
+var viewModel: RootViewModel! {
+    didSet {
+        view.backgroundColor = viewModel.user.backgroundColor
+        navigationItem.title = &quot;\(viewModel.user.name), \(viewModel.user.age)&quot;
+    }
+}
+
+viewDidLoad() {
+    let user = User(name: &quot;Alex&quot;, age: 36, backgroundColor: .white)
+    viewModel = RootViewModel(user: user)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, you won’t see a &lt;code class=&quot;highlighter-rouge&quot;&gt;tableView&lt;/code&gt;. Good! Cause maybe you though we need a table to do the MVVM.&lt;/p&gt;
+
+&lt;p&gt;I think Rebeloper’s code doesn’t really bring out the need for MVVM. We can see how he accessed the &lt;code class=&quot;highlighter-rouge&quot;&gt;User&lt;/code&gt; model inside the view controller. While in Brian’s example, he did the same thing but indirectly. But anyway, I guess that’s how it works. Just another construct that looks similar to a &lt;code class=&quot;highlighter-rouge&quot;&gt;Model&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;take&quot;&gt;Take&lt;/h3&gt;
+
+&lt;p&gt;Both examples almost have the same objective.&lt;/p&gt;
+
+&lt;p&gt;To separate the view logic from the model logic and vice versa by creating an intermediary called a &lt;code class=&quot;highlighter-rouge&quot;&gt;ViewModel&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Why should we do this? Who knows. I know MVC makes sense, but I don’t know how this does. We still have the controller and it makes it all the more confusing because it doesn’t say &lt;code class=&quot;highlighter-rouge&quot;&gt;MVVMC&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hold on, let’s find a better example to see why MVVM is talked about by developers. These examples don’t exaggerate enough why we need to use MVVM. It looks pretty redundant. This here is an example by &lt;a href=&quot;https://www.youtube.com/watch?v=nAI-BI-_YWs&quot;&gt;iOS Quickstart&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-26%20at%208.16.49%20PM.png&quot; alt=&quot;mvvm&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now it’s starting to make sense. These static functions inside this ViewModel are called &lt;code class=&quot;highlighter-rouge&quot;&gt;Translation Codes&lt;/code&gt;. Blame &lt;code class=&quot;highlighter-rouge&quot;&gt;iOS Quickstart&lt;/code&gt; if I’m wrong about that. Without the MVVM architecture, we’ll be putting these translation codes inside our view controller and it gets messier there. The &lt;code class=&quot;highlighter-rouge&quot;&gt;VM&lt;/code&gt; of MVVM is just another way to create another file or folder to store the mess elsewhere if you consider these translation codes a mess, because I do.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="model" /><category term="view" /><category term="controller" /><category term="viewmodel" /><category term="brian" /><category term="voong" /><category term="rebeloper" /><summary type="html">There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: model, view model, and controller. There’s an extra in Brian Voong’s example.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.iosapptemplates.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-17-at-8.25.44-PM.png" /></entry><entry><title type="html">Sharing UserDefault Between Apps</title><link href="http://iosjunkie.com/blog/sharing-userdefault-between-apps/" rel="alternate" type="text/html" title="Sharing UserDefault Between Apps" /><published>2019-10-22T00:00:00+08:00</published><updated>2019-10-22T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/sharing-userdefault-between-apps</id><content type="html" xml:base="http://iosjunkie.com/blog/sharing-userdefault-between-apps/">&lt;p&gt;I just discovered a way for two apps to communicate with each other with the use of UserDefaults. I thought that UserDefault is only available locally in the app. Sandboxed in its own environment.&lt;/p&gt;
 
 &lt;p&gt;The two apps should add &lt;code class=&quot;highlighter-rouge&quot;&gt;Groups&lt;/code&gt; capability each.&lt;/p&gt;
 
@@ -349,12 +454,4 @@ appleIDProvider.getCredentialState(forUserID: userIdentifier) { (credentialState
 
 &lt;p&gt;For these three, I maintained the use of Cocoapods. It can works hand in hand with Carthage.&lt;/p&gt;
 
-&lt;p&gt;I’m not sure I’ve noticed any changes, because Firebase is the heaviest framework I have and it is installed with Cocoapods, thereby still making my build time really slow. Apart from that, I don’t really see the rest of the frameworks build anymore. I guess that’s an improvement.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="carthage" /><category term="swift" /><category term="cocoapods" /><category term="cocoapod" /><category term="pod" /><category term="import" /><category term="libraries" /><category term="framework" /><category term="bettersegmentedcontrol" /><category term="gmstepper" /><summary type="html">Cocoapods makes your build times slower and that’s why I’ve taken the liberty of trying Carthage. Well, from the instructions I’ve read in bigger frameworks like Realm and FacebookCore/FacebookLogin, it is a daunting process. Which is why it took me this long to want to even bother with it. But for some smaller frameworks, it is almost similar to Cocoapod’s process, which I like better. Unfortunately, this arduous shift took painfully long to install the frameworks. Every time I add a new framework to my Cartfile and update carthage, it downloads everything and builds everything over again. My gahd!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://koenig-media.raywenderlich.com/uploads/2017/08/Carthage-feature-2.png" /></entry><entry><title type="html">Can You Design iOS Apps If You’re Not A Designer?</title><link href="http://iosjunkie.com/blog/can-you-design-ios-apps-if-youre-not-a-designer/" rel="alternate" type="text/html" title="Can You Design iOS Apps If You're Not A Designer?" /><published>2019-10-11T00:00:00+08:00</published><updated>2019-10-11T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/can-you-design-ios-apps-if-youre-not-a-designer</id><content type="html" xml:base="http://iosjunkie.com/blog/can-you-design-ios-apps-if-youre-not-a-designer/">&lt;p&gt;I’m in no position to give any advise on creating designs because I’ve never been a designer. I only code my way through Xcode and I’ve only begun trying to deploy an app on the App Store. I have been, for months, trying to design my app inside the storyboard. It’s pretty difficult, considering that I frequently need to launch the simulator to see the full splendor of my design. It takes painfully long to build, really, but I don’t regret having been able to experience it. I learned so much about how constraints work on the storyboard. But not designing, no. My designing skills did not improve at all.&lt;/p&gt;
-
-&lt;p&gt;I was really skeptic about wireframing and prototyping. Just now, I think I’m doing what designers call prototyping. I’m starting to do it because I’m tired of clicking my way through the storyboard and it lags sometimes.&lt;/p&gt;
-
-&lt;p&gt;Now, I’m exploring the possibility of designing some aspects of my app in &lt;code class=&quot;highlighter-rouge&quot;&gt;Sketch&lt;/code&gt;. It feels lightweight to use, loads up pretty fast and nothing lags. Cool, right? I just create an artboard that would match the screen size of, say, an iPhone SE. The font size I’m using in Xcode is exactly the font size I’m able to use in &lt;code class=&quot;highlighter-rouge&quot;&gt;Sketch&lt;/code&gt;. All the shapes and sizes are portable by setting the artboard’s screen size to an iPhone-like screen. Feels great to be able to explore colors and shapes much faster.&lt;/p&gt;
-
-&lt;p&gt;Since I’m not really a designer, I take most of my design insights from &lt;code class=&quot;highlighter-rouge&quot;&gt;Dribbble&lt;/code&gt;. I don’t copy the exact designs. However, it’s nice to know which colors complement each other and how shapes will mix and match the other shapes around it. That’s what I’ve been up to in &lt;code class=&quot;highlighter-rouge&quot;&gt;Dribbble&lt;/code&gt;. More often than not, I improvise my own design and it turns up like shit. Now that I’m trying it with &lt;code class=&quot;highlighter-rouge&quot;&gt;Sketch&lt;/code&gt;, it seems to be more plausible to make descent outcome out of my improvisations. I can see the results so fast, I don’t need a simulator for it.&lt;/p&gt;
-
-&lt;p&gt;For icons, I prefer using &lt;a href=&quot;https://apps.apple.com/us/app/icons8-lite/id786188363?mt=12&quot;&gt;Icons8&lt;/a&gt;. It’s an app that allows me to easily drag icons directly from the app to my Assets.xcassets or to &lt;code class=&quot;highlighter-rouge&quot;&gt;Sketch&lt;/code&gt;.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="design" /><category term="ios" /><category term="swift" /><category term="apps" /><category term="app" /><category term="sketch" /><summary type="html">I’m in no position to give any advise on creating designs because I’ve never been a designer. I only code my way through Xcode and I’ve only begun trying to deploy an app on the App Store. I have been, for months, trying to design my app inside the storyboard. It’s pretty difficult, considering that I frequently need to launch the simulator to see the full splendor of my design. It takes painfully long to build, really, but I don’t regret having been able to experience it. I learned so much about how constraints work on the storyboard. But not designing, no. My designing skills did not improve at all.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-11%20at%202.44.27%20PM.png" /></entry></feed>
+&lt;p&gt;I’m not sure I’ve noticed any changes, because Firebase is the heaviest framework I have and it is installed with Cocoapods, thereby still making my build time really slow. Apart from that, I don’t really see the rest of the frameworks build anymore. I guess that’s an improvement.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="carthage" /><category term="swift" /><category term="cocoapods" /><category term="cocoapod" /><category term="pod" /><category term="import" /><category term="libraries" /><category term="framework" /><category term="bettersegmentedcontrol" /><category term="gmstepper" /><summary type="html">Cocoapods makes your build times slower and that’s why I’ve taken the liberty of trying Carthage. Well, from the instructions I’ve read in bigger frameworks like Realm and FacebookCore/FacebookLogin, it is a daunting process. Which is why it took me this long to want to even bother with it. But for some smaller frameworks, it is almost similar to Cocoapod’s process, which I like better. Unfortunately, this arduous shift took painfully long to install the frameworks. Every time I add a new framework to my Cartfile and update carthage, it downloads everything and builds everything over again. My gahd!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://koenig-media.raywenderlich.com/uploads/2017/08/Carthage-feature-2.png" /></entry></feed>

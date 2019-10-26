@@ -45,9 +45,15 @@ The most entertaining coder you'll see. Head on to his tutorials and you'll see 
 
 This one is an O.G. in the game. He's built a school in this field and you can sign up for one of his courses. They have teacher support and all that good stuff. Not to mention, Chris also has a lot of tutorials on YouTube just like the rest of these guys.
 
+## 7. [Rebeloper a.k.a. Alex Nagy][rebeloper]
+![legend](https://images.squarespace-cdn.com/content/v1/5b8bb07ac3c16ae8650c50e8/1567165926686-94WL8BYRCS97687M5FYE/ke17ZwdGBToddI8pDm48kLXCf88_9uNTKXkq27cF4sB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmzUsryC7riGV7bTeYhg5Sep4Y8p3OCJVqs3FfNTLch3O2M0DsfUdwheg190rC2-Re/Alex.jpg)
+
+He is a senior iOS developer with more than 8 years of experience in building scalable, high quality iOS apps. He likes to build out projects from scratch in code. It's important for him to create meaningful apps that impact the life of users in a positive way. According to his website, Rebeloper.com, he works alongside `Agatha` and `Alpar`, cool superhero names, huh?
+
 [brian]: https://www.youtube.com/channel/UCuP2vJ6kRutQBfRmdcI92mA
 [sean]: https://www.youtube.com/channel/UCbTw29mcP12YlTt1EpUaVJw/featured
 [meng]: https://www.youtube.com/channel/UCTIhfOopxukTIRkbXJ3kN-g
 [scott]: https://www.youtube.com/channel/UCqndzS37vNHVrqLVAKEP2HQ
 [kilo]: https://www.youtube.com/channel/UCv75sKQFFIenWHrprnrR9aAhttps://www.youtube.com/channel/UCv75sKQFFIenWHrprnrR9aA
 [chris]: https://www.youtube.com/user/CodeWithChris
+[rebeloper]: https://www.youtube.com/channel/UCK88iDIf2V6w68WvC-k7jcg
