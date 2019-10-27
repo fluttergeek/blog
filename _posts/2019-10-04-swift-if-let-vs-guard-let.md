@@ -1,11 +1,14 @@
 ---
 title: 'Swift: If Let vs. Guard Let'
-image: https://i.ytimg.com/vi/P2YZu9MwLaM/maxresdefault.jpg
+date: 2019-10-04 00:00:00 Z
+categories:
+- Tutorial
+- Swift
 tags:
 - ''
 - swift
 - language
-categories: Tutorial Swift
+image: https://i.ytimg.com/vi/P2YZu9MwLaM/maxresdefault.jpg
 ---
 
 This is a brief explanation for newbies. It's because when I was still a newbie, I didn't really understand how or when to use either of these two. I never touched them at all. If you want a more thorough explanation on this, check out the [Swift Language Guide][slg].

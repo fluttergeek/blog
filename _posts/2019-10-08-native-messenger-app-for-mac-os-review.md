@@ -1,7 +1,8 @@
 ---
 title: Native Messenger App For Mac OS (Review) vs Caprine vs Goofy vs Franz
-image: assets/images/Screen%20Shot%202019-10-08%20at%207.52.43%20PM.png
-categories: Review
+date: 2019-10-08 00:00:00 Z
+categories:
+- Review
 tags:
 - ''
 - review
@@ -10,6 +11,7 @@ tags:
 - app
 - messenger
 - facebook
+image: assets/images/Screen%20Shot%202019-10-08%20at%207.52.43%20PM.png
 ---
 
 I'm currently on Mojave and I just thought that it's time I use an app for messenger. It takes quite a while to load Facebook messenger on my Chrome browser. Maybe it's just my internet speed. So I looked for an app on the Mac App Store and there's not much apps out there for native Mac OS app look of Messenger. This is probably the only one out there. The only one I've found at least. I've scrolled deep enough to see there's no other like it. It has decent amount of stars as rating, but does it really live up to it?

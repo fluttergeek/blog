@@ -1,48 +1,59 @@
+---
+title: Blog
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: _posts
+  values:
+    layout: post
+    author: jules
+    avatar: "/assets/images/avatar1.jpg"
+- scope:
+    path: _pages
+  values:
+    layout: page
 name: iOS Junkie
-description: Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.
+description: Demystifying complex instructions, tutorials, and a little bit more geared
+  toward the iOS development or Swift stuff. Technical yet simple tips on how iOS
+  components work.
 logo: assets/images/logo.png
 favicon: assets/images/favicon.ico
-baseurl: /blog
+baseurl: "/blog"
 url: http://iosjunkie.com
 disqus: iosjunkie
 email: zoom.flux@gmail.com
 include:
-  - _pages
-permalink: '/:title/'
+- _pages
+permalink: "/:title/"
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-seo-tag
-gem:
+- jekyll-feed
+- jekyll-sitemap
+- jekyll-paginate
+- jekyll-seo-tag
+gem: 
 authors:
   jules:
     name: Jules Lee
-    site: 'https://iosjunkie.com'
-    avatar: /assets/images/avatar1.jpg
-    bio: >-
-      Hi, I am Jules, the author of iOS Junkie. Demystifying complex instructions
+    site: https://iosjunkie.com
+    avatar: "/assets/images/avatar1.jpg"
+    bio: Hi, I am Jules, the author of iOS Junkie. Demystifying complex instructions
       from the internet.
     email: zoom.flux@gmail.com
-    facebook: 'https://facebook.com/mr.jules.lee'
-defaults:
-  - scope:
-      path: _posts
-    values:
-      layout: post
-      author: jules
-      avatar: /assets/images/avatar1.jpg
-  - scope:
-      path: _pages
-    values:
-      layout: page
+    facebook: https://facebook.com/mr.jules.lee
 markdown: kramdown
 highlighter: rouge
 paginate: 10
 exclude:
-  - README.markdown
-  - package.json
-  - grunt.js
-  - Gruntfile.js
-  - Gruntfile.coffee
-  - node_modules
+- README.markdown
+- package.json
+- grunt.js
+- Gruntfile.js
+- Gruntfile.coffee
+- node_modules

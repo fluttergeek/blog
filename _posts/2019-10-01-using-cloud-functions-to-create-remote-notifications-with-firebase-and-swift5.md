@@ -1,6 +1,11 @@
 ---
 title: Using Cloud Functions To Create Remote Notifications With Firebase In Swift
   5 and Javascript
+date: 2019-10-01 00:00:00 Z
+categories:
+- Tutorial
+- Swift
+- Notification
 tags:
 - remote
 - notification
@@ -12,7 +17,6 @@ tags:
 - featured
 - APNs
 image: https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_709/https://buildfire.com/wp-content/uploads/2018/03/uber.png
-categories: Tutorial Swift Notification
 ---
 
 This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already have the GoogleService-Info.plist in your Xcode project. It is important because it contains your bundle identifier. Without Firebase knowing your bundle identifier, you can't proceed to enable Cloud messaging. 

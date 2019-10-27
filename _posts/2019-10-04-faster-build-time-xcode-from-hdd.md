@@ -1,5 +1,6 @@
 ---
 title: Faster Build Time Xcode From HDD
+date: 2019-10-04 00:00:00 Z
 image: assets/images/Pv7si.png
 ---
 

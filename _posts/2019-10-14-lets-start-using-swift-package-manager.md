@@ -1,6 +1,8 @@
 ---
 title: Let's Start Using Swift Package Manager
-image: https://miro.medium.com/max/1200/1*ooI0KwILz0Yo2cXUaW9gog.png
+date: 2019-10-14 00:00:00 Z
+categories:
+- Review
 tags:
 - ''
 - tutorial
@@ -8,7 +10,7 @@ tags:
 - package
 - manager
 - review
-categories: Review
+image: https://miro.medium.com/max/1200/1*ooI0KwILz0Yo2cXUaW9gog.png
 ---
 
 The first time I encountered the word `Swift Package Manager` was just a few days ago while searching for alternative ways to install the `Firebase` framework in my project. I thought `Carthage` was a holy grail. Boy, am I wrong now that I've seen how to install frameworks with Swift Package Manager. Unfortunately, Firebase doesn't have a swift package yet. Not officially, anyway. They have started trying to make the support since months ago, but no prorgress has been done months after. Crazy! I know.

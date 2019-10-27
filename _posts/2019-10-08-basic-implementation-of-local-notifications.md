@@ -1,7 +1,9 @@
 ---
 title: Basic Implementation of Local Notifications
-image: assets/images/Notifications_Top_2x.png
-categories: Tutorial Swift
+date: 2019-10-08 00:00:00 Z
+categories:
+- Tutorial
+- Swift
 tags:
 - ''
 - local
@@ -11,6 +13,7 @@ tags:
 - UNUsernotification
 - newbies
 - basic
+image: assets/images/Notifications_Top_2x.png
 ---
 
 Let's get one thing straight now baby. Local notifications is not the same as `Push`/`Remote` notifications. It is also not the same as the Notification-Observer relationship which I will discuss [next][next]. They differ because local notifications don't need triggers coming from outside the app. Either way, you'll still need the `UNUserNotificationCenter`, and for that, you need to import `UserNotifications`. This is usually used in scheduling apps like alarm and todo-list.

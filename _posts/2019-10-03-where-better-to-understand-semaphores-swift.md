@@ -1,6 +1,9 @@
 ---
 title: Where Better To Understand Semaphores (Swift)
-image: assets/images/1_7aP7xcLcB6cJ9wySieNNCA.gif
+date: 2019-10-03 00:00:00 Z
+categories:
+- Tutorial
+- Swift
 tags:
 - ''
 - featured
@@ -12,7 +15,7 @@ tags:
 - grand
 - central
 - dispatch
-categories: Tutorial Swift
+image: assets/images/1_7aP7xcLcB6cJ9wySieNNCA.gif
 ---
 
 Thanks to Roy Kronenfeld's [Medium post][roy] for this explanation of how to use a semaphore, specifically, utilizing the counter: `let semaphore = DispatchSemaphore(value: 0)`. Another [tutorial][lbat] was made by `Let's Build That App` but semaphore wasn't covered in great detail, and I think it's best if all iOS developers dive into the semaphore counters the way Roy did.

@@ -1,7 +1,9 @@
 ---
 title: Sublime 3 In BUNDLER_EDITOR
-image: assets/images/SublimeText3.jpg
-categories: Tutorial Sublime
+date: 2019-09-30 00:00:00 Z
+categories:
+- Tutorial
+- Sublime
 tags:
 - ''
 - sublime
@@ -10,6 +12,7 @@ tags:
 - editor
 - bash
 - profile
+image: assets/images/SublimeText3.jpg
 ---
 
 First, let's create a symlink:

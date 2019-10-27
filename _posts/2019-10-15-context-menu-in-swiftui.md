@@ -1,12 +1,15 @@
 ---
 title: Context Menu in SwiftUI
-image: assets/images/Screen%20Shot%202019-10-15%20at%209.16.42%20AM.png
+date: 2019-10-15 00:00:00 Z
+categories:
+- Tutorial
+- SwiftUI
 tags:
 - ''
 - context
 - menu
 - swiftui
-categories: Tutorial SwiftUI
+image: assets/images/Screen%20Shot%202019-10-15%20at%209.16.42%20AM.png
 ---
 
 This is one of the coolest things you'd see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns out they work within the app too.

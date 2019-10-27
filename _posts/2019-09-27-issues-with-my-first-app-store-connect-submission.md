@@ -1,6 +1,6 @@
 ---
 title: Issues With My First App Store Connect Submission
-image: assets/images/Screen%20Shot%202019-09-25%20at%208.43.21%20PM.png
+date: 2019-09-27 00:00:00 Z
 categories:
 - Publish
 tags:
@@ -18,6 +18,7 @@ tags:
 - url
 - FacebookCore
 - notifications
+image: assets/images/Screen%20Shot%202019-09-25%20at%208.43.21%20PM.png
 ---
 
 It was my first app submission to the app store. I mean, well, I hadn't submitted it for review yet, but it already detected a couple of issues that needs dealing with. I uploaded it to app connect for 6 times until I got it right. 

@@ -1,7 +1,9 @@
 ---
 title: Take Your Swift Data Structures Knowledge To The Next Level
-image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8GiuB-Wn_sJ6WubFAJbuOx_ArtUmQgrbCqpIj6rl9GFHJZ0m
-categories: Reference Swift
+date: 2019-10-05 00:00:00 Z
+categories:
+- Reference
+- Swift
 tags:
 - ''
 - swift
@@ -11,6 +13,7 @@ tags:
 - knowledge
 - Xcode
 - iOS
+image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8GiuB-Wn_sJ6WubFAJbuOx_ArtUmQgrbCqpIj6rl9GFHJZ0m
 ---
 
 I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen's Swift News. Though I wouldn't recommended relying on this alone, in case you need to prepare for an interview, because there are other aspects of iOS development that needs perusing.

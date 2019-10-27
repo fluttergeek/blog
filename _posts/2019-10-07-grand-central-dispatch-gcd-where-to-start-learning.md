@@ -1,7 +1,9 @@
 ---
-image: https://res.cloudinary.com/practicaldev/image/fetch/s--orob56V4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://learningswift.brightdigit.com/wp-content/uploads/sites/2/2019/09/ParallelConcurrency.001-1024x768.jpeg
 title: 'Grand Central Dispatch (GCD): Where To Start Learning'
-categories: Reference Swift
+date: 2019-10-07 00:00:00 Z
+categories:
+- Reference
+- Swift
 tags:
 - ''
 - grand
@@ -16,6 +18,7 @@ tags:
 - swiftui
 - combine
 - framework
+image: https://res.cloudinary.com/practicaldev/image/fetch/s--orob56V4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://learningswift.brightdigit.com/wp-content/uploads/sites/2/2019/09/ParallelConcurrency.001-1024x768.jpeg
 ---
 
 I've been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It's really just a concept of using threads. It's not a railway system, no. 

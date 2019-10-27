@@ -1,6 +1,9 @@
 ---
 title: 'Notification And Observer: The Basics'
-image: assets/images/1_Ca69vjmxQIdkOfW-O6hZaA.png
+date: 2019-10-09 00:00:00 Z
+categories:
+- Tutorial
+- Swift
 tags:
 - ''
 - featured
@@ -11,7 +14,7 @@ tags:
 - local
 - remote
 - trigger
-categories: Tutorial Swift
+image: assets/images/1_Ca69vjmxQIdkOfW-O6hZaA.png
 ---
 
 This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that notifies the observer:

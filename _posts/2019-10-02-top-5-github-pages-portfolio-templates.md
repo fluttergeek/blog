@@ -1,6 +1,10 @@
 ---
 title: Top 5 Github Pages Portfolio Templates
-image: assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg
+date: 2019-10-02 00:00:00 Z
+categories:
+- Portfolio
+- Github
+- Pages
 tags:
 - ''
 - portfolio
@@ -8,7 +12,7 @@ tags:
 - pages
 - jekyll
 - developer
-categories: Portfolio Github Pages
+image: assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg
 ---
 
 As a developer, I'd like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of these, there's a link to their repositories. You won't find much if you look into Jekyll Portfolio Themes. Been there, done that. Nada! These templates are going to come up in google search results, but it's better to see them in all in one place.

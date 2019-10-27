@@ -1,6 +1,9 @@
 ---
 title: Experience With Carthage As Opposed To Cocoapods
-image: https://koenig-media.raywenderlich.com/uploads/2017/08/Carthage-feature-2.png
+date: 2019-10-11 00:00:00 Z
+categories:
+- Review
+- Xcode
 tags:
 - ''
 - carthage
@@ -13,7 +16,7 @@ tags:
 - framework
 - bettersegmentedcontrol
 - gmstepper
-categories: Review Xcode
+image: https://koenig-media.raywenderlich.com/uploads/2017/08/Carthage-feature-2.png
 ---
 
 Cocoapods makes your build times slower and that's why I've taken the liberty of trying Carthage. Well, from the instructions I've read in bigger frameworks like `Realm` and `FacebookCore/FacebookLogin`, it is a daunting process. Which is why it took me this long to want to even bother with it. But for some smaller frameworks, it is almost similar to Cocoapod's process, which I like better. Unfortunately, this arduous shift took painfully long to install the frameworks. Every time I add a new framework to my `Cartfile` and update carthage, it downloads everything and builds everything over again. My gahd! 

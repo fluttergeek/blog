@@ -1,6 +1,9 @@
 ---
 title: "@State to @ObjectBinding Modifier"
-image: assets/images/maxresdefault.jpg
+date: 2019-10-02 00:00:00 Z
+categories:
+- Tutorial
+- SwiftUI
 tags:
 - ''
 - state
@@ -8,7 +11,7 @@ tags:
 - object
 - "@objectbinding"
 - swiftui
-categories: Tutorial SwiftUI
+image: assets/images/maxresdefault.jpg
 ---
 
 Notice how Scott changed from `@State` to `@ObjectBinding`. He started discussing BindableObject at 5:17. That's because you can only use `@State` with local properties in the struct view. Let's see his code one more time.

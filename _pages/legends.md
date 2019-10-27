@@ -1,6 +1,7 @@
 ---
-layout: page
 title: Legends
+permalink: "/legends.html"
+layout: page
 tags:
 - ''
 - featured
@@ -10,7 +11,6 @@ tags:
 - developers
 - ios
 - engineers
-permalink: "/legends.html"
 ---
 
 A list of who's who in the iOS development industry. I know, it sounds a bit much. Please, allow me to fanboy for a bit. This order has no criteria, we don't want comparing these legends. I mostly found them on YouTube. I may not list the ones who post on Medium, since I have not made any connection with their personalities not that I've talked to any of these guys on the list.

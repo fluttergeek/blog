@@ -1,6 +1,9 @@
 ---
 title: Can You Design iOS Apps If You're Not A Designer?
-image: assets/images/Screen%20Shot%202019-10-11%20at%202.44.27%20PM.png
+date: 2019-10-11 00:00:00 Z
+categories:
+- Tutorial
+- Design
 tags:
 - ''
 - design
@@ -9,7 +12,7 @@ tags:
 - apps
 - app
 - sketch
-categories: Tutorial Design
+image: assets/images/Screen%20Shot%202019-10-11%20at%202.44.27%20PM.png
 ---
 
 I'm in no position to give any advise on creating designs because I've never been a designer. I only code my way through Xcode and I've only begun trying to deploy an app on the App Store. I have been, for months, trying to design my app inside the storyboard. It's pretty difficult, considering that I frequently need to launch the simulator to see the full splendor of my design. It takes painfully long to build, really, but I don't regret having been able to experience it. I learned so much about how constraints work on the storyboard. But not designing, no. My designing skills did not improve at all.

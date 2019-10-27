@@ -1,7 +1,10 @@
 ---
 title: Use Jekyll Manager Instead of Jekyll Admin
-image: assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png
-categories: Jekyll Admin Manager
+date: 2019-09-30 00:00:00 Z
+categories:
+- Jekyll
+- Admin
+- Manager
 tags:
 - ''
 - featured
@@ -11,6 +14,7 @@ tags:
 - dashboard
 - admin
 - grammarly
+image: assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png
 ---
 
 I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it's more intuitive. I am wrong. However, the upgrades done in jekyll-manager isn't really all that drastic. They still haven't got a fix for when selecting the image metadata. It is still http://localhost:4000/blog/assets/images/...jpg when I select an image from the static files. I wonder why they haven't dealt this yet. This should have been the turning point of their fork. Instead, a few UI changes have been made. Some, impressive.

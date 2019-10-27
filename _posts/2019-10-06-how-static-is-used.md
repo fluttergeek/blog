@@ -1,6 +1,9 @@
 ---
 title: How Static Is Used
-image: https://i.ytimg.com/vi/s2E5hVxQAZQ/hqdefault.jpg
+date: 2019-10-06 00:00:00 Z
+categories:
+- Tutorial
+- Swift
 tags:
 - ''
 - featured
@@ -12,7 +15,7 @@ tags:
 - class
 - construct
 - type
-categories: Tutorial Swift
+image: https://i.ytimg.com/vi/s2E5hVxQAZQ/hqdefault.jpg
 ---
 
 Static is like creating a global variable. You'll see what I mean when you've watched Sean Allen's video tutorial.

@@ -1,6 +1,10 @@
 ---
 title: Sign Out Firebase And Remove Access Token
-image: https://blog.hasura.io/content/images/2019/03/rawpixel-783430-unsplash-1.jpg
+date: 2019-10-09 00:00:00 Z
+categories:
+- Tutorial
+- Swift
+- Firebase
 tags:
 - ''
 - firebase
@@ -11,7 +15,7 @@ tags:
 - token
 - defer
 - login
-categories: Tutorial Swift Firebase
+image: https://blog.hasura.io/content/images/2019/03/rawpixel-783430-unsplash-1.jpg
 ---
 
 I call the `signOut()` to sign out, but there's really a lot of things going on inside my call. I'm not sure which is the correct way to do this yet, but what I'm trying to achieve is once I'm signed off, my login view will not automatically sign me back in. My login view checks if the access token contains a token, and if it does, then automatically sign me in and performSegue.

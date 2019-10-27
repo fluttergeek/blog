@@ -2,13 +2,16 @@
 title: You may have difficulty booting from this destination volume, the underlying
   disk is not partitioned with a partitioning scheme that Apple recommends for Intel
   Macs.
+date: 2019-10-03 00:00:00 Z
+categories:
+- Tutorial
+- Mac
 tags:
 - ''
 - carbon
 - copy
 - cloner
 - EFI
-categories: Tutorial Mac
 image: assets/images/Screen%20Shot%202019-10-03%20at%2011.07.54%20PM.png
 ---
 

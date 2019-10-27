@@ -1,6 +1,10 @@
 ---
 title: MapKit Theme Style Overlay Swift 5
-image: assets/images/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202019-10-04%20at%2020.23.31.png
+date: 2019-10-04 00:00:00 Z
+categories:
+- Tutorial
+- MapKit
+- Swift
 tags:
 - ''
 - featured
@@ -9,7 +13,7 @@ tags:
 - UIKit
 - mapbox
 - googlemap
-categories: Tutorial MapKit Swift
+image: assets/images/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202019-10-04%20at%2020.23.31.png
 ---
 
 You don't want to use MapBox or GoogleMap? Me too. I don't want to pay for something that isn't going to be much different. For now, I don't see myself using their extra features, whatever those might be.

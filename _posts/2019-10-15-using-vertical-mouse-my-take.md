@@ -1,6 +1,9 @@
 ---
 title: 'Using Vertical Mouse: My Take'
-image: assets/images/919bb5baa29ab582de3bbd77e65b319c.jpg
+date: 2019-10-15 00:00:00 Z
+categories:
+- Review
+- Health
 tags:
 - ''
 - vertical
@@ -9,7 +12,7 @@ tags:
 - carpal
 - tunnel
 - syndrome
-categories: Review Health
+image: assets/images/919bb5baa29ab582de3bbd77e65b319c.jpg
 ---
 
 I bought the `Wireless Vertical Mouse Game 800/1600/2400DPI Mice 2-Button` a couple of weeks ago and it just a arrived a week ago. I bought mine in [Shopee][shopee]. It's a marketplace here in the Philippines. I bought it for only Php 445 including freight. That's like almost USD 10. This is brandless and it charges like how you charge with your phone. I guess its battery lasts for a week, or maybe it just turned off. It says in Shopee that it should last more than a month. So, I just recharged mine again today. 

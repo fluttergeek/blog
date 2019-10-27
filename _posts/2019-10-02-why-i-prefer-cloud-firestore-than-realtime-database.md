@@ -1,6 +1,10 @@
 ---
 title: Why I Prefer Cloud Firestore Than Realtime Database
-image: assets/images/update.jpg
+date: 2019-10-02 00:00:00 Z
+categories:
+- Tutorial
+- Firestore
+- Firebase
 tags:
 - ''
 - firestore
@@ -10,7 +14,7 @@ tags:
 - documents
 - Xcode
 - swift
-categories: Tutorial Firestore Firebase
+image: assets/images/update.jpg
 ---
 
 This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn't really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.

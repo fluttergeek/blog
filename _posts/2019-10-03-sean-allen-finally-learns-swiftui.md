@@ -1,6 +1,8 @@
 ---
 title: Sean Allen Finally Learns SwiftUI
-image: assets/images/mqdefault.jpg
+date: 2019-10-03 00:00:00 Z
+categories:
+- Promotion
 tags:
 - ''
 - featured
@@ -15,7 +17,7 @@ tags:
 - Xcode
 - build
 - bootcamp
-categories: Promotion
+image: assets/images/mqdefault.jpg
 ---
 
 I've seen him talk about how he was hesitant to dive into learning Swift UI. I took his sentiment as my own because I don't really see why I needed to. 

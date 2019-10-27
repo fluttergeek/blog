@@ -1,13 +1,15 @@
 ---
 title: Fake Airpods i500 TWS Review
-image: assets/images/41qIPi7taiL._SX385_.jpg
+date: 2019-10-21 00:00:00 Z
+categories:
+- Review
 tags:
 - ''
 - airpods
 - apple
 - i500
 - tws
-categories: Review
+image: assets/images/41qIPi7taiL._SX385_.jpg
 ---
 
 I bought a pair of Apple Fake Airpods on [Shopee][shp] for Php 1060 including shipping. Yes, that's right! I bought it cheap. It's around $20 and it's worthy, I might add.

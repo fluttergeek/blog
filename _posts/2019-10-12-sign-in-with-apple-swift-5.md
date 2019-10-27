@@ -1,6 +1,9 @@
 ---
 title: Sign In With Apple Swift 5 Tutorial
-image: assets/images/Screen%20Shot%202019-10-12%20at%201.09.03%20PM.png
+date: 2019-10-12 00:00:00 Z
+categories:
+- Tutorial
+- Swift
 tags:
 - ''
 - sign
@@ -9,7 +12,7 @@ tags:
 - apple
 - swift
 - uikit
-categories: Tutorial Swift
+image: assets/images/Screen%20Shot%202019-10-12%20at%201.09.03%20PM.png
 ---
 
 First of all, a big thanks to Kilo Loco's [tutorial][tut]. Check it out. Not only is this feature available for iOS 13 up, it's also available for Mac OS 10.15.

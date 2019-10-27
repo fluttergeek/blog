@@ -1,6 +1,9 @@
 ---
-image: assets/images/Screen%20Shot%202019-10-27%20at%209.16.22%20PM.png
 title: Jekyll Code Syntax Indentation
+date: 2019-10-27 00:00:00 Z
+categories:
+- Tutorial
+- CSS
 tags:
 - ''
 - jekyll
@@ -13,7 +16,7 @@ tags:
 - pygment
 - markdown
 - css
-categories: Tutorial CSS
+image: assets/images/Screen%20Shot%202019-10-27%20at%209.16.22%20PM.png
 ---
 
 I've been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it's actually pretty simple. All that's needed to fix this is a 3 line CSS code:

@@ -1,13 +1,16 @@
 ---
 title: My First Post On Reddit
-image: assets/images/Screen%20Shot%202019-10-08%20at%208.38.36%20PM.png
+date: 2019-10-08 00:00:00 Z
+categories:
+- Review
+- Blog
 tags:
 - ''
 - featured
 - reddit
 - post
 - blog
-categories: Review Blog
+image: assets/images/Screen%20Shot%202019-10-08%20at%208.38.36%20PM.png
 ---
 
 YouTube has been recommeding me blog tips and I've recently been keen on trying to get views on this blog. Today, my blog is still not indexed by google, but my half-baked portfolio `iosjunkie.com` is. Which is weird.

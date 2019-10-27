@@ -1,7 +1,9 @@
 ---
 title: Where To Learn Async Callback and Futures
-image: assets/images/reactivecocoa-functional-reactive-programming-concepts-in-ios-11-638.jpg
-categories: Tutorial Swift
+date: 2019-10-03 00:00:00 Z
+categories:
+- Tutorial
+- Swift
 tags:
 - ''
 - async
@@ -12,6 +14,7 @@ tags:
 - algorithm
 - advanced
 - await
+image: assets/images/reactivecocoa-functional-reactive-programming-concepts-in-ios-11-638.jpg
 ---
 
 One of my favorite online tutors is Let's Build That App. He's really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be digging into. Most of this article is coming from his tutorial and I've also included his video in case anyone's interested.

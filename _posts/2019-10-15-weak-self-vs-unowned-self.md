@@ -1,6 +1,9 @@
 ---
 title: Weak Self vs Unowned Self
-image: https://i.ytimg.com/vi/q0-DIJszYRo/maxresdefault.jpg
+date: 2019-10-15 00:00:00 Z
+categories:
+- Tutorial
+- Swift
 tags:
 - ''
 - swift
@@ -11,7 +14,7 @@ tags:
 - memory
 - leak
 - deinit
-categories: Tutorial Swift
+image: https://i.ytimg.com/vi/q0-DIJszYRo/maxresdefault.jpg
 ---
 
 Most articles regarding this are overwhelming and I'm about to make it easier. This is based on Brian Voong's tutorial. I urge you to watch the video too because, essentially, that is what I'm basing this article on.

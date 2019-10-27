@@ -1,7 +1,9 @@
 ---
 title: A Better EmptyView In An Empty CollectionView
-image: assets/images/71823045_2511297908958002_3393944923223883776_n.jpg
-categories: Tutorial Improvise
+date: 2019-10-02 00:00:00 Z
+categories:
+- Tutorial
+- Improvise
 tags:
 - ''
 - featured
@@ -10,6 +12,7 @@ tags:
 - empty
 - swift
 - table
+image: assets/images/71823045_2511297908958002_3393944923223883776_n.jpg
 ---
 
 One of the most lovely codes I've found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It's simple to do, and you'll be surprised for it. I copied most of the code from Taha Sönmez [post][taha] on Medium. I believe he explains this in great detail. Although if you're an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I'm going to show you is done on a collection view. There's only 3 lines of code difference.

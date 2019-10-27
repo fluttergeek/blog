@@ -1,6 +1,10 @@
 ---
-image: https://i.stack.imgur.com/hDiMB.png
 title: Sophisticated Way To Use LocationManager Swift 5
+date: 2019-10-07 00:00:00 Z
+categories:
+- Tutorial
+- Swift
+- CoreLocation
 tags:
 - ''
 - location
@@ -10,7 +14,7 @@ tags:
 - corelocation
 - operation
 - queue
-categories: Tutorial Swift CoreLocation
+image: https://i.stack.imgur.com/hDiMB.png
 ---
 
 This is the most elegant solution I found on how to retrieve location with CoreLocation.

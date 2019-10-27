@@ -1,6 +1,9 @@
 ---
 title: Check If Online Swift 5
-image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBXD5o0JeyxP-5MmwSZO4lOrONruMPlZmrTRWonLxYsgx1iPYH
+date: 2019-10-09 00:00:00 Z
+categories:
+- Tutorial
+- Swift
 tags:
 - ''
 - online
@@ -10,7 +13,7 @@ tags:
 - connection
 - available
 - offline
-categories: Tutorial Swift
+image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBXD5o0JeyxP-5MmwSZO4lOrONruMPlZmrTRWonLxYsgx1iPYH
 ---
 
 Thanks to [Paul Hudson @twostraws][ph] for the informative knowledge on how to check for internet connection. Let me remind you that this solution is available since iOS 12.0. WWDC in June 2018 introduced the Network framework available from iOS 12 onwards which includes the NWPathMonitor class, which we will be using in this tutorial. Here's a straight forward example of the basic implementation on how to check for internet connection.

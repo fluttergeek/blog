@@ -1,7 +1,9 @@
 ---
 title: Codable JSON Parsing
-categories: Tutorial Swift
-image: assets/images/codable-json-swift-how-to-770x400.jpg
+date: 2019-10-03 00:00:00 Z
+categories:
+- Tutorial
+- Swift
 tags:
 - ''
 - swift
@@ -10,6 +12,7 @@ tags:
 - encode
 - SwiftyJSON
 - CodingKeys
+image: assets/images/codable-json-swift-how-to-770x400.jpg
 ---
 
 One of the reasons why you should learn this is, first, because you're an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let's look at the code done by [Code Pro][cp].

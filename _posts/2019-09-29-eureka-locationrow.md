@@ -1,6 +1,6 @@
 ---
 title: Eureka LocationRow
-image: assets/images/EurekaLocationRow.gif
+date: 2019-09-29 00:00:00 Z
 categories:
 - Tutorial
 tags:
@@ -13,6 +13,7 @@ tags:
 - swift
 - mapkit
 - cllocation
+image: assets/images/EurekaLocationRow.gif
 ---
 
 If you're a newbie on this, you might not actually figure this out quick. Apparently, it's only a quick tour to the example project in Eureka. Particularly in [`CustomCells.swift`][location]. Just create a file and copy the last code below or from the link if the repository gets updated. 

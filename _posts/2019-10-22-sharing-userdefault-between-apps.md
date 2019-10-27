@@ -1,6 +1,9 @@
 ---
-image: https://miro.medium.com/max/6000/1*7Zy2OC1nxK-BqmDbGxtPDg.png
 title: Sharing UserDefault Between Apps
+date: 2019-10-22 00:00:00 Z
+categories:
+- Tutorial
+- Swift
 tags:
 - ''
 - userdefaults
@@ -8,7 +11,7 @@ tags:
 - xcode
 - apps
 - ios
-categories: Tutorial Swift
+image: https://miro.medium.com/max/6000/1*7Zy2OC1nxK-BqmDbGxtPDg.png
 ---
 
 I just discovered a way for two apps to communicate with each other with the use of UserDefaults. I thought that UserDefault is only available locally in the app. Sandboxed in its own environment.
