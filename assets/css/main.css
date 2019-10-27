@@ -171,7 +171,7 @@ samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em; }
 
-pre {
+pre { 
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;

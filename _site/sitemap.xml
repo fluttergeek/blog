@@ -169,6 +169,10 @@
 <lastmod>2019-10-26T00:00:00+08:00</lastmod>
 </url>
 <url>
+<loc>http://iosjunkie.com/blog/jekyll-code-syntax-indentation/</loc>
+<lastmod>2019-10-27T00:00:00+08:00</lastmod>
+</url>
+<url>
 <loc>http://iosjunkie.com/blog/posts/2019-01-18-charm-old-cities/</loc>
 </url>
 <url>
@@ -260,5 +264,9 @@
 </url>
 <url>
 <loc>http://iosjunkie.com/blog/page5/</loc>
+</url>
+<url>
+<loc>http://iosjunkie.com/blog/jekyll-manager-0.1.1/lib/jekyll-admin/public/</loc>
+<lastmod>2019-10-27T21:36:32+08:00</lastmod>
 </url>
 </urlset>

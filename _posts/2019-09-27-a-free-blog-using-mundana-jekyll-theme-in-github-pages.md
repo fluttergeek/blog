@@ -56,6 +56,9 @@ I catch myself looking at sample posts whenever I create a new post. You might n
 
 If you post codes like me, then there's a bit of an issue with indentation. Every indentation must be done with four spaces, not with 1 or 2 tabs. 
 
+#### Update
+I found a solution for the indentation of blocks of codes. I wrote an [article][indent] about it.
+
 ### Creating Pages
 Create your pages in `_pages`, but there's one very important matter to discuss here. You need a permalink meta for every page you make. Otherwise, the url will become `/_pages/your_new_page`.
 
@@ -79,3 +82,4 @@ If you run it and everything goes smoothly, try opening `localhost:4000/admin` o
 You can then copy it to your Applications folder and it works just like that. You will see that it is running once there a spinning icon in the menu bar. It will say 0% completed for eternity. You cannot close the server even by cancelling the whole process in your menu bar. If you really want to stop the server, go to `Activity Monitor` and force quite `ruby` in one of the processes or memory tab. I haven't figured a workaround on this yet, but it doesn't seem to bother me. 
 
 [mundana]: https://github.com/wowthemesnet/mundana-theme-jekyll.git
+[indent]: /blog/jekyll-code-syntax-indentation/
