@@ -15,7 +15,6 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
 gem:
-  - jekyll-admin
 authors:
   jules:
     name: Jules Lee
