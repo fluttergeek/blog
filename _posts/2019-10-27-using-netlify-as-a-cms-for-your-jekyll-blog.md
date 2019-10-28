@@ -1,6 +1,6 @@
 ---
 title: Using Netlify As A CMS For Your Jekyll Blog
-date: 2019-10-27 16:00:00 Z
+date: 2019-10-27T16:00:00.000+00:00
 categories:
 - Jekyll
 - Tutorial
@@ -9,8 +9,8 @@ tags:
 - netlify
 - jekyll
 image: assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png
----
 
+---
 I was actually intimidated by the idea of trying out `Netlify` for my blog but not so much anymore. It turned out pretty easy to do.
 
 First thing's first, `Netlify` is some kind of web hosting. Although you can opt to just run a local server from your computer by just running `bundle exec jekyll serve`.
@@ -40,7 +40,7 @@ I copied the contents of `index.html` from [Add to Your Site](https://www.netlif
 
 Now comes the tricky part, which is setting up the look of our admin dashboard in `config.yml`. If you reverse engineer it, it's easier than reading through html.
 
-There are ways to login to your dashboard, but I chose to login with `Github`.
+There are ways to login to your dashboard, but I chose to login with `Github`. To do that, here's what you'll have to put in `admin/config.yml`:
 
     backend:
       name: github
