@@ -1,8 +1,13 @@
+.*
+~*
 _site
 .sass-cache
 .jekyll-metadata
 node_modules
 Gemfile.lock
+vendor
+/vendor
 vendor/
 .jekyll-cache/
 overrides/
+/_site
