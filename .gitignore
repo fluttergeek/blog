@@ -5,3 +5,4 @@ node_modules
 Gemfile.lock
 vendor/
 .jekyll-cache/
+overrides/
