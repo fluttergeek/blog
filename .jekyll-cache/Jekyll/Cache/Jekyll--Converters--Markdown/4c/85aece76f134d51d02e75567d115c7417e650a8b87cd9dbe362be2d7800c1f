@@ -1,3 +1,0 @@
-I"�<p>One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view. It’s simple to do, and you’ll be surprised for it. I copied most of the code from Taha Sönmez <a href="https://medium.com/@mtssonmez/handle-empty-tableview-in-swift-4-ios-11-23635d108409">post</a> on Medium. I believe he explains this in great detail. Although if you’re an intermediate Swift programmer, you might not need the explanation anymore. He did it on a tableview, while this code I’m going to show you is done on a collection view. There’s only 3 lines of code difference.</p>
-
-:ET

@@ -1,2 +1,0 @@
-I"ê<p>This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already have the GoogleService-Info.plist in your Xcode project. It is important because it contains your bundle identifier. Without Firebase knowing your bundle identifier, you can‚Äôt proceed to enable Cloud messaging.</p>
-:ET

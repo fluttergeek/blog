@@ -1,2 +1,0 @@
-I"<p>You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The problem lies with the partition scheme you’ve used. If you’ve set your Disk Utility’s view to <code class="highlighter-rouge">Show Only Volumes</code>, then it would look like this:</p>
-:ET

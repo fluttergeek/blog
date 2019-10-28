@@ -1,9 +1,0 @@
-I"�<p>I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen’s Swift News. Though I wouldn’t recommended relying on this alone, in case you need to prepare for an interview, because there are other aspects of iOS development that needs perusing.</p>
-
-<p><img src="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-10-05%20at%209.26.13%20PM.png" alt="ray wenderlich" /></p>
-
-<p>I don’t always find Ray Wenderlich’s site a great place to look for tutorials. Some of the contents do baffle me sometimes. Although, it’s still a good place to start learning programming, Swift especially. This resource, <a href="https://www.raywenderlich.com/762435-swift-interview-questions-and-answers">Swift Interview Questions and Answers</a>, is a good find for me though. It’s a good place to start learning or refreshing your knowledge on the most utilized methods of using the Swift language. It’s kind of like a flashcard wherein answers are hidden, then you press the reveal button to get an explanation.</p>
-
-<p>The explanations are superb! It’s not always just a bunch of paragraphs, some have a bunch of examples every step of the way and explained in the simplest-to-understand manner. I mean who needs more explaining when there’s the easy to understand examples. I wish there is a similar resource for <code class="highlighter-rouge">GCD</code> because it is tough for newbies.</p>
-
-:ET

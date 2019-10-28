@@ -1,5 +1,0 @@
-I"�<p>I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no.</p>
-<blockquote>
-  <p>GCD is an API provided by apple to allow you to manage concurrent operations in a smooth way, in order to avoid freezing of your application and keep it always responsive for users. - Jaafar Barek</p>
-</blockquote>
-:ET

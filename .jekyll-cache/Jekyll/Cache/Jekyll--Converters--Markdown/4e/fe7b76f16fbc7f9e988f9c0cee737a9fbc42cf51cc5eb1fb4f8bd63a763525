@@ -1,3 +1,0 @@
-I"�<p>Let’s get one thing straight now baby. Local notifications is not the same as <code class="highlighter-rouge">Push</code>/<code class="highlighter-rouge">Remote</code> notifications. It is also not the same as the Notification-Observer relationship which I will discuss <a href="/blog/notification-and-observer-the-basics/">next</a>. They differ because local notifications don’t need triggers coming from outside the app. Either way, you’ll still need the <code class="highlighter-rouge">UNUserNotificationCenter</code>, and for that, you need to import <code class="highlighter-rouge">UserNotifications</code>. This is usually used in scheduling apps like alarm and todo-list.</p>
-
-:ET
