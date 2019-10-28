@@ -1,6 +1,6 @@
 ---
 title: Using Forestry As A CMS For Your Jekyll Blog
-date: 2019-10-27 16:00:00 +0000
+date: '2019-10-27 16:00:00 +0000'
 categories:
 - Jekyll
 - Tutorial
@@ -33,7 +33,7 @@ Things I don't like about it:
 
 1. Whenever you edit an old post, it goes back up to the top of the recent list.
 2. Whenever I select an image for my Featured Image in the front matter, it leaves whitespaces on the filename. Rendering `background-image: url(/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png);` invalid. A single quote is then required to fix this.
-3. You need to switch to `Raw Editor` instead of `WYSIWYG` to embed a YouTube video to prevent the text editor from detecting a link.
+3. You need to switch to `Raw Editor` instead of `WYSIWYG` to embed a YouTube video to prevent the text editor from detecting a link. Otherwise, just cancel the link creation when prompted.
 4. It doesn't automatically add new posts to your sitemap.xml. So, you should build Jekyll locally on your terminal.
 
 ## Tips:
