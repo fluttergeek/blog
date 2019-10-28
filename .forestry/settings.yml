@@ -1,7 +1,4 @@
 ---
----
-
----
 new_page_extension: md
 auto_deploy: false
 admin_path: ''
@@ -19,7 +16,7 @@ sections:
   label: Posts
   create: all
 upload_dir: assets/images
-public_path: assets/images
+public_path: blog/assets/images
 front_matter_path: assets/images
 use_front_matter_path: true
 file_template: ":filename:"
