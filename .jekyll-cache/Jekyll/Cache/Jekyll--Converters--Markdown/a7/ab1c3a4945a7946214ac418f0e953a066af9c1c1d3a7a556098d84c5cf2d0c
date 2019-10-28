@@ -1,0 +1,56 @@
+I"8<p>This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with <code class="highlighter-rouge">/.forestry/settings.yml</code>. It keeps saying <code class="highlighter-rouge">Invalid yaml syntax</code>.</p>
+
+<p><img src="/blog/assets/images/Screen Shot 2019-10-28 at 2.36.31 PM.png" alt="" /><br />
+However, everything seems to be working just fine with Forestry.</p>
+
+<p>Things I like about it:</p>
+
+<ol>
+  <li>All the posts can be sorted by either <code class="highlighter-rouge">title</code> or <code class="highlighter-rouge">date</code>.</li>
+  <li>I can insert and upload pictures on the markdown text editor with ease. It allows me to choose a photo from the assets folder that I’ve configured. It also allows me to just input a link instead of choosing from the assets folder.</li>
+  <li>I can also insert and upload an image for my <code class="highlighter-rouge">Featured Image</code> front matter.</li>
+  <li>The markdown editor looks more professional that <code class="highlighter-rouge">jekyll-manager</code>.</li>
+  <li>I don’t have to do <code class="highlighter-rouge">bundle exec jekyll serve</code> anymore.</li>
+  <li>I don’t have to push every change or addition I make to Github anymore. Once I click <code class="highlighter-rouge">save</code> on forestry, it instantly writes it on my Github repository.</li>
+  <li>Once you set your admin path, in settings, to <code class="highlighter-rouge">\admin\</code>, it will deploy an admin code to your repository which allows you to access forestry from <code class="highlighter-rouge">http://your-blog.github.io/admin/.</code></li>
+  <li>Grammarly works on the markdown text editor, unlike in <code class="highlighter-rouge">jekyll-manager</code>.</li>
+</ol>
+
+<p>Things I don’t like about it:</p>
+
+<ol>
+  <li>Whenever you edit an old post, it goes back up to the top of the recent list.</li>
+  <li>Whenever I select an image for my Featured Image in the front matter, it leaves whitespaces on the filename. Rendering <code class="highlighter-rouge">background-image: url(/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png);</code> invalid. A single quote is then required to fix this.</li>
+  <li>You need to switch to <code class="highlighter-rouge">Raw Editor</code> instead of <code class="highlighter-rouge">WYSIWYG</code> to embed a YouTube video to prevent the text editor from detecting a link. Otherwise, just cancel the link creation when prompted.</li>
+  <li>It doesn’t automatically add new posts to your sitemap.xml. So, you should build Jekyll locally on your terminal.</li>
+</ol>
+
+<h2 id="tips">Tips:</h2>
+
+<ul>
+  <li>Every time I write a block of code or insert an image in the <code class="highlighter-rouge">markdown</code>, I have a hard time going to the next line. Merely pressing <code class="highlighter-rouge">Enter</code> doesn’t do the trick. To go to the next line, you must <code class="highlighter-rouge">Shift</code> + <code class="highlighter-rouge">Enter</code>.</li>
+  <li>You don’t have to create a front matter for the body of your article. It took me a while to realize that there’s a markdown editor by default. I tried it first on my iPad, that’s why it took me a long time to notice the markdown editor, which is more conspicuous when using a web browser on my pc. It’s a gigantic view on the right side of my web browser when using the pc, but it looks like this on the iPad.</li>
+</ul>
+
+<p><img src="/blog/assets/images/F81E8C91-8257-430E-A75A-562F33452CBF.jpeg" alt="" /><br />
+You need to click the icon on the top right corner to switch panels in order for you to see the text editor, which is shown below:</p>
+
+<p><img src="/blog/assets/images/7CFB1A72-88DA-4872-A596-3FD5804C40A4.jpeg" alt="" /></p>
+
+<p>So that’s how it looks on the iPad. I regret wasting my time on <code class="highlighter-rouge">jekyll-manager</code> for quite some time now for not deeply exploring forestry.</p>
+
+<ul>
+  <li>
+    <p>This is my workaround on the sitemap.xml problem. I use the app <code class="highlighter-rouge">Automator</code> to automate some terminal commands that will pull my Github blog repo and build Jekyll on it, then push it back to Github.</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /Path/to/Blog
+source ~/.bash_profile
+git pull origin gh-pages
+JEKYLL_ENV=production bundle exec jekyll build
+git add .
+git commit -m "new changes"
+git push origin gh-pages --force
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET
