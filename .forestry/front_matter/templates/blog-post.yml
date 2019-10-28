@@ -1,7 +1,4 @@
 ---
----
-
----
 label: Blog post
 hide_body: false
 fields:
@@ -20,3 +17,5 @@ fields:
 - type: file
   name: image
   label: image
+pages:
+- _posts/2019-09-30-inverse-or-not-filter-in-realm-swift.md
