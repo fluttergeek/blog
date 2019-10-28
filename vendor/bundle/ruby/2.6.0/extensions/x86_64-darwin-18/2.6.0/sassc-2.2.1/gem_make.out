@@ -1,5 +1,5 @@
 current directory: /Users/macintosh/Documents/Portfolio/Blog/vendor/bundle/ruby/2.6.0/gems/sassc-2.2.1/ext
-/usr/local/opt/ruby/bin/ruby -I /usr/local/lib/ruby/site_ruby/2.6.0 -r ./siteconf20191028-17602-7za6sm.rb extconf.rb
+/usr/local/opt/ruby/bin/ruby -I /usr/local/lib/ruby/site_ruby/2.6.0 -r ./siteconf20191029-18704-1pqlcao.rb extconf.rb
 creating Makefile
 
 current directory: /Users/macintosh/Documents/Portfolio/Blog/vendor/bundle/ruby/2.6.0/gems/sassc-2.2.1/ext
@@ -72,4 +72,4 @@ linking shared-object sassc/libsass.bundle
 
 current directory: /Users/macintosh/Documents/Portfolio/Blog/vendor/bundle/ruby/2.6.0/gems/sassc-2.2.1/ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20191028-17602-1lmabdk/sassc
+/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20191029-18704-y2h8ml/sassc
