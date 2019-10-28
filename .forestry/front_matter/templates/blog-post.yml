@@ -1,7 +1,4 @@
 ---
----
-
----
 label: Blog post
 hide_body: false
 fields:
@@ -22,3 +19,4 @@ fields:
   label: image
 pages:
 - _posts/2019-09-30-inverse-or-not-filter-in-realm-swift.md
+- _posts/using-netlify-as-a-cms-for-your-jekyll-blog.md
