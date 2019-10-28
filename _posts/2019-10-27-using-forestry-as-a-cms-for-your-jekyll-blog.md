@@ -1,6 +1,6 @@
 ---
 title: Using Forestry As A CMS For Your Jekyll Blog
-date: '2019-10-27 16:00:00 +0000'
+date: 2019-10-27 16:00:00 +0000
 categories:
 - Jekyll
 - Tutorial
@@ -57,3 +57,6 @@ So that's how it looks on the iPad. I regret wasting my time on `jekyll-manager`
       git add .
       git commit -m "new changes"
       git push origin gh-pages --force
+
+
+* Change the `Date` front matter to hidden, required, and Use `now` as default.
