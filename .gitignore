@@ -10,4 +10,3 @@ vendor
 vendor/
 .jekyll-cache/
 overrides/
-/_site
