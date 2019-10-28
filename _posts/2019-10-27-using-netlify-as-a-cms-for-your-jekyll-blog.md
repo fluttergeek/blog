@@ -1,6 +1,6 @@
 ---
 title: Using Netlify As A CMS For Your Jekyll Blog
-date: 2019-10-27 16:00:00 Z
+date: 2019-10-27T16:00:00.000+00:00
 categories:
 - Jekyll
 - Tutorial
@@ -9,8 +9,8 @@ tags:
 - netlify
 - jekyll
 image: assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png
----
 
+---
 I was actually intimidated by the idea of trying out `Netlify` for my blog but not so much anymore. It turned out pretty easy to do.
 
 First thing's first, `Netlify` is some kind of web hosting. Although you can opt to just run a local server from your computer by just running `bundle exec jekyll serve`.
@@ -86,7 +86,7 @@ There are ways to login to your dashboard, but I chose to login with `Github`. T
                 name: "description"
                 widget: "markdown" 
 
-I just came up with this from the tutorials I watched.
+I just came up with this from the tutorials I watched. Now, the photos below is the result of what we just typed in our `config.yml`.
 
 This is what it looks like when I go to `http://localhost:4000/blog/admin/#/collections/website-settings`:
 
@@ -97,3 +97,17 @@ And this is what it looks like in `http://localhost:4000/blog/admin/#/collection
 ![](/blog/assets/images/Screen Shot 2019-10-28 at 11.12.13 AM.png)
 
 ![](/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png)
+
+Once done, commit and push it to your Github. Go back to `https://app.netlify.com/sites/your-blog/deploys` and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru `https://your-blog.netlify.com/admin`.
+
+## Take
+
+I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I'm typing this article, I often get a typo of `Netflix`.
+
+Would I use it?
+
+**No!**
+
+The list of posts is not sorted by date. I'm used to having it sorted by date. The images in the `/assets/images/` folder are also not sorted and there's no way of sorting any collection in this CMS. Sad, but true.
+
+That's my only problem with it, but if that's not a problem for you, then give it a go.
