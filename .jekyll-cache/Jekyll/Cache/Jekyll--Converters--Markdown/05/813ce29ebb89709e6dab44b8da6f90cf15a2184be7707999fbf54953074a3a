@@ -1,4 +1,4 @@
-I"B_<div class="container">
+I"_<div class="container">
     
  <!--endif page url is / -->
     
@@ -13,6 +13,38 @@
         <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
         
 
+        
+        
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/basic-implementation-of-local-notifications/">Basic Implementation of Local Notifications</a>
+	</h2>
+	<p class="excerpt">
+	   Let’s get one thing straight now baby. Local notifications is not the same as Push/Remote notifications. It is also not the same as the Notification-Observer relationship which I will...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 07, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/basic-implementation-of-local-notifications/">
+	<img class="w-100" src="/blog/assets/images/Notifications_Top_2x.png" alt="Basic Implementation of Local Notifications" />
+	</a>
+	</div>
+
+</div>
+        
         
         
             <div class="mb-5 d-flex justify-content-between main-loop-card">
@@ -35,7 +67,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 07, 2019
+		Oct 06, 2019
 	</small>
 </div>
 
@@ -67,7 +99,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 07, 2019
+		Oct 06, 2019
 	</small>
 </div>
 
@@ -99,7 +131,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 07, 2019
+		Oct 06, 2019
 	</small>
 </div>
 
@@ -131,7 +163,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 06, 2019
+		Oct 05, 2019
 	</small>
 </div>
 
@@ -163,7 +195,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 05, 2019
+		Oct 04, 2019
 	</small>
 </div>
 
@@ -195,7 +227,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 04, 2019
+		Oct 03, 2019
 	</small>
 </div>
 
@@ -229,7 +261,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 04, 2019
+		Oct 03, 2019
 	</small>
 </div>
 
@@ -257,7 +289,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 04, 2019
+		Oct 03, 2019
 	</small>
 </div>
 
@@ -289,45 +321,13 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 03, 2019
+		Oct 02, 2019
 	</small>
 </div>
 
 	<div class="col-md-3 pr-0 text-right">
 	<a href="/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/">
 	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.07.54%20PM.png" alt="You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs." />
-	</a>
-	</div>
-
-</div>
-        
-        
-        
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/where-to-learn-async-callback-and-futures/">Where To Learn Async Callback and Futures</a>
-	</h2>
-	<p class="excerpt">
-	   One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be diggin...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Oct 03, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/where-to-learn-async-callback-and-futures/">
-	<img class="w-100" src="/blog/assets/images/reactivecocoa-functional-reactive-programming-concepts-in-ios-11-638.jpg" alt="Where To Learn Async Callback and Futures" />
 	</a>
 	</div>
 

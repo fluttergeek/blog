@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My First Post On Reddit | iOS Junkie</title>
+    <title>Using Touch ID and Face ID In Your App (Swift 5) | iOS Junkie</title>
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>My First Post On Reddit | Blog</title>
+<title>Using Touch ID and Face ID In Your App (Swift 5) | Blog</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="My First Post On Reddit" />
+<meta property="og:title" content="Using Touch ID and Face ID In Your App (Swift 5)" />
 <meta name="author" content="jules" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="YouTube has been recommeding me blog tips and I’ve recently been keen on trying to get views on this blog. Today, my blog is still not indexed by google, but my half-baked portfolio iosjunkie.com is. Which is weird." />
-<meta property="og:description" content="YouTube has been recommeding me blog tips and I’ve recently been keen on trying to get views on this blog. Today, my blog is still not indexed by google, but my half-baked portfolio iosjunkie.com is. Which is weird." />
-<link rel="canonical" href="http://iosjunkie.com/blog/my-first-post-on-reddit/" />
-<meta property="og:url" content="http://iosjunkie.com/blog/my-first-post-on-reddit/" />
+<meta name="description" content="To use Face ID, or even Touch ID, we need to import LocalAuthentication. The code below works for both Face and Touch ID. Whichever is enabled in the user’s settings." />
+<meta property="og:description" content="To use Face ID, or even Touch ID, we need to import LocalAuthentication. The code below works for both Face and Touch ID. Whichever is enabled in the user’s settings." />
+<link rel="canonical" href="http://iosjunkie.com/blog/using-touch-id-and-face-id-in-your-app-swift-5/" />
+<meta property="og:url" content="http://iosjunkie.com/blog/using-touch-id-and-face-id-in-your-app-swift-5/" />
 <meta property="og:site_name" content="Blog" />
-<meta property="og:image" content="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-08%20at%208.38.36%20PM.png" />
+<meta property="og:image" content="http://iosjunkie.com/blog/assets/images/iphone-x-faceid-670x335.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-10-07T16:00:00-08:00" />
+<meta property="article:published_time" content="2019-10-28T12:00:00-08:00" />
 <script type="application/ld+json">
-{"description":"YouTube has been recommeding me blog tips and I’ve recently been keen on trying to get views on this blog. Today, my blog is still not indexed by google, but my half-baked portfolio iosjunkie.com is. Which is weird.","dateModified":"2019-10-07T16:00:00-08:00","datePublished":"2019-10-07T16:00:00-08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://iosjunkie.com/blog/my-first-post-on-reddit/"},"image":"http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-08%20at%208.38.36%20PM.png","url":"http://iosjunkie.com/blog/my-first-post-on-reddit/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://iosjunkie.com/blog/assets/images/logo.png"},"name":"jules"},"author":{"@type":"Person","name":"jules"},"headline":"My First Post On Reddit","@context":"https://schema.org"}</script>
+{"description":"To use Face ID, or even Touch ID, we need to import LocalAuthentication. The code below works for both Face and Touch ID. Whichever is enabled in the user’s settings.","dateModified":"2019-10-28T12:00:00-08:00","datePublished":"2019-10-28T12:00:00-08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://iosjunkie.com/blog/using-touch-id-and-face-id-in-your-app-swift-5/"},"image":"http://iosjunkie.com/blog/assets/images/iphone-x-faceid-670x335.jpg","url":"http://iosjunkie.com/blog/using-touch-id-and-face-id-in-your-app-swift-5/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://iosjunkie.com/blog/assets/images/logo.png"},"name":"jules"},"author":{"@type":"Person","name":"jules"},"headline":"Using Touch ID and Face ID In Your App (Swift 5)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -261,7 +261,7 @@ var documents = [{
     "id": 33,
     "url": "http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/",
     "title": "Using Netlify As A CMS For Your Jekyll Blog",
-    "body": "2019/10/27 - I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do. First thing’s first, Netlify is some kind of web hosting. Although you can opt to just run a local server from your computer by just running bundle exec jekyll serve. Let’s create our Netlify account and follow this guide by Thomas Bradley: This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn’t find the rest to be that useful, so I’ve written down below the next steps you should take. To create the Netlify Dashboard, you need to create a folder. This folder is a subdirectory of your blog. So, if you set your baseurl from your _config. yml to \blog, then this folder, let’s say, admin can be accessed through \blog\admin. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. index. html and config. yml. This is another config. yml different from the root’s _config. yml. I copied the contents of index. html from Add to Your Site. &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset= utf-8  /&gt; &lt;meta name= viewport  content= width=device-width, initial-scale=1. 0  /&gt; &lt;title&gt;Content Manager&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt; &lt;script src= https://unpkg. com/netlify-cms@^2. 0. 0/dist/netlify-cms. js &gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;Now comes the tricky part, which is setting up the look of our admin dashboard in config. yml. If you reverse engineer it, it’s easier than reading through html. There are ways to login to your dashboard, but I chose to login with Github. To do that, here’s what you’ll have to put in admin/config. yml: backend: name: github branch: gh-pages # Branch to update (optional; defaults to master) repo: iosjunkie/blog # Repository of your blog in Githubpublish_mode: editorial_workflowmedia_folder:  assets/images collections: - name:  posts   label:  Posts   folder:  _posts   create: true  slug:  {{year}}-{{month}}-{{day}}-{{slug}}   fields:   - { label:  Layout , name:  layout , widget:  hidden , default:  post  }   - { label:  Title , name:  title , widget:  string  }   - label:  Featured Image     name:  image     widget:  image     required: false    media_library:     config:      multiple: false   - { label:  Tags , name:  tags , widget:  list , required: false }   - { label:  Categories , name:  categories , widget:  string , required: true }   - { label:  Draft , name:  draft , widget:  boolean , default: true }   - label:  Body     name:  body     widget:  markdown  - name:  website-settings   label:  Settings   files:   - label:  Settings     name:  site     file:  _config. yml     fields:     - label:  Name       name:  name       widget:  string      - label:  Description       name:  description       widget:  markdown  I just came up with this from the tutorials I watched. The images below are the results of what we just typed in our config. yml. This is what it looks like when I go to http://localhost:4000/blog/admin/#/collections/website-settings: And this is what it looks like in http://localhost:4000/blog/admin/#/collections/posts:  Once done, commit and push it to your Github. Go back to https://app. netlify. com/sites/your-blog/deploys and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru https://your-blog. netlify. com/admin. Take: I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I’m typing this article, I often get a typo of Netflix. Would I use it? No! The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the /assets/images/ folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true. That’s my only problem with it, but if that’s not a problem for you, then give it a go. "
+    "body": "2019/10/27 - I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do. First thing’s first, Netlify is some kind of web hosting. Although you can opt to just run a local server from your computer by just running bundle exec jekyll serve. Let’s create our Netlify account and follow this guide by Thomas Bradley: This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn’t find the rest to be that useful, so I’ve written down below the next steps you should take. To create the Netlify Dashboard, you need to create a folder. This folder is a subdirectory of your blog. So, if you set your baseurl from your _config. yml to \blog, then this folder, let’s say, admin can be accessed through \blog\admin. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. index. html and config. yml. This is another config. yml different from the root’s _config. yml. I copied the contents of index. html from Add to Your Site. &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset= utf-8  /&gt; &lt;meta name= viewport  content= width=device-width, initial-scale=1. 0  /&gt; &lt;title&gt;Content Manager&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt; &lt;script src= https://unpkg. com/netlify-cms@^2. 0. 0/dist/netlify-cms. js &gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;Now comes the tricky part, which is setting up the look of our admin dashboard in config. yml. If you reverse engineer it, it’s easier than reading through html. There are ways to login to your dashboard, but I chose to login with Github. To do that, here’s what you’ll have to put in admin/config. yml: backend: name: github branch: gh-pages # Branch to update (optional; defaults to master) repo: iosjunkie/blog # Repository of your blog in Githubpublish_mode: editorial_workflowmedia_folder:  assets/images collections: - name:  posts   label:  Posts   folder:  _posts   create: true  slug:  ---   fields:   - { label:  Layout , name:  layout , widget:  hidden , default:  post  }   - { label:  Title , name:  title , widget:  string  }   - label:  Featured Image     name:  image     widget:  image     required: false    media_library:     config:      multiple: false   - { label:  Tags , name:  tags , widget:  list , required: false }   - { label:  Categories , name:  categories , widget:  string , required: true }   - { label:  Draft , name:  draft , widget:  boolean , default: true }   - label:  Body     name:  body     widget:  markdown  - name:  website-settings   label:  Settings   files:   - label:  Settings     name:  site     file:  _config. yml     fields:     - label:  Name       name:  name       widget:  string      - label:  Description       name:  description       widget:  markdown  I just came up with this from the tutorials I watched. The images below are the results of what we just typed in our config. yml. This is what it looks like when I go to http://localhost:4000/blog/admin/#/collections/website-settings: And this is what it looks like in http://localhost:4000/blog/admin/#/collections/posts:  Once done, commit and push it to your Github. Go back to https://app. netlify. com/sites/your-blog/deploys and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru https://your-blog. netlify. com/admin. Take: I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I’m typing this article, I often get a typo of Netflix. Would I use it? No! The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the /assets/images/ folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true. That’s my only problem with it, but if that’s not a problem for you, then give it a go. "
     }, {
     "id": 34,
     "url": "http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/",
@@ -558,22 +558,20 @@ function lunr_search(term) {
 					<p class="text-uppercase font-weight-bold">
                         <span class="catlist">
 						
-                          <a class="sscroll text-danger" href="/blog/categories.html#review">review</a><span class="sep">, </span>
-                        
-                          <a class="sscroll text-danger" href="/blog/categories.html#blog">blog</a><span class="sep">, </span>
+                          <a class="sscroll text-danger" href="/blog/categories.html#tutorial">tutorial</a><span class="sep">, </span>
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">My First Post On Reddit</h1>
+					<h1 class="display-4 mb-4 article-headline">Using Touch ID and Face ID In Your App (Swift 5)</h1>
 					<div class="d-flex align-items-center">
                         
                         <img class="rounded-circle" src="/blog//assets/images/avatar1.jpg" alt="Jules Lee" width="70"/>
                         
 						<small class="ml-3"> Jules Lee <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
-                            <span class="text-muted d-block mt-1">Oct 07, 2019 · <span class="reading-time">
+                            <span class="text-muted d-block mt-1">Oct 28, 2019 · <span class="reading-time">
   
   
-    2 mins read
+    1 min read
   
 </span>
     </span>
@@ -582,7 +580,7 @@ function lunr_search(term) {
 				</div>
                 
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="/blog/assets/images/Screen%20Shot%202019-10-08%20at%208.38.36%20PM.png" alt="My First Post On Reddit">
+					<img class="rounded" src="/blog/assets/images/iphone-x-faceid-670x335.jpg" alt="Using Touch ID and Face ID In Your App (Swift 5)">
 				</div>
                 
 			</div>
@@ -622,21 +620,77 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<p>YouTube has been recommeding me blog tips and I’ve recently been keen on trying to get views on this blog. Today, my blog is still not indexed by google, but my half-baked portfolio <code class="highlighter-rouge">iosjunkie.com</code> is. Which is weird.</p>
+			<p>To use Face ID, or even Touch ID, we need to import <code class="highlighter-rouge">LocalAuthentication</code>. The code below works for both Face and Touch ID. Whichever is enabled in the user’s settings.</p>
 
-<p>One of the tips of some YouTuber was to post your links on <code class="highlighter-rouge">Reddit</code>. I was hesitant at first because I felt like it would be kind of like spamming on the internet, but that YouTuber said that it would help index my blog faster, and so I did. So, it happens that there are three ways to post on Reddit, just like the numerous ways to post on Facebook. You can post a <code class="highlighter-rouge">link, image, or a text</code>. No wonder I’ve been seeing so many links only posts on Reddit. I thought they were spammy.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let context = LAContext()
+var error: NSError?
 
-<p>The way it works is just copy and paste a link to the <code class="highlighter-rouge">Url</code> field. Once you’re done, the <code class="highlighter-rouge">title</code> field will automatically fill itself out, then submit. You can’t upload a thumbnail on the link you posted. It is also automatically generated coming from your link’s image metadata. Just brilliant! However, you can’t really post links everywhere. There are some topics that you won’t be allowed to post links to.</p>
+if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &amp;error) {
+	// This reason is only for Touch ID, not Face ID
+    // The reason for accessing Face ID, is found in Info.plist
+    let reason: String = "Please use Touch ID to unlock"
+    
+    context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { [weak self] success, authenticationError in
+    	Dispatch.main.async {
+        	if success {
+            	// do some unlocking of data or
+                // present new view
+            } else {
+            	// Face wasn't detected
+                // Maybe user was wearing sunglasses
+                if error = error {
+                  let ac = UIAlertController(title: "Authetication Failed!"),
+                              message: self.reportTouchIDError(error: error),
+                              preferredStyle: .alert)
+                  ac.addAction(UIAlertAction(title: "OK", style: .default))
+                  self?.present(ac, animated: true)
+                }
+            }
+        }
+    }
+} else {
+	// Biometric is not supported by your iOS device
+    let ac = UIAlertController(title: "Biometric Authentication Unavailable"),
+                  message: "Your device is not configured for biometric authentication.",
+                  preferredStyle: .alert)
+    ac.addAction(UIAlertAction(title: "OK", style: .default))
+    self?.present(ac, animated: true)
+}
+</code></pre></div></div>
 
-<p>The second link post was what I posted on my blog just yesterday. I just thought people would try to find it because it is a more recent issue with Xcode 11, and so people did find it really quick. Now I have <code class="highlighter-rouge">16 karmas</code> just for a day of using Reddit. Whatever the hell that means. So it is true that it is easier for your blog to be found if you post on <code class="highlighter-rouge">Reddit</code>.</p>
+<p>Before this can work, we must add a key value in our Info.plist to alert the user that we are going to be using this biometric feature.</p>
 
-<p>My first link post was a tutorial and I was sure people were going to find it more helpful, but as it turns out, no one bothered to touch it yet. I’m still sure that posting it on <code class="highlighter-rouge">Reddit</code> will help that post be seen than not having posted it on Reddit.</p>
+<p>Key: Privacy - Face ID Usage Description</p>
 
-<p>And.. surprise.. surprise! My blog views also went up really high. At least, the highest it has been since creation.</p>
+<p>Type: String</p>
 
-<p><img src="/blog/assets/images/71862910_476156719779477_1624238644300611584_n.jpg" alt="analytics" /></p>
+<p>Value: This app uses Face ID to confirm your identity</p>
 
-<p>This feels great actually. It feels like I’m already indexed by <code class="highlighter-rouge">Google</code> and like people are already flocking into my blog. Someone also recently just gave me a tip for my other blog post, hence I updated my blog post, and now, it has a more flavorful content. Dang, I’m really feeling like a legit blogger now.</p>
+<p>There’s a more specific way of producing an error. This example was explained by <code class="highlighter-rouge">David Tran</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>func reportTouchIDError(error: NSError) -&gt; String {
+	switch error.code {
+    case LAError.AuthenticationFailed.rawValue:
+    	return "Authentication Failed!"
+    case LAError.PasscodeNotSet.rawValue:
+    	return "Passcode not set!"
+    case LAError.SystemCancel.rawValue:
+    	return "Authentication was cancelled by the system!"
+    case LAError.UserCancel.rawValue:
+    	return "User cancel auth"
+    case LAError.TouchIDNotEnrolled.rawValue:
+    	return "User has not enrolled any finger with touch ID"
+    case LAError.TouchIDNotAvailable.rawValue:
+    	return "Touch ID is not available"
+    case LAError.UserFallBack.rawValue:
+    	return "User tapped enter password"
+    default:
+    	return error.localizedDescription
+    }
+}
+</code></pre></div></div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vf7JyFFSNDU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                 
 			</article>
 			
@@ -644,15 +698,13 @@ function lunr_search(term) {
 			<div class="mb-4">
 				<span class="taglist">
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#"></a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#biometric">biometric</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#featured">featured</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#touch id">touch id</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#reddit">reddit</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#face id">face id</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#post">post</a>
-				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#blog">blog</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#swift">swift</a>
 				
 				</span>
 			</div>
@@ -711,13 +763,9 @@ function lunr_search(term) {
         <div class="row prevnextlinks small font-weight-bold">
           
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="/blog/basic-implementation-of-local-notifications/"> <img height="30px" class="mr-1" src="/blog/assets/images/Notifications_Top_2x.png">  Basic Implementation of Local Notifications</a>
+                <a class="text-dark" href="/blog/using-netlify-as-a-cms-for-your-jekyll-blog/"> <img height="30px" class="mr-1" src="/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png">  Using Netlify As A CMS For Your Jekyll Blog</a>
             </div>
           
-          
-            <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="/blog/native-messenger-app-for-mac-os-review/"> Native Messenger App For Mac OS (Review) vs Caprine vs Goofy vs Franz  <img height="30px" class="ml-1" src="/blog/assets/images/Screen%20Shot%202019-10-08%20at%207.52.43%20PM.png"> </a>
-            </div>
           
         </div>
     </div>
@@ -739,7 +787,7 @@ function lunr_search(term) {
         <div class="container">
         <div class="row align-items-center justify-content-between">
             <div>
-                <span class="navbar-brand mr-2 mb-0"><strong>My First Post On Reddit</strong></span>
+                <span class="navbar-brand mr-2 mb-0"><strong>Using Touch ID and Face ID In Your App (Swift 5)</strong></span>
                 <span>Copyright © <script>document.write(new Date().getFullYear())</script>.</span>
 
                 <!--  Github Repo Star Btn-->

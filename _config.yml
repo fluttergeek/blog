@@ -1,6 +1,6 @@
 ---
 title: Blog
-timezone: UTC
+timezone: UTC+8
 collections:
   posts:
     title: Posts
@@ -20,6 +20,7 @@ defaults:
   values:
     layout: page
 name: iOS Junkie
+future: true
 description: Demystifying complex instructions, tutorials, and a little bit more geared
   toward the iOS development or Swift stuff. Technical yet simple tips on how iOS
   components work.

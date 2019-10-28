@@ -1,4 +1,4 @@
-I"�^<div class="container">
+I"m_<div class="container">
     
  <!--endif page url is / -->
     
@@ -13,6 +13,38 @@
         <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
         
 
+        
+        
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/where-to-learn-async-callback-and-futures/">Where To Learn Async Callback and Futures</a>
+	</h2>
+	<p class="excerpt">
+	   One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be diggin...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 02, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/where-to-learn-async-callback-and-futures/">
+	<img class="w-100" src="/blog/assets/images/reactivecocoa-functional-reactive-programming-concepts-in-ios-11-638.jpg" alt="Where To Learn Async Callback and Futures" />
+	</a>
+	</div>
+
+</div>
+        
         
         
             <div class="mb-5 d-flex justify-content-between main-loop-card">
@@ -33,7 +65,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 03, 2019
+		Oct 02, 2019
 	</small>
 </div>
 
@@ -63,7 +95,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 03, 2019
+		Oct 02, 2019
 	</small>
 </div>
 
@@ -95,7 +127,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 03, 2019
+		Oct 02, 2019
 	</small>
 </div>
 
@@ -129,7 +161,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 02, 2019
+		Oct 01, 2019
 	</small>
 </div>
 
@@ -163,7 +195,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 02, 2019
+		Oct 01, 2019
 	</small>
 </div>
 
@@ -195,7 +227,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 02, 2019
+		Oct 01, 2019
 	</small>
 </div>
 
@@ -227,7 +259,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 02, 2019
+		Oct 01, 2019
 	</small>
 </div>
 
@@ -261,7 +293,7 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Oct 01, 2019
+		Sep 30, 2019
 	</small>
 </div>
 
@@ -295,43 +327,13 @@
 		</span>
 	</small>
 	<small class="text-muted">
-		Sep 30, 2019
+		Sep 29, 2019
 	</small>
 </div>
 
 	<div class="col-md-3 pr-0 text-right">
 	<a href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">
 	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" alt="Use Jekyll Manager Instead of Jekyll Admin" />
-	</a>
-	</div>
-
-</div>
-        
-        
-        
-            <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/blog/inverse-or-not-filter-in-realm-swift/">!= VS. NOT Filter In Realm Swift</a>
-	</h2>
-	<p class="excerpt">
-	   Instead of using != as your not equal, you can or should use NOT instead. I’m writing this post because I just can’t seem != to work as part of my predicate. I was struggling to find ...
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Sep 30, 2019
-	</small>
-</div>
-
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/blog/inverse-or-not-filter-in-realm-swift/">
-	<img class="w-100" src="/blog/assets/images/1_DqzHUZj6HcmIBK9I2aOVww.png" alt="!= VS. NOT Filter In Realm Swift" />
 	</a>
 	</div>
 

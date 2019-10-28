@@ -1,0 +1,2 @@
+I"×<p>To use Face ID, or even Touch ID, we need to import <code class="highlighter-rouge">LocalAuthentication</code>. The code below works for both Face and Touch ID. Whichever is enabled in the userâ€™s settings.</p>
+:ET

@@ -1,9 +1,9 @@
-I"ç<table>
+I"Ö<table>
   <tbody>
     <tr>
-      <td>Sitemap: {{ &#8220;sitemap.xml&#8221;</td>
+      <td>Sitemap: {{ ‚Äúsitemap.xml‚Äù</td>
       <td>absolute_url }}</td>
     </tr>
   </tbody>
 </table>
-:EF
+:ET
