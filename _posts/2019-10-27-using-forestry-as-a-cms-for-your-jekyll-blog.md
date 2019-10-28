@@ -1,6 +1,6 @@
 ---
 title: Using Forestry As A CMS For Your Jekyll Blog
-date: 2019-10-27 16:00:00 Z
+date: 2019-10-27 16:00:00 +0000
 categories:
 - Jekyll
 - Tutorial
@@ -11,8 +11,8 @@ tags:
 - forestry
 - jekyll
 image: assets/images/Screen Shot 2019-10-28 at 2.33.01 PM.png
----
 
+---
 This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven't found a workaround the error I'm getting with `/.forestry/settings.yml`. It keeps saying `Invalid yaml syntax`.
 
 ![](/blog/assets/images/Screen Shot 2019-10-28 at 2.36.31 PM.png)  
@@ -32,6 +32,7 @@ Things I don't like about it:
 1. Whenever you edit an old post, it goes back up to the top of the recent list.
 2. Whenever I select an image for my Featured Image in the front matter, it leaves whitespaces on the filename. Rendering `background-image: url(/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png);` invalid. A single quote is then required to fix this.
 3. You need to switch to `Raw Editor` instead of `WYSIWYG` to embed a YouTube video to prevent the text editor from detecting a link.
+4. It doesn't automatically add new posts to your sitemap.xml.
 
 ## Tips:
 
