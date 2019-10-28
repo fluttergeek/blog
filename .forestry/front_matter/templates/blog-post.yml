@@ -1,7 +1,4 @@
 ---
----
-
----
 label: Blog post
 hide_body: false
 fields:
@@ -24,3 +21,4 @@ pages:
 - _posts/2019-09-27-a-free-blog-using-mundana-jekyll-theme-in-github-pages.md
 - _posts/2019-09-30-inverse-or-not-filter-in-realm-swift.md
 - _posts/2019-10-27-using-netlify-as-a-cms-for-your-jekyll-blog.md
+- _posts/using-forestry-as-a-cms-for-your-jekyll-blog.md
