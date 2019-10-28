@@ -1,7 +1,4 @@
 ---
----
-
----
 new_page_extension: md
 auto_deploy: false
 admin_path: 
@@ -18,7 +15,7 @@ sections:
 - type: jekyll-posts
   label: Posts
   create: all
-upload_dir: 'assets/images'
+upload_dir: assets/images
 public_path: ''
 front_matter_path: ''
 use_front_matter_path: false
