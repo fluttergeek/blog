@@ -1,6 +1,6 @@
 ---
 title: Using Forestry As A CMS For Your Jekyll Blog
-date: 2019-10-27 16:00:00 +0000
+date: 2019-10-27 16:00:00 Z
 categories:
 - Jekyll
 - Tutorial
@@ -11,8 +11,8 @@ tags:
 - forestry
 - jekyll
 image: assets/images/Screen Shot 2019-10-28 at 2.33.01 PM.png
-
 ---
+
 This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven't found a workaround the error I'm getting with `/.forestry/settings.yml`. It keeps saying `Invalid yaml syntax`.
 
 ![](/blog/assets/images/Screen Shot 2019-10-28 at 2.36.31 PM.png)  
