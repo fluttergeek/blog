@@ -4,10 +4,6 @@
 .jekyll-metadata
 node_modules
 Gemfile.lock
-vendor
-/vendor
-vendor/
-vendor/bundle/ruby/2.6.0
 .jekyll-cache/
 overrides/
 posts/
