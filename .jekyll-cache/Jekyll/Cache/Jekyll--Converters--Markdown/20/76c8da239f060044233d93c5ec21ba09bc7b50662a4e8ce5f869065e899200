@@ -1,0 +1,8 @@
+I"�<p>Instead of using <code class="highlighter-rouge">!=</code> as your not equal, you can or should use <code class="highlighter-rouge">NOT</code> instead. I’m writing this post because I just can’t seem <code class="highlighter-rouge">!=</code> to work as part of my predicate. I was struggling to find a way to make not equal to work. I looked it up in the documentation. Even though <code class="highlighter-rouge">!=</code> is in there, I could not make it work. However, the <code class="highlighter-rouge">=</code> sign worked. Weird. And so, I did something like this.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let filter = "(status = 'Pending' OR (status = 'Washed' AND (pad = 2 OR pad = 3))) AND NOT cancel = 'Cancelled' AND NOT ownerId = ''"
+orders!.filter(filter)
+</code></pre></div></div>
+
+<p>Here, you’ll see <code class="highlighter-rouge">NOT</code> placed before the attribute. I don’t know why it works that way, but it works anyway.</p>
+:ET

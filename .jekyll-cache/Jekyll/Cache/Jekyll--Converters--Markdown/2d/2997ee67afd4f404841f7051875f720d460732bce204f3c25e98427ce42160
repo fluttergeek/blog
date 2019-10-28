@@ -1,0 +1,594 @@
+I"B_<div class="container">
+    
+ <!--endif page url is / -->
+    
+
+
+<!-- Now the rest of the posts with the usual loop but with an offset:4 on the first page so we can skeep the first 4 posts displayed above -->
+    
+<div class="row mt-3">
+   
+    <div class="col-md-8 main-loop">
+        
+        <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
+        
+
+        
+        
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/sophisticated-way-to-use-locationmanager-swift-5/">Sophisticated Way To Use LocationManager Swift 5</a>
+	</h2>
+	<p class="excerpt">
+	   This is the most elegant solution I found on how to retrieve location with CoreLocation.
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#corelocation">CoreLocation</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 07, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/sophisticated-way-to-use-locationmanager-swift-5/">
+	<img class="w-100" src="https://i.stack.imgur.com/hDiMB.png" alt="Sophisticated Way To Use LocationManager Swift 5" />
+	</a>
+	</div>
+
+</div>
+        
+        
+        
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/grand-central-dispatch-gcd-where-to-start-learning/">Grand Central Dispatch (GCD): Where To Start Learning</a>
+	</h2>
+	<p class="excerpt">
+	   I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no.  GCD is an...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#reference">Reference</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 07, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/grand-central-dispatch-gcd-where-to-start-learning/">
+	<img class="w-100" src="https://res.cloudinary.com/practicaldev/image/fetch/s--orob56V4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://learningswift.brightdigit.com/wp-content/uploads/sites/2/2019/09/ParallelConcurrency.001-1024x768.jpeg" alt="Grand Central Dispatch (GCD): Where To Start Learning" />
+	</a>
+	</div>
+
+</div>
+        
+        
+        
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/assistant-editor-mode-in-xcode-11/">Where Is Assistant Editor Mode In Xcode 11</a>
+	</h2>
+	<p class="excerpt">
+	   Welcome to the world of Xcode 11 where it’s now confusing to find the assistant editor. Well, there it is. It is not in the same place anymore. On the top right corner of the storyboa...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#xcode">Xcode</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 07, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/assistant-editor-mode-in-xcode-11/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-07%20at%203.11.58%20AM.png" alt="Where Is Assistant Editor Mode In Xcode 11" />
+	</a>
+	</div>
+
+</div>
+        
+        
+        
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/how-static-is-used/">How Static Is Used</a>
+	</h2>
+	<p class="excerpt">
+	   Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial.
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 06, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/how-static-is-used/">
+	<img class="w-100" src="https://i.ytimg.com/vi/s2E5hVxQAZQ/hqdefault.jpg" alt="How Static Is Used" />
+	</a>
+	</div>
+
+</div>
+        
+        
+        
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/take-your-swift-data-structures-knowledge-to-the-next-level/">Take Your Swift Data Structures Knowledge To The Next Level</a>
+	</h2>
+	<p class="excerpt">
+	   I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen’s Swift News. Though I wouldn’t recommended relying on this alone, in case you ...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#reference">Reference</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 05, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/take-your-swift-data-structures-knowledge-to-the-next-level/">
+	<img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8GiuB-Wn_sJ6WubFAJbuOx_ArtUmQgrbCqpIj6rl9GFHJZ0m" alt="Take Your Swift Data Structures Knowledge To The Next Level" />
+	</a>
+	</div>
+
+</div>
+        
+        
+        
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/swift-if-let-vs-guard-let/">Swift: If Let vs. Guard Let</a>
+	</h2>
+	<p class="excerpt">
+	   This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 04, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/swift-if-let-vs-guard-let/">
+	<img class="w-100" src="https://i.ytimg.com/vi/P2YZu9MwLaM/maxresdefault.jpg" alt="Swift: If Let vs. Guard Let" />
+	</a>
+	</div>
+
+</div>
+        
+        
+        
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/mapkit-theme-overlay-swift-5/">MapKit Theme Style Overlay Swift 5</a>
+	</h2>
+	<p class="excerpt">
+	   You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, wha...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#mapkit">MapKit</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 04, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/mapkit-theme-overlay-swift-5/">
+	<img class="w-100" src="/blog/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202019-10-04%20at%2020.23.31.png" alt="MapKit Theme Style Overlay Swift 5" />
+	</a>
+	</div>
+
+</div>
+        
+        
+        
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/faster-build-time-xcode-from-hdd/">Faster Build Time Xcode From HDD</a>
+	</h2>
+	<p class="excerpt">
+	   I’ve had my Xcode projects in the HDD drive ever since. Today, I transferred them to my SSD thinking it would solve my problem. But yeah, I guess it would load my codes faster since i...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 04, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/faster-build-time-xcode-from-hdd/">
+	<img class="w-100" src="/blog/assets/images/Pv7si.png" alt="Faster Build Time Xcode From HDD" />
+	</a>
+	</div>
+
+</div>
+        
+        
+        
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/">You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs.</a>
+	</h2>
+	<p class="excerpt">
+	   You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The p...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#mac">Mac</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 03, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.07.54%20PM.png" alt="You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs." />
+	</a>
+	</div>
+
+</div>
+        
+        
+        
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/where-to-learn-async-callback-and-futures/">Where To Learn Async Callback and Futures</a>
+	</h2>
+	<p class="excerpt">
+	   One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be diggin...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 03, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/where-to-learn-async-callback-and-futures/">
+	<img class="w-100" src="/blog/assets/images/reactivecocoa-functional-reactive-programming-concepts-in-ios-11-638.jpg" alt="Where To Learn Async Callback and Futures" />
+	</a>
+	</div>
+
+</div>
+        
+        
+        
+        <div class="mt-5">
+         <!-- Pagination links -->
+            
+            <ul class="pagination"> 
+              
+                <li class="page-item"><a class="page-link" href="/blog/page2">&laquo; Prev</a></li>
+              
+
+              
+                
+                <li class="page-item"><a class="page-link" href="/blog/">1</a></li>
+                
+              
+                
+                <li class="page-item"><a class="page-link" href="/blog/page2">2</a></li>
+                
+              
+                
+                <li class="page-item disabled"><span class="webjeda page-link">3</span></li>
+                
+              
+                
+                <li class="page-item"><a class="page-link" href="/blog/page4">4</a></li>
+                
+              
+                
+                <li class="page-item"><a class="page-link" href="/blog/page5">5</a></li>
+                
+              
+
+              
+                <li class="page-item"><a class="page-link" href="/blog/page4">Next &raquo;</a></li>
+              
+            </ul>
+                  
+        </div>
+        
+    </div>
+    
+    <div class="col-md-4">
+        <div class="sticky-top sticky-top-offset">
+    <h4 class="font-weight-bold spanborder"><span>Featured</span></h4>  
+    <ol class="list-featured">				
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/notification-and-observer-the-basics/" class="text-dark">Notification And Observer: The Basics</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/my-first-post-on-reddit/" class="text-dark">My First Post On Reddit</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#review">Review</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#blog">Blog</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/how-static-is-used/" class="text-dark">How Static Is Used</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/mapkit-theme-overlay-swift-5/" class="text-dark">MapKit Theme Style Overlay Swift 5</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#mapkit">MapKit</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/where-better-to-understand-semaphores-swift/" class="text-dark">Where Better To Understand Semaphores (Swift)</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/sean-allen-finally-learns-swiftui/" class="text-dark">Sean Allen Finally Learns SwiftUI</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#promotion">Promotion</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/a-better-emptyview-in-an-empty-collectionview/" class="text-dark">A Better EmptyView In An Empty CollectionView</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#improvise">Improvise</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/" class="text-dark">Using Cloud Functions To Create Remote Notifications With Firebase In Swift 5 and Javascript</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#notification">Notification</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/use-jekyll-manager-instead-of-jekyll-admin/" class="text-dark">Use Jekyll Manager Instead of Jekyll Admin</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#manager">Manager</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/eureka-locationrow/" class="text-dark">Eureka LocationRow</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/issues-with-my-first-app-store-connect-submission/" class="text-dark">Issues With My First App Store Connect Submission</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#publish">Publish</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/" class="text-dark">A Free Blog Using Mundana Jekyll Theme In Github Pages</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+           
+    </ol>
+</div>     
+    </div>
+    
+</div>
+</div>
+:ET

@@ -1,0 +1,3547 @@
+I"��<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+        <h1 class="font-weight-bold title h6 text-uppercase mb-4">Categories</h1>
+            
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="jekyll"><span>Jekyll</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/using-netlify-as-a-cms-for-your-jekyll-blog/">Using Netlify As A CMS For Your Jekyll Blog</a>
+	</h2>
+	<p class="excerpt">
+	   I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do.
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 27, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/using-netlify-as-a-cms-for-your-jekyll-blog/">
+	<img class="w-100" src="/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png" alt="Using Netlify As A CMS For Your Jekyll Blog" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/using-forestry-as-a-cms-for-your-jekyll-blog/">Using Forestry As A CMS For Your Jekyll Blog</a>
+	</h2>
+	<p class="excerpt">
+	   This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaro...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 27, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/using-forestry-as-a-cms-for-your-jekyll-blog/">
+	<img class="w-100" src="/blog/assets/images/Screen Shot 2019-10-28 at 2.33.01 PM.png" alt="Using Forestry As A CMS For Your Jekyll Blog" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">Use Jekyll Manager Instead of Jekyll Admin</a>
+	</h2>
+	<p class="excerpt">
+	   I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#manager">Manager</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Sep 30, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" alt="Use Jekyll Manager Instead of Jekyll Admin" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">A Free Blog Using Mundana Jekyll Theme In Github Pages</a>
+	</h2>
+	<p class="excerpt">
+	   This might be too technical for a non-computer-savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Sep 27, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.00.31%20PM.png" alt="A Free Blog Using Mundana Jekyll Theme In Github Pages" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="tutorial"><span>Tutorial</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/using-netlify-as-a-cms-for-your-jekyll-blog/">Using Netlify As A CMS For Your Jekyll Blog</a>
+	</h2>
+	<p class="excerpt">
+	   I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do.
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 27, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/using-netlify-as-a-cms-for-your-jekyll-blog/">
+	<img class="w-100" src="/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png" alt="Using Netlify As A CMS For Your Jekyll Blog" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/using-forestry-as-a-cms-for-your-jekyll-blog/">Using Forestry As A CMS For Your Jekyll Blog</a>
+	</h2>
+	<p class="excerpt">
+	   This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaro...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 27, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/using-forestry-as-a-cms-for-your-jekyll-blog/">
+	<img class="w-100" src="/blog/assets/images/Screen Shot 2019-10-28 at 2.33.01 PM.png" alt="Using Forestry As A CMS For Your Jekyll Blog" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/jekyll-code-syntax-indentation/">Jekyll Code Syntax Indentation</a>
+	</h2>
+	<p class="excerpt">
+	   I’ve been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it’s actually pretty simple. All that’s needed to fix this...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#css">CSS</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 27, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/jekyll-code-syntax-indentation/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-27%20at%209.16.22%20PM.png" alt="Jekyll Code Syntax Indentation" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/mvvm/">Taking A Look At MVVM</a>
+	</h2>
+	<p class="excerpt">
+	   There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: model, view model, and controlle...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 26, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/mvvm/">
+	<img class="w-100" src="https://www.iosapptemplates.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-17-at-8.25.44-PM.png" alt="Taking A Look At MVVM" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/sharing-userdefault-between-apps/">Sharing UserDefault Between Apps</a>
+	</h2>
+	<p class="excerpt">
+	   I just discovered a way for two apps to communicate with each other with the use of UserDefaults. I thought that UserDefault is only available locally in the app. Sandboxed in its own...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 22, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/sharing-userdefault-between-apps/">
+	<img class="w-100" src="https://miro.medium.com/max/6000/1*7Zy2OC1nxK-BqmDbGxtPDg.png" alt="Sharing UserDefault Between Apps" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/weak-self-vs-unowned-self/">Weak Self vs Unowned Self</a>
+	</h2>
+	<p class="excerpt">
+	   Most articles regarding this are overwhelming and I’m about to make it easier. This is based on Brian Voong’s tutorial. I urge you to watch the video too because, essentially, that is...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 15, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/weak-self-vs-unowned-self/">
+	<img class="w-100" src="https://i.ytimg.com/vi/q0-DIJszYRo/maxresdefault.jpg" alt="Weak Self vs Unowned Self" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/context-menu-in-swiftui/">Context Menu in SwiftUI</a>
+	</h2>
+	<p class="excerpt">
+	   This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns o...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swiftui">SwiftUI</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 15, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/context-menu-in-swiftui/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-15%20at%209.16.42%20AM.png" alt="Context Menu in SwiftUI" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/enums/">Enums For Beginners</a>
+	</h2>
+	<p class="excerpt">
+	   Enums can be confusing for everybody, especially the newbies. I mean, why use those when you can just create variables and constructs. It does the same right? Some claim that they use...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 13, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/enums/">
+	<img class="w-100" src="https://becodable.com/wp-content/uploads/2018/09/Swift-Enum.jpg" alt="Enums For Beginners" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/sign-in-with-apple-swift-5/">Sign In With Apple Swift 5 Tutorial</a>
+	</h2>
+	<p class="excerpt">
+	   First of all, a big thanks to Kilo Loco’s tutorial. Check it out. Not only is this feature available for iOS 13 up, it’s also available for Mac OS 10.15.
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 12, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/sign-in-with-apple-swift-5/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-12%20at%201.09.03%20PM.png" alt="Sign In With Apple Swift 5 Tutorial" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/can-you-design-ios-apps-if-youre-not-a-designer/">Can You Design iOS Apps If You're Not A Designer?</a>
+	</h2>
+	<p class="excerpt">
+	   I’m in no position to give any advise on creating designs because I’ve never been a designer. I only code my way through Xcode and I’ve only begun trying to deploy an app on the App S...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#design">Design</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 11, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/can-you-design-ios-apps-if-youre-not-a-designer/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-11%20at%202.44.27%20PM.png" alt="Can You Design iOS Apps If You're Not A Designer?" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/sign-out-firebase-and-remove-access-token/">Sign Out Firebase And Remove Access Token</a>
+	</h2>
+	<p class="excerpt">
+	   I call the signOut() to sign out, but there’s really a lot of things going on inside my call. I’m not sure which is the correct way to do this yet, but what I’m trying to achieve is o...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#firebase">Firebase</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 09, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/sign-out-firebase-and-remove-access-token/">
+	<img class="w-100" src="https://blog.hasura.io/content/images/2019/03/rawpixel-783430-unsplash-1.jpg" alt="Sign Out Firebase And Remove Access Token" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/notification-and-observer-the-basics/">Notification And Observer: The Basics</a>
+	</h2>
+	<p class="excerpt">
+	   This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that not...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 09, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/notification-and-observer-the-basics/">
+	<img class="w-100" src="/blog/assets/images/1_Ca69vjmxQIdkOfW-O6hZaA.png" alt="Notification And Observer: The Basics" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/check-if-online-swift-5/">Check If Online Swift 5</a>
+	</h2>
+	<p class="excerpt">
+	   Thanks to Paul Hudson @twostraws for the informative knowledge on how to check for internet connection. Let me remind you that this solution is available since iOS 12.0. WWDC in June ...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 09, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/check-if-online-swift-5/">
+	<img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBXD5o0JeyxP-5MmwSZO4lOrONruMPlZmrTRWonLxYsgx1iPYH" alt="Check If Online Swift 5" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/basic-implementation-of-local-notifications/">Basic Implementation of Local Notifications</a>
+	</h2>
+	<p class="excerpt">
+	   Let’s get one thing straight now baby. Local notifications is not the same as Push/Remote notifications. It is also not the same as the Notification-Observer relationship which I will...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 08, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/basic-implementation-of-local-notifications/">
+	<img class="w-100" src="/blog/assets/images/Notifications_Top_2x.png" alt="Basic Implementation of Local Notifications" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/sophisticated-way-to-use-locationmanager-swift-5/">Sophisticated Way To Use LocationManager Swift 5</a>
+	</h2>
+	<p class="excerpt">
+	   This is the most elegant solution I found on how to retrieve location with CoreLocation.
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#corelocation">CoreLocation</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 07, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/sophisticated-way-to-use-locationmanager-swift-5/">
+	<img class="w-100" src="https://i.stack.imgur.com/hDiMB.png" alt="Sophisticated Way To Use LocationManager Swift 5" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/assistant-editor-mode-in-xcode-11/">Where Is Assistant Editor Mode In Xcode 11</a>
+	</h2>
+	<p class="excerpt">
+	   Welcome to the world of Xcode 11 where it’s now confusing to find the assistant editor. Well, there it is. It is not in the same place anymore. On the top right corner of the storyboa...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#xcode">Xcode</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 07, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/assistant-editor-mode-in-xcode-11/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-07%20at%203.11.58%20AM.png" alt="Where Is Assistant Editor Mode In Xcode 11" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/how-static-is-used/">How Static Is Used</a>
+	</h2>
+	<p class="excerpt">
+	   Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial.
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 06, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/how-static-is-used/">
+	<img class="w-100" src="https://i.ytimg.com/vi/s2E5hVxQAZQ/hqdefault.jpg" alt="How Static Is Used" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/swift-if-let-vs-guard-let/">Swift: If Let vs. Guard Let</a>
+	</h2>
+	<p class="excerpt">
+	   This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 04, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/swift-if-let-vs-guard-let/">
+	<img class="w-100" src="https://i.ytimg.com/vi/P2YZu9MwLaM/maxresdefault.jpg" alt="Swift: If Let vs. Guard Let" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/mapkit-theme-overlay-swift-5/">MapKit Theme Style Overlay Swift 5</a>
+	</h2>
+	<p class="excerpt">
+	   You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, wha...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#mapkit">MapKit</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 04, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/mapkit-theme-overlay-swift-5/">
+	<img class="w-100" src="/blog/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202019-10-04%20at%2020.23.31.png" alt="MapKit Theme Style Overlay Swift 5" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/">You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs.</a>
+	</h2>
+	<p class="excerpt">
+	   You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The p...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#mac">Mac</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 03, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.07.54%20PM.png" alt="You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs." />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/where-to-learn-async-callback-and-futures/">Where To Learn Async Callback and Futures</a>
+	</h2>
+	<p class="excerpt">
+	   One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be diggin...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 03, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/where-to-learn-async-callback-and-futures/">
+	<img class="w-100" src="/blog/assets/images/reactivecocoa-functional-reactive-programming-concepts-in-ios-11-638.jpg" alt="Where To Learn Async Callback and Futures" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/where-better-to-understand-semaphores-swift/">Where Better To Understand Semaphores (Swift)</a>
+	</h2>
+	<p class="excerpt">
+	   Thanks to Roy Kronenfeld’s Medium post for this explanation of how to use a semaphore, specifically, utilizing the counter: let semaphore = DispatchSemaphore(value: 0). Another tutori...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 03, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/where-better-to-understand-semaphores-swift/">
+	<img class="w-100" src="/blog/assets/images/1_7aP7xcLcB6cJ9wySieNNCA.gif" alt="Where Better To Understand Semaphores (Swift)" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/codable-json-parsing/">Codable JSON Parsing</a>
+	</h2>
+	<p class="excerpt">
+	   One of the reasons why you should learn this is, first, because you’re an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let’s look a...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 03, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/codable-json-parsing/">
+	<img class="w-100" src="/blog/assets/images/codable-json-swift-how-to-770x400.jpg" alt="Codable JSON Parsing" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/why-i-prefer-cloud-firestore-than-realtime-database/">Why I Prefer Cloud Firestore Than Realtime Database</a>
+	</h2>
+	<p class="excerpt">
+	   This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and ...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#firestore">Firestore</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#firebase">Firebase</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 02, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/why-i-prefer-cloud-firestore-than-realtime-database/">
+	<img class="w-100" src="/blog/assets/images/update.jpg" alt="Why I Prefer Cloud Firestore Than Realtime Database" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/state-to-objectbinding-modifier/">@State to @ObjectBinding Modifier</a>
+	</h2>
+	<p class="excerpt">
+	   Notice how Scott changed from @State to @ObjectBinding. He started discussing BindableObject at 5:17. That’s because you can only use @State with local properties in the struct view. ...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swiftui">SwiftUI</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 02, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/state-to-objectbinding-modifier/">
+	<img class="w-100" src="/blog/assets/images/maxresdefault.jpg" alt="@State to @ObjectBinding Modifier" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/a-better-emptyview-in-an-empty-collectionview/">A Better EmptyView In An Empty CollectionView</a>
+	</h2>
+	<p class="excerpt">
+	   One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#improvise">Improvise</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 02, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/a-better-emptyview-in-an-empty-collectionview/">
+	<img class="w-100" src="/blog/assets/images/71823045_2511297908958002_3393944923223883776_n.jpg" alt="A Better EmptyView In An Empty CollectionView" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">Using Cloud Functions To Create Remote Notifications With Firebase In Swift 5 and Javascript</a>
+	</h2>
+	<p class="excerpt">
+	   This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already hav...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#notification">Notification</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 01, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">
+	<img class="w-100" src="https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_709/https://buildfire.com/wp-content/uploads/2018/03/uber.png" alt="Using Cloud Functions To Create Remote Notifications With Firebase In Swift 5 and Javascript" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/inverse-or-not-filter-in-realm-swift/">!= VS. NOT Filter In Realm Swift</a>
+	</h2>
+	<p class="excerpt">
+	   Instead of using != as your not equal, you can or should use NOT instead. I’m writing this post because I just can’t seem != to work as part of my predicate. I was struggling to find ...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Sep 30, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/inverse-or-not-filter-in-realm-swift/">
+	<img class="w-100" src="/blog/assets/images/1_DqzHUZj6HcmIBK9I2aOVww.png" alt="!= VS. NOT Filter In Realm Swift" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/bundler-editorsublime/">Sublime 3 In BUNDLER_EDITOR</a>
+	</h2>
+	<p class="excerpt">
+	   First, let’s create a symlink:
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#sublime">Sublime</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Sep 30, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/bundler-editorsublime/">
+	<img class="w-100" src="/blog/assets/images/SublimeText3.jpg" alt="Sublime 3 In BUNDLER_EDITOR" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/eureka-locationrow/">Eureka LocationRow</a>
+	</h2>
+	<p class="excerpt">
+	   If you’re a newbie on this, you might not actually figure this out quick. Apparently, it’s only a quick tour to the example project in Eureka. Particularly in CustomCells.swift. Just ...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Sep 29, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/eureka-locationrow/">
+	<img class="w-100" src="/blog/assets/images/EurekaLocationRow.gif" alt="Eureka LocationRow" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/custom-table-cell-with-swiftui/">Custom Table Cell With SwiftUI</a>
+	</h2>
+	<p class="excerpt">
+	   First of all, thanks to Scott Smith for helping me understand this. I know it can be another learning curve to start learning SwiftUI if you’ve only begun diving into becoming an iOS ...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Sep 28, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/custom-table-cell-with-swiftui/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-28%20at%2010.32.57%20PM.png" alt="Custom Table Cell With SwiftUI" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">A Free Blog Using Mundana Jekyll Theme In Github Pages</a>
+	</h2>
+	<p class="excerpt">
+	   This might be too technical for a non-computer-savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Sep 27, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.00.31%20PM.png" alt="A Free Blog Using Mundana Jekyll Theme In Github Pages" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="admin"><span>Admin</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">Use Jekyll Manager Instead of Jekyll Admin</a>
+	</h2>
+	<p class="excerpt">
+	   I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#manager">Manager</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Sep 30, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" alt="Use Jekyll Manager Instead of Jekyll Admin" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">A Free Blog Using Mundana Jekyll Theme In Github Pages</a>
+	</h2>
+	<p class="excerpt">
+	   This might be too technical for a non-computer-savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdi...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Sep 27, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.00.31%20PM.png" alt="A Free Blog Using Mundana Jekyll Theme In Github Pages" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="publish"><span>Publish</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/issues-with-my-first-app-store-connect-submission/">Issues With My First App Store Connect Submission</a>
+	</h2>
+	<p class="excerpt">
+	   It was my first app submission to the app store. I mean, well, I hadn’t submitted it for review yet, but it already detected a couple of issues that needs dealing with. I uploaded it ...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#publish">Publish</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Sep 27, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/issues-with-my-first-app-store-connect-submission/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-25%20at%208.43.21%20PM.png" alt="Issues With My First App Store Connect Submission" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="sublime"><span>Sublime</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/bundler-editorsublime/">Sublime 3 In BUNDLER_EDITOR</a>
+	</h2>
+	<p class="excerpt">
+	   First, let’s create a symlink:
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#sublime">Sublime</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Sep 30, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/bundler-editorsublime/">
+	<img class="w-100" src="/blog/assets/images/SublimeText3.jpg" alt="Sublime 3 In BUNDLER_EDITOR" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="manager"><span>Manager</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">Use Jekyll Manager Instead of Jekyll Admin</a>
+	</h2>
+	<p class="excerpt">
+	   I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s m...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#manager">Manager</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Sep 30, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/use-jekyll-manager-instead-of-jekyll-admin/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" alt="Use Jekyll Manager Instead of Jekyll Admin" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="swift"><span>Swift</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/mvvm/">Taking A Look At MVVM</a>
+	</h2>
+	<p class="excerpt">
+	   There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: model, view model, and controlle...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 26, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/mvvm/">
+	<img class="w-100" src="https://www.iosapptemplates.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-17-at-8.25.44-PM.png" alt="Taking A Look At MVVM" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/sharing-userdefault-between-apps/">Sharing UserDefault Between Apps</a>
+	</h2>
+	<p class="excerpt">
+	   I just discovered a way for two apps to communicate with each other with the use of UserDefaults. I thought that UserDefault is only available locally in the app. Sandboxed in its own...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 22, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/sharing-userdefault-between-apps/">
+	<img class="w-100" src="https://miro.medium.com/max/6000/1*7Zy2OC1nxK-BqmDbGxtPDg.png" alt="Sharing UserDefault Between Apps" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/weak-self-vs-unowned-self/">Weak Self vs Unowned Self</a>
+	</h2>
+	<p class="excerpt">
+	   Most articles regarding this are overwhelming and I’m about to make it easier. This is based on Brian Voong’s tutorial. I urge you to watch the video too because, essentially, that is...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 15, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/weak-self-vs-unowned-self/">
+	<img class="w-100" src="https://i.ytimg.com/vi/q0-DIJszYRo/maxresdefault.jpg" alt="Weak Self vs Unowned Self" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/enums/">Enums For Beginners</a>
+	</h2>
+	<p class="excerpt">
+	   Enums can be confusing for everybody, especially the newbies. I mean, why use those when you can just create variables and constructs. It does the same right? Some claim that they use...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 13, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/enums/">
+	<img class="w-100" src="https://becodable.com/wp-content/uploads/2018/09/Swift-Enum.jpg" alt="Enums For Beginners" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/sign-in-with-apple-swift-5/">Sign In With Apple Swift 5 Tutorial</a>
+	</h2>
+	<p class="excerpt">
+	   First of all, a big thanks to Kilo Loco’s tutorial. Check it out. Not only is this feature available for iOS 13 up, it’s also available for Mac OS 10.15.
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 12, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/sign-in-with-apple-swift-5/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-12%20at%201.09.03%20PM.png" alt="Sign In With Apple Swift 5 Tutorial" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/sign-out-firebase-and-remove-access-token/">Sign Out Firebase And Remove Access Token</a>
+	</h2>
+	<p class="excerpt">
+	   I call the signOut() to sign out, but there’s really a lot of things going on inside my call. I’m not sure which is the correct way to do this yet, but what I’m trying to achieve is o...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#firebase">Firebase</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 09, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/sign-out-firebase-and-remove-access-token/">
+	<img class="w-100" src="https://blog.hasura.io/content/images/2019/03/rawpixel-783430-unsplash-1.jpg" alt="Sign Out Firebase And Remove Access Token" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/notification-and-observer-the-basics/">Notification And Observer: The Basics</a>
+	</h2>
+	<p class="excerpt">
+	   This topic is not about Local Notifications or Push Notifications. It is about creating triggers. This is a straightforward snippet of how you call a trigger or the one-liner that not...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 09, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/notification-and-observer-the-basics/">
+	<img class="w-100" src="/blog/assets/images/1_Ca69vjmxQIdkOfW-O6hZaA.png" alt="Notification And Observer: The Basics" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/check-if-online-swift-5/">Check If Online Swift 5</a>
+	</h2>
+	<p class="excerpt">
+	   Thanks to Paul Hudson @twostraws for the informative knowledge on how to check for internet connection. Let me remind you that this solution is available since iOS 12.0. WWDC in June ...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 09, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/check-if-online-swift-5/">
+	<img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBXD5o0JeyxP-5MmwSZO4lOrONruMPlZmrTRWonLxYsgx1iPYH" alt="Check If Online Swift 5" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/basic-implementation-of-local-notifications/">Basic Implementation of Local Notifications</a>
+	</h2>
+	<p class="excerpt">
+	   Let’s get one thing straight now baby. Local notifications is not the same as Push/Remote notifications. It is also not the same as the Notification-Observer relationship which I will...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 08, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/basic-implementation-of-local-notifications/">
+	<img class="w-100" src="/blog/assets/images/Notifications_Top_2x.png" alt="Basic Implementation of Local Notifications" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/sophisticated-way-to-use-locationmanager-swift-5/">Sophisticated Way To Use LocationManager Swift 5</a>
+	</h2>
+	<p class="excerpt">
+	   This is the most elegant solution I found on how to retrieve location with CoreLocation.
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#corelocation">CoreLocation</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 07, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/sophisticated-way-to-use-locationmanager-swift-5/">
+	<img class="w-100" src="https://i.stack.imgur.com/hDiMB.png" alt="Sophisticated Way To Use LocationManager Swift 5" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/grand-central-dispatch-gcd-where-to-start-learning/">Grand Central Dispatch (GCD): Where To Start Learning</a>
+	</h2>
+	<p class="excerpt">
+	   I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no.  GCD is an...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#reference">Reference</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 07, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/grand-central-dispatch-gcd-where-to-start-learning/">
+	<img class="w-100" src="https://res.cloudinary.com/practicaldev/image/fetch/s--orob56V4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://learningswift.brightdigit.com/wp-content/uploads/sites/2/2019/09/ParallelConcurrency.001-1024x768.jpeg" alt="Grand Central Dispatch (GCD): Where To Start Learning" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/how-static-is-used/">How Static Is Used</a>
+	</h2>
+	<p class="excerpt">
+	   Static is like creating a global variable. You’ll see what I mean when you’ve watched Sean Allen’s video tutorial.
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 06, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/how-static-is-used/">
+	<img class="w-100" src="https://i.ytimg.com/vi/s2E5hVxQAZQ/hqdefault.jpg" alt="How Static Is Used" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/take-your-swift-data-structures-knowledge-to-the-next-level/">Take Your Swift Data Structures Knowledge To The Next Level</a>
+	</h2>
+	<p class="excerpt">
+	   I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen’s Swift News. Though I wouldn’t recommended relying on this alone, in case you ...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#reference">Reference</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 05, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/take-your-swift-data-structures-knowledge-to-the-next-level/">
+	<img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8GiuB-Wn_sJ6WubFAJbuOx_ArtUmQgrbCqpIj6rl9GFHJZ0m" alt="Take Your Swift Data Structures Knowledge To The Next Level" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/swift-if-let-vs-guard-let/">Swift: If Let vs. Guard Let</a>
+	</h2>
+	<p class="excerpt">
+	   This is a brief explanation for newbies. It’s because when I was still a newbie, I didn’t really understand how or when to use either of these two. I never touched them at all. If you...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 04, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/swift-if-let-vs-guard-let/">
+	<img class="w-100" src="https://i.ytimg.com/vi/P2YZu9MwLaM/maxresdefault.jpg" alt="Swift: If Let vs. Guard Let" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/mapkit-theme-overlay-swift-5/">MapKit Theme Style Overlay Swift 5</a>
+	</h2>
+	<p class="excerpt">
+	   You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, wha...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#mapkit">MapKit</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 04, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/mapkit-theme-overlay-swift-5/">
+	<img class="w-100" src="/blog/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202019-10-04%20at%2020.23.31.png" alt="MapKit Theme Style Overlay Swift 5" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/where-to-learn-async-callback-and-futures/">Where To Learn Async Callback and Futures</a>
+	</h2>
+	<p class="excerpt">
+	   One of my favorite online tutors is Let’s Build That App. He’s really good with his YouTube thing going on. Makes me understand a lot of Swift stuff that I never imagined to be diggin...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 03, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/where-to-learn-async-callback-and-futures/">
+	<img class="w-100" src="/blog/assets/images/reactivecocoa-functional-reactive-programming-concepts-in-ios-11-638.jpg" alt="Where To Learn Async Callback and Futures" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/where-better-to-understand-semaphores-swift/">Where Better To Understand Semaphores (Swift)</a>
+	</h2>
+	<p class="excerpt">
+	   Thanks to Roy Kronenfeld’s Medium post for this explanation of how to use a semaphore, specifically, utilizing the counter: let semaphore = DispatchSemaphore(value: 0). Another tutori...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 03, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/where-better-to-understand-semaphores-swift/">
+	<img class="w-100" src="/blog/assets/images/1_7aP7xcLcB6cJ9wySieNNCA.gif" alt="Where Better To Understand Semaphores (Swift)" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/codable-json-parsing/">Codable JSON Parsing</a>
+	</h2>
+	<p class="excerpt">
+	   One of the reasons why you should learn this is, first, because you’re an iOS developer. You need to trim down the size of your app by avoiding 3rd party frameworks. Now, let’s look a...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 03, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/codable-json-parsing/">
+	<img class="w-100" src="/blog/assets/images/codable-json-swift-how-to-770x400.jpg" alt="Codable JSON Parsing" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">Using Cloud Functions To Create Remote Notifications With Firebase In Swift 5 and Javascript</a>
+	</h2>
+	<p class="excerpt">
+	   This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already hav...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#notification">Notification</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 01, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">
+	<img class="w-100" src="https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_709/https://buildfire.com/wp-content/uploads/2018/03/uber.png" alt="Using Cloud Functions To Create Remote Notifications With Firebase In Swift 5 and Javascript" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="notification"><span>Notification</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">Using Cloud Functions To Create Remote Notifications With Firebase In Swift 5 and Javascript</a>
+	</h2>
+	<p class="excerpt">
+	   This is tested using Firebase Realtime Database, not with Firestore. Before all of these, I assume you have already been using the realtime database. More importantly, you already hav...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#notification">Notification</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 01, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/">
+	<img class="w-100" src="https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_709/https://buildfire.com/wp-content/uploads/2018/03/uber.png" alt="Using Cloud Functions To Create Remote Notifications With Firebase In Swift 5 and Javascript" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="improvise"><span>Improvise</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/a-better-emptyview-in-an-empty-collectionview/">A Better EmptyView In An Empty CollectionView</a>
+	</h2>
+	<p class="excerpt">
+	   One of the most lovely codes I’ve found is to turn an empty view into something more informative than showing nothing. As you can see, I have two labels in place of my collection view...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#improvise">Improvise</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 02, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/a-better-emptyview-in-an-empty-collectionview/">
+	<img class="w-100" src="/blog/assets/images/71823045_2511297908958002_3393944923223883776_n.jpg" alt="A Better EmptyView In An Empty CollectionView" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="swiftui"><span>SwiftUI</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/context-menu-in-swiftui/">Context Menu in SwiftUI</a>
+	</h2>
+	<p class="excerpt">
+	   This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns o...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swiftui">SwiftUI</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 15, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/context-menu-in-swiftui/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-15%20at%209.16.42%20AM.png" alt="Context Menu in SwiftUI" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/state-to-objectbinding-modifier/">@State to @ObjectBinding Modifier</a>
+	</h2>
+	<p class="excerpt">
+	   Notice how Scott changed from @State to @ObjectBinding. He started discussing BindableObject at 5:17. That’s because you can only use @State with local properties in the struct view. ...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swiftui">SwiftUI</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 02, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/state-to-objectbinding-modifier/">
+	<img class="w-100" src="/blog/assets/images/maxresdefault.jpg" alt="@State to @ObjectBinding Modifier" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="portfolio"><span>Portfolio</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/top-5-github-pages-portfolio-templates/">Top 5 Github Pages Portfolio Templates</a>
+	</h2>
+	<p class="excerpt">
+	   As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of thes...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#portfolio">Portfolio</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#github">Github</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#pages">Pages</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 02, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/top-5-github-pages-portfolio-templates/">
+	<img class="w-100" src="/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg" alt="Top 5 Github Pages Portfolio Templates" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="github"><span>Github</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/top-5-github-pages-portfolio-templates/">Top 5 Github Pages Portfolio Templates</a>
+	</h2>
+	<p class="excerpt">
+	   As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of thes...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#portfolio">Portfolio</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#github">Github</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#pages">Pages</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 02, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/top-5-github-pages-portfolio-templates/">
+	<img class="w-100" src="/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg" alt="Top 5 Github Pages Portfolio Templates" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="pages"><span>Pages</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/top-5-github-pages-portfolio-templates/">Top 5 Github Pages Portfolio Templates</a>
+	</h2>
+	<p class="excerpt">
+	   As a developer, I’d like to host my portfolio somewhere free and somewhere familiar to developers. Oh wait! I know where that is. These templates are forkable and for each one of thes...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#portfolio">Portfolio</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#github">Github</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#pages">Pages</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 02, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/top-5-github-pages-portfolio-templates/">
+	<img class="w-100" src="/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg" alt="Top 5 Github Pages Portfolio Templates" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="firestore"><span>Firestore</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/why-i-prefer-cloud-firestore-than-realtime-database/">Why I Prefer Cloud Firestore Than Realtime Database</a>
+	</h2>
+	<p class="excerpt">
+	   This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and ...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#firestore">Firestore</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#firebase">Firebase</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 02, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/why-i-prefer-cloud-firestore-than-realtime-database/">
+	<img class="w-100" src="/blog/assets/images/update.jpg" alt="Why I Prefer Cloud Firestore Than Realtime Database" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="firebase"><span>Firebase</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/sign-out-firebase-and-remove-access-token/">Sign Out Firebase And Remove Access Token</a>
+	</h2>
+	<p class="excerpt">
+	   I call the signOut() to sign out, but there’s really a lot of things going on inside my call. I’m not sure which is the correct way to do this yet, but what I’m trying to achieve is o...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#firebase">Firebase</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 09, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/sign-out-firebase-and-remove-access-token/">
+	<img class="w-100" src="https://blog.hasura.io/content/images/2019/03/rawpixel-783430-unsplash-1.jpg" alt="Sign Out Firebase And Remove Access Token" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/why-i-prefer-cloud-firestore-than-realtime-database/">Why I Prefer Cloud Firestore Than Realtime Database</a>
+	</h2>
+	<p class="excerpt">
+	   This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and ...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#firestore">Firestore</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#firebase">Firebase</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 02, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/why-i-prefer-cloud-firestore-than-realtime-database/">
+	<img class="w-100" src="/blog/assets/images/update.jpg" alt="Why I Prefer Cloud Firestore Than Realtime Database" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="promotion"><span>Promotion</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/sean-allen-finally-learns-swiftui/">Sean Allen Finally Learns SwiftUI</a>
+	</h2>
+	<p class="excerpt">
+	   I’ve seen him talk about how he was hesitant to dive into learning Swift UI. I took his sentiment as my own because I don’t really see why I needed to.
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#promotion">Promotion</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 03, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/sean-allen-finally-learns-swiftui/">
+	<img class="w-100" src="/blog/assets/images/mqdefault.jpg" alt="Sean Allen Finally Learns SwiftUI" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="mac"><span>Mac</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/">You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs.</a>
+	</h2>
+	<p class="excerpt">
+	   You might encounter this problem after cloning with Carbon Copy Cloner. You’ve also come here because you’re trying to make the cloned hard drive bootable. Well, you’re in luck. The p...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#mac">Mac</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 03, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/you-may-have-difficulty-booting-from-this-destination-volume-the-underlying-disk-is-not-partitioned-with-a-partitioning-scheme-that-apple-recommends-for-intel-macs/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-03%20at%2011.07.54%20PM.png" alt="You may have difficulty booting from this destination volume, the underlying disk is not partitioned with a partitioning scheme that Apple recommends for Intel Macs." />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="mapkit"><span>MapKit</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/mapkit-theme-overlay-swift-5/">MapKit Theme Style Overlay Swift 5</a>
+	</h2>
+	<p class="excerpt">
+	   You don’t want to use MapBox or GoogleMap? Me too. I don’t want to pay for something that isn’t going to be much different. For now, I don’t see myself using their extra features, wha...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#mapkit">MapKit</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 04, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/mapkit-theme-overlay-swift-5/">
+	<img class="w-100" src="/blog/assets/images/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202019-10-04%20at%2020.23.31.png" alt="MapKit Theme Style Overlay Swift 5" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="reference"><span>Reference</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/grand-central-dispatch-gcd-where-to-start-learning/">Grand Central Dispatch (GCD): Where To Start Learning</a>
+	</h2>
+	<p class="excerpt">
+	   I’ve been hearing and reading GCD for quite a while now. Grand Central Dispatch. Whoa! Big word! It’s really just a concept of using threads. It’s not a railway system, no.  GCD is an...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#reference">Reference</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 07, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/grand-central-dispatch-gcd-where-to-start-learning/">
+	<img class="w-100" src="https://res.cloudinary.com/practicaldev/image/fetch/s--orob56V4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://learningswift.brightdigit.com/wp-content/uploads/sites/2/2019/09/ParallelConcurrency.001-1024x768.jpeg" alt="Grand Central Dispatch (GCD): Where To Start Learning" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/take-your-swift-data-structures-knowledge-to-the-next-level/">Take Your Swift Data Structures Knowledge To The Next Level</a>
+	</h2>
+	<p class="excerpt">
+	   I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen’s Swift News. Though I wouldn’t recommended relying on this alone, in case you ...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#reference">Reference</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 05, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/take-your-swift-data-structures-knowledge-to-the-next-level/">
+	<img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8GiuB-Wn_sJ6WubFAJbuOx_ArtUmQgrbCqpIj6rl9GFHJZ0m" alt="Take Your Swift Data Structures Knowledge To The Next Level" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="xcode"><span>Xcode</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/experience-with-carthage/">Experience With Carthage As Opposed To Cocoapods</a>
+	</h2>
+	<p class="excerpt">
+	   Cocoapods makes your build times slower and that’s why I’ve taken the liberty of trying Carthage. Well, from the instructions I’ve read in bigger frameworks like Realm and FacebookCor...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#review">Review</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#xcode">Xcode</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 11, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/experience-with-carthage/">
+	<img class="w-100" src="https://koenig-media.raywenderlich.com/uploads/2017/08/Carthage-feature-2.png" alt="Experience With Carthage As Opposed To Cocoapods" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/assistant-editor-mode-in-xcode-11/">Where Is Assistant Editor Mode In Xcode 11</a>
+	</h2>
+	<p class="excerpt">
+	   Welcome to the world of Xcode 11 where it’s now confusing to find the assistant editor. Well, there it is. It is not in the same place anymore. On the top right corner of the storyboa...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#xcode">Xcode</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 07, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/assistant-editor-mode-in-xcode-11/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-07%20at%203.11.58%20AM.png" alt="Where Is Assistant Editor Mode In Xcode 11" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="corelocation"><span>CoreLocation</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/sophisticated-way-to-use-locationmanager-swift-5/">Sophisticated Way To Use LocationManager Swift 5</a>
+	</h2>
+	<p class="excerpt">
+	   This is the most elegant solution I found on how to retrieve location with CoreLocation.
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#corelocation">CoreLocation</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 07, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/sophisticated-way-to-use-locationmanager-swift-5/">
+	<img class="w-100" src="https://i.stack.imgur.com/hDiMB.png" alt="Sophisticated Way To Use LocationManager Swift 5" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="review"><span>Review</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/fake-airpods-i500-tws-review/">Fake Airpods i500 TWS Review</a>
+	</h2>
+	<p class="excerpt">
+	   I bought a pair of Apple Fake Airpods on Shopee for Php 1060 including shipping. Yes, that’s right! I bought it cheap. It’s around $20 and it’s worthy, I might add.
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#review">Review</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 21, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/fake-airpods-i500-tws-review/">
+	<img class="w-100" src="/blog/assets/images/41qIPi7taiL._SX385_.jpg" alt="Fake Airpods i500 TWS Review" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/using-vertical-mouse-my-take/">Using Vertical Mouse: My Take</a>
+	</h2>
+	<p class="excerpt">
+	   I bought the Wireless Vertical Mouse Game 800/1600/2400DPI Mice 2-Button a couple of weeks ago and it just a arrived a week ago. I bought mine in Shopee. It’s a marketplace here in th...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#review">Review</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#health">Health</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 15, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/using-vertical-mouse-my-take/">
+	<img class="w-100" src="/blog/assets/images/919bb5baa29ab582de3bbd77e65b319c.jpg" alt="Using Vertical Mouse: My Take" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/lets-start-using-swift-package-manager/">Let's Start Using Swift Package Manager</a>
+	</h2>
+	<p class="excerpt">
+	   The first time I encountered the word Swift Package Manager was just a few days ago while searching for alternative ways to install the Firebase framework in my project. I thought Car...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#review">Review</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 14, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/lets-start-using-swift-package-manager/">
+	<img class="w-100" src="https://miro.medium.com/max/1200/1*ooI0KwILz0Yo2cXUaW9gog.png" alt="Let's Start Using Swift Package Manager" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/experience-with-carthage/">Experience With Carthage As Opposed To Cocoapods</a>
+	</h2>
+	<p class="excerpt">
+	   Cocoapods makes your build times slower and that’s why I’ve taken the liberty of trying Carthage. Well, from the instructions I’ve read in bigger frameworks like Realm and FacebookCor...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#review">Review</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#xcode">Xcode</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 11, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/experience-with-carthage/">
+	<img class="w-100" src="https://koenig-media.raywenderlich.com/uploads/2017/08/Carthage-feature-2.png" alt="Experience With Carthage As Opposed To Cocoapods" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/native-messenger-app-for-mac-os-review/">Native Messenger App For Mac OS (Review) vs Caprine vs Goofy vs Franz</a>
+	</h2>
+	<p class="excerpt">
+	   I’m currently on Mojave and I just thought that it’s time I use an app for messenger. It takes quite a while to load Facebook messenger on my Chrome browser. Maybe it’s just my intern...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#review">Review</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 08, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/native-messenger-app-for-mac-os-review/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-08%20at%207.52.43%20PM.png" alt="Native Messenger App For Mac OS (Review) vs Caprine vs Goofy vs Franz" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/my-first-post-on-reddit/">My First Post On Reddit</a>
+	</h2>
+	<p class="excerpt">
+	   YouTube has been recommeding me blog tips and I’ve recently been keen on trying to get views on this blog. Today, my blog is still not indexed by google, but my half-baked portfolio i...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#review">Review</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#blog">Blog</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 08, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/my-first-post-on-reddit/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-08%20at%208.38.36%20PM.png" alt="My First Post On Reddit" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="blog"><span>Blog</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/my-first-post-on-reddit/">My First Post On Reddit</a>
+	</h2>
+	<p class="excerpt">
+	   YouTube has been recommeding me blog tips and I’ve recently been keen on trying to get views on this blog. Today, my blog is still not indexed by google, but my half-baked portfolio i...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#review">Review</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#blog">Blog</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 08, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/my-first-post-on-reddit/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-08%20at%208.38.36%20PM.png" alt="My First Post On Reddit" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="design"><span>Design</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/can-you-design-ios-apps-if-youre-not-a-designer/">Can You Design iOS Apps If You're Not A Designer?</a>
+	</h2>
+	<p class="excerpt">
+	   I’m in no position to give any advise on creating designs because I’ve never been a designer. I only code my way through Xcode and I’ve only begun trying to deploy an app on the App S...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#design">Design</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 11, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/can-you-design-ios-apps-if-youre-not-a-designer/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-11%20at%202.44.27%20PM.png" alt="Can You Design iOS Apps If You're Not A Designer?" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="health"><span>Health</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/using-vertical-mouse-my-take/">Using Vertical Mouse: My Take</a>
+	</h2>
+	<p class="excerpt">
+	   I bought the Wireless Vertical Mouse Game 800/1600/2400DPI Mice 2-Button a couple of weeks ago and it just a arrived a week ago. I bought mine in Shopee. It’s a marketplace here in th...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#review">Review</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#health">Health</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 15, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/using-vertical-mouse-my-take/">
+	<img class="w-100" src="/blog/assets/images/919bb5baa29ab582de3bbd77e65b319c.jpg" alt="Using Vertical Mouse: My Take" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+         
+        <h4 class="font-weight-bold spanborder text-capitalize" id="css"><span>CSS</span></h4>
+            
+        
+        
+        
+          
+         
+            <div class="mb-5 d-flex justify-content-between main-loop-card">
+<div class="pr-3">
+	<h2 class="mb-1 h4 font-weight-bold">
+	<a class="text-dark" href="/blog/jekyll-code-syntax-indentation/">Jekyll Code Syntax Indentation</a>
+	</h2>
+	<p class="excerpt">
+	   I’ve been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it’s actually pretty simple. All that’s needed to fix this...
+	</p>
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+		
+		<a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#css">CSS</a><span class="sep">, </span>
+		
+		</span>
+	</small>
+	<small class="text-muted">
+		Oct 27, 2019
+	</small>
+</div>
+
+	<div class="col-md-3 pr-0 text-right">
+	<a href="/blog/jekyll-code-syntax-indentation/">
+	<img class="w-100" src="/blog/assets/images/Screen%20Shot%202019-10-27%20at%209.16.22%20PM.png" alt="Jekyll Code Syntax Indentation" />
+	</a>
+	</div>
+
+</div>
+          
+        
+        
+        
+        
+
+        
+
+        </div>
+        
+            <div class="col-md-4">
+        <div class="sticky-top sticky-top-offset">
+    <h4 class="font-weight-bold spanborder"><span>Featured</span></h4>  
+    <ol class="list-featured">				
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/notification-and-observer-the-basics/" class="text-dark">Notification And Observer: The Basics</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/my-first-post-on-reddit/" class="text-dark">My First Post On Reddit</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#review">Review</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#blog">Blog</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/how-static-is-used/" class="text-dark">How Static Is Used</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/mapkit-theme-overlay-swift-5/" class="text-dark">MapKit Theme Style Overlay Swift 5</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#mapkit">MapKit</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/where-better-to-understand-semaphores-swift/" class="text-dark">Where Better To Understand Semaphores (Swift)</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/sean-allen-finally-learns-swiftui/" class="text-dark">Sean Allen Finally Learns SwiftUI</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#promotion">Promotion</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/a-better-emptyview-in-an-empty-collectionview/" class="text-dark">A Better EmptyView In An Empty CollectionView</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#improvise">Improvise</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/" class="text-dark">Using Cloud Functions To Create Remote Notifications With Firebase In Swift 5 and Javascript</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#swift">Swift</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#notification">Notification</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/use-jekyll-manager-instead-of-jekyll-admin/" class="text-dark">Use Jekyll Manager Instead of Jekyll Admin</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#manager">Manager</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/eureka-locationrow/" class="text-dark">Eureka LocationRow</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/issues-with-my-first-app-store-connect-submission/" class="text-dark">Issues With My First App Store Connect Submission</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#publish">Publish</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+                        
+            <li class="mb-4">
+            <span>
+                <h6 class="font-weight-bold">
+                    <a href="/blog/a-free-blog-using-mundana-jekyll-theme-in-github-pages/" class="text-dark">A Free Blog Using Mundana Jekyll Theme In Github Pages</a>
+                </h6>
+                <span class="d-block text-muted">
+                    In <span class="catlist">
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#jekyll">Jekyll</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#tutorial">Tutorial</a><span class="sep">, </span>
+                    
+                    <a class="text-capitalize text-muted smoothscroll" href="/blog/categories.html#admin">Admin</a><span class="sep">, </span>
+                    
+                    </span>
+                </span>
+            </span>
+            </li>                
+           
+    </ol>
+</div>     
+    </div>
+        
+    </div>
+</div>
+:ET

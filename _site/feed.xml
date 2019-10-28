@@ -1,4 +1,144 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-28T00:45:06+08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">iOS Junkie</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Jekyll Code Syntax Indentation</title><link href="http://iosjunkie.com/blog/jekyll-code-syntax-indentation/" rel="alternate" type="text/html" title="Jekyll Code Syntax Indentation" /><published>2019-10-27T00:00:00+08:00</published><updated>2019-10-27T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/jekyll-code-syntax-indentation</id><content type="html" xml:base="http://iosjunkie.com/blog/jekyll-code-syntax-indentation/">&lt;p&gt;I’ve been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it’s actually pretty simple. All that’s needed to fix this is a 3 line CSS code:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-28T11:54:38+00:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">Blog</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Using Netlify As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Netlify As A CMS For Your Jekyll Blog" /><published>2019-10-27T16:00:00+00:00</published><updated>2019-10-27T16:00:00+00:00</updated><id>http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;I was actually intimidated by the idea of trying out &lt;code class=&quot;highlighter-rouge&quot;&gt;Netlify&lt;/code&gt; for my blog but not so much anymore. It turned out pretty easy to do.&lt;/p&gt;
+
+&lt;p&gt;First thing’s first, &lt;code class=&quot;highlighter-rouge&quot;&gt;Netlify&lt;/code&gt; is some kind of web hosting. Although you can opt to just run a local server from your computer by just running &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let’s create our &lt;code class=&quot;highlighter-rouge&quot;&gt;Netlify&lt;/code&gt; account and follow this guide by Thomas Bradley:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/eEjdJY_Ak8U&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn’t find the rest to be that useful, so I’ve written down below the next steps you should take.&lt;/p&gt;
+
+&lt;p&gt;To create the &lt;code class=&quot;highlighter-rouge&quot;&gt;Netlify Dashboard&lt;/code&gt;, you need to create a folder. This folder is a subdirectory of your &lt;code class=&quot;highlighter-rouge&quot;&gt;blog&lt;/code&gt;. So, if you set your baseurl from your &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;\blog&lt;/code&gt;, then this folder, let’s say, &lt;code class=&quot;highlighter-rouge&quot;&gt;admin&lt;/code&gt; can be accessed through &lt;code class=&quot;highlighter-rouge&quot;&gt;\blog\admin&lt;/code&gt;. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;config.yml&lt;/code&gt;. This is another config.yml different from the root’s _config.yml.&lt;/p&gt;
+
+&lt;p&gt;I copied the contents of &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; from &lt;a href=&quot;https://www.netlifycms.org/docs/add-to-your-site/#app-file-structure&quot; title=&quot;Add to Your Site&quot;&gt;Add to Your Site&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1.0&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Content Manager&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Include the script that builds the page and powers Netlify CMS --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now comes the tricky part, which is setting up the look of our admin dashboard in &lt;code class=&quot;highlighter-rouge&quot;&gt;config.yml&lt;/code&gt;. If you reverse engineer it, it’s easier than reading through html.&lt;/p&gt;
+
+&lt;p&gt;There are ways to login to your dashboard, but I chose to login with &lt;code class=&quot;highlighter-rouge&quot;&gt;Github&lt;/code&gt;. To do that, here’s what you’ll have to put in &lt;code class=&quot;highlighter-rouge&quot;&gt;admin/config.yml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;backend:
+  name: github
+  branch: gh-pages # Branch to update (optional; defaults to master)
+  repo: iosjunkie/blog # Repository of your blog in Github
+
+publish_mode: editorial_workflow
+media_folder: &quot;assets/images&quot;
+
+collections:
+  - name: &quot;posts&quot;
+    label: &quot;Posts&quot;
+    folder: &quot;_posts&quot;
+    create: true
+    slug: &quot;---&quot;
+    fields:
+      - { label: &quot;Layout&quot;, name: &quot;layout&quot;, widget: &quot;hidden&quot;, default: &quot;post&quot; }
+      - { label: &quot;Title&quot;, name: &quot;title&quot;, widget: &quot;string&quot; }
+      - label: &quot;Featured Image&quot;
+        name: &quot;image&quot;
+        widget: &quot;image&quot;
+        required: false
+        media_library:
+          config:
+            multiple: false
+      - { label: &quot;Tags&quot;, name: &quot;tags&quot;, widget: &quot;list&quot;, required: false }
+      - { label: &quot;Categories&quot;, name: &quot;categories&quot;, widget: &quot;string&quot;, required: true }
+      - { label: &quot;Draft&quot;, name: &quot;draft&quot;, widget: &quot;boolean&quot;, default: true }
+      - label: &quot;Body&quot;
+        name: &quot;body&quot;
+        widget: &quot;markdown&quot;
+  - name: &quot;website-settings&quot;
+    label: &quot;Settings&quot;
+    files:
+      - label: &quot;Settings&quot;
+        name: &quot;site&quot;
+        file: &quot;_config.yml&quot;
+        fields:
+          - label: &quot;Name&quot;
+            name: &quot;name&quot;
+            widget: &quot;string&quot;
+          - label: &quot;Description&quot;
+            name: &quot;description&quot;
+            widget: &quot;markdown&quot; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I just came up with this from the tutorials I watched. The images below are the results of what we just typed in our &lt;code class=&quot;highlighter-rouge&quot;&gt;config.yml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is what it looks like when I go to &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:4000/blog/admin/#/collections/website-settings&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen Shot 2019-10-28 at 11.11.40 AM.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/blog/assets/images/Screen Shot 2019-10-28 at 11.11.59 AM.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+And this is what it looks like in &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:4000/blog/admin/#/collections/posts:&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen Shot 2019-10-28 at 11.12.13 AM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once done, commit and push it to your Github. Go back to &lt;code class=&quot;highlighter-rouge&quot;&gt;https://app.netlify.com/sites/your-blog/deploys&lt;/code&gt; and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru &lt;code class=&quot;highlighter-rouge&quot;&gt;https://your-blog.netlify.com/admin&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;take&quot;&gt;Take&lt;/h2&gt;
+
+&lt;p&gt;I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I’m typing this article, I often get a typo of &lt;code class=&quot;highlighter-rouge&quot;&gt;Netflix&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Would I use it?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;No!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the &lt;code class=&quot;highlighter-rouge&quot;&gt;/assets/images/&lt;/code&gt; folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true.&lt;/p&gt;
+
+&lt;p&gt;That’s my only problem with it, but if that’s not a problem for you, then give it a go.&lt;/p&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="jekyll" /><summary type="html">I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%2011.12.35%20AM.png" /></entry><entry><title type="html">Using Forestry As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Forestry As A CMS For Your Jekyll Blog" /><published>2019-10-27T16:00:00+00:00</published><updated>2019-10-27T16:00:00+00:00</updated><id>http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with &lt;code class=&quot;highlighter-rouge&quot;&gt;/.forestry/settings.yml&lt;/code&gt;. It keeps saying &lt;code class=&quot;highlighter-rouge&quot;&gt;Invalid yaml syntax&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen Shot 2019-10-28 at 2.36.31 PM.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+However, everything seems to be working just fine with Forestry.&lt;/p&gt;
+
+&lt;p&gt;Things I like about it:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;All the posts can be sorted by either &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;date&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;I can insert and upload pictures on the markdown text editor with ease. It allows me to choose a photo from the assets folder that I’ve configured. It also allows me to just input a link instead of choosing from the assets folder.&lt;/li&gt;
+  &lt;li&gt;I can also insert and upload an image for my &lt;code class=&quot;highlighter-rouge&quot;&gt;Featured Image&lt;/code&gt; front matter.&lt;/li&gt;
+  &lt;li&gt;The markdown editor looks more professional that &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;I don’t have to do &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt; anymore.&lt;/li&gt;
+  &lt;li&gt;I don’t have to push every change or addition I make to Github anymore. Once I click &lt;code class=&quot;highlighter-rouge&quot;&gt;save&lt;/code&gt; on forestry, it instantly writes it on my Github repository.&lt;/li&gt;
+  &lt;li&gt;Once you set your admin path, in settings, to &lt;code class=&quot;highlighter-rouge&quot;&gt;\admin\&lt;/code&gt;, it will deploy an admin code to your repository which allows you to access forestry from &lt;code class=&quot;highlighter-rouge&quot;&gt;http://your-blog.github.io/admin/.&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Grammarly works on the markdown text editor, unlike in &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Things I don’t like about it:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Whenever you edit an old post, it goes back up to the top of the recent list.&lt;/li&gt;
+  &lt;li&gt;Whenever I select an image for my Featured Image in the front matter, it leaves whitespaces on the filename. Rendering &lt;code class=&quot;highlighter-rouge&quot;&gt;background-image: url(/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png);&lt;/code&gt; invalid. A single quote is then required to fix this.&lt;/li&gt;
+  &lt;li&gt;You need to switch to &lt;code class=&quot;highlighter-rouge&quot;&gt;Raw Editor&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;WYSIWYG&lt;/code&gt; to embed a YouTube video to prevent the text editor from detecting a link.&lt;/li&gt;
+  &lt;li&gt;It doesn’t automatically add new posts to your sitemap.xml.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;tips&quot;&gt;Tips:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Every time I write a block of code or insert an image in the &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown&lt;/code&gt;, I have a hard time going to the next line. Merely pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;Enter&lt;/code&gt; doesn’t do the trick. To go to the next line, you must &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;Enter&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;You don’t have to create a front matter for the body of your article. It took me a while to realize that there’s a markdown editor by default. I tried it first on my iPad, that’s why it took me a long time to notice the markdown editor, which is more conspicuous when using a web browser on my pc. It’s a gigantic view on the right side of my web browser when using the pc, but it looks like this on the iPad.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/F81E8C91-8257-430E-A75A-562F33452CBF.jpeg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+You need to click the icon on the top right corner to switch panels in order for you to see the text editor, which is shown below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/7CFB1A72-88DA-4872-A596-3FD5804C40A4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So that’s how it looks on the iPad. I regret wasting my time on &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-manager&lt;/code&gt; for quite some time now for not deeply exploring forestry.&lt;/p&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="forestry.io" /><category term="forestry" /><category term="jekyll" /><summary type="html">This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with /.forestry/settings.yml. It keeps saying Invalid yaml syntax.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%202.33.01%20PM.png" /></entry><entry><title type="html">Jekyll Code Syntax Indentation</title><link href="http://iosjunkie.com/blog/jekyll-code-syntax-indentation/" rel="alternate" type="text/html" title="Jekyll Code Syntax Indentation" /><published>2019-10-27T00:00:00+00:00</published><updated>2019-10-27T00:00:00+00:00</updated><id>http://iosjunkie.com/blog/jekyll-code-syntax-indentation</id><content type="html" xml:base="http://iosjunkie.com/blog/jekyll-code-syntax-indentation/">&lt;p&gt;I’ve been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it’s actually pretty simple. All that’s needed to fix this is a 3 line CSS code:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-moz-tab-size: 4;
 -o-tab-size: 4;
@@ -228,7 +368,7 @@ pre.line-numbers &amp;gt; code {
 		}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is only enough to darken the background, but I can’t get the syntax to be colorful, especially when I want my swift to look more like it’s on an IDE. However for this article, this is enough of a solution.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="jekyll" /><category term="code" /><category term="syntax" /><category term="indentation" /><category term="highlight" /><category term="block" /><category term="prism" /><category term="pygment" /><category term="markdown" /><category term="css" /><summary type="html">I’ve been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it’s actually pretty simple. All that’s needed to fix this is a 3 line CSS code:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-27%20at%209.16.22%20PM.png" /></entry><entry><title type="html">Taking A Look At MVVM</title><link href="http://iosjunkie.com/blog/mvvm/" rel="alternate" type="text/html" title="Taking A Look At MVVM" /><published>2019-10-26T00:00:00+08:00</published><updated>2019-10-26T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/mvvm</id><content type="html" xml:base="http://iosjunkie.com/blog/mvvm/">&lt;p&gt;There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: &lt;code class=&quot;highlighter-rouge&quot;&gt;model&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;view model&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;controller&lt;/code&gt;. There’s an extra in Brian Voong’s example.&lt;/p&gt;
+&lt;p&gt;This is only enough to darken the background, but I can’t get the syntax to be colorful, especially when I want my swift to look more like it’s on an IDE. However for this article, this is enough of a solution.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="jekyll" /><category term="code" /><category term="syntax" /><category term="indentation" /><category term="highlight" /><category term="block" /><category term="prism" /><category term="pygment" /><category term="markdown" /><category term="css" /><summary type="html">I’ve been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it’s actually pretty simple. All that’s needed to fix this is a 3 line CSS code:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-27%20at%209.16.22%20PM.png" /></entry><entry><title type="html">Taking A Look At MVVM</title><link href="http://iosjunkie.com/blog/mvvm/" rel="alternate" type="text/html" title="Taking A Look At MVVM" /><published>2019-10-26T00:00:00+00:00</published><updated>2019-10-26T00:00:00+00:00</updated><id>http://iosjunkie.com/blog/mvvm</id><content type="html" xml:base="http://iosjunkie.com/blog/mvvm/">&lt;p&gt;There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: &lt;code class=&quot;highlighter-rouge&quot;&gt;model&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;view model&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;controller&lt;/code&gt;. There’s an extra in Brian Voong’s example.&lt;/p&gt;
 
 &lt;h3 id=&quot;first-from-brian-voong&quot;&gt;First from Brian Voong&lt;/h3&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Course.swift
@@ -335,7 +475,7 @@ viewDidLoad() {
 
 &lt;p&gt;Now it’s starting to make sense. These static functions inside this ViewModel are called &lt;code class=&quot;highlighter-rouge&quot;&gt;Translation Codes&lt;/code&gt;. Blame &lt;code class=&quot;highlighter-rouge&quot;&gt;iOS Quickstart&lt;/code&gt; if I’m wrong about that. Without the MVVM architecture, we’ll be putting these translation codes inside our view controller and it gets messier there. The &lt;code class=&quot;highlighter-rouge&quot;&gt;VM&lt;/code&gt; of MVVM is just another way to create another file or folder to store the mess elsewhere if you consider these translation codes a mess, because I do.&lt;/p&gt;
 
-&lt;p&gt;Remember I said &lt;code class=&quot;highlighter-rouge&quot;&gt;MVVMC&lt;/code&gt;? Well, I thought the controller has its own abbreviation like in &lt;code class=&quot;highlighter-rouge&quot;&gt;MVC&lt;/code&gt;. Turns out the V in M&lt;code class=&quot;highlighter-rouge&quot;&gt;V&lt;/code&gt;VM stands for View Controller. Invisible &lt;code class=&quot;highlighter-rouge&quot;&gt;C&lt;/code&gt; right there. I thought the view there was like table cell or something.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="model" /><category term="view" /><category term="controller" /><category term="viewmodel" /><category term="brian" /><category term="voong" /><category term="rebeloper" /><summary type="html">There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: model, view model, and controller. There’s an extra in Brian Voong’s example.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.iosapptemplates.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-17-at-8.25.44-PM.png" /></entry><entry><title type="html">Sharing UserDefault Between Apps</title><link href="http://iosjunkie.com/blog/sharing-userdefault-between-apps/" rel="alternate" type="text/html" title="Sharing UserDefault Between Apps" /><published>2019-10-22T00:00:00+08:00</published><updated>2019-10-22T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/sharing-userdefault-between-apps</id><content type="html" xml:base="http://iosjunkie.com/blog/sharing-userdefault-between-apps/">&lt;p&gt;I just discovered a way for two apps to communicate with each other with the use of UserDefaults. I thought that UserDefault is only available locally in the app. Sandboxed in its own environment.&lt;/p&gt;
+&lt;p&gt;Remember I said &lt;code class=&quot;highlighter-rouge&quot;&gt;MVVMC&lt;/code&gt;? Well, I thought the controller has its own abbreviation like in &lt;code class=&quot;highlighter-rouge&quot;&gt;MVC&lt;/code&gt;. Turns out the V in M&lt;code class=&quot;highlighter-rouge&quot;&gt;V&lt;/code&gt;VM stands for View Controller. Invisible &lt;code class=&quot;highlighter-rouge&quot;&gt;C&lt;/code&gt; right there. I thought the view there was like table cell or something.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="model" /><category term="view" /><category term="controller" /><category term="viewmodel" /><category term="brian" /><category term="voong" /><category term="rebeloper" /><summary type="html">There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: model, view model, and controller. There’s an extra in Brian Voong’s example.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.iosapptemplates.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-17-at-8.25.44-PM.png" /></entry><entry><title type="html">Sharing UserDefault Between Apps</title><link href="http://iosjunkie.com/blog/sharing-userdefault-between-apps/" rel="alternate" type="text/html" title="Sharing UserDefault Between Apps" /><published>2019-10-22T00:00:00+00:00</published><updated>2019-10-22T00:00:00+00:00</updated><id>http://iosjunkie.com/blog/sharing-userdefault-between-apps</id><content type="html" xml:base="http://iosjunkie.com/blog/sharing-userdefault-between-apps/">&lt;p&gt;I just discovered a way for two apps to communicate with each other with the use of UserDefaults. I thought that UserDefault is only available locally in the app. Sandboxed in its own environment.&lt;/p&gt;
 
 &lt;p&gt;The two apps should add &lt;code class=&quot;highlighter-rouge&quot;&gt;Groups&lt;/code&gt; capability each.&lt;/p&gt;
 
@@ -351,7 +491,7 @@ viewDidLoad() {
 
 // reading something from key
 let username = groupDefaults?.string(forKey: &quot;something&quot;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jules</name></author><category term="" /><category term="userdefaults" /><category term="swift" /><category term="xcode" /><category term="apps" /><category term="ios" /><summary type="html">I just discovered a way for two apps to communicate with each other with the use of UserDefaults. I thought that UserDefault is only available locally in the app. Sandboxed in its own environment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://miro.medium.com/max/6000/1*7Zy2OC1nxK-BqmDbGxtPDg.png" /></entry><entry><title type="html">Fake Airpods i500 TWS Review</title><link href="http://iosjunkie.com/blog/fake-airpods-i500-tws-review/" rel="alternate" type="text/html" title="Fake Airpods i500 TWS Review" /><published>2019-10-21T00:00:00+08:00</published><updated>2019-10-21T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/fake-airpods-i500-tws-review</id><content type="html" xml:base="http://iosjunkie.com/blog/fake-airpods-i500-tws-review/">&lt;p&gt;I bought a pair of Apple Fake Airpods on &lt;a href=&quot;https://shopee.ph/product/164746332/2622313935&quot;&gt;Shopee&lt;/a&gt; for Php 1060 including shipping. Yes, that’s right! I bought it cheap. It’s around $20 and it’s worthy, I might add.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jules</name></author><category term="" /><category term="userdefaults" /><category term="swift" /><category term="xcode" /><category term="apps" /><category term="ios" /><summary type="html">I just discovered a way for two apps to communicate with each other with the use of UserDefaults. I thought that UserDefault is only available locally in the app. Sandboxed in its own environment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://miro.medium.com/max/6000/1*7Zy2OC1nxK-BqmDbGxtPDg.png" /></entry><entry><title type="html">Fake Airpods i500 TWS Review</title><link href="http://iosjunkie.com/blog/fake-airpods-i500-tws-review/" rel="alternate" type="text/html" title="Fake Airpods i500 TWS Review" /><published>2019-10-21T00:00:00+00:00</published><updated>2019-10-21T00:00:00+00:00</updated><id>http://iosjunkie.com/blog/fake-airpods-i500-tws-review</id><content type="html" xml:base="http://iosjunkie.com/blog/fake-airpods-i500-tws-review/">&lt;p&gt;I bought a pair of Apple Fake Airpods on &lt;a href=&quot;https://shopee.ph/product/164746332/2622313935&quot;&gt;Shopee&lt;/a&gt; for Php 1060 including shipping. Yes, that’s right! I bought it cheap. It’s around $20 and it’s worthy, I might add.&lt;/p&gt;
 
 &lt;p&gt;I have looked into this for quite some time. I never knew I wanted them so much until I found myself trying to look for a fake one. The original one is just too much for its price. I’ve read a lot of bad reviews on lower models of TWS until I caught myself reading the reviews of an i500 TWS. There weren’t any bad reviews, but I was still skeptic because many TWS do have a defect or two. Some have only one side working, some only work for a week, and some are louder only on one side.&lt;/p&gt;
 
@@ -365,7 +505,17 @@ let username = groupDefaults?.string(forKey: &quot;something&quot;)
 
 &lt;p&gt;I have tried it both on my iPad and Vivo V9. Recording audio with airpods on my iPad gave me some shit quality, while in my android phone, it is actually crisp. However, the volume is lowered. I might have just spoken too softly on my airpods while I was recording my voice on the Vivo V9.&lt;/p&gt;
 
-&lt;p&gt;Overall, I love the fake airpods. I use it all the time. The bluetooth connectivity is as convenient as when using bluetooth headset’s, connects instantly.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="airpods" /><category term="apple" /><category term="i500" /><category term="tws" /><summary type="html">I bought a pair of Apple Fake Airpods on Shopee for Php 1060 including shipping. Yes, that’s right! I bought it cheap. It’s around $20 and it’s worthy, I might add.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/41qIPi7taiL._SX385_.jpg" /></entry><entry><title type="html">Context Menu in SwiftUI</title><link href="http://iosjunkie.com/blog/context-menu-in-swiftui/" rel="alternate" type="text/html" title="Context Menu in SwiftUI" /><published>2019-10-15T00:00:00+08:00</published><updated>2019-10-15T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/context-menu-in-swiftui</id><content type="html" xml:base="http://iosjunkie.com/blog/context-menu-in-swiftui/">&lt;p&gt;This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns out they work within the app too.&lt;/p&gt;
+&lt;p&gt;Overall, I love the fake airpods. I use it all the time. The bluetooth connectivity is as convenient as when using bluetooth headset’s, connects instantly.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="airpods" /><category term="apple" /><category term="i500" /><category term="tws" /><summary type="html">I bought a pair of Apple Fake Airpods on Shopee for Php 1060 including shipping. Yes, that’s right! I bought it cheap. It’s around $20 and it’s worthy, I might add.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/41qIPi7taiL._SX385_.jpg" /></entry><entry><title type="html">Using Vertical Mouse: My Take</title><link href="http://iosjunkie.com/blog/using-vertical-mouse-my-take/" rel="alternate" type="text/html" title="Using Vertical Mouse: My Take" /><published>2019-10-15T00:00:00+00:00</published><updated>2019-10-15T00:00:00+00:00</updated><id>http://iosjunkie.com/blog/using-vertical-mouse-my-take</id><content type="html" xml:base="http://iosjunkie.com/blog/using-vertical-mouse-my-take/">&lt;p&gt;I bought the &lt;code class=&quot;highlighter-rouge&quot;&gt;Wireless Vertical Mouse Game 800/1600/2400DPI Mice 2-Button&lt;/code&gt; a couple of weeks ago and it just a arrived a week ago. I bought mine in &lt;a href=&quot;https://shopee.ph/product/76803954/1920543944&quot;&gt;Shopee&lt;/a&gt;. It’s a marketplace here in the Philippines. I bought it for only Php 445 including freight. That’s like almost USD 10. This is brandless and it charges like how you charge with your phone. I guess its battery lasts for a week, or maybe it just turned off. It says in Shopee that it should last more than a month. So, I just recharged mine again today.&lt;/p&gt;
+
+&lt;p&gt;Does it fix the arm strain problem?&lt;/p&gt;
+
+&lt;p&gt;I think it does. As a programmer, I thought I was having carpal tunnel syndrome. This happened to me during 2016 after graduating from college. My hands would become painful and even more painful each day. Until I stopped programming. It took me many months of pregabalin/gabapentin and Vitamin B complex to heal from it. It wasn’t fully gone but I was more relieved. I went to med school after that, and I haven’t encountered the pain again. We don’t use keyboards and mouse that much in med school. Then after 2 years, I decided it’s not for me at all.&lt;/p&gt;
+
+&lt;p&gt;The past few months I’ve been trying to get back to programming. The pain starts coming back, so I minimized my computer usage to keep the pain away the day after. I realized that putting my keyboard closer to my lap did the trick. It removed most of the pain. I got more into coding and there is pain when I’m holding the mouse for so long. I guess I shouldn’t have rested my palms on top of the mouse if I wasn’t really using it. But that just doesn’t solve the problem because I will be programming for long hours.&lt;/p&gt;
+
+&lt;p&gt;After trying the vertical mouse, things starts to change pretty quickly. I no longer feel the strain in my hands and arms. It reduced the pain to like 90%. The other 10% is when I use the vertical mouse for much longer hours but it’s not all that painful and it subsides easily. All these years I thought I had carpal tunnel syndrome. I was misdiagnosed by a Rheumatologist here in Zamboanga. You know why? I told him I have this pain and it includes my pinky and my finger joints as well. He refuses to diagnose it with anything else but &lt;code class=&quot;highlighter-rouge&quot;&gt;CTS&lt;/code&gt;. I know it wasn’t CTS because my pinky is included which shouldn’t be the case if it really was CTS.&lt;/p&gt;
+
+&lt;p&gt;As for this vertical mouse model, well, it is brandless and you get what you pay for. I’m not sure why it hangs a bit when I load up a lot of windows or when I’m running out of RAM. It’s not that much of a problem though. Most of the time it doesn’t hang. But when it does, the left click button kind of acts like a right click and then it feels laggy and not to mention, the scrolling too. For the most part, I’m satisfied with my mouse. It is a wireless mouse, but like most wireless mouse, you need that tiny usb thingy plugged in your computer that allows it to be wireless. Not bluetooth.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="vertical" /><category term="mouse" /><category term="review" /><category term="carpal" /><category term="tunnel" /><category term="syndrome" /><summary type="html">I bought the Wireless Vertical Mouse Game 800/1600/2400DPI Mice 2-Button a couple of weeks ago and it just a arrived a week ago. I bought mine in Shopee. It’s a marketplace here in the Philippines. I bought it for only Php 445 including freight. That’s like almost USD 10. This is brandless and it charges like how you charge with your phone. I guess its battery lasts for a week, or maybe it just turned off. It says in Shopee that it should last more than a month. So, I just recharged mine again today.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/919bb5baa29ab582de3bbd77e65b319c.jpg" /></entry><entry><title type="html">Context Menu in SwiftUI</title><link href="http://iosjunkie.com/blog/context-menu-in-swiftui/" rel="alternate" type="text/html" title="Context Menu in SwiftUI" /><published>2019-10-15T00:00:00+00:00</published><updated>2019-10-15T00:00:00+00:00</updated><id>http://iosjunkie.com/blog/context-menu-in-swiftui</id><content type="html" xml:base="http://iosjunkie.com/blog/context-menu-in-swiftui/">&lt;p&gt;This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns out they work within the app too.&lt;/p&gt;
 
 &lt;p&gt;It simply works like alertsheet. Like alertsheet, it is a collection of buttons but now with images attached to them too. The action is also encapsulated within the button. The best part is you no longer have to use a nasty looking closure to make that happen.&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import SwiftUI
@@ -405,7 +555,7 @@ struct ContentView: View {
 
 &lt;p&gt;Example was taken from &lt;code class=&quot;highlighter-rouge&quot;&gt;KAVSOFT&lt;/code&gt;:&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/NgXHemwSFIQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="" /><category term="context" /><category term="menu" /><category term="swiftui" /><summary type="html">This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns out they work within the app too.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-15%20at%209.16.42%20AM.png" /></entry><entry><title type="html">Weak Self vs Unowned Self</title><link href="http://iosjunkie.com/blog/weak-self-vs-unowned-self/" rel="alternate" type="text/html" title="Weak Self vs Unowned Self" /><published>2019-10-15T00:00:00+08:00</published><updated>2019-10-15T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/weak-self-vs-unowned-self</id><content type="html" xml:base="http://iosjunkie.com/blog/weak-self-vs-unowned-self/">&lt;p&gt;Most articles regarding this are overwhelming and I’m about to make it easier. This is based on Brian Voong’s tutorial. I urge you to watch the video too because, essentially, that is what I’m basing this article on.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/NgXHemwSFIQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="" /><category term="context" /><category term="menu" /><category term="swiftui" /><summary type="html">This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns out they work within the app too.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-15%20at%209.16.42%20AM.png" /></entry><entry><title type="html">Weak Self vs Unowned Self</title><link href="http://iosjunkie.com/blog/weak-self-vs-unowned-self/" rel="alternate" type="text/html" title="Weak Self vs Unowned Self" /><published>2019-10-15T00:00:00+00:00</published><updated>2019-10-15T00:00:00+00:00</updated><id>http://iosjunkie.com/blog/weak-self-vs-unowned-self</id><content type="html" xml:base="http://iosjunkie.com/blog/weak-self-vs-unowned-self/">&lt;p&gt;Most articles regarding this are overwhelming and I’m about to make it easier. This is based on Brian Voong’s tutorial. I urge you to watch the video too because, essentially, that is what I’m basing this article on.&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/q0-DIJszYRo&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
@@ -463,17 +613,7 @@ struct ContentView: View {
 
 &lt;p&gt;After unloading the 1stView, our 2ndView is also unloaded ang gives us the printed message from its &lt;code class=&quot;highlighter-rouge&quot;&gt;deinit&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Here’s a &lt;a href=&quot;https://www.avanderlee.com/swift/weak-self/&quot;&gt;post by Antoine v.d. SwiftLee 🚀&lt;/a&gt; which explains what ARC does behind the curtains.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="tutorial" /><category term="unowned" /><category term="weak" /><category term="self" /><category term="memory" /><category term="leak" /><category term="deinit" /><summary type="html">Most articles regarding this are overwhelming and I’m about to make it easier. This is based on Brian Voong’s tutorial. I urge you to watch the video too because, essentially, that is what I’m basing this article on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.ytimg.com/vi/q0-DIJszYRo/maxresdefault.jpg" /></entry><entry><title type="html">Using Vertical Mouse: My Take</title><link href="http://iosjunkie.com/blog/using-vertical-mouse-my-take/" rel="alternate" type="text/html" title="Using Vertical Mouse: My Take" /><published>2019-10-15T00:00:00+08:00</published><updated>2019-10-15T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/using-vertical-mouse-my-take</id><content type="html" xml:base="http://iosjunkie.com/blog/using-vertical-mouse-my-take/">&lt;p&gt;I bought the &lt;code class=&quot;highlighter-rouge&quot;&gt;Wireless Vertical Mouse Game 800/1600/2400DPI Mice 2-Button&lt;/code&gt; a couple of weeks ago and it just a arrived a week ago. I bought mine in &lt;a href=&quot;https://shopee.ph/product/76803954/1920543944&quot;&gt;Shopee&lt;/a&gt;. It’s a marketplace here in the Philippines. I bought it for only Php 445 including freight. That’s like almost USD 10. This is brandless and it charges like how you charge with your phone. I guess its battery lasts for a week, or maybe it just turned off. It says in Shopee that it should last more than a month. So, I just recharged mine again today.&lt;/p&gt;
-
-&lt;p&gt;Does it fix the arm strain problem?&lt;/p&gt;
-
-&lt;p&gt;I think it does. As a programmer, I thought I was having carpal tunnel syndrome. This happened to me during 2016 after graduating from college. My hands would become painful and even more painful each day. Until I stopped programming. It took me many months of pregabalin/gabapentin and Vitamin B complex to heal from it. It wasn’t fully gone but I was more relieved. I went to med school after that, and I haven’t encountered the pain again. We don’t use keyboards and mouse that much in med school. Then after 2 years, I decided it’s not for me at all.&lt;/p&gt;
-
-&lt;p&gt;The past few months I’ve been trying to get back to programming. The pain starts coming back, so I minimized my computer usage to keep the pain away the day after. I realized that putting my keyboard closer to my lap did the trick. It removed most of the pain. I got more into coding and there is pain when I’m holding the mouse for so long. I guess I shouldn’t have rested my palms on top of the mouse if I wasn’t really using it. But that just doesn’t solve the problem because I will be programming for long hours.&lt;/p&gt;
-
-&lt;p&gt;After trying the vertical mouse, things starts to change pretty quickly. I no longer feel the strain in my hands and arms. It reduced the pain to like 90%. The other 10% is when I use the vertical mouse for much longer hours but it’s not all that painful and it subsides easily. All these years I thought I had carpal tunnel syndrome. I was misdiagnosed by a Rheumatologist here in Zamboanga. You know why? I told him I have this pain and it includes my pinky and my finger joints as well. He refuses to diagnose it with anything else but &lt;code class=&quot;highlighter-rouge&quot;&gt;CTS&lt;/code&gt;. I know it wasn’t CTS because my pinky is included which shouldn’t be the case if it really was CTS.&lt;/p&gt;
-
-&lt;p&gt;As for this vertical mouse model, well, it is brandless and you get what you pay for. I’m not sure why it hangs a bit when I load up a lot of windows or when I’m running out of RAM. It’s not that much of a problem though. Most of the time it doesn’t hang. But when it does, the left click button kind of acts like a right click and then it feels laggy and not to mention, the scrolling too. For the most part, I’m satisfied with my mouse. It is a wireless mouse, but like most wireless mouse, you need that tiny usb thingy plugged in your computer that allows it to be wireless. Not bluetooth.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="vertical" /><category term="mouse" /><category term="review" /><category term="carpal" /><category term="tunnel" /><category term="syndrome" /><summary type="html">I bought the Wireless Vertical Mouse Game 800/1600/2400DPI Mice 2-Button a couple of weeks ago and it just a arrived a week ago. I bought mine in Shopee. It’s a marketplace here in the Philippines. I bought it for only Php 445 including freight. That’s like almost USD 10. This is brandless and it charges like how you charge with your phone. I guess its battery lasts for a week, or maybe it just turned off. It says in Shopee that it should last more than a month. So, I just recharged mine again today.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/919bb5baa29ab582de3bbd77e65b319c.jpg" /></entry><entry><title type="html">Let’s Start Using Swift Package Manager</title><link href="http://iosjunkie.com/blog/lets-start-using-swift-package-manager/" rel="alternate" type="text/html" title="Let's Start Using Swift Package Manager" /><published>2019-10-14T00:00:00+08:00</published><updated>2019-10-14T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/lets-start-using-swift-package-manager</id><content type="html" xml:base="http://iosjunkie.com/blog/lets-start-using-swift-package-manager/">&lt;p&gt;The first time I encountered the word &lt;code class=&quot;highlighter-rouge&quot;&gt;Swift Package Manager&lt;/code&gt; was just a few days ago while searching for alternative ways to install the &lt;code class=&quot;highlighter-rouge&quot;&gt;Firebase&lt;/code&gt; framework in my project. I thought &lt;code class=&quot;highlighter-rouge&quot;&gt;Carthage&lt;/code&gt; was a holy grail. Boy, am I wrong now that I’ve seen how to install frameworks with Swift Package Manager. Unfortunately, Firebase doesn’t have a swift package yet. Not officially, anyway. They have started trying to make the support since months ago, but no prorgress has been done months after. Crazy! I know.&lt;/p&gt;
+&lt;p&gt;Here’s a &lt;a href=&quot;https://www.avanderlee.com/swift/weak-self/&quot;&gt;post by Antoine v.d. SwiftLee 🚀&lt;/a&gt; which explains what ARC does behind the curtains.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="tutorial" /><category term="unowned" /><category term="weak" /><category term="self" /><category term="memory" /><category term="leak" /><category term="deinit" /><summary type="html">Most articles regarding this are overwhelming and I’m about to make it easier. This is based on Brian Voong’s tutorial. I urge you to watch the video too because, essentially, that is what I’m basing this article on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.ytimg.com/vi/q0-DIJszYRo/maxresdefault.jpg" /></entry><entry><title type="html">Let’s Start Using Swift Package Manager</title><link href="http://iosjunkie.com/blog/lets-start-using-swift-package-manager/" rel="alternate" type="text/html" title="Let's Start Using Swift Package Manager" /><published>2019-10-14T00:00:00+00:00</published><updated>2019-10-14T00:00:00+00:00</updated><id>http://iosjunkie.com/blog/lets-start-using-swift-package-manager</id><content type="html" xml:base="http://iosjunkie.com/blog/lets-start-using-swift-package-manager/">&lt;p&gt;The first time I encountered the word &lt;code class=&quot;highlighter-rouge&quot;&gt;Swift Package Manager&lt;/code&gt; was just a few days ago while searching for alternative ways to install the &lt;code class=&quot;highlighter-rouge&quot;&gt;Firebase&lt;/code&gt; framework in my project. I thought &lt;code class=&quot;highlighter-rouge&quot;&gt;Carthage&lt;/code&gt; was a holy grail. Boy, am I wrong now that I’ve seen how to install frameworks with Swift Package Manager. Unfortunately, Firebase doesn’t have a swift package yet. Not officially, anyway. They have started trying to make the support since months ago, but no prorgress has been done months after. Crazy! I know.&lt;/p&gt;
 
 &lt;p&gt;The process of adding a framework to your project with SwiftPM is pretty straightforward. Note that I use &lt;code class=&quot;highlighter-rouge&quot;&gt;framework&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;package&lt;/code&gt; interchangeably. Get the git url from the framework’s github that is SwiftPM supported. Then in your Xcode, go to &lt;code class=&quot;highlighter-rouge&quot;&gt;File » Swift Packages » Add Package Dependency&lt;/code&gt;. Enter the git url and click &lt;code class=&quot;highlighter-rouge&quot;&gt;next&lt;/code&gt;. You will be given an option to choose the latest version or from another branch, typical &lt;code class=&quot;highlighter-rouge&quot;&gt;Github&lt;/code&gt; jargon really.&lt;/p&gt;
 
@@ -483,179 +623,4 @@ struct ContentView: View {
 
 &lt;p&gt;There’s a ridiculously simple explanation on how to create a &lt;code class=&quot;highlighter-rouge&quot;&gt;Swift Package&lt;/code&gt;:&lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/xu9oeCAS8aA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="" /><category term="tutorial" /><category term="swift" /><category term="package" /><category term="manager" /><category term="review" /><summary type="html">The first time I encountered the word Swift Package Manager was just a few days ago while searching for alternative ways to install the Firebase framework in my project. I thought Carthage was a holy grail. Boy, am I wrong now that I’ve seen how to install frameworks with Swift Package Manager. Unfortunately, Firebase doesn’t have a swift package yet. Not officially, anyway. They have started trying to make the support since months ago, but no prorgress has been done months after. Crazy! I know.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://miro.medium.com/max/1200/1*ooI0KwILz0Yo2cXUaW9gog.png" /></entry><entry><title type="html">Enums For Beginners</title><link href="http://iosjunkie.com/blog/enums/" rel="alternate" type="text/html" title="Enums For Beginners" /><published>2019-10-13T00:00:00+08:00</published><updated>2019-10-13T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/enums</id><content type="html" xml:base="http://iosjunkie.com/blog/enums/">&lt;p&gt;Enums can be confusing for everybody, especially the newbies. I mean, why use those when you can just create variables and constructs. It does the same right? Some claim that they use enum to make their code type-safe, error free and easy to use. I guess that would be true if an app is becoming perplexingly complex.&lt;/p&gt;
-
-&lt;p&gt;In basic form, it can look like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;enum Directions {
-    case north
-    case south
-    case east
-    case west
-}
- 
- 
-// Defining multiple cases on a single line
- 
-enum Directions { 
-    case north, south, east, west 
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Cool, so what then? How and why would you want to use those? After calling forth &lt;code class=&quot;highlighter-rouge&quot;&gt;Directions.north&lt;/code&gt; with a &lt;code class=&quot;highlighter-rouge&quot;&gt;print&lt;/code&gt;, you’ll just see this in the console &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;north\n&quot;&lt;/code&gt;. You might wonder why is this even useful? It’s like calling a variable inside of a struct type.&lt;/p&gt;
-
-&lt;p&gt;Let’s move on to Raw Values. We now know that cases will return a string. Aside from it, it can also return a &lt;code class=&quot;highlighter-rouge&quot;&gt;rawValue&lt;/code&gt;. Just how do we do that? It’s easy, just inherit from a type by doing something like this: &lt;code class=&quot;highlighter-rouge&quot;&gt;enum Directions: Int&lt;/code&gt;. Now when you print(&lt;code class=&quot;highlighter-rouge&quot;&gt;Directions.north.rawValue&lt;/code&gt;), you’ll get &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;. It’s just like Directions became some sort of array and north is indexed at &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;.  Here’s another example for that:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;enum AnimationCurve: Int {
-    case easeInOut, easeIn, easeOut, linear
-}
-
-print(AnimationCurve.easeIn.rawValue)
-// &quot;1\n&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The next example will not be able to inherit from types to call &lt;code class=&quot;highlighter-rouge&quot;&gt;rawValues&lt;/code&gt; from cases.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;enum Directions {
-    case north(String)
-    case south(latitude: Double, longitude: Double)
-    case east(String)
-    case west(String)
-}
- 
-var digitalCompass = Directions.south(latitude: -120.83, longitude: 37.0)
-print(digitalCompass)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;When printed, this will give a value of &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;south(latitude: -120.83, longitude: 37.0)\n&quot;&lt;/code&gt;. Neat huh? So, basically it’s a string. Cases are a f***ing string with like no spaces because they are also variable names at the same time! Genius!&lt;/p&gt;
-
-&lt;p&gt;How do we get the values inside of the parenthesis? Is there some kind of rawValue mechanism we can use for this? As a matter of fact, there is! We can print a form of string from the values inside of these parentheses. If you trust me on this, we can print out &lt;code class=&quot;highlighter-rouge&quot;&gt;Latitude is 0.5, while longitude is 0.6&lt;/code&gt; just by printing &lt;code class=&quot;highlighter-rouge&quot;&gt;print(Directions.south(latitude: 0.5, longitude: 0.6).description)&lt;/code&gt;. We just have to extend this enum like it’s some kind of construct and create a computed property, we chose to use the word &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt; as you can see. It can be anything actually.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;extension Directions {
-    var description: String {
-        switch self {
-        case .sorth(let direction):
-            return direction
-        case .south(let latitude, let longitude):
-            return &quot;Latitude is \(latitude), while longitude is \(longitude)&quot;
-        case .east(let isItReally):
-            return &quot;The direction is \(isItReally)&quot;
-        case .west(let westeros):
-            return &quot;King's landing is in \(westeros)&quot;
-        }
-    }
-}
-
-print(Directions.south(latitude: 0.5, longitude: 0.6).description)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;There’s another way to simply do this without having to call the computed property &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt; directly. We can inherit this extension from CustomStringConvertible, like this:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;extension Directions: CustomStringConvertible {
-    var description: String {
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;, but the computed property should be &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt;. If you use another variable name instead of it, then you will not be able to use &lt;code class=&quot;highlighter-rouge&quot;&gt;CustomStringConvertible&lt;/code&gt;’s feature.&lt;/p&gt;
-
-&lt;p&gt;Now all you have to do to get the same result is print out &lt;code class=&quot;highlighter-rouge&quot;&gt;Directions.south(latitude: 0.5, longitude: 0.6)&lt;/code&gt; without the &lt;code class=&quot;highlighter-rouge&quot;&gt;description&lt;/code&gt; after it.&lt;/p&gt;
-
-&lt;p&gt;That’s the idea of how to return strings out of enums with parentheses. The &lt;code class=&quot;highlighter-rouge&quot;&gt;let latitude, let longitude&lt;/code&gt; are just parameter names. If you’ve noticed, it can actually be named anything too.&lt;/p&gt;
-
-&lt;p&gt;Now that we know how to work with enums. There are other things you can do with it too, like comparing complex enum’s value to a similar type of enum. This is a tutorial by &lt;code class=&quot;highlighter-rouge&quot;&gt;Károly Nyisztor&lt;/code&gt; and it teaches just that.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/XsXE3SlzpM4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Thanks to &lt;a href=&quot;https://becodable.com/swift-enum/&quot;&gt;BeCodable&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=XsXE3SlzpM4&quot;&gt;Károly Nyisztor&lt;/a&gt; and &lt;a href=&quot;https://www.avanderlee.com/swift/enumerations/&quot;&gt;Antoine v.d. SwiftLee 🚀&lt;/a&gt;. The examples come from their posts. Take your enums knowledge to the next level by clicking on their names, it links to their post about enums. Since my intention about this post is to just bridge the gap between beginners to learning the essence of enums, these guys will do you better with more examples and applications on how it really works.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="enums" /><category term="swift" /><category term="tutorial" /><summary type="html">Enums can be confusing for everybody, especially the newbies. I mean, why use those when you can just create variables and constructs. It does the same right? Some claim that they use enum to make their code type-safe, error free and easy to use. I guess that would be true if an app is becoming perplexingly complex.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://becodable.com/wp-content/uploads/2018/09/Swift-Enum.jpg" /></entry><entry><title type="html">Sign In With Apple Swift 5 Tutorial</title><link href="http://iosjunkie.com/blog/sign-in-with-apple-swift-5/" rel="alternate" type="text/html" title="Sign In With Apple Swift 5 Tutorial" /><published>2019-10-12T00:00:00+08:00</published><updated>2019-10-12T00:00:00+08:00</updated><id>http://iosjunkie.com/blog/sign-in-with-apple-swift-5</id><content type="html" xml:base="http://iosjunkie.com/blog/sign-in-with-apple-swift-5/">&lt;p&gt;First of all, a big thanks to Kilo Loco’s &lt;a href=&quot;https://www.youtube.com/watch?v=vuygdr0EcGM&quot;&gt;tutorial&lt;/a&gt;. Check it out. Not only is this feature available for iOS 13 up, it’s also available for Mac OS 10.15.&lt;/p&gt;
-
-&lt;p&gt;This is my favorite feature in iOS 13. Being able to sign in with the option of privacy. Why is that? Well if you use this feature in your app, your user will be able to use a dummy name and a garbage email address. The garbage email address generated by Apple will forward emails to the email associated with the user’s Apple ID. It’s not necessarily the user’s @icloud.com email. It could be his gmail. And of course, the user doesn’t have to change his name to something else and he can opt to use the Apple associated email. As of now, the only information this feature can use are full name and email.&lt;/p&gt;
-
-&lt;p&gt;All the user really has to do, if privacy isn’t the top concern, is click continue with password and then enter the password for your Apple ID. Once the user is done, click &lt;code class=&quot;highlighter-rouge&quot;&gt;continue&lt;/code&gt; and voila!&lt;/p&gt;
-
-&lt;p&gt;So here’s how to do that with UIKit in Swift:&lt;/p&gt;
-
-&lt;p&gt;Go to signing and capabilities -&amp;gt; add Capability -&amp;gt; Sign In with Apple&lt;/p&gt;
-
-&lt;p&gt;import AuthenticationServices in two files, in the model and view controller.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// User.swift // Model
-struct User {
-    let id: String
-    let firstName: String
-    let lastName: String
-    let email: String
-
-    init(credentials: ASAuthorizationAppleIDCredential) {
-        self.id = credentials.user
-        self.firstName = credentials.fullName?.givenName ?? &quot;&quot;
-        self.lastName = credentials.fullName?.familyName ?? &quot;&quot;
-        self.email = credentials.email ?? &quot;&quot;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Notice that only credentials.user is non-optional, and that’s because it is the only guaranteed thing to come out of this. At this point, we don’t know yet what is defined in the scope of what we want to get from our User.&lt;/p&gt;
-
-&lt;p&gt;Now let’s add the sign in button, though Apple has already got us covered on this. It already has its own height. You can’t manually add this on your storyboard, so you’ll have to programmatically code it and programmatically key in the constraints as well. But basically, this is what you’ll need to create the sign in button:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let appleButton = ASAuthorizationAppleIDButton()
-appleButton.translatesAutoresizingMaskingIntoConstraints = false
-appleButton.addTarget(self, action: #selector(didTapAppleButton), for: .touchUpInside)
-view.addSubview(appleButton)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;That’s basically what you’ll need to make the button appear. Now let’s make it functional&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@objc func didTapAppleButton() {
-    let provider = ASAuthorizationAppleIDProvider()
-    let request = provider.createRequest()
-    request.requestScopes = [.fulName, .email]
-		
-    let controller = ASAuthorizationController(authorizationRequests: [request])
-    controller.delegate = self
-    controller.presentationContextProvider = self
-    controller.performRequest()
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The next thing to do is to extend from two delegates: &lt;code class=&quot;highlighter-rouge&quot;&gt;ASAuthorizationControllerDelegate&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;ASAuthorizationControllerPresentationContextProviding&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;extension ViewController: ASAuthorizationControllerPresentationContextProviding {
-    func presentationAnchor(for controller: ASAuthorizationController) -&amp;gt; ASPresentationAnchor {
-        return view.window!
-    }
-}
-
-extension ViewController: ASAuthorizationControllerDelegate, didCompleteWithAuthorization authorization: ASAuthorization) {
-    switch authorization.credential {
-    case let credentials as ASAuthorizationAppleIDCredential:
-        let user = User(credentials: credentials)
-        performSegue(withIdentifier: &quot;goToHome&quot;, sender: user)
-    default: break
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;That’s pretty much all you have to do to get &lt;code class=&quot;highlighter-rouge&quot;&gt;Sign In with Apple&lt;/code&gt; working, basically.&lt;/p&gt;
-
-&lt;p&gt;Now, you may have heard, if you watched Kilo Loco’s tutorial, about an autologin which I haven’t seen him done a tutorial on it. It would be just like checking if the credential exists or not. I looked it up and here it goes:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let appleIDProvider = ASAuthorizationAppleIDProvider()
-appleIDProvider.getCredentialState(forUserID: userIdentifier) { (credentialState, error) in
-    switch credentialState {
-    case .authorized:
-        // The Apple ID credential is valid. Show Home UI Here
-        break
-    case .revoked:
-        // The Apple ID credential is revoked. Show SignIn UI Here.
-        break
-    case .notFound:
-        // No credential was found. Show SignIn UI Here.
-        break
-    default:
-        break
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If you want to go over sending your users some email, then you’ll have to configure it further inside your &lt;a href=&quot;https://developer.apple.com/account/resources/services/configure&quot;&gt;Apple Developer Account&lt;/a&gt;.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vuygdr0EcGM&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="" /><category term="sign" /><category term="in" /><category term="login" /><category term="apple" /><category term="swift" /><category term="uikit" /><summary type="html">First of all, a big thanks to Kilo Loco’s tutorial. Check it out. Not only is this feature available for iOS 13 up, it’s also available for Mac OS 10.15.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-12%20at%201.09.03%20PM.png" /></entry></feed>
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/xu9oeCAS8aA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="" /><category term="tutorial" /><category term="swift" /><category term="package" /><category term="manager" /><category term="review" /><summary type="html">The first time I encountered the word Swift Package Manager was just a few days ago while searching for alternative ways to install the Firebase framework in my project. I thought Carthage was a holy grail. Boy, am I wrong now that I’ve seen how to install frameworks with Swift Package Manager. Unfortunately, Firebase doesn’t have a swift package yet. Not officially, anyway. They have started trying to make the support since months ago, but no prorgress has been done months after. Crazy! I know.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://miro.medium.com/max/1200/1*ooI0KwILz0Yo2cXUaW9gog.png" /></entry></feed>

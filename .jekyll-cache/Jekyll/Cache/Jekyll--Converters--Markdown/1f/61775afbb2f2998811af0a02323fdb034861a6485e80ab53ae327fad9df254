@@ -1,0 +1,2 @@
+I"�<p>I call the <code class="highlighter-rouge">signOut()</code> to sign out, but there’s really a lot of things going on inside my call. I’m not sure which is the correct way to do this yet, but what I’m trying to achieve is once I’m signed off, my login view will not automatically sign me back in. My login view checks if the access token contains a token, and if it does, then automatically sign me in and performSegue.</p>
+:ET

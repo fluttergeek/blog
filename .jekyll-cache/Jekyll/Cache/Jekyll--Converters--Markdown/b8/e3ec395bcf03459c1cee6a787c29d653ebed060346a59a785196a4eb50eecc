@@ -1,0 +1,2 @@
+I"i<p>There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: <code class="highlighter-rouge">model</code>, <code class="highlighter-rouge">view model</code>, and <code class="highlighter-rouge">controller</code>. There’s an extra in Brian Voong’s example.</p>
+:ET

@@ -1,0 +1,110 @@
+I"�<p>There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: <code class="highlighter-rouge">model</code>, <code class="highlighter-rouge">view model</code>, and <code class="highlighter-rouge">controller</code>. There’s an extra in Brian Voong’s example.</p>
+
+<h3 id="first-from-brian-voong">First from Brian Voong</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Course.swift
+struct Course: Decodable {
+    id : int
+    name: String
+    number_of_lessons: Int
+}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// CourseViewModel.swift
+struct CourseViewModel {
+    let name: String
+    let detailTextString: String
+    let accessoryType: UITableViewCellAccessoryType
+		
+    // Dependency Injection (DI)
+    init(course: Course) {
+        self.name = course.name
+				
+        if course.number_of_lessons &gt; 35 {
+            detailTextString = "Lessons 30+ Check it Out!"
+            accessoryType = .detailDisclosureButton
+        else {
+            detailTextString = "Lessons: \(course.number_of_lessons)"
+            accessoryType = .none
+        }
+    }
+}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// CourseCell.swift
+class CourseCell: UITableViewCell {
+    var courseViewModel: CourseViewModel! {
+        didSet {
+           textLabel?.text = courseViewModel.name
+           detailTextLabel?.text = courseViewModel.detailTextString
+           accessoryType = courseViewModel.accessryType
+        }
+}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// CoursesController.swift
+fileprivate func fetchData() {
+    Service.shared.fetchCourses { (courses, err) in
+        if let err = err { return }
+        
+        self.courseViewModels = courses?.map({ return CourseViewModel(course: $0)}) ?? []
+        self.tableView.reloadData()
+}
+</code></pre></div></div>
+
+<p>This fetchData function is only available inside CoursesController.swift file, because it is a fileprivate. Brian Voong created a <code class="highlighter-rouge">Service.swift</code> file from where this closure comes from which is not a relevant topic for this post. When accessed accordingly, it can be available to any classes but within CoursesController.swift file. But that’s not what we’re here to talk about. This function calls an API that returns us the courses, which is of type Course. Inside the closure, it is taking that <code class="highlighter-rouge">courses</code> array into a CourseViewModel array. The CourseViewModel array will then be the data source of the <code class="highlighter-rouge">tableView</code>.</p>
+
+<h3 id="second-is-from-rebeloper">Second is from Rebeloper</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// User.swift
+struct User {
+    let name: String
+    let age: Int
+    backgroundColor: UIColor
+		
+    init(name: String, age: Int, backgroundColor: UIColor) {
+        self.name = name
+        self.age = age
+        self.backgrouundColor = backgroundColor
+    }
+}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// RootViewModel.swift
+class RootViewModel {
+    let user: User
+    
+    init(user: User) {
+        self.user = user
+    }
+}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// RootViewController.swift
+var viewModel: RootViewModel! {
+    didSet {
+        view.backgroundColor = viewModel.user.backgroundColor
+        navigationItem.title = "\(viewModel.user.name), \(viewModel.user.age)"
+    }
+}
+
+viewDidLoad() {
+    let user = User(name: "Alex", age: 36, backgroundColor: .white)
+    viewModel = RootViewModel(user: user)
+}
+</code></pre></div></div>
+
+<p>Here, you won’t see a <code class="highlighter-rouge">tableView</code>. Good! Cause maybe you though we need a table to do the MVVM.</p>
+
+<p>I think Rebeloper’s code doesn’t really bring out the need for MVVM. We can see how he accessed the <code class="highlighter-rouge">User</code> model inside the view controller. While in Brian’s example, he did the same thing but indirectly. But anyway, I guess that’s how it works. Just another construct that looks similar to a <code class="highlighter-rouge">Model</code>.</p>
+
+<h3 id="take">Take</h3>
+
+<p>Both examples almost have the same objective.</p>
+
+<p>To separate the view logic from the model logic and vice versa by creating an intermediary called a <code class="highlighter-rouge">ViewModel</code>.</p>
+
+<p>Why should we do this? Who knows. I know MVC makes sense, but I don’t know how this does. We still have the controller and it makes it all the more confusing because it doesn’t say <code class="highlighter-rouge">MVVMC</code>.</p>
+
+<p>Hold on, let’s find a better example to see why MVVM is talked about by developers. These examples don’t exaggerate enough why we need to use MVVM. It looks pretty redundant. This here is an example by <a href="https://www.youtube.com/watch?v=nAI-BI-_YWs">iOS Quickstart</a>:</p>
+
+<p><img src="/blog/assets/images/Screen%20Shot%202019-10-26%20at%208.16.49%20PM.png" alt="mvvm" /></p>
+
+<p>Now it’s starting to make sense. These static functions inside this ViewModel are called <code class="highlighter-rouge">Translation Codes</code>. Blame <code class="highlighter-rouge">iOS Quickstart</code> if I’m wrong about that. Without the MVVM architecture, we’ll be putting these translation codes inside our view controller and it gets messier there. The <code class="highlighter-rouge">VM</code> of MVVM is just another way to create another file or folder to store the mess elsewhere if you consider these translation codes a mess, because I do.</p>
+
+<p>Remember I said <code class="highlighter-rouge">MVVMC</code>? Well, I thought the controller has its own abbreviation like in <code class="highlighter-rouge">MVC</code>. Turns out the V in M<code class="highlighter-rouge">V</code>VM stands for View Controller. Invisible <code class="highlighter-rouge">C</code> right there. I thought the view there was like table cell or something.</p>
+
+:ET

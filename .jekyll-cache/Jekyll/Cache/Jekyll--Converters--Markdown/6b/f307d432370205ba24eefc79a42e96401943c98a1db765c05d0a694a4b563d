@@ -1,0 +1,3 @@
+I"N<p>Thanks to Roy Kronenfeld’s <a href="https://medium.com/@roykronenfeld/semaphores-in-swift-e296ea80f860">Medium post</a> for this explanation of how to use a semaphore, specifically, utilizing the counter: <code class="highlighter-rouge">let semaphore = DispatchSemaphore(value: 0)</code>. Another <a href="https://www.youtube.com/watch?v=6rJN_ECd1XM">tutorial</a> was made by <code class="highlighter-rouge">Let's Build That App</code> but semaphore wasn’t covered in great detail, and I think it’s best if all iOS developers dive into the semaphore counters the way Roy did.</p>
+
+:ET

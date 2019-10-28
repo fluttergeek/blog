@@ -1,0 +1,73 @@
+I"G<p>This might be too technical for a non-computer-savvy to be doing, so I’ve formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdirectory just like my blog <code class="highlighter-rouge">iosjunkie.com/blog</code>, then you might want to see this first:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nN6QuNqmAwk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>It really helped me setup a blog as a subdirectory of my domain. I only had to create another repository <code class="highlighter-rouge">blog</code> and cloned that repository into my computer. Then I copied Mundana’s contents from <a href="https://github.com/wowthemesnet/mundana-theme-jekyll.git">Github</a> into the blog folder. Next is you’ll have to setup the <em>config.yml</em>.  If your site is in the root, for baseurl, make sure this is set to baseurl: ‘’. In my case, baseurl: ‘/blog’.</p>
+
+<p>The first few lines of config.yml is straightforward. You’ll have to change those values. Make sure to change the author attributes as well as the default author under <code class="highlighter-rouge">defaults</code>. Whenever you post something new, you don’t have to indicate a meta for layout, author, and avatar anymore.</p>
+
+<p><img src="/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.15.56%20PM.png" alt="example" /> Now, this is what makes life easier. With this dashboard, you don’t have to explicity input a meta for your title anymore. Although, you might need to put in the categories, permalink, or tags in your metadata field if you wish to add some.</p>
+
+<p><img src="/blog/assets/images/Screen%20Shot%202019-09-27%20at%206.29.32%20PM.png" alt="metadata" /> It’s not a perfect system, uploading a photo here can be a pain. Which is why I decided to move a photo asset in the <code class="highlighter-rouge">/assets/images/</code> directory manually every time, because it saves the photo in my <code class="highlighter-rouge">/blog</code> folder when I upload using <code class="highlighter-rouge">jekyll-admin</code>.</p>
+
+<p>It’s still a great interface I’m telling you. You can preview your markdown side by side what you’ve written or by toggling preview only. The text editor isn’t much, but it’ll do more than just using an ordinary one.</p>
+
+<p>Install this admin dashboard interface on your Gemfile by adding <code class="highlighter-rouge">jekyll-admin</code> to it:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>group :jekyll_plugins do
+    gem 'jekyll-feed'
+    gem 'jekyll-sitemap'
+    gem 'jekyll-paginate'
+    gem 'jekyll-seo-tag'
+    gem 'jekyll-admin'
+end
+</code></pre></div></div>
+
+<p>Save the file and go to the terminal/CMD. Type <code class="highlighter-rouge">bundle</code> or <code class="highlighter-rouge">bundle install</code> to install the gem, but make sure Ruby is installed in your system.</p>
+
+<p>You will only be launching this locally. So, every time you want to use jekyll-admin, type this on terminal</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve --watch
+</code></pre></div></div>
+
+<p>then go to <code class="highlighter-rouge">localhost:4000/admin</code></p>
+
+<h3 id="posting">Posting</h3>
+
+<p>I catch myself looking at sample posts whenever I create a new post. You might need to if you’re not familiar with the Jekyll format or on how to use markdown. So, I renamed the <code class="highlighter-rouge">_post</code> folder to <code class="highlighter-rouge">post</code> and added <code class="highlighter-rouge">post</code> to my .gitignore. It’s not necessary to create another <code class="highlighter-rouge">_post</code> folder back, but if you’re not using the jekyll-admin or if you’re just using a text editor, then you should create it again.</p>
+
+<p>If you write codes like I do, then there’s a bit of an issue with indentation. Every indentation must be done with four spaces, not with 1 or 2 tabs.</p>
+
+<h4 id="update">Update</h4>
+
+<p>I found a solution for the indentation of blocks of codes. I wrote an <a href="/blog/jekyll-code-syntax-indentation/">article</a> about it.</p>
+
+<h3 id="creating-pages">Creating Pages</h3>
+
+<p>Create your pages in <code class="highlighter-rouge">_pages</code>, but there’s one very important matter to discuss here. You need a permalink meta for every page you make. Otherwise, the URL will become <code class="highlighter-rouge">/_pages/your_new_page</code>.</p>
+
+<p><img src="/blog/assets/images/Screen%20Shot%202019-10-04%20at%2012.51.16%20AM.png" alt="permalink" /></p>
+
+<h3 id="automating">Automating</h3>
+
+<p>You might want to lessen the technicality of going through the terminal to go to your blog directory and serving Jekyll to access admin. You can do this by opening <code class="highlighter-rouge">Automator</code>. You have this pre-installed on your Mac OS. Create a new <code class="highlighter-rouge">workflow</code>, then choose to run shell script like so:</p>
+
+<p><img src="/blog/assets/images/Screen%20Shot%202019-10-02%20at%209.07.22%20PM.png" alt="shell" /></p>
+
+<p>Type in what you’d normally type on your terminal.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /Directory/To/Your/Blog
+source ~/.bash_profile
+bundle exec jekyll serve --watch
+</code></pre></div></div>
+
+<p>If you run it and everything goes smoothly, try opening <code class="highlighter-rouge">localhost:4000/admin</code> on your browser. That’s how you’ll know if it is already done launching the server. And when you’re done writing this script, you may close the <code class="highlighter-rouge">Automator</code> and it’ll ask you to save the script. Save it as Application to your preferred directory. If you ever need to access the admin dashboard of your blog, just double-click like you would on a normal app. You might be surprised. This also works for pushing all your changes to GitHub.</p>
+
+<p>You can then copy it to your Applications folder and it works just like that. You will see that it is running once there a spinning icon in the menu bar. It will say 0% completed for eternity. You cannot close the server even by canceling the whole process in your menu bar. If you really want to stop the server, go to <code class="highlighter-rouge">Activity Monitor</code> and force quite <code class="highlighter-rouge">ruby</code> in one of the processes or memory tab. I haven’t figured a workaround on this yet, but it doesn’t seem to bother me.</p>
+
+<h3 id="other-options">Other Options</h3>
+
+<p>On October 27, 2019, I tried Netlify and wrote a <a href="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/" title="Netlify">guide</a> about it.</p>
+
+<p>On October 28, 2019, I tried Forestry.io again and wrote my likes and dislikes about it as well as some tips. <a href="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/" title="Forestry.io">Check it out</a>. I’ve actually tried Forestry.io once before, but I didn’t understand it back then.</p>
+:ET

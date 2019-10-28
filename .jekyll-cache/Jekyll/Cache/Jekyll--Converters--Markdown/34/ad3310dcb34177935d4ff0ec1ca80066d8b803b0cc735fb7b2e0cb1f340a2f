@@ -1,0 +1,44 @@
+I"k<p>I’m currently on Mojave and I just thought that it’s time I use an app for messenger. It takes quite a while to load Facebook messenger on my Chrome browser. Maybe it’s just my internet speed. So I looked for an app on the Mac App Store and there’s not much apps out there for native Mac OS app look of Messenger. This is probably the only one out there. The only one I’ve found at least. I’ve scrolled deep enough to see there’s no other like it. It has decent amount of stars as rating, but does it really live up to it?</p>
+
+<p><img src="/blog/assets/images/Screen_Shot_2019-10-08_at_7_52_32_PM.png" alt="chatmate" /></p>
+
+<p>What can I say? It really looks native, but it is half-baked. Here’s why:</p>
+<ol>
+  <li>The login fields look alright, but the placeholder doesn’t say the username can be accepted too. It’s just <code class="highlighter-rouge">Email</code> and <code class="highlighter-rouge">phone number</code>.</li>
+  <li>The login button is especially horrible looking. Just a plane white button with no rounded edges. Its font is too thin and the spacing around the text of the button is just not well thought of.</li>
+  <li>As you can see on the photo, the user’s icon is overlapping the window frame’s buttons.</li>
+  <li>Some text like <code class="highlighter-rouge">Chat</code> is meant to be brighter on this dark mode. It definitely looks more suited to the light mode.</li>
+  <li>The light mode is actually more gray than white.</li>
+</ol>
+
+<p>Other than that, I’m satisfied with the app. I bought it for only a dollar. I’m going to keep on using it because it’s way faster than loading the messenger website.</p>
+
+<h2 id="update">UPDATE:</h2>
+
+<p>Thanks to <a href="https://www.reddit.com/r/macapps/comments/dezb0e/native_messenger_app_for_mac_os_review/">u/Auttoh</a> and <a href="https://www.reddit.com/r/macapps/comments/dezb0e/native_messenger_app_for_mac_os_review/">aadillyas</a> for responding on my Reddit link post of this blog post. They both gave me a tip on a similar app but not found on the app store. It’s from a <a href="https://github.com/sindresorhus/caprine/">github link</a>. Caprine is an unofficial and privacy-focused Facebook Messenger app with many useful features. As you can see, I didn’t have to pixelate the names of my friends because they have this feature to hide names and avatars. It also allows you to follow the system’s appearance of your mac. Say you are in dark mode, the app will also be in dark mode. If you changed your system’s appearance to light mode, the app will also turn light mode. You can also choose to make its mode independent from the system’s appearance.</p>
+
+<p><img src="/blog/assets/images/Screen%20Shot%202019-10-09%20at%204.28.52%20AM.png" alt="caprine" /></p>
+
+<p>There’s also a compact mode on this app which hides away the names if your window is tinier. Only pictures of your friends will be shown on the side.</p>
+
+<p><img src="https://github.com/sindresorhus/caprine/raw/master/media/screenshot-compact.png" alt="compact" /></p>
+
+<p>It looks way more sophisticated than <code class="highlighter-rouge">Chatmate</code> but it doesn’t feel as snappy. It is build on javascript/<code class="highlighter-rouge">Electron</code> hence it is not native. Although, it looks native enough actually. There are still some features that load like a web page, like when choosing <code class="highlighter-rouge">stickers</code> or when loading a conversation from another friend. After a day of using it, I realized how long it takes to open the app. I see a dark empty window first for a maybe 15 to 30 seconds until t loads the messenger web page.</p>
+
+<p><a href="https://www.goofyapp.com/">Goofy</a> is another unoffical Messenger mac app. It is also <code class="highlighter-rouge">Electron</code> based. It could be faster because it has much less features than <code class="highlighter-rouge">Caprine</code>, obviously.</p>
+
+<p><img src="https://www.goofyapp.com/img/screenshot.png" alt="goofy" /></p>
+
+<p>That’s Goofy for you! Now that I’ve tried <code class="highlighter-rouge">Goofy</code> too, I can say it really is much lighter. The whole thing after logging in is just a browser. It looks similar to <code class="highlighter-rouge">Caprine</code> actually but as I said, way way less features. This is the lightest among other non-native Messengers.</p>
+
+<p>Now here’s something I’d like to introduce to you. I’m not sure what this is built on, but it is faster than <code class="highlighter-rouge">Caprine</code>, but I wish it had <code class="highlighter-rouge">Caprine's</code> awesome features. The only thing I love about it is that it loads much faster. Franz is the former Emperor of Austria - but also a messaging app that combines chat &amp; messaging services into one application. <a href="https://meetfranz.com/">Franz</a> currently supports Slack, WhatsApp, WeChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype and many more.</p>
+
+<p><img src="https://meetfranz.com/static/images/franz-screenshot.png" alt="franz" /></p>
+
+<p>It feels lighter than Caprine, but the messenger part is simply a web app of the official <code class="highlighter-rouge">Messenger</code>. Hence, it still isn’t a native solution. How it feels when using the web app is the exact same feel when using <code class="highlighter-rouge">Franz</code> and I can say that it feels much master than <code class="highlighter-rouge">Caprine</code> when loading the stickers. The only downside I can find is that it just keeps asking you to purchase <code class="highlighter-rouge">Franz Professional</code>.</p>
+
+<p><img src="/blog/assets/images/Screen%20Shot%202019-10-09%20at%2010.56.18%20PM.png" alt="franzprofessional" /></p>
+
+<p>It went like this out of nowehere like a screensaver, and I waited 10 seconds for it to go back to messenger mode. It basically does this every time you open up <code class="highlighter-rouge">Franz</code>.</p>
+
+:ET

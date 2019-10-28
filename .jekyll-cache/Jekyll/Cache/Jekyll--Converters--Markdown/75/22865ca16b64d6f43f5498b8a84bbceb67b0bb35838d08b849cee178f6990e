@@ -1,0 +1,2 @@
+I"Ì<p>I just discovered a way for two apps to communicate with each other with the use of UserDefaults. I thought that UserDefault is only available locally in the app. Sandboxed in its own environment.</p>
+:ET

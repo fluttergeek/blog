@@ -1,0 +1,103 @@
+I"=<p>I was actually intimidated by the idea of trying out <code class="highlighter-rouge">Netlify</code> for my blog but not so much anymore. It turned out pretty easy to do.</p>
+
+<p>First thing’s first, <code class="highlighter-rouge">Netlify</code> is some kind of web hosting. Although you can opt to just run a local server from your computer by just running <code class="highlighter-rouge">bundle exec jekyll serve</code>.</p>
+
+<p>Let’s create our <code class="highlighter-rouge">Netlify</code> account and follow this guide by Thomas Bradley:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eEjdJY_Ak8U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn’t find the rest to be that useful, so I’ve written down below the next steps you should take.</p>
+
+<p>To create the <code class="highlighter-rouge">Netlify Dashboard</code>, you need to create a folder. This folder is a subdirectory of your <code class="highlighter-rouge">blog</code>. So, if you set your baseurl from your <code class="highlighter-rouge">_config.yml</code> to <code class="highlighter-rouge">\blog</code>, then this folder, let’s say, <code class="highlighter-rouge">admin</code> can be accessed through <code class="highlighter-rouge">\blog\admin</code>. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. <code class="highlighter-rouge">index.html</code> and <code class="highlighter-rouge">config.yml</code>. This is another config.yml different from the root’s _config.yml.</p>
+
+<p>I copied the contents of <code class="highlighter-rouge">index.html</code> from <a href="https://www.netlifycms.org/docs/add-to-your-site/#app-file-structure" title="Add to Your Site">Add to Your Site</a>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Content Manager<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="c">&lt;!-- Include the script that builds the page and powers Netlify CMS --&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>Now comes the tricky part, which is setting up the look of our admin dashboard in <code class="highlighter-rouge">config.yml</code>. If you reverse engineer it, it’s easier than reading through html.</p>
+
+<p>There are ways to login to your dashboard, but I chose to login with <code class="highlighter-rouge">Github</code>. To do that, here’s what you’ll have to put in <code class="highlighter-rouge">admin/config.yml</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>backend:
+  name: github
+  branch: gh-pages # Branch to update (optional; defaults to master)
+  repo: iosjunkie/blog # Repository of your blog in Github
+
+publish_mode: editorial_workflow
+media_folder: "assets/images"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Featured Image"
+        name: "image"
+        widget: "image"
+        required: false
+        media_library:
+          config:
+            multiple: false
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Categories", name: "categories", widget: "string", required: true }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+  - name: "website-settings"
+    label: "Settings"
+    files:
+      - label: "Settings"
+        name: "site"
+        file: "_config.yml"
+        fields:
+          - label: "Name"
+            name: "name"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "markdown" 
+</code></pre></div></div>
+
+<p>I just came up with this from the tutorials I watched. The images below are the results of what we just typed in our <code class="highlighter-rouge">config.yml</code>.</p>
+
+<p>This is what it looks like when I go to <code class="highlighter-rouge">http://localhost:4000/blog/admin/#/collections/website-settings</code>:</p>
+
+<p><img src="/blog/assets/images/Screen Shot 2019-10-28 at 11.11.40 AM.png" alt="" /><br />
+<img src="/blog/assets/images/Screen Shot 2019-10-28 at 11.11.59 AM.png" alt="" /><br />
+And this is what it looks like in <code class="highlighter-rouge">http://localhost:4000/blog/admin/#/collections/posts:</code></p>
+
+<p><img src="/blog/assets/images/Screen Shot 2019-10-28 at 11.12.13 AM.png" alt="" /></p>
+
+<p><img src="/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png" alt="" /></p>
+
+<p>Once done, commit and push it to your Github. Go back to <code class="highlighter-rouge">https://app.netlify.com/sites/your-blog/deploys</code> and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru <code class="highlighter-rouge">https://your-blog.netlify.com/admin</code>.</p>
+
+<h2 id="take">Take</h2>
+
+<p>I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I’m typing this article, I often get a typo of <code class="highlighter-rouge">Netflix</code>.</p>
+
+<p>Would I use it?</p>
+
+<p><strong>No!</strong></p>
+
+<p>The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the <code class="highlighter-rouge">/assets/images/</code> folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true.</p>
+
+<p>That’s my only problem with it, but if that’s not a problem for you, then give it a go.</p>
+:ET

@@ -1,0 +1,2 @@
+I"Y<p>Notice how Scott changed from <code class="highlighter-rouge">@State</code> to <code class="highlighter-rouge">@ObjectBinding</code>. He started discussing BindableObject at 5:17. That’s because you can only use <code class="highlighter-rouge">@State</code> with local properties in the struct view. Let’s see his code one more time.</p>
+:ET

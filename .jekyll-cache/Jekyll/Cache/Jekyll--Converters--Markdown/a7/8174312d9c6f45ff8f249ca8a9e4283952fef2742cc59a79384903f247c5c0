@@ -1,0 +1,29 @@
+I"L<p>Notice how Scott changed from <code class="highlighter-rouge">@State</code> to <code class="highlighter-rouge">@ObjectBinding</code>. He started discussing BindableObject at 5:17. That’s because you can only use <code class="highlighter-rouge">@State</code> with local properties in the struct view. Let’s see his code one more time.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7sxdhunvSCg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import Combine
+
+class ListDataSource: BindableObject {
+	var willChange = PassthroughSubject&lt;Void, Never&gt; ()
+	
+	var rowModels = [CustomRowModel] () {
+		willSet {
+			willChange.send()
+		}
+	}
+}
+</code></pre></div></div>
+
+<p>In this tutorial, that’s all the code we need. Just kidding. There’s one more:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct ContentView: View {
+	@ObjectBinding var datasource = ListDataSource()
+	
+	// to access the rowModels array
+	datasource.rowModels
+}
+</code></pre></div></div>
+
+<p>Notice here that he used @ObjectBinding instead of @State. If you want a hold of the state of a class, then you must use @ObjectBinding instead and that class should inherit from <code class="highlighter-rouge">BindableObject</code> protocol, which requires that you have a <code class="highlighter-rouge">PassthroughSubject</code>. In order to use <code class="highlighter-rouge">PassthroughSubject</code>, import <code class="highlighter-rouge">Combine</code> first. You can substitude willChange to didChange. Heck, it’s just a variable name. But if you do, also change the <code class="highlighter-rouge">willSet</code> to <code class="highlighter-rouge">didSet</code>. <code class="highlighter-rouge">willChange.send()</code> will notify the subscribed view, which in this case is <code class="highlighter-rouge">ContentView</code>, of any changes done to <code class="highlighter-rouge">rowModels</code> array.</p>
+:ET

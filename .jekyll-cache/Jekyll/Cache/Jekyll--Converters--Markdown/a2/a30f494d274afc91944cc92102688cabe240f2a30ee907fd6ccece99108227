@@ -1,0 +1,3 @@
+I"?<p>Thanks to <a href="https://www.hackingwithswift.com/example-code/networking/how-to-check-for-internet-connectivity-using-nwpathmonitor">Paul Hudson @twostraws</a> for the informative knowledge on how to check for internet connection. Let me remind you that this solution is available since iOS 12.0. WWDC in June 2018 introduced the Network framework available from iOS 12 onwards which includes the NWPathMonitor class, which we will be using in this tutorial. Here’s a straight forward example of the basic implementation on how to check for internet connection.</p>
+
+:ET
