@@ -1,6 +1,6 @@
 ---
 title: Using Forestry As A CMS For Your Jekyll Blog
-date: 2019-10-27 16:00:00 Z
+date: 2019-10-27 16:00:00 +0000
 categories:
 - Jekyll
 - Tutorial
@@ -11,8 +11,8 @@ tags:
 - forestry
 - jekyll
 image: assets/images/Screen Shot 2019-10-28 at 2.33.01 PM.png
----
 
+---
 This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven't found a workaround the error I'm getting with `/.forestry/settings.yml`. It keeps saying `Invalid yaml syntax`.
 
 ![](/blog/assets/images/Screen Shot 2019-10-28 at 2.36.31 PM.png)  
@@ -25,7 +25,9 @@ Things I like about it:
 3. I can also insert and upload an image for my `Featured Image` front matter.
 4. The markdown editor looks more professional that `jekyll-manager`.
 5. I don't have to do `bundle exec jekyll serve` anymore.
-6. I don't have to push every changes or additions I make to Github anymore. Once I click `save` on forestry, it instantly writes it on my Github repository.
+6. I don't have to push every change or addition I make to Github anymore. Once I click `save` on forestry, it instantly writes it on my Github repository.
+7. Once you set your admin path, in settings, to `\admin\`, it will deploy an admin code to your repository which allows you to access forestry from `http://your-blog.github.io/admin/.`
+8. Grammarly works on the markdown text editor, unlike in `jekyll-manager`.
 
 Things I don't like about it:
 
@@ -42,7 +44,6 @@ Things I don't like about it:
 ![](/blog/assets/images/F81E8C91-8257-430E-A75A-562F33452CBF.jpeg)  
 You need to click the icon on the top right corner to switch panels in order for you to see the text editor, which is shown below:
 
-  
 ![](/blog/assets/images/7CFB1A72-88DA-4872-A596-3FD5804C40A4.jpeg)
 
 So that's how it looks on the iPad. I regret wasting my time on `jekyll-manager` for quite some time now for not deeply exploring forestry.
