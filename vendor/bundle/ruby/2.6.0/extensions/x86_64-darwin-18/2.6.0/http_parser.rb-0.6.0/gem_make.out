@@ -1,5 +1,5 @@
 current directory: /Users/macintosh/Documents/Portfolio/Blog/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
-/usr/local/opt/ruby/bin/ruby -I /usr/local/lib/ruby/site_ruby/2.6.0 -r ./siteconf20191028-4368-8oxjq1.rb extconf.rb
+/usr/local/opt/ruby/bin/ruby -I /usr/local/lib/ruby/site_ruby/2.6.0 -r ./siteconf20191028-10628-v21scc.rb extconf.rb
 creating Makefile
 
 current directory: /Users/macintosh/Documents/Portfolio/Blog/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
@@ -13,4 +13,4 @@ linking shared-object ruby_http_parser.bundle
 
 current directory: /Users/macintosh/Documents/Portfolio/Blog/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20191028-4368-1xa9nuh
+/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20191028-10628-cts2at
