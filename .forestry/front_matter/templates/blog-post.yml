@@ -4,19 +4,19 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - type: datetime
   name: date
-  label: date
+  label: Date
 - type: list
   name: categories
-  label: categories
+  label: Categories
 - type: list
   name: tags
-  label: tags
+  label: Tags
 - type: file
   name: image
-  label: image
+  label: Featured Image
 pages:
 - _posts/2019-09-27-a-free-blog-using-mundana-jekyll-theme-in-github-pages.md
 - _posts/2019-09-30-inverse-or-not-filter-in-realm-swift.md
