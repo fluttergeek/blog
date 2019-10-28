@@ -1,6 +1,6 @@
 ---
 title: Using Netlify As A CMS For Your Jekyll Blog
-date: 2019-10-27 16:00:00 Z
+date: 2019-10-27 16:00:00 +0000
 categories:
 - Jekyll
 - Tutorial
@@ -9,11 +9,17 @@ tags:
 - netlify
 - jekyll
 image: assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png
----
 
+---
 I was actually intimidated by the idea of trying out `Netlify` for my blog but not so much anymore. It turned out pretty easy to do.
 
 First thing's first, `Netlify` is some kind of web hosting. Although you can opt to just run a local server from your computer by just running `bundle exec jekyll serve`.
+
+Let's create our `Netlify` account and follow this guide by Thomas Bradley:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eEjdJY_Ak8U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn't find the rest to be that useful, so I've written down below the next steps you should take.
 
 To create the `Netlify Dashboard`, you need to create a folder. This folder is a subdirectory of your `blog`. So, if you set your baseurl from your `_config.yml` to `\blog`, then this folder, let's say, `admin` can be accessed through `\blog\admin`. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. `index.html` and `config.yml`. This is another config.yml different from the root's _config.yml.
 
