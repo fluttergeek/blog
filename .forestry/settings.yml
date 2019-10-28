@@ -1,7 +1,4 @@
 ---
----
-
----
 new_page_extension: md
 auto_deploy: false
 admin_path: ''
@@ -11,7 +8,7 @@ sections:
   label: Pages
   create: all
 - type: directory
-  path: _uploads
+  path: assets/images
   label: Uploads
   create: all
   match: "**/*"
