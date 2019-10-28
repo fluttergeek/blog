@@ -1,6 +1,6 @@
 ---
 title: Using Netlify As A CMS For Your Jekyll Blog
-date: 2019-10-27 16:00:00 Z
+date: 2019-10-27T16:00:00.000+00:00
 categories:
 - Jekyll
 - Tutorial
@@ -9,8 +9,8 @@ tags:
 - netlify
 - jekyll
 image: assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png
----
 
+---
 I was actually intimidated by the idea of trying out `Netlify` for my blog but not so much anymore. It turned out pretty easy to do.
 
 First thing's first, `Netlify` is some kind of web hosting. Although you can opt to just run a local server from your computer by just running `bundle exec jekyll serve`.
@@ -90,10 +90,10 @@ I just came up with this from the tutorials I watched.
 
 This is what it looks like when I go to `http://localhost:4000/blog/admin/#/collections/website-settings`:
 
-![](assets/images/Screen Shot 2019-10-28 at 11.11.40 AM.png)  
-![](assets/images/Screen Shot 2019-10-28 at 11.11.59 AM.png)  
+![](blog/assets/images/Screen Shot 2019-10-28 at 11.11.40 AM.png)  
+![](blog/assets/images/Screen Shot 2019-10-28 at 11.11.59 AM.png)  
 And this is what it looks like in `http://localhost:4000/blog/admin/#/collections/posts:`
 
-![](assets/images/Screen Shot 2019-10-28 at 11.12.13 AM.png)
+![](blog/assets/images/Screen Shot 2019-10-28 at 11.12.13 AM.png)
 
-![](assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png)
+![](blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png)
