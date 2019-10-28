@@ -1,2 +1,9 @@
 posts/
 overrides/
+vendor/
+/.bundle/
+/vendor/bundle
+.DS_Store
+.jekyll-cache
+Gemfile
+Gemfile.lock
