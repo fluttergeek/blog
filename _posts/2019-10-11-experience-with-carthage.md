@@ -63,4 +63,4 @@ For these three, I maintained the use of Cocoapods. It can works hand in hand wi
 
 I'm not sure I've noticed any changes, because Firebase is the heaviest framework I have and it is installed with Cocoapods, thereby still making my build time really slow. Apart from that, I don't really see the rest of the frameworks build anymore. I guess that's an improvement.
 
-For more tips on using Carthage, head on to Wolox's article.
+For more tips on using Carthage, head on to [Wolox's article](https://medium.com/wolox-driving-innovation/how-to-carthage-efficiently-4913b8378898 "Carthage").
