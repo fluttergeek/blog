@@ -6,8 +6,8 @@ webhook_url:
 sections:
 - type: directory
   path: ''
-  label: Pages
-  create: documents
+  label: Homepage
+  create: none
   match: "*.html"
   exclude: README.md
   templates:
