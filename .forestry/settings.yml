@@ -24,7 +24,6 @@ sections:
 - type: document
   path: README.md
   label: README
-  match: "**/*"
   read_only: true
 upload_dir: assets/images
 public_path: "/blog/assets/images"
@@ -40,4 +39,4 @@ build:
   mount_path: "/srv"
   working_dir: "/srv"
   instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
-    --port 8080 --host 0.0.0.0 -d _site
+    --port 8080 --host 0.0.0.0 -d _site --baseurl ''
