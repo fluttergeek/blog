@@ -8,7 +8,7 @@ sections:
   path: ''
   label: Pages
   create: documents
-  match: "*.md"
+  match: "*.html"
   exclude: README.md
   templates:
   - homepage
