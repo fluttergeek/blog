@@ -58,3 +58,6 @@ exclude:
 - Gruntfile.js
 - Gruntfile.coffee
 - node_modules
+- Gemfile
+- Gemfile.lock
+- vendor/bundle/
