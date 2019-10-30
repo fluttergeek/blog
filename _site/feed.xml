@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-28T23:03:48-08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">Blog</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Delux M618 USB Wired Ergonomic Vertical Optical Mouse Review</title><link href="http://iosjunkie.com/blog/delux-m618-usb-wired-ergonomic-vertical-optical-mouse-review/" rel="alternate" type="text/html" title="Delux M618 USB Wired Ergonomic Vertical Optical Mouse Review" /><published>2019-10-28T22:34:18-08:00</published><updated>2019-10-28T22:34:18-08:00</updated><id>http://iosjunkie.com/blog/delux-m618-usb-wired-ergonomic-vertical-optical-mouse-review</id><content type="html" xml:base="http://iosjunkie.com/blog/delux-m618-usb-wired-ergonomic-vertical-optical-mouse-review/">&lt;p&gt;My new vertical mouse just arrived as we speak. This is a little different from the &lt;a href=&quot;http://iosjunkie.com/blog/using-vertical-mouse-my-take/&quot; title=&quot;Vertical Mouse&quot;&gt;previous&lt;/a&gt; one; It has a wire instead of it being wireless and it feels funny around my hands.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-10-30T04:59:46-08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">Blog</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward the iOS development or Swift stuff. Technical yet simple tips on how iOS components work.</subtitle><entry><title type="html">Is Catalina Sluggish? (Hackintosh)</title><link href="http://iosjunkie.com/blog/is-catalina-sluggish-hackintosh/" rel="alternate" type="text/html" title="Is Catalina Sluggish? (Hackintosh)" /><published>2019-10-30T04:32:56-08:00</published><updated>2019-10-30T04:32:56-08:00</updated><id>http://iosjunkie.com/blog/is-catalina-sluggish-hackintosh</id><content type="html" xml:base="http://iosjunkie.com/blog/is-catalina-sluggish-hackintosh/">&lt;p&gt;As a developer, technically, not yet, but I’m trying to become an iOS developer. I have been giving SwiftUI some thought. I want to try it because the declarative way of developing apps is trending and the canvas besides the code is tantalizing. Maybe it’ll be a lot faster than using a storyboard.&lt;/p&gt;
+
+&lt;p&gt;Let me give you an idea about my specs:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dell Optiplex 9020 micro&lt;/li&gt;
+  &lt;li&gt;2 GHz Intel Core i5&lt;/li&gt;
+  &lt;li&gt;Ram: 12 GB 1600 MHz DDR3&lt;/li&gt;
+  &lt;li&gt;Quadcore&lt;/li&gt;
+  &lt;li&gt;WiFi Dongle: DWA-123 11n Adapter&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I’m running a Mojave on this Hackintosh, and I have split my partition into two to try out Catalina. I used dosdude1’s patcher to install Catalina because it failed when I try to update using App Store or the connection gets interrupted when downloading. So far installation went fine. It took some time and I thought I was stuck in a loop of spinning wheel. Glad it went on after a while.&lt;/p&gt;
+
+&lt;p&gt;After importing all files and settings from Mojave, it said something like it can’t copy Realtek driver or something. Too bad I didn’t take a photo of it so I could search for whatever was happening. I just skipped it and my desktop was then shown.&lt;/p&gt;
+
+&lt;p&gt;To my disappointment, I couldn’t get the internet to work. I tried installing the driver from &lt;a href=&quot;https://www.dlink.com.ph/dwa-123-d1/&quot; title=&quot;DWA-123&quot;&gt;https://www.dlink.com.ph/dwa-123-d1/&lt;/a&gt;, and I also tried installing IO80211Family.kext. All with no luck. I’m giving up at this point because somehow my audio output doesn’t work anymore as well. Although Initially, right after installation, I can listen to songs with iTunes.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-you-came-here-for&quot;&gt;What You Came Here For&lt;/h3&gt;
+
+&lt;p&gt;No, it isn’t sluggish as I’ve read randomly from YouTube commenters on reviews regarding Mac OS Catalina. Or maybe it is, but it was negligible. I tried using Xcode 11.1 to test if it were to slow down. It didn’t really slow down. I can still use it with ease the way it is in Mojave.&lt;/p&gt;</content><author><name>jules</name></author><category term="SwiftUI" /><category term="DWA-123 11n " /><category term="IO80211Family.kext" /><category term="kext" /><category term="wifi" /><category term="realtek" /><category term="sluggish" /><category term="os" /><category term="mac" /><category term="catalina" /><category term="hackintosh" /><summary type="html">As a developer, technically, not yet, but I’m trying to become an iOS developer. I have been giving SwiftUI some thought. I want to try it because the declarative way of developing apps is trending and the canvas besides the code is tantalizing. Maybe it’ll be a lot faster than using a storyboard.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/macos-catalina-1.jpg" /></entry><entry><title type="html">Delux M618 USB Wired Ergonomic Vertical Optical Mouse Review</title><link href="http://iosjunkie.com/blog/delux-m618-usb-wired-ergonomic-vertical-optical-mouse-review/" rel="alternate" type="text/html" title="Delux M618 USB Wired Ergonomic Vertical Optical Mouse Review" /><published>2019-10-28T22:34:18-08:00</published><updated>2019-10-28T22:34:18-08:00</updated><id>http://iosjunkie.com/blog/delux-m618-usb-wired-ergonomic-vertical-optical-mouse-review</id><content type="html" xml:base="http://iosjunkie.com/blog/delux-m618-usb-wired-ergonomic-vertical-optical-mouse-review/">&lt;p&gt;My new vertical mouse just arrived as we speak. This is a little different from the &lt;a href=&quot;http://iosjunkie.com/blog/using-vertical-mouse-my-take/&quot; title=&quot;Vertical Mouse&quot;&gt;previous&lt;/a&gt; one; It has a wire instead of it being wireless and it feels funny around my hands.&lt;/p&gt;
 
 &lt;p&gt;I have now been accustomed to using my previous vertical mouse. It felt rather more comfortable when I wrap my hand around it, but I don’t feel the same comfort with this new one.&lt;/p&gt;
 
@@ -74,7 +94,64 @@ if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &a
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vf7JyFFSNDU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="biometric" /><category term="touch id" /><category term="face id" /><category term="swift" /><summary type="html">To use Face ID, or even Touch ID, we need to import LocalAuthentication. The code below works for both Face and Touch ID. Whichever is enabled in the user’s settings.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/iphone-x-faceid-670x335.jpg" /></entry><entry><title type="html">Using Netlify As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Netlify As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;I was actually intimidated by the idea of trying out &lt;code class=&quot;highlighter-rouge&quot;&gt;Netlify&lt;/code&gt; for my blog but not so much anymore. It turned out pretty easy to do.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vf7JyFFSNDU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="biometric" /><category term="touch id" /><category term="face id" /><category term="swift" /><summary type="html">To use Face ID, or even Touch ID, we need to import LocalAuthentication. The code below works for both Face and Touch ID. Whichever is enabled in the user’s settings.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/iphone-x-faceid-670x335.jpg" /></entry><entry><title type="html">Using Forestry As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Forestry As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with &lt;code class=&quot;highlighter-rouge&quot;&gt;/.forestry/settings.yml&lt;/code&gt;. It keeps saying &lt;code class=&quot;highlighter-rouge&quot;&gt;Invalid yaml syntax&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen Shot 2019-10-28 at 2.36.31 PM.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+However, everything seems to be working just fine with Forestry.&lt;/p&gt;
+
+&lt;p&gt;Things I like about it:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;All the posts can be sorted by either &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;date&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;I can insert and upload pictures on the markdown text editor with ease. It allows me to choose a photo from the assets folder that I’ve configured. It also allows me to just input a link instead of choosing from the assets folder.&lt;/li&gt;
+  &lt;li&gt;I can also insert and upload an image for my &lt;code class=&quot;highlighter-rouge&quot;&gt;Featured Image&lt;/code&gt; front matter.&lt;/li&gt;
+  &lt;li&gt;The markdown editor looks more professional that &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;I don’t have to do &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt; anymore.&lt;/li&gt;
+  &lt;li&gt;I don’t have to push every change or addition I make to Github anymore. Once I click &lt;code class=&quot;highlighter-rouge&quot;&gt;save&lt;/code&gt; on forestry, it instantly writes it on my Github repository.&lt;/li&gt;
+  &lt;li&gt;Once you set your admin path, in settings, to &lt;code class=&quot;highlighter-rouge&quot;&gt;\admin\&lt;/code&gt;, it will deploy an admin code to your repository which allows you to access forestry from &lt;code class=&quot;highlighter-rouge&quot;&gt;http://your-blog.github.io/admin/.&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Grammarly works on the markdown text editor, unlike in &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Things I don’t like about it:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Whenever you edit an old post, it goes back up to the top of the recent list.&lt;/li&gt;
+  &lt;li&gt;Whenever I select an image for my Featured Image in the front matter, it leaves whitespaces on the filename. Rendering &lt;code class=&quot;highlighter-rouge&quot;&gt;background-image: url(/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png);&lt;/code&gt; invalid. A single quote is then required to fix this.&lt;/li&gt;
+  &lt;li&gt;You need to switch to &lt;code class=&quot;highlighter-rouge&quot;&gt;Raw Editor&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;WYSIWYG&lt;/code&gt; to embed a YouTube video to prevent the text editor from detecting a link. Otherwise, just cancel the link creation when prompted.&lt;/li&gt;
+  &lt;li&gt;It doesn’t automatically add new posts to your sitemap.xml. So, you should build Jekyll locally on your terminal.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;tips&quot;&gt;Tips:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Every time I write a block of code or insert an image in the &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown&lt;/code&gt;, I have a hard time going to the next line. Merely pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;Enter&lt;/code&gt; doesn’t do the trick. To go to the next line, you must &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;Enter&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;You don’t have to create a front matter for the body of your article. It took me a while to realize that there’s a markdown editor by default. I tried it first on my iPad, that’s why it took me a long time to notice the markdown editor, which is more conspicuous when using a web browser on my pc. It’s a gigantic view on the right side of my web browser when using the pc, but it looks like this on the iPad.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/F81E8C91-8257-430E-A75A-562F33452CBF.jpeg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+You need to click the icon on the top right corner to switch panels in order for you to see the text editor, which is shown below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/7CFB1A72-88DA-4872-A596-3FD5804C40A4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So that’s how it looks on the iPad. I regret wasting my time on &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-manager&lt;/code&gt; for quite some time now for not deeply exploring forestry.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;This is my workaround on the sitemap.xml problem. I use the app &lt;code class=&quot;highlighter-rouge&quot;&gt;Automator&lt;/code&gt; to automate some terminal commands that will pull my Github blog repo and build Jekyll on it, then push it back to Github.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /Path/to/Blog
+source ~/.bash_profile
+git pull origin gh-pages
+JEKYLL_ENV=production bundle exec jekyll build
+git add .
+git commit -m &quot;new changes&quot;
+git push origin gh-pages --force
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Change the &lt;code class=&quot;highlighter-rouge&quot;&gt;Date&lt;/code&gt; front matter to hidden, required, and Use &lt;code class=&quot;highlighter-rouge&quot;&gt;now&lt;/code&gt; as default.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="forestry.io" /><category term="forestry" /><category term="jekyll" /><summary type="html">This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with /.forestry/settings.yml. It keeps saying Invalid yaml syntax.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%202.33.01%20PM.png" /></entry><entry><title type="html">Using Netlify As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Netlify As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;I was actually intimidated by the idea of trying out &lt;code class=&quot;highlighter-rouge&quot;&gt;Netlify&lt;/code&gt; for my blog but not so much anymore. It turned out pretty easy to do.&lt;/p&gt;
 
 &lt;p&gt;First thing’s first, &lt;code class=&quot;highlighter-rouge&quot;&gt;Netlify&lt;/code&gt; is some kind of web hosting. Although you can opt to just run a local server from your computer by just running &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt;.&lt;/p&gt;
 
@@ -175,64 +252,7 @@ And this is what it looks like in &lt;code class=&quot;highlighter-rouge&quot;&g
 
 &lt;p&gt;The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the &lt;code class=&quot;highlighter-rouge&quot;&gt;/assets/images/&lt;/code&gt; folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true.&lt;/p&gt;
 
-&lt;p&gt;That’s my only problem with it, but if that’s not a problem for you, then give it a go.&lt;/p&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="jekyll" /><summary type="html">I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%2011.12.35%20AM.png" /></entry><entry><title type="html">Using Forestry As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Forestry As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with &lt;code class=&quot;highlighter-rouge&quot;&gt;/.forestry/settings.yml&lt;/code&gt;. It keeps saying &lt;code class=&quot;highlighter-rouge&quot;&gt;Invalid yaml syntax&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen Shot 2019-10-28 at 2.36.31 PM.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-However, everything seems to be working just fine with Forestry.&lt;/p&gt;
-
-&lt;p&gt;Things I like about it:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;All the posts can be sorted by either &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;date&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;I can insert and upload pictures on the markdown text editor with ease. It allows me to choose a photo from the assets folder that I’ve configured. It also allows me to just input a link instead of choosing from the assets folder.&lt;/li&gt;
-  &lt;li&gt;I can also insert and upload an image for my &lt;code class=&quot;highlighter-rouge&quot;&gt;Featured Image&lt;/code&gt; front matter.&lt;/li&gt;
-  &lt;li&gt;The markdown editor looks more professional that &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;I don’t have to do &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt; anymore.&lt;/li&gt;
-  &lt;li&gt;I don’t have to push every change or addition I make to Github anymore. Once I click &lt;code class=&quot;highlighter-rouge&quot;&gt;save&lt;/code&gt; on forestry, it instantly writes it on my Github repository.&lt;/li&gt;
-  &lt;li&gt;Once you set your admin path, in settings, to &lt;code class=&quot;highlighter-rouge&quot;&gt;\admin\&lt;/code&gt;, it will deploy an admin code to your repository which allows you to access forestry from &lt;code class=&quot;highlighter-rouge&quot;&gt;http://your-blog.github.io/admin/.&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Grammarly works on the markdown text editor, unlike in &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Things I don’t like about it:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Whenever you edit an old post, it goes back up to the top of the recent list.&lt;/li&gt;
-  &lt;li&gt;Whenever I select an image for my Featured Image in the front matter, it leaves whitespaces on the filename. Rendering &lt;code class=&quot;highlighter-rouge&quot;&gt;background-image: url(/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png);&lt;/code&gt; invalid. A single quote is then required to fix this.&lt;/li&gt;
-  &lt;li&gt;You need to switch to &lt;code class=&quot;highlighter-rouge&quot;&gt;Raw Editor&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;WYSIWYG&lt;/code&gt; to embed a YouTube video to prevent the text editor from detecting a link. Otherwise, just cancel the link creation when prompted.&lt;/li&gt;
-  &lt;li&gt;It doesn’t automatically add new posts to your sitemap.xml. So, you should build Jekyll locally on your terminal.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;tips&quot;&gt;Tips:&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Every time I write a block of code or insert an image in the &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown&lt;/code&gt;, I have a hard time going to the next line. Merely pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;Enter&lt;/code&gt; doesn’t do the trick. To go to the next line, you must &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;Enter&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;You don’t have to create a front matter for the body of your article. It took me a while to realize that there’s a markdown editor by default. I tried it first on my iPad, that’s why it took me a long time to notice the markdown editor, which is more conspicuous when using a web browser on my pc. It’s a gigantic view on the right side of my web browser when using the pc, but it looks like this on the iPad.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/F81E8C91-8257-430E-A75A-562F33452CBF.jpeg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-You need to click the icon on the top right corner to switch panels in order for you to see the text editor, which is shown below:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/7CFB1A72-88DA-4872-A596-3FD5804C40A4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So that’s how it looks on the iPad. I regret wasting my time on &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-manager&lt;/code&gt; for quite some time now for not deeply exploring forestry.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;This is my workaround on the sitemap.xml problem. I use the app &lt;code class=&quot;highlighter-rouge&quot;&gt;Automator&lt;/code&gt; to automate some terminal commands that will pull my Github blog repo and build Jekyll on it, then push it back to Github.&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /Path/to/Blog
-source ~/.bash_profile
-git pull origin gh-pages
-JEKYLL_ENV=production bundle exec jekyll build
-git add .
-git commit -m &quot;new changes&quot;
-git push origin gh-pages --force
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Change the &lt;code class=&quot;highlighter-rouge&quot;&gt;Date&lt;/code&gt; front matter to hidden, required, and Use &lt;code class=&quot;highlighter-rouge&quot;&gt;now&lt;/code&gt; as default.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="forestry.io" /><category term="forestry" /><category term="jekyll" /><summary type="html">This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with /.forestry/settings.yml. It keeps saying Invalid yaml syntax.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%202.33.01%20PM.png" /></entry><entry><title type="html">Jekyll Code Syntax Indentation</title><link href="http://iosjunkie.com/blog/jekyll-code-syntax-indentation/" rel="alternate" type="text/html" title="Jekyll Code Syntax Indentation" /><published>2019-10-26T16:00:00-08:00</published><updated>2019-10-26T16:00:00-08:00</updated><id>http://iosjunkie.com/blog/jekyll-code-syntax-indentation</id><content type="html" xml:base="http://iosjunkie.com/blog/jekyll-code-syntax-indentation/">&lt;p&gt;I’ve been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it’s actually pretty simple. All that’s needed to fix this is a 3 line CSS code:&lt;/p&gt;
+&lt;p&gt;That’s my only problem with it, but if that’s not a problem for you, then give it a go.&lt;/p&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="jekyll" /><summary type="html">I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%2011.12.35%20AM.png" /></entry><entry><title type="html">Jekyll Code Syntax Indentation</title><link href="http://iosjunkie.com/blog/jekyll-code-syntax-indentation/" rel="alternate" type="text/html" title="Jekyll Code Syntax Indentation" /><published>2019-10-26T16:00:00-08:00</published><updated>2019-10-26T16:00:00-08:00</updated><id>http://iosjunkie.com/blog/jekyll-code-syntax-indentation</id><content type="html" xml:base="http://iosjunkie.com/blog/jekyll-code-syntax-indentation/">&lt;p&gt;I’ve been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it’s actually pretty simple. All that’s needed to fix this is a 3 line CSS code:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-moz-tab-size: 4;
 -o-tab-size: 4;
@@ -657,18 +677,4 @@ let username = groupDefaults?.string(forKey: &quot;something&quot;)
 
 &lt;p&gt;After unloading the 1stView, our 2ndView is also unloaded ang gives us the printed message from its &lt;code class=&quot;highlighter-rouge&quot;&gt;deinit&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Here’s a &lt;a href=&quot;https://www.avanderlee.com/swift/weak-self/&quot;&gt;post by Antoine v.d. SwiftLee 🚀&lt;/a&gt; which explains what ARC does behind the curtains.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="tutorial" /><category term="unowned" /><category term="weak" /><category term="self" /><category term="memory" /><category term="leak" /><category term="deinit" /><summary type="html">Most articles regarding this are overwhelming and I’m about to make it easier. This is based on Brian Voong’s tutorial. I urge you to watch the video too because, essentially, that is what I’m basing this article on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.ytimg.com/vi/q0-DIJszYRo/maxresdefault.jpg" /></entry><entry><title type="html">Using Vertical Mouse: My Take</title><link href="http://iosjunkie.com/blog/using-vertical-mouse-my-take/" rel="alternate" type="text/html" title="Using Vertical Mouse: My Take" /><published>2019-10-14T16:00:00-08:00</published><updated>2019-10-14T16:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-vertical-mouse-my-take</id><content type="html" xml:base="http://iosjunkie.com/blog/using-vertical-mouse-my-take/">&lt;p&gt;I bought the &lt;code class=&quot;highlighter-rouge&quot;&gt;Wireless Vertical Mouse Game 800/1600/2400DPI Mice 2-Button&lt;/code&gt; a couple of weeks ago and it just arrived a week ago. I bought mine in &lt;a href=&quot;https://shopee.ph/product/76803954/1920543944&quot;&gt;Shopee&lt;/a&gt;. It’s a marketplace here in the Philippines. I bought it for only Php 445 including freight. That’s like almost USD 10. This is brandless and it charges like how you charge with your phone. I guess its battery lasts for a week, or maybe it just turned off. It says in Shopee that it should last more than a month. So, I just recharged mine again today.&lt;/p&gt;
-
-&lt;p&gt;Does it fix the arm strain problem?&lt;/p&gt;
-
-&lt;p&gt;I think it does. As a programmer, I thought I was having carpal tunnel syndrome. This happened to me during 2016 after graduating from college. My hands would become painful and even more painful each day. Until I stopped programming. It took me many months of pregabalin/gabapentin and Vitamin B complex to heal from it. It wasn’t fully gone but I was more relieved. I went to med school after that, and I haven’t encountered the pain again. We don’t use keyboards and mouse that much in med school. Then after 2 years, I decided it’s not for me at all.&lt;/p&gt;
-
-&lt;p&gt;The past few months I’ve been trying to get back to programming. The pain starts coming back, so I minimized my computer usage to keep the pain away the day after. I realized that putting my keyboard closer to my lap did the trick. It removed most of the pain. I got more into coding and there is a pain when I’m holding the mouse for so long. I guess I shouldn’t have rested my palms on top of the mouse if I wasn’t really using it. But that just doesn’t solve the problem because I will be programming for long hours.&lt;/p&gt;
-
-&lt;p&gt;After trying the vertical mouse, things start to change pretty quickly. I no longer feel the strain in my hands and arms. It reduced the pain to like 90%. The other 10% is when I use the vertical mouse for much longer hours but it’s not all that painful and it subsides easily. All these years I thought I had carpal tunnel syndrome. I was misdiagnosed by a Rheumatologist here in Zamboanga. You know why? I told him I have this pain and it includes my pinky and my finger joints as well. He refuses to diagnose it with anything else but &lt;code class=&quot;highlighter-rouge&quot;&gt;CTS&lt;/code&gt;. I know it wasn’t CTS because my pinky is included which shouldn’t be the case if it really was CTS.&lt;/p&gt;
-
-&lt;p&gt;As for this vertical mouse model, well, it is brandless and you get what you pay for. I’m not sure why it hangs a bit when I load up a lot of windows or when I’m running out of RAM. It’s not that much of a problem though. Most of the time it doesn’t hang. But when it does, the left click button kind of acts like a right-click and then it feels laggy and not to mention, the scrolling too. For the most part, I’m satisfied with my mouse. It is a wireless mouse, but like most wireless mouses, you need that tiny USB thingy plugged in your computer that allows it to be wireless. Not Bluetooth.&lt;/p&gt;
-
-&lt;h2 id=&quot;update&quot;&gt;Update&lt;/h2&gt;
-
-&lt;p&gt;Okay, after 3 weeks of using the mouse, I decided to order &lt;a href=&quot;/blog/delux-m618-usb-wired-ergonomic-vertical-optical-mouse-review/&quot; title=&quot;Deluxe M618&quot;&gt;another one&lt;/a&gt;. The lag was just annoying. It only lags when I hover on certain areas on my mousepad. The lag when scrolling is such pain also. So I bought a Delux M618 from Lazada&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="vertical" /><category term="mouse" /><category term="review" /><category term="carpal" /><category term="tunnel" /><category term="syndrome" /><summary type="html">I bought the Wireless Vertical Mouse Game 800/1600/2400DPI Mice 2-Button a couple of weeks ago and it just arrived a week ago. I bought mine in Shopee. It’s a marketplace here in the Philippines. I bought it for only Php 445 including freight. That’s like almost USD 10. This is brandless and it charges like how you charge with your phone. I guess its battery lasts for a week, or maybe it just turned off. It says in Shopee that it should last more than a month. So, I just recharged mine again today.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/919bb5baa29ab582de3bbd77e65b319c.jpg" /></entry></feed>
+&lt;p&gt;Here’s a &lt;a href=&quot;https://www.avanderlee.com/swift/weak-self/&quot;&gt;post by Antoine v.d. SwiftLee 🚀&lt;/a&gt; which explains what ARC does behind the curtains.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="tutorial" /><category term="unowned" /><category term="weak" /><category term="self" /><category term="memory" /><category term="leak" /><category term="deinit" /><summary type="html">Most articles regarding this are overwhelming and I’m about to make it easier. This is based on Brian Voong’s tutorial. I urge you to watch the video too because, essentially, that is what I’m basing this article on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://i.ytimg.com/vi/q0-DIJszYRo/maxresdefault.jpg" /></entry></feed>
