@@ -24,4 +24,8 @@ The color I got is black, though I would've liked it to be the color I've used i
 
 ## Update
 
-I've gotten used to this mouse. It's unfortunate that I ordered another vertical mouse that looks similar to my old mouse. The key to using this mouse is holding the upper part of it. I don't remember the comfort of using my previous mouse, but this just works. Although, the left-click button is kind not working at times or if I don't use enough force to press it. Most of the time it works though. I'm just not sure if I'm pressing it too softly.
+I've gotten used to this mouse. It's unfortunate that I ordered another vertical mouse that looks similar to my old mouse. The key to using this mouse is holding the upper part of it. 
+
+Another important thing not to do is to rest your hand on it if you aren't using it. I don't know why but there is pressure on my pinky when I rest it there for too long. It gets sore after a while.
+
+I don't remember the comfort of using my previous mouse, but this just works. Although, the left-click button is kind not working at times or if I don't use enough force to press it. Most of the time it works though. I'm just not sure if I'm pressing it too softly.
