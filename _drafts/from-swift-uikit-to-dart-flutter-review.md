@@ -16,7 +16,7 @@ image: ''
 ---
 I've given this some thought for maybe a month or two now. To switch from iOS developer to Flutter developer, even though I'm not employed or something. Now, why would I do that? Xcode is the best IDE out there, why switch to a newbie framework that only has VSCode as an IDE?
 
-Well, since I'm unemployed that means I'm a bit closer to the broke spectrum. I was thinking about what if Apple keeps upgrading its hardware requirements and I'm no longer able to keep up with it. I realized that when I had to run a Catalina on this Hackintosh device I'm using. It didn't go so well. I couldn't use SwiftUI's canvass feature. I assume that I'm never going to be able to try it anymore. So what's next if they upgraded even further? And even with UIKit, as my project gets bigger and bigger, the lag on Xcode becomes more and more unbearable. 
+Well, since I'm unemployed that means I'm a bit closer to the broke spectrum. I was thinking about what if Apple keeps upgrading its hardware requirements and I'm no longer able to keep up with it. I realized that when I had to run a Catalina on this Hackintosh device I'm using. It didn't go so well. I couldn't use SwiftUI's canvass feature. I assume that I'm never going to be able to try it anymore. So what's next if they upgraded even further? And even with UIKit, as my project gets bigger and bigger, the lag on Xcode becomes more and more unbearable.
 
 So I thought, I'd have to just deal with a lightweight IDE to get by. Since I still want to develop on a mobile platform, Flutter has to be the best thing out there. Its community is growing fast, and therefore its easier for newbies like me to find solutions.
 
@@ -51,7 +51,7 @@ A week ago, I could hardly make an idea come to life with Flutter because it loo
 
 **Stateless** are widgets that will have its contents reloaded, like all of it in that widget, if you want to change any data on the widget. It would be like creating an object again in place of the previous one.
 
-**Stateful** is particularly going to reload only the data and not the entire build of that widget. This involves creating two classes, which sounds tedious already, I know. But with the autocomplete feature in one of those extensions above, you only need one word to make all that appear. The same goes for the stateless. Apparently, since many widgets have so many properties there are a lot of autocomplete that's going to happen. So if you know what you're doing, it's not exactly that cumbersome. 
+**Stateful** is particularly going to reload only the data and not the entire build of that widget. This involves creating two classes, which sounds tedious already, I know. But with the autocomplete feature in one of those extensions above, you only need one word to make all that appear. The same goes for the stateless. Apparently, since many widgets have so many properties there are a lot of autocomplete that's going to happen. So if you know what you're doing, it's not exactly that cumbersome.
 
 Take the `import` line for example, you mostly need to import material.dart, foundation.dart, intl.dart, if you're working on an android project and depending on what you need. there's also autocomplete for that so you don't have to worry much about making typos.
 
@@ -62,3 +62,7 @@ One line function. I think this also exists in Swift, but you might be curious t
     () {
     	print('hi');
     }
+
+For a previous Swift programmer, the transition will probably be a breeze. There are so many similar concepts even if words don't look the same. But the commas and semicolons are unforgiving. You also wouldn't like the way you need to import every image and font you need in your app in your pubspec.yaml file.
+
+For a previous Android developer, which I also used to be, well, Flutter is a way much easier way to develop apps. 
