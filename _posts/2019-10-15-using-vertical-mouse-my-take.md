@@ -31,3 +31,7 @@ As for this vertical mouse model, well, it is brandless and you get what you pay
 ## Update
 
 Okay, after 3 weeks of using the mouse, I decided to order [another one](/blog/delux-m618-usb-wired-ergonomic-vertical-optical-mouse-review/ "Deluxe M618"). The lag was just annoying. It only lags when I hover on certain areas on my mousepad. The lag when scrolling is such pain also. So I bought a Delux M618 from Lazada
+
+## Another Update
+
+I went back to this type of vertical mouse. The latest one I now have is wired so it simply does not lag.
