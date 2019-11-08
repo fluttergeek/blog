@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@State to @ObjectBinding Modifier | FlutterGeek</title>
+    <title>From Swift UIKit to Dart Flutter Review | FlutterGeek</title>
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>@State to @ObjectBinding Modifier | Blog</title>
+<title>From Swift UIKit to Dart Flutter Review | Blog</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="@State to @ObjectBinding Modifier" />
+<meta property="og:title" content="From Swift UIKit to Dart Flutter Review" />
 <meta name="author" content="jules" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Notice how Scott changed from @State to @ObjectBinding. He started discussing BindableObject at 5:17. That’s because you can only use @State with local properties in the struct view. Let’s see his code one more time." />
-<meta property="og:description" content="Notice how Scott changed from @State to @ObjectBinding. He started discussing BindableObject at 5:17. That’s because you can only use @State with local properties in the struct view. Let’s see his code one more time." />
-<link rel="canonical" href="http://fluttergeek.com/blog/state-to-objectbinding-modifier/" />
-<meta property="og:url" content="http://fluttergeek.com/blog/state-to-objectbinding-modifier/" />
+<meta name="description" content="I’ve given this some thought for maybe a month or two now. To switch from iOS developer to Flutter developer, even though I’m not employed or something. Now, why would I do that? Xcode is the best IDE out there, why switch to a newbie framework that only has VSCode as an IDE?" />
+<meta property="og:description" content="I’ve given this some thought for maybe a month or two now. To switch from iOS developer to Flutter developer, even though I’m not employed or something. Now, why would I do that? Xcode is the best IDE out there, why switch to a newbie framework that only has VSCode as an IDE?" />
+<link rel="canonical" href="http://fluttergeek.com/blog/from-swift-uikit-to-dart-flutter-review/" />
+<meta property="og:url" content="http://fluttergeek.com/blog/from-swift-uikit-to-dart-flutter-review/" />
 <meta property="og:site_name" content="Blog" />
-<meta property="og:image" content="http://fluttergeek.com/blog/assets/images/maxresdefault.jpg" />
+<meta property="og:image" content="http://fluttergeek.com/blog/assets/images/flutter_banner.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-10-01T16:00:00-08:00" />
+<meta property="article:published_time" content="2019-11-06T21:23:44-08:00" />
 <script type="application/ld+json">
-{"description":"Notice how Scott changed from @State to @ObjectBinding. He started discussing BindableObject at 5:17. That’s because you can only use @State with local properties in the struct view. Let’s see his code one more time.","dateModified":"2019-10-01T16:00:00-08:00","datePublished":"2019-10-01T16:00:00-08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://fluttergeek.com/blog/state-to-objectbinding-modifier/"},"image":"http://fluttergeek.com/blog/assets/images/maxresdefault.jpg","url":"http://fluttergeek.com/blog/state-to-objectbinding-modifier/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://fluttergeek.com/blog/assets/images/logo.png"},"name":"jules"},"author":{"@type":"Person","name":"jules"},"headline":"@State to @ObjectBinding Modifier","@context":"https://schema.org"}</script>
+{"description":"I’ve given this some thought for maybe a month or two now. To switch from iOS developer to Flutter developer, even though I’m not employed or something. Now, why would I do that? Xcode is the best IDE out there, why switch to a newbie framework that only has VSCode as an IDE?","dateModified":"2019-11-06T21:23:44-08:00","datePublished":"2019-11-06T21:23:44-08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://fluttergeek.com/blog/from-swift-uikit-to-dart-flutter-review/"},"image":"http://fluttergeek.com/blog/assets/images/flutter_banner.jpg","url":"http://fluttergeek.com/blog/from-swift-uikit-to-dart-flutter-review/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://fluttergeek.com/blog/assets/images/logo.png"},"name":"jules"},"author":{"@type":"Person","name":"jules"},"headline":"From Swift UIKit to Dart Flutter Review","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -186,7 +186,7 @@ var documents = [{
     "id": 18,
     "url": "http://fluttergeek.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/",
     "title": "Using Netlify As A CMS For Your Jekyll Blog",
-    "body": "2019/10/27 - I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do. First thing’s first, Netlify is some kind of web hosting. Although you can opt to just run a local server from your computer by just running bundle exec jekyll serve. Let’s create our Netlify account and follow this guide by Thomas Bradley: This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn’t find the rest to be that useful, so I’ve written down below the next steps you should take. To create the Netlify Dashboard, you need to create a folder. This folder is a subdirectory of your blog. So, if you set your baseurl from your _config. yml to \blog, then this folder, let’s say, admin can be accessed through \blog\admin. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. index. html and config. yml. This is another config. yml different from the root’s _config. yml. I copied the contents of index. html from Add to Your Site. &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset= utf-8  /&gt; &lt;meta name= viewport  content= width=device-width, initial-scale=1. 0  /&gt; &lt;title&gt;Content Manager&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt; &lt;script src= https://unpkg. com/netlify-cms@^2. 0. 0/dist/netlify-cms. js &gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;Now comes the tricky part, which is setting up the look of our admin dashboard in config. yml. If you reverse engineer it, it’s easier than reading through html. There are ways to login to your dashboard, but I chose to login with Github. To do that, here’s what you’ll have to put in admin/config. yml: backend: name: github branch: gh-pages # Branch to update (optional; defaults to master) repo: iosjunkie/blog # Repository of your blog in Githubpublish_mode: editorial_workflowmedia_folder:  assets/images collections: - name:  posts   label:  Posts   folder:  _posts   create: true  slug:  {{year}}-{{month}}-{{day}}-{{slug}}   fields:   - { label:  Layout , name:  layout , widget:  hidden , default:  post  }   - { label:  Title , name:  title , widget:  string  }   - label:  Featured Image     name:  image     widget:  image     required: false    media_library:     config:      multiple: false   - { label:  Tags , name:  tags , widget:  list , required: false }   - { label:  Categories , name:  categories , widget:  string , required: true }   - { label:  Draft , name:  draft , widget:  boolean , default: true }   - label:  Body     name:  body     widget:  markdown  - name:  website-settings   label:  Settings   files:   - label:  Settings     name:  site     file:  _config. yml     fields:     - label:  Name       name:  name       widget:  string      - label:  Description       name:  description       widget:  markdown  I just came up with this from the tutorials I watched. The images below are the results of what we just typed in our config. yml. This is what it looks like when I go to http://localhost:4000/blog/admin/#/collections/website-settings: And this is what it looks like in http://localhost:4000/blog/admin/#/collections/posts:  Once done, commit and push it to your Github. Go back to https://app. netlify. com/sites/your-blog/deploys and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru https://your-blog. netlify. com/admin. Take: I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I’m typing this article, I often get a typo of Netflix. Would I use it? No! The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the /assets/images/ folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true. That’s my only problem with it, but if that’s not a problem for you, then give it a go. "
+    "body": "2019/10/27 - I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do. First thing’s first, Netlify is some kind of web hosting. Although you can opt to just run a local server from your computer by just running bundle exec jekyll serve. Let’s create our Netlify account and follow this guide by Thomas Bradley: This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn’t find the rest to be that useful, so I’ve written down below the next steps you should take. To create the Netlify Dashboard, you need to create a folder. This folder is a subdirectory of your blog. So, if you set your baseurl from your _config. yml to \blog, then this folder, let’s say, admin can be accessed through \blog\admin. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. index. html and config. yml. This is another config. yml different from the root’s _config. yml. I copied the contents of index. html from Add to Your Site. &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset= utf-8  /&gt; &lt;meta name= viewport  content= width=device-width, initial-scale=1. 0  /&gt; &lt;title&gt;Content Manager&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt; &lt;script src= https://unpkg. com/netlify-cms@^2. 0. 0/dist/netlify-cms. js &gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;Now comes the tricky part, which is setting up the look of our admin dashboard in config. yml. If you reverse engineer it, it’s easier than reading through html. There are ways to login to your dashboard, but I chose to login with Github. To do that, here’s what you’ll have to put in admin/config. yml: backend: name: github branch: gh-pages # Branch to update (optional; defaults to master) repo: iosjunkie/blog # Repository of your blog in Githubpublish_mode: editorial_workflowmedia_folder:  assets/images collections: - name:  posts   label:  Posts   folder:  _posts   create: true  slug:  ---   fields:   - { label:  Layout , name:  layout , widget:  hidden , default:  post  }   - { label:  Title , name:  title , widget:  string  }   - label:  Featured Image     name:  image     widget:  image     required: false    media_library:     config:      multiple: false   - { label:  Tags , name:  tags , widget:  list , required: false }   - { label:  Categories , name:  categories , widget:  string , required: true }   - { label:  Draft , name:  draft , widget:  boolean , default: true }   - label:  Body     name:  body     widget:  markdown  - name:  website-settings   label:  Settings   files:   - label:  Settings     name:  site     file:  _config. yml     fields:     - label:  Name       name:  name       widget:  string      - label:  Description       name:  description       widget:  markdown  I just came up with this from the tutorials I watched. The images below are the results of what we just typed in our config. yml. This is what it looks like when I go to http://localhost:4000/blog/admin/#/collections/website-settings: And this is what it looks like in http://localhost:4000/blog/admin/#/collections/posts:  Once done, commit and push it to your Github. Go back to https://app. netlify. com/sites/your-blog/deploys and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru https://your-blog. netlify. com/admin. Take: I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I’m typing this article, I often get a typo of Netflix. Would I use it? No! The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the /assets/images/ folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true. That’s my only problem with it, but if that’s not a problem for you, then give it a go. "
     }, {
     "id": 19,
     "url": "http://fluttergeek.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/",
@@ -483,22 +483,20 @@ function lunr_search(term) {
 					<p class="text-uppercase font-weight-bold">
                         <span class="catlist">
 						
-                          <a class="sscroll text-danger" href="/blog/categories.html#tutorial">tutorial</a><span class="sep">, </span>
-                        
-                          <a class="sscroll text-danger" href="/blog/categories.html#swiftui">swiftui</a><span class="sep">, </span>
+                          <a class="sscroll text-danger" href="/blog/categories.html#review">review</a><span class="sep">, </span>
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">@State to @ObjectBinding Modifier</h1>
+					<h1 class="display-4 mb-4 article-headline">From Swift UIKit to Dart Flutter Review</h1>
 					<div class="d-flex align-items-center">
                         
                         <img class="rounded-circle" src="/blog//assets/images/avatar1.jpg" alt="Jules Lee" width="70"/>
                         
 						<small class="ml-3"> Jules Lee <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
-                            <span class="text-muted d-block mt-1">Oct 01, 2019 · <span class="reading-time">
+                            <span class="text-muted d-block mt-1">Nov 06, 2019 · <span class="reading-time">
   
   
-    1 min read
+    5 mins read
   
 </span>
     </span>
@@ -507,7 +505,7 @@ function lunr_search(term) {
 				</div>
                 
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="/blog/assets/images/maxresdefault.jpg" alt="@State to @ObjectBinding Modifier">
+					<img class="rounded" src="/blog/assets/images/flutter_banner.jpg" alt="From Swift UIKit to Dart Flutter Review">
 				</div>
                 
 			</div>
@@ -547,34 +545,61 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<p>Notice how Scott changed from <code class="highlighter-rouge">@State</code> to <code class="highlighter-rouge">@ObjectBinding</code>. He started discussing BindableObject at 5:17. That’s because you can only use <code class="highlighter-rouge">@State</code> with local properties in the struct view. Let’s see his code one more time.</p>
+			<p>I’ve given this some thought for maybe a month or two now. To switch from iOS developer to Flutter developer, even though I’m not employed or something. Now, why would I do that? Xcode is the best IDE out there, why switch to a newbie framework that only has VSCode as an IDE?</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7sxdhunvSCg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p>Well, since I’m unemployed that means I’m a bit closer to the broke spectrum. I was thinking about what if Apple keeps upgrading its hardware requirements and I’m no longer able to keep up with it. I realized that when I had to run a Catalina on this Hackintosh device I’m using. It didn’t go so well. I couldn’t use SwiftUI’s canvass feature. I assume that I’m never going to be able to try it anymore. So what’s next if they upgraded even further? And even with UIKit, as my project gets bigger and bigger, the lag on Xcode becomes more and more unbearable.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import Combine
+<p>So I thought, I’d have to just deal with a lightweight IDE to get by. Since I still want to develop on a mobile platform, Flutter has to be the best thing out there. Its community is growing fast, and therefore its easier for newbies like me to find solutions.</p>
 
-class ListDataSource: BindableObject {
-	var willChange = PassthroughSubject&lt;Void, Never&gt; ()
-	
-	var rowModels = [CustomRowModel] () {
-		willSet {
-			willChange.send()
-		}
-	}
+<p>I have tried coding in SwiftUI a bit, but never build a fully functional app with it. I guess I can compare learning Flutter and SwiftUI since they are both declarative. Both can get painfully spaghetti as the project grows. It’s totally the least I like about using either. If you’ve been a developer, it’s also comparable to that. Flutter in dart is like having HTML, javascript, and CSS all combined to become a programming language that is object-oriented. So you see, the pain in having to code every bit of structure is there. It’s not the drag and drop that I see in Xcode anymore or the utility area which makes my code a lot slimmer.</p>
+
+<p>Flutter feels like coding a javascript framework, but you can do it in one file if you feel like it. That file would be main.dart. It should always be under the <code class="highlighter-rouge">/lib</code> folder and not in the subfolders that you might make. The Gemfile I used to work with is now called pubspec.yaml. Once edited, it updates the packages automatically without having to run a command on your terminal. I guess it works that way because of the extensions I installed in VSCode that makes Flutter a lot less tedious to work with. Here’s the list of extensions that I have installed:</p>
+
+<ol>
+  <li>Auto-save on Window Change</li>
+  <li>Awesome Flutter Snippets</li>
+  <li>Beautify</li>
+  <li>Better Align</li>
+  <li>Better Comments</li>
+  <li>bloc</li>
+  <li>Bookmarks</li>
+  <li>Bracket Pair Colorizer 2</li>
+  <li>Color Highlight</li>
+  <li>Dart</li>
+  <li>Flutter</li>
+  <li>Guides</li>
+  <li>Image Preview</li>
+  <li>Material Icon Theme</li>
+  <li>Project Manager</li>
+  <li>Pubspec Assist</li>
+  <li>TabOut</li>
+  <li>Todo Tree</li>
+</ol>
+
+<p>Some of these might not even be specifically for Flutter. It’s also good to know that these extensions are easily found on like some kind of AppStore inside the VSCode.</p>
+
+<h2 id="learning-curve">Learning Curve</h2>
+
+<p>A week ago, I could hardly make an idea come to life with Flutter because it looks very limiting to use. I attribute it mostly to my poor knowledge-base of the kinds of widgets there are. The first things I had to now are Stateful and Stateless. I’m not going to dive deeply into it but I’ll try to explain it briefly.</p>
+
+<p><strong>Stateless</strong> are widgets that will have its contents reloaded, like all of it in that widget, if you want to change any data on the widget. It would be like creating an object again in place of the previous one.</p>
+
+<p><strong>Stateful</strong> is particularly going to reload only the data and not the entire build of that widget. This involves creating two classes, which sounds tedious already, I know. But with the autocomplete feature in one of those extensions above, you only need one word to make all that appear. The same goes for the stateless. Apparently, since many widgets have so many properties there are a lot of autocomplete that’s going to happen. So if you know what you’re doing, it’s not exactly that cumbersome.</p>
+
+<p>Take the <code class="highlighter-rouge">import</code> line for example, you mostly need to import material.dart, foundation.dart, intl.dart, if you’re working on an android project and depending on what you need. there’s also autocomplete for that so you don’t have to worry much about making typos.</p>
+
+<p>Unfortunately, you have to import every bit of widget you need that is in a separate file. Unlike in Xcode, you can’t access classes without importing them. The cool thing about the autocomplete feature in one of those extensions is that if you use a class/widget, and let the autocomplete do the work for you, it will automatically import that class/widget.</p>
+
+<p>One line function. I think this also exists in Swift, but you might be curious to know if you see one of these <code class="highlighter-rouge">() =&gt; print('hi');</code>. It is simply like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>() {
+	print('hi');
 }
 </code></pre></div></div>
 
-<p>In this tutorial, that’s all the code we need. Just kidding. There’s one more:</p>
+<p>For a previous Swift programmer, the transition will probably be a breeze. There are so many similar concepts even if words don’t look the same. But the commas and semicolons are unforgiving. You also wouldn’t like the way you need to import every image and font you need in your app in your pubspec.yaml file.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct ContentView: View {
-	@ObjectBinding var datasource = ListDataSource()
-	
-	// to access the rowModels array
-	datasource.rowModels
-}
-</code></pre></div></div>
-
-<p>Notice here that he used @ObjectBinding instead of @State. If you want a hold of the state of a class, then you must use @ObjectBinding instead and that class should inherit from <code class="highlighter-rouge">BindableObject</code> protocol, which requires that you have a <code class="highlighter-rouge">PassthroughSubject</code>. In order to use <code class="highlighter-rouge">PassthroughSubject</code>, import <code class="highlighter-rouge">Combine</code> first. You can substitude willChange to didChange. Heck, it’s just a variable name. But if you do, also change the <code class="highlighter-rouge">willSet</code> to <code class="highlighter-rouge">didSet</code>. <code class="highlighter-rouge">willChange.send()</code> will notify the subscribed view, which in this case is <code class="highlighter-rouge">ContentView</code>, of any changes done to <code class="highlighter-rouge">rowModels</code> array.</p>
+<p>For a previous Android developer, which I also used to be, well, Flutter is a way much easier way to develop apps.</p>
                 
 			</article>
 			
@@ -582,17 +607,19 @@ class ListDataSource: BindableObject {
 			<div class="mb-4">
 				<span class="taglist">
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#"></a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#experience">experience</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#state">state</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#review">review</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#bindable">bindable</a>
-				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#object">object</a>
-				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#@objectbinding">@objectbinding</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#flutter">flutter</a>
 				
 				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#swiftui">swiftui</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#dart">dart</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#uikit">uikit</a>
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#swift">swift</a>
 				
 				</span>
 			</div>
@@ -651,13 +678,9 @@ class ListDataSource: BindableObject {
         <div class="row prevnextlinks small font-weight-bold">
           
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="/blog/a-better-emptyview-in-an-empty-collectionview/"> <img height="30px" class="mr-1" src="/blog/assets/images/71823045_2511297908958002_3393944923223883776_n.jpg">  A Better EmptyView In An Empty CollectionView</a>
+                <a class="text-dark" href="/blog/is-catalina-sluggish-hackintosh/"> <img height="30px" class="mr-1" src="/blog/assets/images/macos-catalina-1.jpg">  Is Catalina Sluggish? (Hackintosh)</a>
             </div>
           
-          
-            <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="/blog/top-5-github-pages-portfolio-templates/"> Top 5 Github Pages Portfolio Templates  <img height="30px" class="ml-1" src="/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg"> </a>
-            </div>
           
         </div>
     </div>
@@ -679,7 +702,7 @@ class ListDataSource: BindableObject {
         <div class="container">
         <div class="row align-items-center justify-content-between">
             <div>
-                <span class="navbar-brand mr-2 mb-0"><strong>@State to @ObjectBinding Modifier</strong></span>
+                <span class="navbar-brand mr-2 mb-0"><strong>From Swift UIKit to Dart Flutter Review</strong></span>
                 <span>Copyright © <script>document.write(new Date().getFullYear())</script>.</span>
 
                 <!--  Github Repo Star Btn-->
