@@ -65,6 +65,6 @@ One line function. I think this also exists in Swift, but you might be curious t
 
 For a previous Swift programmer, the transition will probably be a breeze. There are so many similar concepts even if words don't look the same. But the commas and semicolons are unforgiving. You also wouldn't like the way you need to import every image and font you need in your app in your pubspec.yaml file.
 
-For a previous Android developer, which I also used to be, well, Flutter is a way much easier way to develop apps.
+For a previous Android developer, which I also used to be, well, Flutter is a way much easier way to develop apps. Though, coding with Flutter feels so much closer to Android development than UIKit. A huge reason why I find UIKit easier.
 
 I have said so many bad things about Flutter now that I realized, but it simply isn't that hard to learn. Sure, there are so many new things that even I only just learned, but since most of the code I wrote is repetitive, it makes more and more sense as I go through with the Udemy course about Flutter.
