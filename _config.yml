@@ -25,7 +25,7 @@ description: Demystifying complex instructions, tutorials, and a little bit more
   toward Flutter and iOS development or Swift stuff. Technical yet simple tips on how Flutter and iOS
   components work.
 logo: assets/images/logo.png
-favicon: assets/images/favicon.png
+favicon: assets/images/favicon.ico
 baseurl: "/blog"
 url: http://iosjunkie.com
 disqus: iosjunkie
