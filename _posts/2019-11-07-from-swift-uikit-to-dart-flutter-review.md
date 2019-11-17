@@ -1,5 +1,5 @@
 ---
-date: 2019-11-07 05:23:44 +00:00
+date: 2019-11-07T05:23:44.000+00:00
 title: From Swift UIKit to Dart Flutter Review
 categories:
 - Review
@@ -63,8 +63,8 @@ One line function. I think this also exists in Swift, but you might be curious t
     	print('hi');
     }
 
-For a previous Swift programmer, the transition will probably be a breeze. There are so many similar concepts even if words don't look the same. But the commas and semicolons are unforgiving. You also wouldn't like the way you need to import every image and font you need in your app in your pubspec.yaml file.
+For a previous Swift programmer, the transition will probably be a breeze. There are so many similar concepts even if words don't look the same. But the commas and semicolons are unforgiving. You also wouldn't like the way you need to import every image and font you need in your app in your pubspec.yaml file. **Update**: I have decided to come back to being an iOS developer because the syntax of Dart and the way things are handled in Flutter are just way too much. I don't like handling states with Flutter which is a very complicated process. And having to implement state management every time the UI needs changing is a really dreadful task.
 
 For a previous Android developer, which I also used to be, well, Flutter is a way much easier way to develop apps. Though, coding with Flutter feels so much closer to Android development than UIKit. A huge reason why I find UIKit easier.
 
-I have said so many bad things about Flutter now that I realized, but it simply isn't that hard to learn. Sure, there are so many new things that even I only just learned, but since most of the code I wrote is repetitive, it makes more and more sense as I go through with the Udemy course about Flutter.
+I have said so many bad things about Flutter now that I realized, but it simply isn't that hard to learn. Sure, there are so many new things that even I only just learned, but since most of the code I wrote is repetitive, it makes more and more sense as I go through with the Udemy course about Flutter. With the way things are, it is no doubt Flutter could be adapted by many developers in the future. Its lightweight-ness to develop is just something most mobile developers could wish for, but I wish it was more similar to Swift and UIKit.
