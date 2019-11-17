@@ -36,7 +36,7 @@ pre {
 	overflow: auto;
 }
 
-:not(pre) > code,
+pre > code,
 pre {
 	background: #2d2d2d;
 }
