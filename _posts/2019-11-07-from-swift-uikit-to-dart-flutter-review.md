@@ -63,7 +63,7 @@ One line function. I think this also exists in Swift, but you might be curious t
     	print('hi');
     }
 
-For a previous Swift programmer, the transition will probably be a breeze. There are so many similar concepts even if words don't look the same. But the commas and semicolons are unforgiving. You also wouldn't like the way you need to import every image and font you need in your app in your pubspec.yaml file. **Update**: I have decided to come back to being an iOS developer because the syntax of Dart and the way things are handled in Flutter are just way too much. I don't like handling states with Flutter which is a very complicated process. And having to implement state management every time the UI needs changing is a really dreadful task.
+For a previous Swift programmer, the transition will probably be a breeze. There are so many similar concepts even if words don't look the same. But the commas and semicolons are unforgiving. You also wouldn't like the way you need to import every image and font you need in your app in your pubspec.yaml file. **Update**: I have decided to come back to being an iOS developer because the syntax of Dart and the way things are handled in Flutter are just way too much. I don't like handling states with Flutter which is a very complicated process. And having to implement state management every time the UI needs changing is a really dreadful task. But that's not all, it's painfully repetitive to declare your assets in the pubspec.yaml. 
 
 For a previous Android developer, which I also used to be, well, Flutter is a way much easier way to develop apps. Though, coding with Flutter feels so much closer to Android development than UIKit. A huge reason why I find UIKit easier.
 
