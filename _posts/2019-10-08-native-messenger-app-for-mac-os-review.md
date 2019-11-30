@@ -1,6 +1,6 @@
 ---
 title: Native Messenger App For Mac OS (Review) vs Caprine vs Goofy vs Franz
-date: 2019-10-08 00:00:00 Z
+date: 2019-10-08T00:00:00.000+00:00
 categories:
 - Review
 tags:
@@ -12,13 +12,14 @@ tags:
 - messenger
 - facebook
 image: assets/images/Screen%20Shot%202019-10-08%20at%207.52.43%20PM.png
----
 
+---
 I'm currently on Mojave and I just thought that it's time I use an app for messenger. It takes quite a while to load Facebook messenger on my Chrome browser. Maybe it's just my internet speed. So I looked for an app on the Mac App Store and there's not much apps out there for native Mac OS app look of Messenger. This is probably the only one out there. The only one I've found at least. I've scrolled deep enough to see there's no other like it. It has decent amount of stars as rating, but does it really live up to it?
 
 ![chatmate](/blog/assets/images/Screen_Shot_2019-10-08_at_7_52_32_PM.png)
 
 What can I say? It really looks native, but it is half-baked. Here's why:
+
 1. The login fields look alright, but the placeholder doesn't say the username can be accepted too. It's just `Email` and `phone number`.
 2. The login button is especially horrible looking. Just a plane white button with no rounded edges. Its font is too thin and the spacing around the text of the button is just not well thought of.
 3. As you can see on the photo, the user's icon is overlapping the window frame's buttons.
@@ -29,7 +30,7 @@ Other than that, I'm satisfied with the app. I bought it for only a dollar. I'm 
 
 ## UPDATE:
 
-Thanks to [u/Auttoh][reddit] and [aadillyas][reddit] for responding on my Reddit link post of this blog post. They both gave me a tip on a similar app but not found on the app store. It's from a [github link][git]. Caprine is an unofficial and privacy-focused Facebook Messenger app with many useful features. As you can see, I didn't have to pixelate the names of my friends because they have this feature to hide names and avatars. It also allows you to follow the system's appearance of your mac. Say you are in dark mode, the app will also be in dark mode. If you changed your system's appearance to light mode, the app will also turn light mode. You can also choose to make its mode independent from the system's appearance.
+Thanks to [u/Auttoh](https://www.reddit.com/r/macapps/comments/dezb0e/native_messenger_app_for_mac_os_review/) and [aadillyas](https://www.reddit.com/r/macapps/comments/dezb0e/native_messenger_app_for_mac_os_review/) for responding on my Reddit link post of this blog post. They both gave me a tip on a similar app but not found on the app store. It's from a [github link](https://github.com/sindresorhus/caprine/). Caprine is an unofficial and privacy-focused Facebook Messenger app with many useful features. As you can see, I didn't have to pixelate the names of my friends because they have this feature to hide names and avatars. It also allows you to follow the system's appearance of your mac. Say you are in dark mode, the app will also be in dark mode. If you changed your system's appearance to light mode, the app will also turn light mode. You can also choose to make its mode independent from the system's appearance.
 
 ![caprine](/blog/assets/images/Screen%20Shot%202019-10-09%20at%204.28.52%20AM.png)
 
@@ -37,15 +38,15 @@ There's also a compact mode on this app which hides away the names if your windo
 
 ![compact](https://github.com/sindresorhus/caprine/raw/master/media/screenshot-compact.png)
 
-It looks way more sophisticated than `Chatmate` but it doesn't feel as snappy. It is build on javascript/`Electron` hence it is not native. Although, it looks native enough actually. There are still some features that load like a web page, like when choosing `stickers` or when loading a conversation from another friend. After a day of using it, I realized how long it takes to open the app. I see a dark empty window first for a maybe 15 to 30 seconds until t loads the messenger web page. 
+It looks way more sophisticated than `Chatmate` but it doesn't feel as snappy. It is build on javascript/`Electron` hence it is not native. Although, it looks native enough actually. There are still some features that load like a web page, like when choosing `stickers` or when loading a conversation from another friend. After a day of using it, I realized how long it takes to open the app. I see a dark empty window first for a maybe 15 to 30 seconds until t loads the messenger web page.
 
-[Goofy][goofy] is another unoffical Messenger mac app. It is also `Electron` based. It could be faster because it has much less features than `Caprine`, obviously. 
+[Goofy](https://www.goofyapp.com/) is another unoffical Messenger mac app. It is also `Electron` based. It could be faster because it has much less features than `Caprine`, obviously.
 
 ![goofy](https://www.goofyapp.com/img/screenshot.png)
 
-That's Goofy for you! Now that I've tried `Goofy` too, I can say it really is much lighter. The whole thing after logging in is just a browser. It looks similar to `Caprine` actually but as I said, way way less features. This is the lightest among other non-native Messengers. 
+That's Goofy for you! Now that I've tried `Goofy` too, I can say it really is much lighter. The whole thing after logging in is just a browser. It looks similar to `Caprine` actually but as I said, way way less features. This is the lightest among other non-native Messengers.
 
-Now here's something I'd like to introduce to you. I'm not sure what this is built on, but it is faster than `Caprine`, but I wish it had `Caprine's` awesome features. The only thing I love about it is that it loads much faster. Franz is the former Emperor of Austria - but also a messaging app that combines chat & messaging services into one application. [Franz][franz] currently supports Slack, WhatsApp, WeChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype and many more.
+Now here's something I'd like to introduce to you. I'm not sure what this is built on, but it is faster than `Caprine`, but I wish it had `Caprine's` awesome features. The only thing I love about it is that it loads much faster. Franz is the former Emperor of Austria - but also a messaging app that combines chat & messaging services into one application. [Franz](https://meetfranz.com/) currently supports Slack, WhatsApp, WeChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype and many more.
 
 ![franz](https://meetfranz.com/static/images/franz-screenshot.png)
 
@@ -55,7 +56,6 @@ It feels lighter than Caprine, but the messenger part is simply a web app of the
 
 It went like this out of nowehere like a screensaver, and I waited 10 seconds for it to go back to messenger mode. It basically does this every time you open up `Franz`.
 
-[reddit]: https://www.reddit.com/r/macapps/comments/dezb0e/native_messenger_app_for_mac_os_review/
-[git]: https://github.com/sindresorhus/caprine/
-[goofy]: https://www.goofyapp.com/
-[franz]: https://meetfranz.com/
+## ANOTHER UPDATE:
+
+I am now back to using SSD as my main hard drive where my Mac is booted on. I'm using Caprine again because it's the one that has all these amazing features and the speed is still not as snappy, but compared to using `ChatMate`, I think it loads just the same now. It still beats opening the browser to open up Messenger.
