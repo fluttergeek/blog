@@ -58,4 +58,4 @@ It went like this out of nowehere like a screensaver, and I waited 10 seconds fo
 
 ## ANOTHER UPDATE:
 
-I am now back to using SSD as my main hard drive where my Mac is booted on. I'm using Caprine again because it's the one that has all these amazing features and the speed is still not as snappy, but compared to using `ChatMate`, I think it loads just the same now. It still beats opening the browser to open up Messenger.
+I am now back to using SSD as my main hard drive where my Mac is booted on. I'm using Caprine again because it's the one that has all these amazing features and the speed is still not as snappy but compared to using `ChatMate`, I think it loads just the same now. It still beats opening the browser to open up Messenger.
