@@ -27,9 +27,9 @@ fields:
   default: now
   hidden: true
 pages:
+- _posts/2019-09-27-a-free-blog-using-mundana-jekyll-theme-in-github-pages.md
+- _posts/2019-09-30-inverse-or-not-filter-in-realm-swift.md
+- _posts/2019-10-27-using-netlify-as-a-cms-for-your-jekyll-blog.md
+- _posts/2019-10-29-delux-m618-usb-wired-ergonomic-vertical-optical-mouse-review.md
 - _posts/2019-11-07-from-swift-uikit-to-dart-flutter-review.md
 - _posts/draggable-card-sheet-search-places-on-mapkit.md
-- _posts/2019-10-29-delux-m618-usb-wired-ergonomic-vertical-optical-mouse-review.md
-- _posts/2019-09-27-a-free-blog-using-mundana-jekyll-theme-in-github-pages.md
-- _posts/2019-10-27-using-netlify-as-a-cms-for-your-jekyll-blog.md
-- _posts/2019-09-30-inverse-or-not-filter-in-realm-swift.md

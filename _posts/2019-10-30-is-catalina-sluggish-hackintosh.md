@@ -51,3 +51,7 @@ I don't know why I haven't seen this before, but the solution is readily availab
 My keyboard is so slow when typing. It takes a while to see the letters, numbers or symbols. Considering that I'm using a wireless keyboard, maybe it really does make a difference if I had used a wired keyboard.
 
 ![](/blog/assets/images/Screen Shot 2019-11-27 at 12.33.16 PM.png)
+
+After some time being of being back in Mojave, I installed Bluestacks to play MU Origins 2. Eventually, when there is not enough free RAM, my keyboard also went slow like it did in Catalina.
+
+So, it's definitely not an OS problem, but a RAM problem. However, if it's a RAM problem, then Catalina must have occupied a lot of RAM.
