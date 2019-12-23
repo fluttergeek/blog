@@ -55,3 +55,13 @@ My keyboard is so slow when typing. It takes a while to see the letters, numbers
 After some time being of being back in Mojave, I installed Bluestacks to play MU Origins 2. Eventually, when there is not enough free RAM, my keyboard also went slow like it did in Catalina.
 
 So, it's definitely not an OS problem, but a RAM problem. However, if it's a RAM problem, then Catalina must have occupied a lot of RAM.
+
+### 3rd Attempt
+
+I'm not sure what it was last time about the RAM, but hey, it's almost Christmas and I just had to give it a try again.
+
+Why is there even a third attempt? It so happens that my keyboard lagged in Mojave, and then I checked my RAM to see if it's the culprit. Well, no it's not.
+
+Now that I'm trying it again, I'm actually using Catalina to type this blog post. It is now working well. And I can now venture into SwiftUI. As to why my keyboard went haywire the last time, I'm not sure about it but I know for a fact that something is throttling.
+
+Another thing I like about Catalina is that my default audio output in Mojave is always my headphones, even though it's not connected. Now, even though headphone is still on top of the list in my audio output list, the default is now my DP monitor, where I prefer my audio to come from.
