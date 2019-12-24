@@ -1,5 +1,5 @@
 ---
-date: 2019-12-24 10:11:17 +00:00
+date: 2019-12-24T10:11:17.000+00:00
 title: Cannot Delete or Merge Old Volume In Partition In Catalina
 categories:
 - Mac
