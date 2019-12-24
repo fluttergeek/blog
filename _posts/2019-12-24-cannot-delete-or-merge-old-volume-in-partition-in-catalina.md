@@ -12,7 +12,7 @@ tags:
 - terminal
 - mac
 - diskutil
-image: ''
+image: assets/images/Screen Shot 2016-04-30 at 11.55.05 AM-1.png
 
 ---
 This post is from StackExchange, coming from a user named [Charles](https://apple.stackexchange.com/questions/235080/cannot-delete-or-merge-old-boot-camp-partition-in-el-capitan/255088#255088 "StackExchange").
