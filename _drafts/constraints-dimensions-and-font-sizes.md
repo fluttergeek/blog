@@ -11,4 +11,6 @@ tags:
 image: assets/images/20eeb9d43e06b120b50b494a2052f803.jpg
 
 ---
-Aside from the dimensions from the image above, I'm sure you are also concerned with dimensions of inner components of the storyboard. I would like to share more of these dimensions. I also admit that I didn't make the header image, but I did make the images down below, myself.
+Aside from the dimensions from the image above, I'm sure you are also concerned with dimensions of inner components of the storyboard. I would like to share more of these dimensions. I also admit that I didn't make the header image, but I did make the images down below, myself. Most of these are inspired by a course by [**Gwinyai Nyatsoka**](https://www.udemy.com/user/gwinyai-nyatsoka/)**.**
+
+### Featured Collection View Cell
