@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Why I Prefer Cloud Firestore Than Realtime Database | iOS Junkie</title>
+    <title>Constraints, Dimensions and Font Sizes | iOS Junkie</title>
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Why I Prefer Cloud Firestore Than Realtime Database | Blog</title>
+<title>Constraints, Dimensions and Font Sizes | Blog</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Why I Prefer Cloud Firestore Than Realtime Database" />
+<meta property="og:title" content="Constraints, Dimensions and Font Sizes" />
 <meta name="author" content="jules" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit." />
-<meta property="og:description" content="This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit." />
-<link rel="canonical" href="http://iosjunkie.com/blog/why-i-prefer-cloud-firestore-than-realtime-database/" />
-<meta property="og:url" content="http://iosjunkie.com/blog/why-i-prefer-cloud-firestore-than-realtime-database/" />
+<meta name="description" content="Aside from the dimensions from the image above, I’m sure you are also concerned with dimensions of inner components of the storyboard. I would like to share more of these dimensions. I also admit that I didn’t make the header image, but I did make the images down below, myself. Most of these are inspired by a course by Gwinyai Nyatsoka." />
+<meta property="og:description" content="Aside from the dimensions from the image above, I’m sure you are also concerned with dimensions of inner components of the storyboard. I would like to share more of these dimensions. I also admit that I didn’t make the header image, but I did make the images down below, myself. Most of these are inspired by a course by Gwinyai Nyatsoka." />
+<link rel="canonical" href="http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes/" />
+<meta property="og:url" content="http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes/" />
 <meta property="og:site_name" content="Blog" />
-<meta property="og:image" content="http://iosjunkie.com/blog/assets/images/update.jpg" />
+<meta property="og:image" content="http://iosjunkie.com/blog/assets/images/20eeb9d43e06b120b50b494a2052f803.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-10-01T16:00:00-08:00" />
+<meta property="article:published_time" content="2019-12-26T05:51:02-08:00" />
 <script type="application/ld+json">
-{"description":"This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.","dateModified":"2019-10-01T16:00:00-08:00","datePublished":"2019-10-01T16:00:00-08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://iosjunkie.com/blog/why-i-prefer-cloud-firestore-than-realtime-database/"},"image":"http://iosjunkie.com/blog/assets/images/update.jpg","url":"http://iosjunkie.com/blog/why-i-prefer-cloud-firestore-than-realtime-database/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://iosjunkie.com/blog/assets/images/logo.png"},"name":"jules"},"author":{"@type":"Person","name":"jules"},"headline":"Why I Prefer Cloud Firestore Than Realtime Database","@context":"https://schema.org"}</script>
+{"description":"Aside from the dimensions from the image above, I’m sure you are also concerned with dimensions of inner components of the storyboard. I would like to share more of these dimensions. I also admit that I didn’t make the header image, but I did make the images down below, myself. Most of these are inspired by a course by Gwinyai Nyatsoka.","dateModified":"2019-12-26T05:51:02-08:00","datePublished":"2019-12-26T05:51:02-08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes/"},"image":"http://iosjunkie.com/blog/assets/images/20eeb9d43e06b120b50b494a2052f803.jpg","url":"http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://iosjunkie.com/blog/assets/images/logo.png"},"name":"jules"},"author":{"@type":"Person","name":"jules"},"headline":"Constraints, Dimensions and Font Sizes","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -202,7 +202,7 @@ var documents = [{
     "id": 21,
     "url": "http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/",
     "title": "Using Netlify As A CMS For Your Jekyll Blog",
-    "body": "2019/10/27 - I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do. First thing’s first, Netlify is some kind of web hosting. Although you can opt to just run a local server from your computer by just running bundle exec jekyll serve. Let’s create our Netlify account and follow this guide by Thomas Bradley: This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn’t find the rest to be that useful, so I’ve written down below the next steps you should take. To create the Netlify Dashboard, you need to create a folder. This folder is a subdirectory of your blog. So, if you set your baseurl from your _config. yml to \blog, then this folder, let’s say, admin can be accessed through \blog\admin. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. index. html and config. yml. This is another config. yml different from the root’s _config. yml. I copied the contents of index. html from Add to Your Site. &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset= utf-8  /&gt; &lt;meta name= viewport  content= width=device-width, initial-scale=1. 0  /&gt; &lt;title&gt;Content Manager&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt; &lt;script src= https://unpkg. com/netlify-cms@^2. 0. 0/dist/netlify-cms. js &gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;Now comes the tricky part, which is setting up the look of our admin dashboard in config. yml. If you reverse engineer it, it’s easier than reading through html. There are ways to login to your dashboard, but I chose to login with Github. To do that, here’s what you’ll have to put in admin/config. yml: backend: name: github branch: gh-pages # Branch to update (optional; defaults to master) repo: iosjunkie/blog # Repository of your blog in Githubpublish_mode: editorial_workflowmedia_folder:  assets/images collections: - name:  posts   label:  Posts   folder:  _posts   create: true  slug:  {{year}}-{{month}}-{{day}}-{{slug}}   fields:   - { label:  Layout , name:  layout , widget:  hidden , default:  post  }   - { label:  Title , name:  title , widget:  string  }   - label:  Featured Image     name:  image     widget:  image     required: false    media_library:     config:      multiple: false   - { label:  Tags , name:  tags , widget:  list , required: false }   - { label:  Categories , name:  categories , widget:  string , required: true }   - { label:  Draft , name:  draft , widget:  boolean , default: true }   - label:  Body     name:  body     widget:  markdown  - name:  website-settings   label:  Settings   files:   - label:  Settings     name:  site     file:  _config. yml     fields:     - label:  Name       name:  name       widget:  string      - label:  Description       name:  description       widget:  markdown  I just came up with this from the tutorials I watched. The images below are the results of what we just typed in our config. yml. This is what it looks like when I go to http://localhost:4000/blog/admin/#/collections/website-settings: And this is what it looks like in http://localhost:4000/blog/admin/#/collections/posts:  Once done, commit and push it to your Github. Go back to https://app. netlify. com/sites/your-blog/deploys and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru https://your-blog. netlify. com/admin. Take: I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I’m typing this article, I often get a typo of Netflix. Would I use it? No! The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the /assets/images/ folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true. That’s my only problem with it, but if that’s not a problem for you, then give it a go. "
+    "body": "2019/10/27 - I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do. First thing’s first, Netlify is some kind of web hosting. Although you can opt to just run a local server from your computer by just running bundle exec jekyll serve. Let’s create our Netlify account and follow this guide by Thomas Bradley: This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn’t find the rest to be that useful, so I’ve written down below the next steps you should take. To create the Netlify Dashboard, you need to create a folder. This folder is a subdirectory of your blog. So, if you set your baseurl from your _config. yml to \blog, then this folder, let’s say, admin can be accessed through \blog\admin. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. index. html and config. yml. This is another config. yml different from the root’s _config. yml. I copied the contents of index. html from Add to Your Site. &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset= utf-8  /&gt; &lt;meta name= viewport  content= width=device-width, initial-scale=1. 0  /&gt; &lt;title&gt;Content Manager&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt; &lt;script src= https://unpkg. com/netlify-cms@^2. 0. 0/dist/netlify-cms. js &gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;Now comes the tricky part, which is setting up the look of our admin dashboard in config. yml. If you reverse engineer it, it’s easier than reading through html. There are ways to login to your dashboard, but I chose to login with Github. To do that, here’s what you’ll have to put in admin/config. yml: backend: name: github branch: gh-pages # Branch to update (optional; defaults to master) repo: iosjunkie/blog # Repository of your blog in Githubpublish_mode: editorial_workflowmedia_folder:  assets/images collections: - name:  posts   label:  Posts   folder:  _posts   create: true  slug:  ---   fields:   - { label:  Layout , name:  layout , widget:  hidden , default:  post  }   - { label:  Title , name:  title , widget:  string  }   - label:  Featured Image     name:  image     widget:  image     required: false    media_library:     config:      multiple: false   - { label:  Tags , name:  tags , widget:  list , required: false }   - { label:  Categories , name:  categories , widget:  string , required: true }   - { label:  Draft , name:  draft , widget:  boolean , default: true }   - label:  Body     name:  body     widget:  markdown  - name:  website-settings   label:  Settings   files:   - label:  Settings     name:  site     file:  _config. yml     fields:     - label:  Name       name:  name       widget:  string      - label:  Description       name:  description       widget:  markdown  I just came up with this from the tutorials I watched. The images below are the results of what we just typed in our config. yml. This is what it looks like when I go to http://localhost:4000/blog/admin/#/collections/website-settings: And this is what it looks like in http://localhost:4000/blog/admin/#/collections/posts:  Once done, commit and push it to your Github. Go back to https://app. netlify. com/sites/your-blog/deploys and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru https://your-blog. netlify. com/admin. Take: I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I’m typing this article, I often get a typo of Netflix. Would I use it? No! The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the /assets/images/ folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true. That’s my only problem with it, but if that’s not a problem for you, then give it a go. "
     }, {
     "id": 22,
     "url": "http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/",
@@ -499,24 +499,22 @@ function lunr_search(term) {
 					<p class="text-uppercase font-weight-bold">
                         <span class="catlist">
 						
-                          <a class="sscroll text-danger" href="/blog/categories.html#tutorial">tutorial</a><span class="sep">, </span>
+                          <a class="sscroll text-danger" href="/blog/categories.html#cheatsheet">cheatsheet</a><span class="sep">, </span>
                         
-                          <a class="sscroll text-danger" href="/blog/categories.html#firestore">firestore</a><span class="sep">, </span>
-                        
-                          <a class="sscroll text-danger" href="/blog/categories.html#firebase">firebase</a><span class="sep">, </span>
+                          <a class="sscroll text-danger" href="/blog/categories.html#swift">swift</a><span class="sep">, </span>
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">Why I Prefer Cloud Firestore Than Realtime Database</h1>
+					<h1 class="display-4 mb-4 article-headline">Constraints, Dimensions and Font Sizes</h1>
 					<div class="d-flex align-items-center">
                         
                         <img class="rounded-circle" src="/blog//assets/images/avatar1.jpg" alt="Jules Lee" width="70"/>
                         
 						<small class="ml-3"> Jules Lee <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
-                            <span class="text-muted d-block mt-1">Oct 01, 2019 · <span class="reading-time">
+                            <span class="text-muted d-block mt-1">Dec 26, 2019 · <span class="reading-time">
   
   
-    2 mins read
+    1 min read
   
 </span>
     </span>
@@ -525,7 +523,7 @@ function lunr_search(term) {
 				</div>
                 
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="/blog/assets/images/update.jpg" alt="Why I Prefer Cloud Firestore Than Realtime Database">
+					<img class="rounded" src="/blog/assets/images/20eeb9d43e06b120b50b494a2052f803.jpg" alt="Constraints, Dimensions and Font Sizes">
 				</div>
                 
 			</div>
@@ -565,47 +563,15 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<p>This is just a brief insight on why I prefer using Firestore. At first, I was hesitant to dive into Firestore, because I thought there wasn’t really much difference. I saw videos and tutorials of Firestore and it baffled me even more. So, I stayed with Firebase Realtime Database for a little long while, until I started with another Xcode project. I delved into why Firestore might be a better fit.</p>
+			<p>Aside from the dimensions from the image above, I’m sure you are also concerned with dimensions of inner components of the storyboard. I would like to share more of these dimensions. I also admit that I didn’t make the header image, but I did make the images down below, myself. Most of these are inspired by a course by <a href="https://www.udemy.com/user/gwinyai-nyatsoka/"><strong>Gwinyai Nyatsoka</strong></a><strong>.</strong></p>
 
-<p>Initially, all I understood was Firebase RD will charge you depending on bandwidth usage, while Firestore will charge on writes and reads. I was intimidated by that. The key is to make the writes and reads as minimal as possible to lessen the cost.</p>
+<h3 id="featured-collection-view-cell">Featured Collection View Cell</h3>
 
-<p>In my previous personal project, I used Firebase RD. I have a web app for it and iOS app. Both coded by me. I was wondering why it always took so long to read from Firebase. Then I realized, I created a tree structure and whenever I tried to access the root’s value, it grabs all the branches along with it making my succeeding read queries redundant. It loads a very heavy amount of information as my database grew. That’s how I came to a decision to start using Firestore.</p>
+<p><img src="/blog/assets/images/Screen Shot 2019-12-26 at 10.46.37 PM-1.png" alt="" /></p>
 
-<p>Collections. Documents. You must’ve read those before. It’s confusing, I know. That’s how Firestore works. Think of it this way. <code>Collections</code> are Folders, and <code>Documents</code> are files that can contain a pointer to a sub Collection. Documents contain the attributes and its values. Collections only contain Documents.</p>
+<p>Let’s say we want to achieve the collection cell inside the red annotation, these are its dimensions:</p>
 
-<p>For example:</p>
-
-<ul>
-  <li>Customer (<code>Collection</code>)
-    <ul>
-      <li>Jane (<code>Document</code>)
-        <ul>
-          <li>address: “In the woods”</li>
-          <li>
-            <p>age: 16</p>
-          </li>
-          <li>Orders (sub <code>Collection</code>)
-            <ul>
-              <li>2019-1-19 (<code>Document</code>)
-                <ul>
-                  <li>item: “Pizza”</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<p>I hope you see the pattern now. <code>Collections</code> always contain <code>Documents</code>, and <code>Documents</code> can contain <code>Collections</code>.</p>
-
-<p>What makes it better than Firebase DB?</p>
-
-<p>Well, whenever you reference to collection(“<code>Customer</code>”).document(“<code>Jane</code>”), you won’t be including <code>Orders</code> in your read. Thereby, reducing the load. I guess you can say it’s faster this way. You only get to access the <code>address</code> and <code>age</code> of Jane. If you want to get her orders as well, then reference to collection(“<code>Customer</code>”).document(“<code>Jane</code>”).collection(“<code>Orders</code>”). You can loop through all her orders thereafter.</p>
-
-<p>No matter how deep your tree becomes with Firestore, you won’t be able to directly access its sub collections and that cuts down a lot of loading time and heaviness.</p>
+<p><img src="/blog/assets/images/Top Location Collection View Cell-1.jpg" alt="" /></p>
                 
 			</article>
 			
@@ -613,17 +579,7 @@ function lunr_search(term) {
 			<div class="mb-4">
 				<span class="taglist">
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#"></a>
-				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#firestore">firestore</a>
-				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#firebase">firebase</a>
-				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#database">database</a>
-				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#collections">collections</a>
-				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#documents">documents</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#storyboard">storyboard</a>
 				
 				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#xcode">xcode</a>
 				
@@ -686,13 +642,9 @@ function lunr_search(term) {
         <div class="row prevnextlinks small font-weight-bold">
           
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="/blog/top-5-github-pages-portfolio-templates/"> <img height="30px" class="mr-1" src="/blog/assets/images/responsive-c0618d790ea0358a403e23b5da7e6d451828e88b921890248547188ec829a524.jpg">  Top 5 Github Pages Portfolio Templates</a>
+                <a class="text-dark" href="/blog/cannot-delete-or-merge-old-volume-in-partition-in-catalina/"> <img height="30px" class="mr-1" src="/blog/assets/images/Screen Shot 2016-04-30 at 11.55.05 AM-1.png">  Cannot Delete or Merge Old Volume In Partition In Catalina</a>
             </div>
           
-          
-            <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="/blog/codable-json-parsing/"> Codable JSON Parsing  <img height="30px" class="ml-1" src="/blog/assets/images/codable-json-swift-how-to-770x400.jpg"> </a>
-            </div>
           
         </div>
     </div>
