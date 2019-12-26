@@ -1,5 +1,5 @@
 ---
-date: 2019-12-26 13:51:02 +00:00
+date: 2019-12-26T13:51:02.000+00:00
 title: Constraints, Dimensions and Font Sizes
 categories:
 - Cheatsheet
@@ -20,3 +20,9 @@ Aside from the dimensions from the image above, I'm sure you are also concerned 
 Let's say we want to achieve the collection cell inside the red annotation, these are its dimensions:
 
 ![](/blog/assets/images/Top Location Collection View Cell-1.jpg)
+
+The attributes for the cell's shadow are as follows:
+
+    mainView.layer.shadowOpacity = 0.7
+    mainView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+    mainView.layer.shadowRadius = 5
