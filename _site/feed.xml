@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-12-26T11:26:00-08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">Blog</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward Flutter and iOS development or Swift stuff. Technical yet simple tips on how Flutter and iOS components work.</subtitle><entry><title type="html">Constraints, Dimensions and Font Sizes</title><link href="http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes/" rel="alternate" type="text/html" title="Constraints, Dimensions and Font Sizes" /><published>2019-12-26T05:51:02-08:00</published><updated>2019-12-26T05:51:02-08:00</updated><id>http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes</id><content type="html" xml:base="http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes/">&lt;p&gt;Aside from the dimensions from the image above, I’m sure you are also concerned with dimensions of inner components of the storyboard. I would like to share more of these dimensions. I also admit that I didn’t make the header image, but I did make the images down below, myself. Most of these are inspired by a course by &lt;a href=&quot;https://www.udemy.com/user/gwinyai-nyatsoka/&quot;&gt;&lt;strong&gt;Gwinyai Nyatsoka&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2019-12-29T06:17:03-08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">Blog</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward Flutter and iOS development or Swift stuff. Technical yet simple tips on how Flutter and iOS components work.</subtitle><entry><title type="html">How’s 100 Days of SwiftUI</title><link href="http://iosjunkie.com/blog/how-s-100-days-of-swiftui/" rel="alternate" type="text/html" title="How's 100 Days of SwiftUI" /><published>2019-12-29T05:39:54-08:00</published><updated>2019-12-29T05:39:54-08:00</updated><id>http://iosjunkie.com/blog/how-s-100-days-of-swiftui</id><content type="html" xml:base="http://iosjunkie.com/blog/how-s-100-days-of-swiftui/">&lt;p&gt;Like most Udemy courses, this course also begins by introducing Swift. Hence, Swift UI begins at a later part like Day 16. So that makes it 84 days haha.&lt;/p&gt;
+
+&lt;h4 id=&quot;what-encouraged-me-to-take-on-this-course&quot;&gt;What encouraged me to take on this course?&lt;/h4&gt;
+
+&lt;p&gt;Well, I’ve tried Udemy a couple of times already. Believe me, I also thought of going there again, so then, I looked at the available SwiftUI courses. I was looking for a course that also teaches maps because it has been difficult to find a standard way of building an app with mapkit. Though, there’s a separate course on Udemy for that but in UIKit. I found none. Probably not worth spending a dime on a course that doesn’t involve an essential feature that is commonly used by apps like Uber and Facebook.&lt;/p&gt;
+
+&lt;p&gt;I’ve been hearing about this course on YouTube. Saw it on Reddit as well. I initially thought that it’s time-consuming maybe. Building an app every day for 100 days, maybe?&lt;/p&gt;
+
+&lt;p&gt;It turns out to be like Udemy without having to sign up, but also without a certificate of completion. I guess all you can do is post your projects on Github when you’re done making adjustments that are suggested at the end of every project. It’s not like you have to make a project too, you can simply just watch the video tutorials or read the transcript below it that reads just like a blog article. So you can either watch or read this course, up to you. The advantage is, you can copy-paste whatever is on the video as well.&lt;/p&gt;
+
+&lt;p&gt;Last but not least, you can pace really fast if you’re just reading at the codes and you already understand just by looking at it, so you can move on to a different level of difficulty.&lt;/p&gt;
+
+&lt;h4 id=&quot;would-i-recommend-you-to-do-the-same&quot;&gt;Would I recommend you to do the same?&lt;/h4&gt;
+
+&lt;p&gt;I have just begun taking it, but as far as I’ve been now, I think I do recommend it. Just build a project on your own after finishing the course and publish it on Github to compensate for not having a certificate of completion.&lt;/p&gt;
+
+&lt;p&gt;There’s also no way you can prove you’ve taken the course, even when you’re done answering the quizzes, which I did:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen Shot 2019-12-29 at 9.37.18 PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;do-i-think-swiftui-is-better-than-uikit&quot;&gt;Do I think SwiftUI is better than UIKit?&lt;/h4&gt;
+
+&lt;p&gt;The experience of SwiftUI and Flutter turns out to be really different. I thought it was similar, but now, I’m so much at ease with SwiftUI. It makes a lot of things in UIKit simpler.&lt;/p&gt;</content><author><name>jules</name></author><category term="review" /><category term="100 days" /><category term="paul hudson" /><category term="swiftui" /><summary type="html">Like most Udemy courses, this course also begins by introducing Swift. Hence, Swift UI begins at a later part like Day 16. So that makes it 84 days haha.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-12-29%20at%209.41.44%20PM.png" /></entry><entry><title type="html">Constraints, Dimensions and Font Sizes</title><link href="http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes/" rel="alternate" type="text/html" title="Constraints, Dimensions and Font Sizes" /><published>2019-12-26T05:51:02-08:00</published><updated>2019-12-26T05:51:02-08:00</updated><id>http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes</id><content type="html" xml:base="http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes/">&lt;p&gt;Aside from the dimensions from the image above, I’m sure you are also concerned with dimensions of inner components of the storyboard. I would like to share more of these dimensions. I also admit that I didn’t make the header image, but I did make the images down below, myself. Most of these are inspired by a course by &lt;a href=&quot;https://www.udemy.com/user/gwinyai-nyatsoka/&quot;&gt;&lt;strong&gt;Gwinyai Nyatsoka&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;featured-collection-view-cell&quot;&gt;Featured Collection View Cell&lt;/h3&gt;
 
@@ -234,64 +256,7 @@ if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &a
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vf7JyFFSNDU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="biometric" /><category term="touch id" /><category term="face id" /><category term="swift" /><summary type="html">To use Face ID, or even Touch ID, we need to import LocalAuthentication. The code below works for both Face and Touch ID. Whichever is enabled in the user’s settings.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/iphone-x-faceid-670x335.jpg" /></entry><entry><title type="html">Using Forestry As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Forestry As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with &lt;code&gt;/.forestry/settings.yml&lt;/code&gt;. It keeps saying &lt;code&gt;Invalid yaml syntax&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen Shot 2019-10-28 at 2.36.31 PM.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-However, everything seems to be working just fine with Forestry.&lt;/p&gt;
-
-&lt;p&gt;Things I like about it:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;All the posts can be sorted by either &lt;code&gt;title&lt;/code&gt; or &lt;code&gt;date&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;I can insert and upload pictures on the markdown text editor with ease. It allows me to choose a photo from the assets folder that I’ve configured. It also allows me to just input a link instead of choosing from the assets folder.&lt;/li&gt;
-  &lt;li&gt;I can also insert and upload an image for my &lt;code&gt;Featured Image&lt;/code&gt; front matter.&lt;/li&gt;
-  &lt;li&gt;The markdown editor looks more professional that &lt;code&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;I don’t have to do &lt;code&gt;bundle exec jekyll serve&lt;/code&gt; anymore.&lt;/li&gt;
-  &lt;li&gt;I don’t have to push every change or addition I make to Github anymore. Once I click &lt;code&gt;save&lt;/code&gt; on forestry, it instantly writes it on my Github repository.&lt;/li&gt;
-  &lt;li&gt;Once you set your admin path, in settings, to &lt;code&gt;\admin\&lt;/code&gt;, it will deploy an admin code to your repository which allows you to access forestry from &lt;code&gt;http://your-blog.github.io/admin/.&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Grammarly works on the markdown text editor, unlike in &lt;code&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Things I don’t like about it:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Whenever you edit an old post, it goes back up to the top of the recent list.&lt;/li&gt;
-  &lt;li&gt;Whenever I select an image for my Featured Image in the front matter, it leaves whitespaces on the filename. Rendering &lt;code&gt;background-image: url(/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png);&lt;/code&gt; invalid. A single quote is then required to fix this.&lt;/li&gt;
-  &lt;li&gt;You need to switch to &lt;code&gt;Raw Editor&lt;/code&gt; instead of &lt;code&gt;WYSIWYG&lt;/code&gt; to embed a YouTube video to prevent the text editor from detecting a link. Otherwise, just cancel the link creation when prompted.&lt;/li&gt;
-  &lt;li&gt;It doesn’t automatically add new posts to your sitemap.xml. So, you should build Jekyll locally on your terminal.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;tips&quot;&gt;Tips:&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Every time I write a block of code or insert an image in the &lt;code&gt;markdown&lt;/code&gt;, I have a hard time going to the next line. Merely pressing &lt;code&gt;Enter&lt;/code&gt; doesn’t do the trick. To go to the next line, you must &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;Enter&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;You don’t have to create a front matter for the body of your article. It took me a while to realize that there’s a markdown editor by default. I tried it first on my iPad, that’s why it took me a long time to notice the markdown editor, which is more conspicuous when using a web browser on my pc. It’s a gigantic view on the right side of my web browser when using the pc, but it looks like this on the iPad.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/F81E8C91-8257-430E-A75A-562F33452CBF.jpeg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-You need to click the icon on the top right corner to switch panels in order for you to see the text editor, which is shown below:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/7CFB1A72-88DA-4872-A596-3FD5804C40A4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So that’s how it looks on the iPad. I regret wasting my time on &lt;code&gt;jekyll-manager&lt;/code&gt; for quite some time now for not deeply exploring forestry.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;This is my workaround on the sitemap.xml problem. I use the app &lt;code&gt;Automator&lt;/code&gt; to automate some terminal commands that will pull my Github blog repo and build Jekyll on it, then push it back to Github.&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;cd /Path/to/Blog
-source ~/.bash_profile
-git pull origin gh-pages
-JEKYLL_ENV=production bundle exec jekyll build
-git add .
-git commit -m &quot;new changes&quot;
-git push origin gh-pages --force
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Change the &lt;code&gt;Date&lt;/code&gt; front matter to hidden, required, and Use &lt;code&gt;now&lt;/code&gt; as default.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="forestry.io" /><category term="forestry" /><category term="jekyll" /><summary type="html">This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with /.forestry/settings.yml. It keeps saying Invalid yaml syntax.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%202.33.01%20PM.png" /></entry><entry><title type="html">Using Netlify As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Netlify As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;I was actually intimidated by the idea of trying out &lt;code&gt;Netlify&lt;/code&gt; for my blog but not so much anymore. It turned out pretty easy to do.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vf7JyFFSNDU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="biometric" /><category term="touch id" /><category term="face id" /><category term="swift" /><summary type="html">To use Face ID, or even Touch ID, we need to import LocalAuthentication. The code below works for both Face and Touch ID. Whichever is enabled in the user’s settings.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/iphone-x-faceid-670x335.jpg" /></entry><entry><title type="html">Using Netlify As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Netlify As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;I was actually intimidated by the idea of trying out &lt;code&gt;Netlify&lt;/code&gt; for my blog but not so much anymore. It turned out pretty easy to do.&lt;/p&gt;
 
 &lt;p&gt;First thing’s first, &lt;code&gt;Netlify&lt;/code&gt; is some kind of web hosting. Although you can opt to just run a local server from your computer by just running &lt;code&gt;bundle exec jekyll serve&lt;/code&gt;.&lt;/p&gt;
 
@@ -392,7 +357,64 @@ And this is what it looks like in &lt;code&gt;http://localhost:4000/blog/admin/#
 
 &lt;p&gt;The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the &lt;code&gt;/assets/images/&lt;/code&gt; folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true.&lt;/p&gt;
 
-&lt;p&gt;That’s my only problem with it, but if that’s not a problem for you, then give it a go.&lt;/p&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="jekyll" /><summary type="html">I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%2011.12.35%20AM.png" /></entry><entry><title type="html">Jekyll Code Syntax Indentation</title><link href="http://iosjunkie.com/blog/jekyll-code-syntax-indentation/" rel="alternate" type="text/html" title="Jekyll Code Syntax Indentation" /><published>2019-10-26T16:00:00-08:00</published><updated>2019-10-26T16:00:00-08:00</updated><id>http://iosjunkie.com/blog/jekyll-code-syntax-indentation</id><content type="html" xml:base="http://iosjunkie.com/blog/jekyll-code-syntax-indentation/">&lt;p&gt;I’ve been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it’s actually pretty simple. All that’s needed to fix this is a 3 line CSS code:&lt;/p&gt;
+&lt;p&gt;That’s my only problem with it, but if that’s not a problem for you, then give it a go.&lt;/p&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="jekyll" /><summary type="html">I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%2011.12.35%20AM.png" /></entry><entry><title type="html">Using Forestry As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Forestry As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with &lt;code&gt;/.forestry/settings.yml&lt;/code&gt;. It keeps saying &lt;code&gt;Invalid yaml syntax&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen Shot 2019-10-28 at 2.36.31 PM.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+However, everything seems to be working just fine with Forestry.&lt;/p&gt;
+
+&lt;p&gt;Things I like about it:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;All the posts can be sorted by either &lt;code&gt;title&lt;/code&gt; or &lt;code&gt;date&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;I can insert and upload pictures on the markdown text editor with ease. It allows me to choose a photo from the assets folder that I’ve configured. It also allows me to just input a link instead of choosing from the assets folder.&lt;/li&gt;
+  &lt;li&gt;I can also insert and upload an image for my &lt;code&gt;Featured Image&lt;/code&gt; front matter.&lt;/li&gt;
+  &lt;li&gt;The markdown editor looks more professional that &lt;code&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;I don’t have to do &lt;code&gt;bundle exec jekyll serve&lt;/code&gt; anymore.&lt;/li&gt;
+  &lt;li&gt;I don’t have to push every change or addition I make to Github anymore. Once I click &lt;code&gt;save&lt;/code&gt; on forestry, it instantly writes it on my Github repository.&lt;/li&gt;
+  &lt;li&gt;Once you set your admin path, in settings, to &lt;code&gt;\admin\&lt;/code&gt;, it will deploy an admin code to your repository which allows you to access forestry from &lt;code&gt;http://your-blog.github.io/admin/.&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Grammarly works on the markdown text editor, unlike in &lt;code&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Things I don’t like about it:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Whenever you edit an old post, it goes back up to the top of the recent list.&lt;/li&gt;
+  &lt;li&gt;Whenever I select an image for my Featured Image in the front matter, it leaves whitespaces on the filename. Rendering &lt;code&gt;background-image: url(/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png);&lt;/code&gt; invalid. A single quote is then required to fix this.&lt;/li&gt;
+  &lt;li&gt;You need to switch to &lt;code&gt;Raw Editor&lt;/code&gt; instead of &lt;code&gt;WYSIWYG&lt;/code&gt; to embed a YouTube video to prevent the text editor from detecting a link. Otherwise, just cancel the link creation when prompted.&lt;/li&gt;
+  &lt;li&gt;It doesn’t automatically add new posts to your sitemap.xml. So, you should build Jekyll locally on your terminal.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;tips&quot;&gt;Tips:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Every time I write a block of code or insert an image in the &lt;code&gt;markdown&lt;/code&gt;, I have a hard time going to the next line. Merely pressing &lt;code&gt;Enter&lt;/code&gt; doesn’t do the trick. To go to the next line, you must &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;Enter&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;You don’t have to create a front matter for the body of your article. It took me a while to realize that there’s a markdown editor by default. I tried it first on my iPad, that’s why it took me a long time to notice the markdown editor, which is more conspicuous when using a web browser on my pc. It’s a gigantic view on the right side of my web browser when using the pc, but it looks like this on the iPad.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/F81E8C91-8257-430E-A75A-562F33452CBF.jpeg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+You need to click the icon on the top right corner to switch panels in order for you to see the text editor, which is shown below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/7CFB1A72-88DA-4872-A596-3FD5804C40A4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So that’s how it looks on the iPad. I regret wasting my time on &lt;code&gt;jekyll-manager&lt;/code&gt; for quite some time now for not deeply exploring forestry.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;This is my workaround on the sitemap.xml problem. I use the app &lt;code&gt;Automator&lt;/code&gt; to automate some terminal commands that will pull my Github blog repo and build Jekyll on it, then push it back to Github.&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;cd /Path/to/Blog
+source ~/.bash_profile
+git pull origin gh-pages
+JEKYLL_ENV=production bundle exec jekyll build
+git add .
+git commit -m &quot;new changes&quot;
+git push origin gh-pages --force
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Change the &lt;code&gt;Date&lt;/code&gt; front matter to hidden, required, and Use &lt;code&gt;now&lt;/code&gt; as default.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="forestry.io" /><category term="forestry" /><category term="jekyll" /><summary type="html">This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with /.forestry/settings.yml. It keeps saying Invalid yaml syntax.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%202.33.01%20PM.png" /></entry><entry><title type="html">Jekyll Code Syntax Indentation</title><link href="http://iosjunkie.com/blog/jekyll-code-syntax-indentation/" rel="alternate" type="text/html" title="Jekyll Code Syntax Indentation" /><published>2019-10-26T16:00:00-08:00</published><updated>2019-10-26T16:00:00-08:00</updated><id>http://iosjunkie.com/blog/jekyll-code-syntax-indentation</id><content type="html" xml:base="http://iosjunkie.com/blog/jekyll-code-syntax-indentation/">&lt;p&gt;I’ve been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it’s actually pretty simple. All that’s needed to fix this is a 3 line CSS code:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;-moz-tab-size: 4;
 -o-tab-size: 4;
@@ -622,111 +644,4 @@ pre.line-numbers &amp;gt; code {
 		}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;This is only enough to darken the background, but I can’t get the syntax to be colorful, especially when I want my swift to look more like it’s on an IDE. However for this article, this is enough of a solution.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="jekyll" /><category term="code" /><category term="syntax" /><category term="indentation" /><category term="highlight" /><category term="block" /><category term="prism" /><category term="pygment" /><category term="markdown" /><category term="css" /><summary type="html">I’ve been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it’s actually pretty simple. All that’s needed to fix this is a 3 line CSS code:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-27%20at%209.16.22%20PM.png" /></entry><entry><title type="html">Taking A Look At MVVM</title><link href="http://iosjunkie.com/blog/mvvm/" rel="alternate" type="text/html" title="Taking A Look At MVVM" /><published>2019-10-25T16:00:00-08:00</published><updated>2019-10-25T16:00:00-08:00</updated><id>http://iosjunkie.com/blog/mvvm</id><content type="html" xml:base="http://iosjunkie.com/blog/mvvm/">&lt;p&gt;There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: &lt;code&gt;model&lt;/code&gt;, &lt;code&gt;view model&lt;/code&gt;, and &lt;code&gt;controller&lt;/code&gt;. There’s an extra in Brian Voong’s example.&lt;/p&gt;
-
-&lt;h3 id=&quot;first-from-brian-voong&quot;&gt;First from Brian Voong&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;// Course.swift
-struct Course: Decodable {
-    id : int
-    name: String
-    number_of_lessons: Int
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;// CourseViewModel.swift
-struct CourseViewModel {
-    let name: String
-    let detailTextString: String
-    let accessoryType: UITableViewCellAccessoryType
-		
-    // Dependency Injection (DI)
-    init(course: Course) {
-        self.name = course.name
-				
-        if course.number_of_lessons &amp;gt; 35 {
-            detailTextString = &quot;Lessons 30+ Check it Out!&quot;
-            accessoryType = .detailDisclosureButton
-        else {
-            detailTextString = &quot;Lessons: \(course.number_of_lessons)&quot;
-            accessoryType = .none
-        }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;// CourseCell.swift
-class CourseCell: UITableViewCell {
-    var courseViewModel: CourseViewModel! {
-        didSet {
-           textLabel?.text = courseViewModel.name
-           detailTextLabel?.text = courseViewModel.detailTextString
-           accessoryType = courseViewModel.accessryType
-        }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;// CoursesController.swift
-fileprivate func fetchData() {
-    Service.shared.fetchCourses { (courses, err) in
-        if let err = err { return }
-        
-        self.courseViewModels = courses?.map({ return CourseViewModel(course: $0)}) ?? []
-        self.tableView.reloadData()
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This fetchData function is only available inside CoursesController.swift file, because it is a fileprivate. Brian Voong created a &lt;code&gt;Service.swift&lt;/code&gt; file from where this closure comes from which is not a relevant topic for this post. When accessed accordingly, it can be available to any classes but within CoursesController.swift file. But that’s not what we’re here to talk about. This function calls an API that returns us the courses, which is of type Course. Inside the closure, it is taking that &lt;code&gt;courses&lt;/code&gt; array into a CourseViewModel array. The CourseViewModel array will then be the data source of the &lt;code&gt;tableView&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;second-is-from-rebeloper&quot;&gt;Second is from Rebeloper&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;// User.swift
-struct User {
-    let name: String
-    let age: Int
-    backgroundColor: UIColor
-		
-    init(name: String, age: Int, backgroundColor: UIColor) {
-        self.name = name
-        self.age = age
-        self.backgrouundColor = backgroundColor
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;// RootViewModel.swift
-class RootViewModel {
-    let user: User
-    
-    init(user: User) {
-        self.user = user
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;// RootViewController.swift
-var viewModel: RootViewModel! {
-    didSet {
-        view.backgroundColor = viewModel.user.backgroundColor
-        navigationItem.title = &quot;\(viewModel.user.name), \(viewModel.user.age)&quot;
-    }
-}
-
-viewDidLoad() {
-    let user = User(name: &quot;Alex&quot;, age: 36, backgroundColor: .white)
-    viewModel = RootViewModel(user: user)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here, you won’t see a &lt;code&gt;tableView&lt;/code&gt;. Good! Cause maybe you though we need a table to do the MVVM.&lt;/p&gt;
-
-&lt;p&gt;I think Rebeloper’s code doesn’t really bring out the need for MVVM. We can see how he accessed the &lt;code&gt;User&lt;/code&gt; model inside the view controller. While in Brian’s example, he did the same thing but indirectly. But anyway, I guess that’s how it works. Just another construct that looks similar to a &lt;code&gt;Model&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;take&quot;&gt;Take&lt;/h3&gt;
-
-&lt;p&gt;Both examples almost have the same objective.&lt;/p&gt;
-
-&lt;p&gt;To separate the view logic from the model logic and vice versa by creating an intermediary called a &lt;code&gt;ViewModel&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Why should we do this? Who knows. I know MVC makes sense, but I don’t know how this does. We still have the controller and it makes it all the more confusing because it doesn’t say &lt;code&gt;MVVMC&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Hold on, let’s find a better example to see why MVVM is talked about by developers. These examples don’t exaggerate enough why we need to use MVVM. It looks pretty redundant. This here is an example by &lt;a href=&quot;https://www.youtube.com/watch?v=nAI-BI-_YWs&quot;&gt;iOS Quickstart&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen%20Shot%202019-10-26%20at%208.16.49%20PM.png&quot; alt=&quot;mvvm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now it’s starting to make sense. These static functions inside this ViewModel are called &lt;code&gt;Translation Codes&lt;/code&gt;. Blame &lt;code&gt;iOS Quickstart&lt;/code&gt; if I’m wrong about that. Without the MVVM architecture, we’ll be putting these translation codes inside our view controller and it gets messier there. The &lt;code&gt;VM&lt;/code&gt; of MVVM is just another way to create another file or folder to store the mess elsewhere if you consider these translation codes a mess, because I do.&lt;/p&gt;
-
-&lt;p&gt;Remember I said &lt;code&gt;MVVMC&lt;/code&gt;? Well, I thought the controller has its own abbreviation like in &lt;code&gt;MVC&lt;/code&gt;. Turns out the V in M&lt;code&gt;V&lt;/code&gt;VM stands for View Controller. Invisible &lt;code&gt;C&lt;/code&gt; right there. I thought the view there was like table cell or something.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="swift" /><category term="model" /><category term="view" /><category term="controller" /><category term="viewmodel" /><category term="brian" /><category term="voong" /><category term="rebeloper" /><summary type="html">There are two MVVM tutorials I’ve come across. Let’s see how similar it is and how we can tell both are MVVM. I will arrange their code in this order: model, view model, and controller. There’s an extra in Brian Voong’s example.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.iosapptemplates.com/wp-content/uploads/2019/03/Screen-Shot-2019-03-17-at-8.25.44-PM.png" /></entry></feed>
+&lt;p&gt;This is only enough to darken the background, but I can’t get the syntax to be colorful, especially when I want my swift to look more like it’s on an IDE. However for this article, this is enough of a solution.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="jekyll" /><category term="code" /><category term="syntax" /><category term="indentation" /><category term="highlight" /><category term="block" /><category term="prism" /><category term="pygment" /><category term="markdown" /><category term="css" /><summary type="html">I’ve been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it’s actually pretty simple. All that’s needed to fix this is a 3 line CSS code:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-27%20at%209.16.22%20PM.png" /></entry></feed>

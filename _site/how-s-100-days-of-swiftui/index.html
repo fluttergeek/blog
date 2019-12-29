@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Context Menu in SwiftUI | iOS Junkie</title>
+    <title>How's 100 Days of SwiftUI | iOS Junkie</title>
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Context Menu in SwiftUI | Blog</title>
+<title>How’s 100 Days of SwiftUI | Blog</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Context Menu in SwiftUI" />
+<meta property="og:title" content="How’s 100 Days of SwiftUI" />
 <meta name="author" content="jules" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns out they work within the app too." />
-<meta property="og:description" content="This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns out they work within the app too." />
-<link rel="canonical" href="http://iosjunkie.com/blog/context-menu-in-swiftui/" />
-<meta property="og:url" content="http://iosjunkie.com/blog/context-menu-in-swiftui/" />
+<meta name="description" content="Like most Udemy courses, this course also begins by introducing Swift. Hence, Swift UI begins at a later part like Day 16. So that makes it 84 days haha." />
+<meta property="og:description" content="Like most Udemy courses, this course also begins by introducing Swift. Hence, Swift UI begins at a later part like Day 16. So that makes it 84 days haha." />
+<link rel="canonical" href="http://iosjunkie.com/blog/how-s-100-days-of-swiftui/" />
+<meta property="og:url" content="http://iosjunkie.com/blog/how-s-100-days-of-swiftui/" />
 <meta property="og:site_name" content="Blog" />
-<meta property="og:image" content="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-15%20at%209.16.42%20AM.png" />
+<meta property="og:image" content="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-12-29%20at%209.41.44%20PM.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-10-14T16:00:00-08:00" />
+<meta property="article:published_time" content="2019-12-29T05:39:54-08:00" />
 <script type="application/ld+json">
-{"description":"This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns out they work within the app too.","dateModified":"2019-10-14T16:00:00-08:00","datePublished":"2019-10-14T16:00:00-08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://iosjunkie.com/blog/context-menu-in-swiftui/"},"image":"http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-15%20at%209.16.42%20AM.png","url":"http://iosjunkie.com/blog/context-menu-in-swiftui/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://iosjunkie.com/blog/assets/images/logo.png"},"name":"jules"},"author":{"@type":"Person","name":"jules"},"headline":"Context Menu in SwiftUI","@context":"https://schema.org"}</script>
+{"description":"Like most Udemy courses, this course also begins by introducing Swift. Hence, Swift UI begins at a later part like Day 16. So that makes it 84 days haha.","dateModified":"2019-12-29T05:39:54-08:00","datePublished":"2019-12-29T05:39:54-08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://iosjunkie.com/blog/how-s-100-days-of-swiftui/"},"image":"http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-12-29%20at%209.41.44%20PM.png","url":"http://iosjunkie.com/blog/how-s-100-days-of-swiftui/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://iosjunkie.com/blog/assets/images/logo.png"},"name":"jules"},"author":{"@type":"Person","name":"jules"},"headline":"How’s 100 Days of SwiftUI","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -207,7 +207,7 @@ var documents = [{
     "id": 22,
     "url": "http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/",
     "title": "Using Netlify As A CMS For Your Jekyll Blog",
-    "body": "2019/10/27 - I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do. First thing’s first, Netlify is some kind of web hosting. Although you can opt to just run a local server from your computer by just running bundle exec jekyll serve. Let’s create our Netlify account and follow this guide by Thomas Bradley: This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn’t find the rest to be that useful, so I’ve written down below the next steps you should take. To create the Netlify Dashboard, you need to create a folder. This folder is a subdirectory of your blog. So, if you set your baseurl from your _config. yml to \blog, then this folder, let’s say, admin can be accessed through \blog\admin. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. index. html and config. yml. This is another config. yml different from the root’s _config. yml. I copied the contents of index. html from Add to Your Site. &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset= utf-8  /&gt; &lt;meta name= viewport  content= width=device-width, initial-scale=1. 0  /&gt; &lt;title&gt;Content Manager&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt; &lt;script src= https://unpkg. com/netlify-cms@^2. 0. 0/dist/netlify-cms. js &gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;Now comes the tricky part, which is setting up the look of our admin dashboard in config. yml. If you reverse engineer it, it’s easier than reading through html. There are ways to login to your dashboard, but I chose to login with Github. To do that, here’s what you’ll have to put in admin/config. yml: backend: name: github branch: gh-pages # Branch to update (optional; defaults to master) repo: iosjunkie/blog # Repository of your blog in Githubpublish_mode: editorial_workflowmedia_folder:  assets/images collections: - name:  posts   label:  Posts   folder:  _posts   create: true  slug:  {{year}}-{{month}}-{{day}}-{{slug}}   fields:   - { label:  Layout , name:  layout , widget:  hidden , default:  post  }   - { label:  Title , name:  title , widget:  string  }   - label:  Featured Image     name:  image     widget:  image     required: false    media_library:     config:      multiple: false   - { label:  Tags , name:  tags , widget:  list , required: false }   - { label:  Categories , name:  categories , widget:  string , required: true }   - { label:  Draft , name:  draft , widget:  boolean , default: true }   - label:  Body     name:  body     widget:  markdown  - name:  website-settings   label:  Settings   files:   - label:  Settings     name:  site     file:  _config. yml     fields:     - label:  Name       name:  name       widget:  string      - label:  Description       name:  description       widget:  markdown  I just came up with this from the tutorials I watched. The images below are the results of what we just typed in our config. yml. This is what it looks like when I go to http://localhost:4000/blog/admin/#/collections/website-settings: And this is what it looks like in http://localhost:4000/blog/admin/#/collections/posts:  Once done, commit and push it to your Github. Go back to https://app. netlify. com/sites/your-blog/deploys and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru https://your-blog. netlify. com/admin. Take: I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I’m typing this article, I often get a typo of Netflix. Would I use it? No! The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the /assets/images/ folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true. That’s my only problem with it, but if that’s not a problem for you, then give it a go. "
+    "body": "2019/10/27 - I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do. First thing’s first, Netlify is some kind of web hosting. Although you can opt to just run a local server from your computer by just running bundle exec jekyll serve. Let’s create our Netlify account and follow this guide by Thomas Bradley: This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn’t find the rest to be that useful, so I’ve written down below the next steps you should take. To create the Netlify Dashboard, you need to create a folder. This folder is a subdirectory of your blog. So, if you set your baseurl from your _config. yml to \blog, then this folder, let’s say, admin can be accessed through \blog\admin. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. index. html and config. yml. This is another config. yml different from the root’s _config. yml. I copied the contents of index. html from Add to Your Site. &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset= utf-8  /&gt; &lt;meta name= viewport  content= width=device-width, initial-scale=1. 0  /&gt; &lt;title&gt;Content Manager&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt; &lt;script src= https://unpkg. com/netlify-cms@^2. 0. 0/dist/netlify-cms. js &gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;Now comes the tricky part, which is setting up the look of our admin dashboard in config. yml. If you reverse engineer it, it’s easier than reading through html. There are ways to login to your dashboard, but I chose to login with Github. To do that, here’s what you’ll have to put in admin/config. yml: backend: name: github branch: gh-pages # Branch to update (optional; defaults to master) repo: iosjunkie/blog # Repository of your blog in Githubpublish_mode: editorial_workflowmedia_folder:  assets/images collections: - name:  posts   label:  Posts   folder:  _posts   create: true  slug:  ---   fields:   - { label:  Layout , name:  layout , widget:  hidden , default:  post  }   - { label:  Title , name:  title , widget:  string  }   - label:  Featured Image     name:  image     widget:  image     required: false    media_library:     config:      multiple: false   - { label:  Tags , name:  tags , widget:  list , required: false }   - { label:  Categories , name:  categories , widget:  string , required: true }   - { label:  Draft , name:  draft , widget:  boolean , default: true }   - label:  Body     name:  body     widget:  markdown  - name:  website-settings   label:  Settings   files:   - label:  Settings     name:  site     file:  _config. yml     fields:     - label:  Name       name:  name       widget:  string      - label:  Description       name:  description       widget:  markdown  I just came up with this from the tutorials I watched. The images below are the results of what we just typed in our config. yml. This is what it looks like when I go to http://localhost:4000/blog/admin/#/collections/website-settings: And this is what it looks like in http://localhost:4000/blog/admin/#/collections/posts:  Once done, commit and push it to your Github. Go back to https://app. netlify. com/sites/your-blog/deploys and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru https://your-blog. netlify. com/admin. Take: I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I’m typing this article, I often get a typo of Netflix. Would I use it? No! The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the /assets/images/ folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true. That’s my only problem with it, but if that’s not a problem for you, then give it a go. "
     }, {
     "id": 23,
     "url": "http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/",
@@ -504,22 +504,20 @@ function lunr_search(term) {
 					<p class="text-uppercase font-weight-bold">
                         <span class="catlist">
 						
-                          <a class="sscroll text-danger" href="/blog/categories.html#tutorial">tutorial</a><span class="sep">, </span>
-                        
-                          <a class="sscroll text-danger" href="/blog/categories.html#swiftui">swiftui</a><span class="sep">, </span>
+                          <a class="sscroll text-danger" href="/blog/categories.html#review">review</a><span class="sep">, </span>
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">Context Menu in SwiftUI</h1>
+					<h1 class="display-4 mb-4 article-headline">How's 100 Days of SwiftUI</h1>
 					<div class="d-flex align-items-center">
                         
                         <img class="rounded-circle" src="/blog//assets/images/avatar1.jpg" alt="Jules Lee" width="70"/>
                         
 						<small class="ml-3"> Jules Lee <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
-                            <span class="text-muted d-block mt-1">Oct 14, 2019 · <span class="reading-time">
+                            <span class="text-muted d-block mt-1">Dec 29, 2019 · <span class="reading-time">
   
   
-    1 min read
+    2 mins read
   
 </span>
     </span>
@@ -528,7 +526,7 @@ function lunr_search(term) {
 				</div>
                 
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="/blog/assets/images/Screen%20Shot%202019-10-15%20at%209.16.42%20AM.png" alt="Context Menu in SwiftUI">
+					<img class="rounded" src="/blog/assets/images/Screen Shot 2019-12-29 at 9.41.44 PM.png" alt="How's 100 Days of SwiftUI">
 				</div>
                 
 			</div>
@@ -568,47 +566,29 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<p>This is one of the coolest things you’d see in an iOS app. Context Menus, like the one showed in the picture, was something that I thought could only happen with App Icons. It turns out they work within the app too.</p>
+			<p>Like most Udemy courses, this course also begins by introducing Swift. Hence, Swift UI begins at a later part like Day 16. So that makes it 84 days haha.</p>
 
-<p>It simply works like alertsheet. Like alertsheet, it is a collection of buttons but now with images attached to them too. The action is also encapsulated within the button. The best part is you no longer have to use a nasty looking closure to make that happen.</p>
-<pre><code>import SwiftUI
+<h4 id="what-encouraged-me-to-take-on-this-course">What encouraged me to take on this course?</h4>
 
-struct ContentView: View {
-    var body: some View {
-        Image("pic").resizable().frame(height: 300)
-            .cornerRadius(20).padding()
-            .contextMenu {
-                VStack {
-                    Button(action: {
-                        print("save")
-                    }) {
-                        HStack {
-                            Image(systemName: "folder.fill")
-                            Text("Save To Gallery")
-                        }
-                    }
-                    Button(action: {
-                        print("send")
-                    }) {
-                        HStack {
-                            Image(systemName: "paperplane.fill")
-                            Text("Send")
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-</code></pre>
+<p>Well, I’ve tried Udemy a couple of times already. Believe me, I also thought of going there again, so then, I looked at the available SwiftUI courses. I was looking for a course that also teaches maps because it has been difficult to find a standard way of building an app with mapkit. Though, there’s a separate course on Udemy for that but in UIKit. I found none. Probably not worth spending a dime on a course that doesn’t involve an essential feature that is commonly used by apps like Uber and Facebook.</p>
 
-<p>You could not only use it in images, but also with labels among other things. These things are probably not solid yet, so they might crash your app.</p>
+<p>I’ve been hearing about this course on YouTube. Saw it on Reddit as well. I initially thought that it’s time-consuming maybe. Building an app every day for 100 days, maybe?</p>
 
-<p>Now everything looks cleaner than building one on UIKit. It’s just that these brackets kind of make me dizzy. But don’t fret, you can compartmentalize these things with your programming prowess.</p>
+<p>It turns out to be like Udemy without having to sign up, but also without a certificate of completion. I guess all you can do is post your projects on Github when you’re done making adjustments that are suggested at the end of every project. It’s not like you have to make a project too, you can simply just watch the video tutorials or read the transcript below it that reads just like a blog article. So you can either watch or read this course, up to you. The advantage is, you can copy-paste whatever is on the video as well.</p>
 
-<p>Example was taken from <code>KAVSOFT</code>:</p>
+<p>Last but not least, you can pace really fast if you’re just reading at the codes and you already understand just by looking at it, so you can move on to a different level of difficulty.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NgXHemwSFIQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<h4 id="would-i-recommend-you-to-do-the-same">Would I recommend you to do the same?</h4>
+
+<p>I have just begun taking it, but as far as I’ve been now, I think I do recommend it. Just build a project on your own after finishing the course and publish it on Github to compensate for not having a certificate of completion.</p>
+
+<p>There’s also no way you can prove you’ve taken the course, even when you’re done answering the quizzes, which I did:</p>
+
+<p><img src="/blog/assets/images/Screen Shot 2019-12-29 at 9.37.18 PM.png" alt="" /></p>
+
+<h4 id="do-i-think-swiftui-is-better-than-uikit">Do I think SwiftUI is better than UIKit?</h4>
+
+<p>The experience of SwiftUI and Flutter turns out to be really different. I thought it was similar, but now, I’m so much at ease with SwiftUI. It makes a lot of things in UIKit simpler.</p>
                 
 			</article>
 			
@@ -616,11 +596,11 @@ struct ContentView: View {
 			<div class="mb-4">
 				<span class="taglist">
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#"></a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#review">review</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#context">context</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#100 days">100 days</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#menu">menu</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#paul hudson">paul hudson</a>
 				
 				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#swiftui">swiftui</a>
 				
@@ -681,13 +661,9 @@ struct ContentView: View {
         <div class="row prevnextlinks small font-weight-bold">
           
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="/blog/lets-start-using-swift-package-manager/"> <img height="30px" class="mr-1" src="/blog/https://miro.medium.com/max/1200/1*ooI0KwILz0Yo2cXUaW9gog.png">  Let's Start Using Swift Package Manager</a>
+                <a class="text-dark" href="/blog/constraints-dimensions-and-font-sizes/"> <img height="30px" class="mr-1" src="/blog/assets/images/20eeb9d43e06b120b50b494a2052f803.jpg">  Constraints, Dimensions and Font Sizes</a>
             </div>
           
-          
-            <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="/blog/using-vertical-mouse-my-take/"> Using Vertical Mouse: My Take  <img height="30px" class="ml-1" src="/blog/assets/images/919bb5baa29ab582de3bbd77e65b319c.jpg"> </a>
-            </div>
           
         </div>
     </div>
