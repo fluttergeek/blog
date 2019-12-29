@@ -11,7 +11,7 @@ tags:
 image: assets/images/Screen Shot 2019-12-29 at 9.41.44 PM.png
 
 ---
-Like most Udemy courses, this course also begins by introducing Swift. Hence, Swift UI begins at a later part like Day 16. So that makes it 84 days haha. 
+Like most Udemy courses, this course also begins by introducing Swift. Hence, Swift UI begins at a later part like Day 16. So that makes it 84 days haha.
 
 #### What encouraged me to take on this course?
 
@@ -25,8 +25,12 @@ Last but not least, you can pace really fast if you're just reading at the codes
 
 #### Would I recommend you to do the same?
 
-I have just begun taking it, but as far as I've been now, I think I do recommend it. Just build a project on your own after finishing the course and publish it on Github to compensate for not having a certificate of completion. 
+I have just begun taking it, but as far as I've been now, I think I do recommend it. Just build a project on your own after finishing the course and publish it on Github to compensate for not having a certificate of completion.
+
+There's also no way you can prove you've taken the course, even when you're done answering the quizzes, which I did:
+
+![](/blog/assets/images/Screen Shot 2019-12-29 at 9.37.18 PM.png)
 
 #### Do I think SwiftUI is better than UIKit?
 
-The experience of SwiftUI and Flutter turns out to be really different. I thought it was similar, but now, I'm so much at ease with SwiftUI. It makes a lot of things in UIKit simpler. 
+The experience of SwiftUI and Flutter turns out to be really different. I thought it was similar, but now, I'm so much at ease with SwiftUI. It makes a lot of things in UIKit simpler.
