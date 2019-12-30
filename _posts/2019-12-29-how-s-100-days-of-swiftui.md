@@ -23,6 +23,10 @@ It turns out to be like Udemy without having to sign up, but also without a cert
 
 Last but not least, you can pace really fast if you're just reading at the codes and you already understand just by looking at it, so you can move on to a different level of difficulty.
 
+#### How fast could you do it?
+
+It's only been the 2nd day of my journey, and I've already done Day 16 - Day 26. Uploaded 2 challenges to Github. I don't necessarily do the little projects, because it seemed too simple, but I did upload 1 project, for now. I've been slacking mostly, so imagine what you can do. I have no fixed time allotment in this course. I don't have a job. I sleep during the daytime and maybe go someplace else. I do this all at night until dawn, but with distractions like YouTube and playing MU Origin 2.
+
 #### Would I recommend you to do the same?
 
 I have just begun taking it, but as far as I've been now, I think I do recommend it. Just build a project on your own after finishing the course and publish it on Github to compensate for not having a certificate of completion.
