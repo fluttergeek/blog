@@ -1,5 +1,5 @@
 ---
-date: 2019-12-29 13:39:54 +00:00
+date: 2019-12-29T13:39:54.000+00:00
 title: How's 100 Days of SwiftUI
 categories:
 - Review
@@ -38,3 +38,7 @@ There's also no way you can prove you've taken the course, even when you're done
 #### Do I think SwiftUI is better than UIKit?
 
 The experience of SwiftUI and Flutter turns out to be really different. I thought it was similar, but now, I'm so much at ease with SwiftUI. It makes a lot of things in UIKit simpler.
+
+At first, I was clinging on to the idea that codes are longer when written in SwiftUI because you have to write every bit of modifier (attributes as we know it) from the top of our heads, while we have the attributes inspector in Swift only. If you've tried HTML or CSS, then it kinda feels just like that in the end. The modifiers you write will be like writing from your heart as you get accustomed to it. The memorizing part is not that steep even. You'll soon notice how fast it all came together. So, don't you fear the learning curve. 
+
+Also, it is significantly less code writing compared to Swift only with or without a storyboard. 
