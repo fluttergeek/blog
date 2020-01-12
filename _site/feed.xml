@@ -1,4 +1,136 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2020-01-10T06:13:44-08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">Blog</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward Flutter and iOS development or Swift stuff. Technical yet simple tips on how Flutter and iOS components work.</subtitle><entry><title type="html">How’s 100 Days of SwiftUI</title><link href="http://iosjunkie.com/blog/how-s-100-days-of-swiftui/" rel="alternate" type="text/html" title="How's 100 Days of SwiftUI" /><published>2019-12-29T05:39:54-08:00</published><updated>2019-12-29T05:39:54-08:00</updated><id>http://iosjunkie.com/blog/how-s-100-days-of-swiftui</id><content type="html" xml:base="http://iosjunkie.com/blog/how-s-100-days-of-swiftui/">&lt;p&gt;Like most Udemy courses, this course also begins by introducing Swift. Hence, Swift UI begins at a later part like Day 16. So that makes it 84 days haha.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2020-01-12T00:18:40-08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">Blog</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward Flutter and iOS development or Swift stuff. Technical yet simple tips on how Flutter and iOS components work.</subtitle><entry><title type="html">FriendFace: Saving Nested Object In CoreData With SwiftUI</title><link href="http://iosjunkie.com/blog/friendface-saving-nested-object-in-coredata-with-swiftui/" rel="alternate" type="text/html" title="FriendFace: Saving Nested Object In CoreData With SwiftUI" /><published>2020-01-11T23:47:51-08:00</published><updated>2020-01-11T23:47:51-08:00</updated><id>http://iosjunkie.com/blog/friendface-saving-nested-object-in-coredata-with-swiftui</id><content type="html" xml:base="http://iosjunkie.com/blog/friendface-saving-nested-object-in-coredata-with-swiftui/">&lt;p&gt;There’s no &lt;code&gt;face&lt;/code&gt; image in this challenge, from 100 days of SwiftUI. I will only be discussing my codes. Thanks to Peter Barclay for his &lt;a href=&quot;https://github.com/websurgeon-hws/hws-FriendFace/tree/Day-61-End&quot; title=&quot;Github&quot;&gt;repo&lt;/a&gt;. I assure you I didn’t follow through his logic, but it helped me construct my own logic. Let me start by first showing you the &lt;code&gt;User&lt;/code&gt; model and the &lt;code&gt;Friend&lt;/code&gt; model.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;struct User: Codable, Identifiable {
+    var id: UUID
+    var name: String
+    var age: Int16
+    var company: String
+    var friends: [Friend]
+ }
+
+struct Friend: Codable, Identifiable {
+    var id: UUID
+    var name: String
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The code below was placed inside my User struct:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;static func fetch() -&amp;gt; [User] {
+        
+        let cdUsers = User.fetchCoreData()
+        
+        var users: [User] = [User]() {
+            didSet {
+                if cdUsers.count == 0 {
+                	// It is important to put this in the main thread,
+                    // because I had an error without it.
+                    DispatchQueue.main.async {
+                        User.saveToCoreData(users: users)
+                    }
+                }
+            }
+        }
+        
+        if cdUsers.count &amp;gt; 0 {
+        	// Users fetched from CoreData
+            users = cdUsers
+        } else {
+        	// Fetching users from a JSON
+            let url = URL(string: &quot;https://www.hackingwithswift.com/samples/friendface.json&quot;)
+            let request = URLRequest(url: url!)
+            
+            let semaphore = DispatchSemaphore(value: 0)
+            
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    fatalError(&quot;Network error: &quot; + error.localizedDescription)
+                }
+                guard let response = response as? HTTPURLResponse else {
+                    fatalError(&quot;Not a HTTP response&quot;)
+                }
+                guard response.statusCode &amp;gt;= 200, response.statusCode &amp;lt; 300 else {
+                    fatalError(&quot;Invalid HTTP status code&quot;)
+                }
+                guard let data = data else {
+                    fatalError(&quot;No HTTP data&quot;)
+                }
+                
+                if let decodedUsers = try? JSONDecoder().decode([User].self, from: data) {
+                    users = decodedUsers
+                    semaphore.signal()
+                }
+            }.resume()
+            
+            _ = semaphore.wait(wallTimeout: .distantFuture)
+        }
+        
+        return users
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;While Peter’s solution was to show a List directly from a FetchedResults, I wanted to have one array of users to pull from both JSON and CoreData. This is how I fetched from CoreData without the property wrapper which is normally seen in the tutorials:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;static func fetchCoreData() -&amp;gt; [User] {
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let request = NSFetchRequest&amp;lt;CDUser&amp;gt;(entityName: &quot;CDUser&quot;)
+        request.returnsObjectsAsFaults = false
+        var users = [User]()
+        
+        moc.performAndWait {
+            let results: [CDUser] = try! request.execute()
+            for user in results {
+                var friends = [Friend]()
+                for friend in user.friends!.allObjects as! [CDFriend] {
+                    friends.append(Friend(id: friend.id!, name: friend.name!))
+                }
+                
+                users.append(User(id: user.id!, name: user.name!, age: user.age, company: user.company!, friends: friends))
+            }
+        }
+        return users
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is the most crucial part of my code because it took me two days to finally arrive at an answer on how to save a relative of an object:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;static func saveToCoreData(users: [User]) {
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        moc.performAndWait {
+            users.forEach { user in
+                let cdUser = CDUser(context: moc)
+                cdUser.id = user.id
+                cdUser.name = user.name
+                cdUser.age = Int16(user.age)
+                cdUser.company = user.company
+                
+                user.friends.forEach { friend in
+                    let cdFriend = CDFriend(context: moc)
+                    cdFriend.id = friend.id
+                    cdFriend.name = friend.name
+                    // This line saved me in this challenge
+                    cdFriend.user = cdUser
+                }
+            }
+        }
+        
+        if moc.hasChanges {
+            try? moc.save()
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The problem was that I couldn’t see the friends of &lt;code&gt;cdUser&lt;/code&gt; if I did it this way for each iteration:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cdUser.friends.adding(cdFriend)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cdUser.friends = friends // an array of CDFriend
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I looked into many Stackoverflow inquiries regarding this, but I don’t think there’s a specific question about how to go about it or maybe that I didn’t type the correct keyword, but then I did find one and it happens to be the solution I just showed you right now.&lt;/p&gt;</content><author><name>jules</name></author><category term="save" /><category term="storing" /><category term="object" /><category term="nested" /><category term="coredata" /><category term="swiftui" /><summary type="html">There’s no face image in this challenge, from 100 days of SwiftUI. I will only be discussing my codes. Thanks to Peter Barclay for his repo. I assure you I didn’t follow through his logic, but it helped me construct my own logic. Let me start by first showing you the User model and the Friend model.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/codable-json-swift-how-to-770x400-1.jpg" /></entry><entry><title type="html">How’s 100 Days of SwiftUI</title><link href="http://iosjunkie.com/blog/how-s-100-days-of-swiftui/" rel="alternate" type="text/html" title="How's 100 Days of SwiftUI" /><published>2019-12-29T05:39:54-08:00</published><updated>2019-12-29T05:39:54-08:00</updated><id>http://iosjunkie.com/blog/how-s-100-days-of-swiftui</id><content type="html" xml:base="http://iosjunkie.com/blog/how-s-100-days-of-swiftui/">&lt;p&gt;Like most Udemy courses, this course also begins by introducing Swift. Hence, Swift UI begins at a later part like Day 16. So that makes it 84 days haha.&lt;/p&gt;
 
 &lt;h4 id=&quot;what-encouraged-me-to-take-on-this-course&quot;&gt;What encouraged me to take on this course?&lt;/h4&gt;
 
@@ -24,7 +156,11 @@
 
 &lt;h4 id=&quot;do-i-think-swiftui-is-better-than-uikit&quot;&gt;Do I think SwiftUI is better than UIKit?&lt;/h4&gt;
 
-&lt;p&gt;The experience of SwiftUI and Flutter turns out to be really different. I thought it was similar, but now, I’m so much at ease with SwiftUI. It makes a lot of things in UIKit simpler.&lt;/p&gt;</content><author><name>jules</name></author><category term="review" /><category term="100 days" /><category term="paul hudson" /><category term="swiftui" /><summary type="html">Like most Udemy courses, this course also begins by introducing Swift. Hence, Swift UI begins at a later part like Day 16. So that makes it 84 days haha.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-12-29%20at%209.41.44%20PM.png" /></entry><entry><title type="html">Constraints, Dimensions and Font Sizes</title><link href="http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes/" rel="alternate" type="text/html" title="Constraints, Dimensions and Font Sizes" /><published>2019-12-26T05:51:02-08:00</published><updated>2019-12-26T05:51:02-08:00</updated><id>http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes</id><content type="html" xml:base="http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes/">&lt;p&gt;Aside from the dimensions from the image above, I’m sure you are also concerned with dimensions of inner components of the storyboard. I would like to share more of these dimensions. I also admit that I didn’t make the header image, but I did make the images down below, myself. Most of these are inspired by a course by &lt;a href=&quot;https://www.udemy.com/user/gwinyai-nyatsoka/&quot;&gt;&lt;strong&gt;Gwinyai Nyatsoka&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The experience of SwiftUI and Flutter turns out to be really different. I thought it was similar, but now, I’m so much at ease with SwiftUI. It makes a lot of things in UIKit simpler.&lt;/p&gt;
+
+&lt;p&gt;At first, I was clinging on to the idea that codes are longer when written in SwiftUI because you have to write every bit of modifier (attributes as we know it) from the top of our heads, while we have the attributes inspector in Swift only. If you’ve tried HTML or CSS, then it kinda feels just like that in the end. The modifiers you write will be like writing from your heart as you get accustomed to it. The memorizing part is not that steep even. You’ll soon notice how fast it all came together. So, don’t you fear the learning curve.&lt;/p&gt;
+
+&lt;p&gt;Also, it is significantly less code writing compared to Swift only with or without a storyboard.&lt;/p&gt;</content><author><name>jules</name></author><category term="review" /><category term="100 days" /><category term="paul hudson" /><category term="swiftui" /><summary type="html">Like most Udemy courses, this course also begins by introducing Swift. Hence, Swift UI begins at a later part like Day 16. So that makes it 84 days haha.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-12-29%20at%209.41.44%20PM.png" /></entry><entry><title type="html">Constraints, Dimensions and Font Sizes</title><link href="http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes/" rel="alternate" type="text/html" title="Constraints, Dimensions and Font Sizes" /><published>2019-12-26T05:51:02-08:00</published><updated>2019-12-26T05:51:02-08:00</updated><id>http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes</id><content type="html" xml:base="http://iosjunkie.com/blog/constraints-dimensions-and-font-sizes/">&lt;p&gt;Aside from the dimensions from the image above, I’m sure you are also concerned with dimensions of inner components of the storyboard. I would like to share more of these dimensions. I also admit that I didn’t make the header image, but I did make the images down below, myself. Most of these are inspired by a course by &lt;a href=&quot;https://www.udemy.com/user/gwinyai-nyatsoka/&quot;&gt;&lt;strong&gt;Gwinyai Nyatsoka&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;featured-collection-view-cell&quot;&gt;Featured Collection View Cell&lt;/h3&gt;
 
@@ -260,7 +396,64 @@ if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &a
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vf7JyFFSNDU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="biometric" /><category term="touch id" /><category term="face id" /><category term="swift" /><summary type="html">To use Face ID, or even Touch ID, we need to import LocalAuthentication. The code below works for both Face and Touch ID. Whichever is enabled in the user’s settings.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/iphone-x-faceid-670x335.jpg" /></entry><entry><title type="html">Using Netlify As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Netlify As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;I was actually intimidated by the idea of trying out &lt;code&gt;Netlify&lt;/code&gt; for my blog but not so much anymore. It turned out pretty easy to do.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vf7JyFFSNDU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="biometric" /><category term="touch id" /><category term="face id" /><category term="swift" /><summary type="html">To use Face ID, or even Touch ID, we need to import LocalAuthentication. The code below works for both Face and Touch ID. Whichever is enabled in the user’s settings.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/iphone-x-faceid-670x335.jpg" /></entry><entry><title type="html">Using Forestry As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Forestry As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with &lt;code&gt;/.forestry/settings.yml&lt;/code&gt;. It keeps saying &lt;code&gt;Invalid yaml syntax&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen Shot 2019-10-28 at 2.36.31 PM.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+However, everything seems to be working just fine with Forestry.&lt;/p&gt;
+
+&lt;p&gt;Things I like about it:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;All the posts can be sorted by either &lt;code&gt;title&lt;/code&gt; or &lt;code&gt;date&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;I can insert and upload pictures on the markdown text editor with ease. It allows me to choose a photo from the assets folder that I’ve configured. It also allows me to just input a link instead of choosing from the assets folder.&lt;/li&gt;
+  &lt;li&gt;I can also insert and upload an image for my &lt;code&gt;Featured Image&lt;/code&gt; front matter.&lt;/li&gt;
+  &lt;li&gt;The markdown editor looks more professional that &lt;code&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;I don’t have to do &lt;code&gt;bundle exec jekyll serve&lt;/code&gt; anymore.&lt;/li&gt;
+  &lt;li&gt;I don’t have to push every change or addition I make to Github anymore. Once I click &lt;code&gt;save&lt;/code&gt; on forestry, it instantly writes it on my Github repository.&lt;/li&gt;
+  &lt;li&gt;Once you set your admin path, in settings, to &lt;code&gt;\admin\&lt;/code&gt;, it will deploy an admin code to your repository which allows you to access forestry from &lt;code&gt;http://your-blog.github.io/admin/.&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Grammarly works on the markdown text editor, unlike in &lt;code&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Things I don’t like about it:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Whenever you edit an old post, it goes back up to the top of the recent list.&lt;/li&gt;
+  &lt;li&gt;Whenever I select an image for my Featured Image in the front matter, it leaves whitespaces on the filename. Rendering &lt;code&gt;background-image: url(/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png);&lt;/code&gt; invalid. A single quote is then required to fix this.&lt;/li&gt;
+  &lt;li&gt;You need to switch to &lt;code&gt;Raw Editor&lt;/code&gt; instead of &lt;code&gt;WYSIWYG&lt;/code&gt; to embed a YouTube video to prevent the text editor from detecting a link. Otherwise, just cancel the link creation when prompted.&lt;/li&gt;
+  &lt;li&gt;It doesn’t automatically add new posts to your sitemap.xml. So, you should build Jekyll locally on your terminal.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;tips&quot;&gt;Tips:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Every time I write a block of code or insert an image in the &lt;code&gt;markdown&lt;/code&gt;, I have a hard time going to the next line. Merely pressing &lt;code&gt;Enter&lt;/code&gt; doesn’t do the trick. To go to the next line, you must &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;Enter&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;You don’t have to create a front matter for the body of your article. It took me a while to realize that there’s a markdown editor by default. I tried it first on my iPad, that’s why it took me a long time to notice the markdown editor, which is more conspicuous when using a web browser on my pc. It’s a gigantic view on the right side of my web browser when using the pc, but it looks like this on the iPad.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/F81E8C91-8257-430E-A75A-562F33452CBF.jpeg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+You need to click the icon on the top right corner to switch panels in order for you to see the text editor, which is shown below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/7CFB1A72-88DA-4872-A596-3FD5804C40A4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So that’s how it looks on the iPad. I regret wasting my time on &lt;code&gt;jekyll-manager&lt;/code&gt; for quite some time now for not deeply exploring forestry.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;This is my workaround on the sitemap.xml problem. I use the app &lt;code&gt;Automator&lt;/code&gt; to automate some terminal commands that will pull my Github blog repo and build Jekyll on it, then push it back to Github.&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;cd /Path/to/Blog
+source ~/.bash_profile
+git pull origin gh-pages
+JEKYLL_ENV=production bundle exec jekyll build
+git add .
+git commit -m &quot;new changes&quot;
+git push origin gh-pages --force
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Change the &lt;code&gt;Date&lt;/code&gt; front matter to hidden, required, and Use &lt;code&gt;now&lt;/code&gt; as default.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="forestry.io" /><category term="forestry" /><category term="jekyll" /><summary type="html">This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with /.forestry/settings.yml. It keeps saying Invalid yaml syntax.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%202.33.01%20PM.png" /></entry><entry><title type="html">Using Netlify As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Netlify As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;I was actually intimidated by the idea of trying out &lt;code&gt;Netlify&lt;/code&gt; for my blog but not so much anymore. It turned out pretty easy to do.&lt;/p&gt;
 
 &lt;p&gt;First thing’s first, &lt;code&gt;Netlify&lt;/code&gt; is some kind of web hosting. Although you can opt to just run a local server from your computer by just running &lt;code&gt;bundle exec jekyll serve&lt;/code&gt;.&lt;/p&gt;
 
@@ -361,291 +554,4 @@ And this is what it looks like in &lt;code&gt;http://localhost:4000/blog/admin/#
 
 &lt;p&gt;The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the &lt;code&gt;/assets/images/&lt;/code&gt; folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true.&lt;/p&gt;
 
-&lt;p&gt;That’s my only problem with it, but if that’s not a problem for you, then give it a go.&lt;/p&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="jekyll" /><summary type="html">I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%2011.12.35%20AM.png" /></entry><entry><title type="html">Using Forestry As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Forestry As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with &lt;code&gt;/.forestry/settings.yml&lt;/code&gt;. It keeps saying &lt;code&gt;Invalid yaml syntax&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen Shot 2019-10-28 at 2.36.31 PM.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-However, everything seems to be working just fine with Forestry.&lt;/p&gt;
-
-&lt;p&gt;Things I like about it:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;All the posts can be sorted by either &lt;code&gt;title&lt;/code&gt; or &lt;code&gt;date&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;I can insert and upload pictures on the markdown text editor with ease. It allows me to choose a photo from the assets folder that I’ve configured. It also allows me to just input a link instead of choosing from the assets folder.&lt;/li&gt;
-  &lt;li&gt;I can also insert and upload an image for my &lt;code&gt;Featured Image&lt;/code&gt; front matter.&lt;/li&gt;
-  &lt;li&gt;The markdown editor looks more professional that &lt;code&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;I don’t have to do &lt;code&gt;bundle exec jekyll serve&lt;/code&gt; anymore.&lt;/li&gt;
-  &lt;li&gt;I don’t have to push every change or addition I make to Github anymore. Once I click &lt;code&gt;save&lt;/code&gt; on forestry, it instantly writes it on my Github repository.&lt;/li&gt;
-  &lt;li&gt;Once you set your admin path, in settings, to &lt;code&gt;\admin\&lt;/code&gt;, it will deploy an admin code to your repository which allows you to access forestry from &lt;code&gt;http://your-blog.github.io/admin/.&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Grammarly works on the markdown text editor, unlike in &lt;code&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Things I don’t like about it:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Whenever you edit an old post, it goes back up to the top of the recent list.&lt;/li&gt;
-  &lt;li&gt;Whenever I select an image for my Featured Image in the front matter, it leaves whitespaces on the filename. Rendering &lt;code&gt;background-image: url(/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png);&lt;/code&gt; invalid. A single quote is then required to fix this.&lt;/li&gt;
-  &lt;li&gt;You need to switch to &lt;code&gt;Raw Editor&lt;/code&gt; instead of &lt;code&gt;WYSIWYG&lt;/code&gt; to embed a YouTube video to prevent the text editor from detecting a link. Otherwise, just cancel the link creation when prompted.&lt;/li&gt;
-  &lt;li&gt;It doesn’t automatically add new posts to your sitemap.xml. So, you should build Jekyll locally on your terminal.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;tips&quot;&gt;Tips:&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Every time I write a block of code or insert an image in the &lt;code&gt;markdown&lt;/code&gt;, I have a hard time going to the next line. Merely pressing &lt;code&gt;Enter&lt;/code&gt; doesn’t do the trick. To go to the next line, you must &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;Enter&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;You don’t have to create a front matter for the body of your article. It took me a while to realize that there’s a markdown editor by default. I tried it first on my iPad, that’s why it took me a long time to notice the markdown editor, which is more conspicuous when using a web browser on my pc. It’s a gigantic view on the right side of my web browser when using the pc, but it looks like this on the iPad.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/F81E8C91-8257-430E-A75A-562F33452CBF.jpeg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-You need to click the icon on the top right corner to switch panels in order for you to see the text editor, which is shown below:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/7CFB1A72-88DA-4872-A596-3FD5804C40A4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So that’s how it looks on the iPad. I regret wasting my time on &lt;code&gt;jekyll-manager&lt;/code&gt; for quite some time now for not deeply exploring forestry.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;This is my workaround on the sitemap.xml problem. I use the app &lt;code&gt;Automator&lt;/code&gt; to automate some terminal commands that will pull my Github blog repo and build Jekyll on it, then push it back to Github.&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;cd /Path/to/Blog
-source ~/.bash_profile
-git pull origin gh-pages
-JEKYLL_ENV=production bundle exec jekyll build
-git add .
-git commit -m &quot;new changes&quot;
-git push origin gh-pages --force
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Change the &lt;code&gt;Date&lt;/code&gt; front matter to hidden, required, and Use &lt;code&gt;now&lt;/code&gt; as default.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="forestry.io" /><category term="forestry" /><category term="jekyll" /><summary type="html">This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with /.forestry/settings.yml. It keeps saying Invalid yaml syntax.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%202.33.01%20PM.png" /></entry><entry><title type="html">Jekyll Code Syntax Indentation</title><link href="http://iosjunkie.com/blog/jekyll-code-syntax-indentation/" rel="alternate" type="text/html" title="Jekyll Code Syntax Indentation" /><published>2019-10-26T16:00:00-08:00</published><updated>2019-10-26T16:00:00-08:00</updated><id>http://iosjunkie.com/blog/jekyll-code-syntax-indentation</id><content type="html" xml:base="http://iosjunkie.com/blog/jekyll-code-syntax-indentation/">&lt;p&gt;I’ve been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it’s actually pretty simple. All that’s needed to fix this is a 3 line CSS code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;-moz-tab-size: 4;
--o-tab-size: 4;
-tab-size: 4;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I needed this because every time I indent my code with the &lt;code&gt;tab bar&lt;/code&gt;, it goes much further than 4 spaces. It’s disturbing. It probably did 16 spaces. Now, that issue’s gone. I’ve also found a way to darken the background of every code blocks I write. It’s a code generated by prism, but I had to tweak it a bit to make it compatible with Jekyll.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/* PrismJS 1.17.1
-https://prismjs.com/download.html#themes=prism-tomorrow&amp;amp;languages=clike+javascript&amp;amp;plugins=line-highlight+line-numbers+highlight-keywords+keep-markup */
-/**
- * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
- * Based on https://github.com/chriskempson/tomorrow-theme
- * @author Rose Pritchard
- */
-
-pre code {
-	color: #ccc;
-	background: none;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	line-height: 1.5;
-
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-
-}
-
-/* Code blocks */
-pre {
-	padding: 1em;
-	margin: .5em 0;
-	overflow: auto;
-}
-
-:not(pre) &amp;gt; code,
-pre {
-	background: #2d2d2d;
-}
-
-code.highlighter-rouge {
-	background: none;
-}
-
-/* Inline code */
-:not(pre) &amp;gt; code {
-	padding: .1em;
-	border-radius: .3em;
-	white-space: normal;
-}
-
-.token.comment,
-.token.block-comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: #999;
-}
-
-.token.punctuation {
-	color: #ccc;
-}
-
-.token.tag,
-.token.attr-name,
-.token.namespace,
-.token.deleted {
-	color: #e2777a;
-}
-
-.token.function-name {
-	color: #6196cc;
-}
-
-.token.boolean,
-.token.number,
-.token.function {
-	color: #f08d49;
-}
-
-.token.property,
-.token.class-name,
-.token.constant,
-.token.symbol {
-	color: #f8c555;
-}
-
-.token.selector,
-.token.important,
-.token.atrule,
-.token.keyword,
-.token.builtin {
-	color: #cc99cd;
-}
-
-.token.string,
-.token.char,
-.token.attr-value,
-.token.regex,
-.token.variable {
-	color: #7ec699;
-}
-
-.token.operator,
-.token.entity,
-.token.url {
-	color: #67cdcc;
-}
-
-.token.important,
-.token.bold {
-	font-weight: bold;
-}
-.token.italic {
-	font-style: italic;
-}
-
-.token.entity {
-	cursor: help;
-}
-
-.token.inserted {
-	color: green;
-}
-
-pre[data-line] {
-	position: relative;
-	padding: 1em 0 1em 3em;
-}
-
-.line-highlight {
-	position: absolute;
-	left: 0;
-	right: 0;
-	padding: inherit 0;
-	margin-top: 1em; /* Same as .prism’s padding-top */
-
-	background: hsla(24, 20%, 50%,.08);
-	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
-
-	pointer-events: none;
-
-	line-height: inherit;
-	white-space: pre;
-}
-
-	.line-highlight:before,
-	.line-highlight[data-end]:after {
-		content: attr(data-start);
-		position: absolute;
-		top: .4em;
-		left: .6em;
-		min-width: 1em;
-		padding: 0 .5em;
-		background-color: hsla(24, 20%, 50%,.4);
-		color: hsl(24, 20%, 95%);
-		font: bold 65%/1.5 sans-serif;
-		text-align: center;
-		vertical-align: .3em;
-		border-radius: 999px;
-		text-shadow: none;
-		box-shadow: 0 1px white;
-	}
-
-	.line-highlight[data-end]:after {
-		content: attr(data-end);
-		top: auto;
-		bottom: .4em;
-	}
-
-.line-numbers .line-highlight:before,
-.line-numbers .line-highlight:after {
-	content: none;
-}
-
-pre.line-numbers {
-	position: relative;
-	padding-left: 3.8em;
-	counter-reset: linenumber;
-}
-
-pre.line-numbers &amp;gt; code {
-	position: relative;
-	white-space: inherit;
-}
-
-.line-numbers .line-numbers-rows {
-	position: absolute;
-	pointer-events: none;
-	top: 0;
-	font-size: 100%;
-	left: -3.8em;
-	width: 3em; /* works for line-numbers below 1000 lines */
-	letter-spacing: -1px;
-	border-right: 1px solid #999;
-
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-
-}
-
-	.line-numbers-rows &amp;gt; span {
-		pointer-events: none;
-		display: block;
-		counter-increment: linenumber;
-	}
-
-		.line-numbers-rows &amp;gt; span:before {
-			content: counter(linenumber);
-			color: #999;
-			display: block;
-			padding-right: 0.8em;
-			text-align: right;
-		}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is only enough to darken the background, but I can’t get the syntax to be colorful, especially when I want my swift to look more like it’s on an IDE. However for this article, this is enough of a solution.&lt;/p&gt;</content><author><name>jules</name></author><category term="" /><category term="jekyll" /><category term="code" /><category term="syntax" /><category term="indentation" /><category term="highlight" /><category term="block" /><category term="prism" /><category term="pygment" /><category term="markdown" /><category term="css" /><summary type="html">I’ve been bothered by this problem for quite a while now. I never thought of finding a solution for it, but now that I have, it’s actually pretty simple. All that’s needed to fix this is a 3 line CSS code:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-27%20at%209.16.22%20PM.png" /></entry></feed>
+&lt;p&gt;That’s my only problem with it, but if that’s not a problem for you, then give it a go.&lt;/p&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="jekyll" /><summary type="html">I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%2011.12.35%20AM.png" /></entry></feed>

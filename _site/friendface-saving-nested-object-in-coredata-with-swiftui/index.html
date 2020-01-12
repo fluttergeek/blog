@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Take Your Swift Data Structures Knowledge To The Next Level | iOS Junkie</title>
+    <title>FriendFace: Saving Nested Object In CoreData With SwiftUI | iOS Junkie</title>
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Take Your Swift Data Structures Knowledge To The Next Level | Blog</title>
+<title>FriendFace: Saving Nested Object In CoreData With SwiftUI | Blog</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Take Your Swift Data Structures Knowledge To The Next Level" />
+<meta property="og:title" content="FriendFace: Saving Nested Object In CoreData With SwiftUI" />
 <meta name="author" content="jules" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen’s Swift News. Though I wouldn’t recommended relying on this alone, in case you need to prepare for an interview, because there are other aspects of iOS development that needs perusing." />
-<meta property="og:description" content="I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen’s Swift News. Though I wouldn’t recommended relying on this alone, in case you need to prepare for an interview, because there are other aspects of iOS development that needs perusing." />
-<link rel="canonical" href="http://iosjunkie.com/blog/take-your-swift-data-structures-knowledge-to-the-next-level/" />
-<meta property="og:url" content="http://iosjunkie.com/blog/take-your-swift-data-structures-knowledge-to-the-next-level/" />
+<meta name="description" content="There’s no face image in this challenge, from 100 days of SwiftUI. I will only be discussing my codes. Thanks to Peter Barclay for his repo. I assure you I didn’t follow through his logic, but it helped me construct my own logic. Let me start by first showing you the User model and the Friend model." />
+<meta property="og:description" content="There’s no face image in this challenge, from 100 days of SwiftUI. I will only be discussing my codes. Thanks to Peter Barclay for his repo. I assure you I didn’t follow through his logic, but it helped me construct my own logic. Let me start by first showing you the User model and the Friend model." />
+<link rel="canonical" href="http://iosjunkie.com/blog/friendface-saving-nested-object-in-coredata-with-swiftui/" />
+<meta property="og:url" content="http://iosjunkie.com/blog/friendface-saving-nested-object-in-coredata-with-swiftui/" />
 <meta property="og:site_name" content="Blog" />
-<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8GiuB-Wn_sJ6WubFAJbuOx_ArtUmQgrbCqpIj6rl9GFHJZ0m" />
+<meta property="og:image" content="http://iosjunkie.com/blog/assets/images/codable-json-swift-how-to-770x400-1.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-10-04T16:00:00-08:00" />
+<meta property="article:published_time" content="2020-01-11T23:47:51-08:00" />
 <script type="application/ld+json">
-{"description":"I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen’s Swift News. Though I wouldn’t recommended relying on this alone, in case you need to prepare for an interview, because there are other aspects of iOS development that needs perusing.","dateModified":"2019-10-04T16:00:00-08:00","datePublished":"2019-10-04T16:00:00-08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://iosjunkie.com/blog/take-your-swift-data-structures-knowledge-to-the-next-level/"},"image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8GiuB-Wn_sJ6WubFAJbuOx_ArtUmQgrbCqpIj6rl9GFHJZ0m","url":"http://iosjunkie.com/blog/take-your-swift-data-structures-knowledge-to-the-next-level/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://iosjunkie.com/blog/assets/images/logo.png"},"name":"jules"},"author":{"@type":"Person","name":"jules"},"headline":"Take Your Swift Data Structures Knowledge To The Next Level","@context":"https://schema.org"}</script>
+{"description":"There’s no face image in this challenge, from 100 days of SwiftUI. I will only be discussing my codes. Thanks to Peter Barclay for his repo. I assure you I didn’t follow through his logic, but it helped me construct my own logic. Let me start by first showing you the User model and the Friend model.","dateModified":"2020-01-11T23:47:51-08:00","datePublished":"2020-01-11T23:47:51-08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://iosjunkie.com/blog/friendface-saving-nested-object-in-coredata-with-swiftui/"},"image":"http://iosjunkie.com/blog/assets/images/codable-json-swift-how-to-770x400-1.jpg","url":"http://iosjunkie.com/blog/friendface-saving-nested-object-in-coredata-with-swiftui/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://iosjunkie.com/blog/assets/images/logo.png"},"name":"jules"},"author":{"@type":"Person","name":"jules"},"headline":"FriendFace: Saving Nested Object In CoreData With SwiftUI","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -212,7 +212,7 @@ var documents = [{
     "id": 23,
     "url": "http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/",
     "title": "Using Netlify As A CMS For Your Jekyll Blog",
-    "body": "2019/10/27 - I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do. First thing’s first, Netlify is some kind of web hosting. Although you can opt to just run a local server from your computer by just running bundle exec jekyll serve. Let’s create our Netlify account and follow this guide by Thomas Bradley: This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn’t find the rest to be that useful, so I’ve written down below the next steps you should take. To create the Netlify Dashboard, you need to create a folder. This folder is a subdirectory of your blog. So, if you set your baseurl from your _config. yml to \blog, then this folder, let’s say, admin can be accessed through \blog\admin. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. index. html and config. yml. This is another config. yml different from the root’s _config. yml. I copied the contents of index. html from Add to Your Site. &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset= utf-8  /&gt; &lt;meta name= viewport  content= width=device-width, initial-scale=1. 0  /&gt; &lt;title&gt;Content Manager&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt; &lt;script src= https://unpkg. com/netlify-cms@^2. 0. 0/dist/netlify-cms. js &gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;Now comes the tricky part, which is setting up the look of our admin dashboard in config. yml. If you reverse engineer it, it’s easier than reading through html. There are ways to login to your dashboard, but I chose to login with Github. To do that, here’s what you’ll have to put in admin/config. yml: backend: name: github branch: gh-pages # Branch to update (optional; defaults to master) repo: iosjunkie/blog # Repository of your blog in Githubpublish_mode: editorial_workflowmedia_folder:  assets/images collections: - name:  posts   label:  Posts   folder:  _posts   create: true  slug:  {{year}}-{{month}}-{{day}}-{{slug}}   fields:   - { label:  Layout , name:  layout , widget:  hidden , default:  post  }   - { label:  Title , name:  title , widget:  string  }   - label:  Featured Image     name:  image     widget:  image     required: false    media_library:     config:      multiple: false   - { label:  Tags , name:  tags , widget:  list , required: false }   - { label:  Categories , name:  categories , widget:  string , required: true }   - { label:  Draft , name:  draft , widget:  boolean , default: true }   - label:  Body     name:  body     widget:  markdown  - name:  website-settings   label:  Settings   files:   - label:  Settings     name:  site     file:  _config. yml     fields:     - label:  Name       name:  name       widget:  string      - label:  Description       name:  description       widget:  markdown  I just came up with this from the tutorials I watched. The images below are the results of what we just typed in our config. yml. This is what it looks like when I go to http://localhost:4000/blog/admin/#/collections/website-settings: And this is what it looks like in http://localhost:4000/blog/admin/#/collections/posts:  Once done, commit and push it to your Github. Go back to https://app. netlify. com/sites/your-blog/deploys and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru https://your-blog. netlify. com/admin. Take: I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I’m typing this article, I often get a typo of Netflix. Would I use it? No! The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the /assets/images/ folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true. That’s my only problem with it, but if that’s not a problem for you, then give it a go. "
+    "body": "2019/10/27 - I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do. First thing’s first, Netlify is some kind of web hosting. Although you can opt to just run a local server from your computer by just running bundle exec jekyll serve. Let’s create our Netlify account and follow this guide by Thomas Bradley: This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn’t find the rest to be that useful, so I’ve written down below the next steps you should take. To create the Netlify Dashboard, you need to create a folder. This folder is a subdirectory of your blog. So, if you set your baseurl from your _config. yml to \blog, then this folder, let’s say, admin can be accessed through \blog\admin. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. index. html and config. yml. This is another config. yml different from the root’s _config. yml. I copied the contents of index. html from Add to Your Site. &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset= utf-8  /&gt; &lt;meta name= viewport  content= width=device-width, initial-scale=1. 0  /&gt; &lt;title&gt;Content Manager&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt; &lt;script src= https://unpkg. com/netlify-cms@^2. 0. 0/dist/netlify-cms. js &gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;Now comes the tricky part, which is setting up the look of our admin dashboard in config. yml. If you reverse engineer it, it’s easier than reading through html. There are ways to login to your dashboard, but I chose to login with Github. To do that, here’s what you’ll have to put in admin/config. yml: backend: name: github branch: gh-pages # Branch to update (optional; defaults to master) repo: iosjunkie/blog # Repository of your blog in Githubpublish_mode: editorial_workflowmedia_folder:  assets/images collections: - name:  posts   label:  Posts   folder:  _posts   create: true  slug:  ---   fields:   - { label:  Layout , name:  layout , widget:  hidden , default:  post  }   - { label:  Title , name:  title , widget:  string  }   - label:  Featured Image     name:  image     widget:  image     required: false    media_library:     config:      multiple: false   - { label:  Tags , name:  tags , widget:  list , required: false }   - { label:  Categories , name:  categories , widget:  string , required: true }   - { label:  Draft , name:  draft , widget:  boolean , default: true }   - label:  Body     name:  body     widget:  markdown  - name:  website-settings   label:  Settings   files:   - label:  Settings     name:  site     file:  _config. yml     fields:     - label:  Name       name:  name       widget:  string      - label:  Description       name:  description       widget:  markdown  I just came up with this from the tutorials I watched. The images below are the results of what we just typed in our config. yml. This is what it looks like when I go to http://localhost:4000/blog/admin/#/collections/website-settings: And this is what it looks like in http://localhost:4000/blog/admin/#/collections/posts:  Once done, commit and push it to your Github. Go back to https://app. netlify. com/sites/your-blog/deploys and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru https://your-blog. netlify. com/admin. Take: I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I’m typing this article, I often get a typo of Netflix. Would I use it? No! The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the /assets/images/ folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true. That’s my only problem with it, but if that’s not a problem for you, then give it a go. "
     }, {
     "id": 24,
     "url": "http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/",
@@ -509,22 +509,20 @@ function lunr_search(term) {
 					<p class="text-uppercase font-weight-bold">
                         <span class="catlist">
 						
-                          <a class="sscroll text-danger" href="/blog/categories.html#reference">reference</a><span class="sep">, </span>
-                        
-                          <a class="sscroll text-danger" href="/blog/categories.html#swift">swift</a><span class="sep">, </span>
+                          <a class="sscroll text-danger" href="/blog/categories.html#tutorial">tutorial</a><span class="sep">, </span>
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">Take Your Swift Data Structures Knowledge To The Next Level</h1>
+					<h1 class="display-4 mb-4 article-headline">FriendFace: Saving Nested Object In CoreData With SwiftUI</h1>
 					<div class="d-flex align-items-center">
                         
                         <img class="rounded-circle" src="/blog//assets/images/avatar1.jpg" alt="Jules Lee" width="70"/>
                         
 						<small class="ml-3"> Jules Lee <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
-                            <span class="text-muted d-block mt-1">Oct 04, 2019 · <span class="reading-time">
+                            <span class="text-muted d-block mt-1">Jan 11, 2020 · <span class="reading-time">
   
   
-    1 min read
+    3 mins read
   
 </span>
     </span>
@@ -533,7 +531,7 @@ function lunr_search(term) {
 				</div>
                 
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8GiuB-Wn_sJ6WubFAJbuOx_ArtUmQgrbCqpIj6rl9GFHJZ0m" alt="Take Your Swift Data Structures Knowledge To The Next Level">
+					<img class="rounded" src="/blog/assets/images/codable-json-swift-how-to-770x400-1.jpg" alt="FriendFace: Saving Nested Object In CoreData With SwiftUI">
 				</div>
                 
 			</div>
@@ -573,14 +571,139 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<p>I just found one of the best guides to prepare for your interview. I found out about this in Sean Allen’s Swift News. Though I wouldn’t recommended relying on this alone, in case you need to prepare for an interview, because there are other aspects of iOS development that needs perusing.</p>
+			<p>There’s no <code>face</code> image in this challenge, from 100 days of SwiftUI. I will only be discussing my codes. Thanks to Peter Barclay for his <a href="https://github.com/websurgeon-hws/hws-FriendFace/tree/Day-61-End" title="Github">repo</a>. I assure you I didn’t follow through his logic, but it helped me construct my own logic. Let me start by first showing you the <code>User</code> model and the <code>Friend</code> model.</p>
 
-<p><img src="http://localhost:4000/blog/assets/images/Screen%20Shot%202019-10-05%20at%209.26.13%20PM.png" alt="ray wenderlich" /></p>
+<pre><code>struct User: Codable, Identifiable {
+    var id: UUID
+    var name: String
+    var age: Int16
+    var company: String
+    var friends: [Friend]
+ }
 
-<p>I don’t always find Ray Wenderlich’s site a great place to look for tutorials. Some of the contents do baffle me sometimes. Although, it’s still a good place to start learning programming, Swift especially. This resource, <a href="https://www.raywenderlich.com/762435-swift-interview-questions-and-answers">Swift Interview Questions and Answers</a>, is a good find for me though. It’s a good place to start learning or refreshing your knowledge on the most utilized methods of using the Swift language. It’s kind of like a flashcard wherein answers are hidden, then you press the reveal button to get an explanation.</p>
+struct Friend: Codable, Identifiable {
+    var id: UUID
+    var name: String
+}
+</code></pre>
 
-<p>The explanations are superb! It’s not always just a bunch of paragraphs, some have a bunch of examples every step of the way and explained in the simplest-to-understand manner. I mean who needs more explaining when there’s the easy to understand examples. I wish there is a similar resource for <code>GCD</code> because it is tough for newbies.</p>
+<p>The code below was placed inside my User struct:</p>
 
+<pre><code>static func fetch() -&gt; [User] {
+        
+        let cdUsers = User.fetchCoreData()
+        
+        var users: [User] = [User]() {
+            didSet {
+                if cdUsers.count == 0 {
+                	// It is important to put this in the main thread,
+                    // because I had an error without it.
+                    DispatchQueue.main.async {
+                        User.saveToCoreData(users: users)
+                    }
+                }
+            }
+        }
+        
+        if cdUsers.count &gt; 0 {
+        	// Users fetched from CoreData
+            users = cdUsers
+        } else {
+        	// Fetching users from a JSON
+            let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")
+            let request = URLRequest(url: url!)
+            
+            let semaphore = DispatchSemaphore(value: 0)
+            
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    fatalError("Network error: " + error.localizedDescription)
+                }
+                guard let response = response as? HTTPURLResponse else {
+                    fatalError("Not a HTTP response")
+                }
+                guard response.statusCode &gt;= 200, response.statusCode &lt; 300 else {
+                    fatalError("Invalid HTTP status code")
+                }
+                guard let data = data else {
+                    fatalError("No HTTP data")
+                }
+                
+                if let decodedUsers = try? JSONDecoder().decode([User].self, from: data) {
+                    users = decodedUsers
+                    semaphore.signal()
+                }
+            }.resume()
+            
+            _ = semaphore.wait(wallTimeout: .distantFuture)
+        }
+        
+        return users
+    }
+</code></pre>
+
+<p>While Peter’s solution was to show a List directly from a FetchedResults, I wanted to have one array of users to pull from both JSON and CoreData. This is how I fetched from CoreData without the property wrapper which is normally seen in the tutorials:</p>
+
+<pre><code>static func fetchCoreData() -&gt; [User] {
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let request = NSFetchRequest&lt;CDUser&gt;(entityName: "CDUser")
+        request.returnsObjectsAsFaults = false
+        var users = [User]()
+        
+        moc.performAndWait {
+            let results: [CDUser] = try! request.execute()
+            for user in results {
+                var friends = [Friend]()
+                for friend in user.friends!.allObjects as! [CDFriend] {
+                    friends.append(Friend(id: friend.id!, name: friend.name!))
+                }
+                
+                users.append(User(id: user.id!, name: user.name!, age: user.age, company: user.company!, friends: friends))
+            }
+        }
+        return users
+    }
+</code></pre>
+
+<p>This is the most crucial part of my code because it took me two days to finally arrive at an answer on how to save a relative of an object:</p>
+
+<pre><code>static func saveToCoreData(users: [User]) {
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        moc.performAndWait {
+            users.forEach { user in
+                let cdUser = CDUser(context: moc)
+                cdUser.id = user.id
+                cdUser.name = user.name
+                cdUser.age = Int16(user.age)
+                cdUser.company = user.company
+                
+                user.friends.forEach { friend in
+                    let cdFriend = CDFriend(context: moc)
+                    cdFriend.id = friend.id
+                    cdFriend.name = friend.name
+                    // This line saved me in this challenge
+                    cdFriend.user = cdUser
+                }
+            }
+        }
+        
+        if moc.hasChanges {
+            try? moc.save()
+        }
+    }
+</code></pre>
+
+<p>The problem was that I couldn’t see the friends of <code>cdUser</code> if I did it this way for each iteration:</p>
+
+<pre><code>cdUser.friends.adding(cdFriend)
+</code></pre>
+
+<p>or</p>
+
+<pre><code>cdUser.friends = friends // an array of CDFriend
+</code></pre>
+
+<p>I looked into many Stackoverflow inquiries regarding this, but I don’t think there’s a specific question about how to go about it or maybe that I didn’t type the correct keyword, but then I did find one and it happens to be the solution I just showed you right now.</p>
                 
 			</article>
 			
@@ -588,21 +711,17 @@ function lunr_search(term) {
 			<div class="mb-4">
 				<span class="taglist">
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#"></a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#save">save</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#swift">swift</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#storing">storing</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#interview">interview</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#object">object</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#questions">questions</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#nested">nested</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#reference">reference</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#coredata">coredata</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#knowledge">knowledge</a>
-				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#xcode">xcode</a>
-				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#ios">ios</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#swiftui">swiftui</a>
 				
 				</span>
 			</div>
@@ -661,13 +780,9 @@ function lunr_search(term) {
         <div class="row prevnextlinks small font-weight-bold">
           
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="/blog/swift-if-let-vs-guard-let/"> <img height="30px" class="mr-1" src="/blog/https://i.ytimg.com/vi/P2YZu9MwLaM/maxresdefault.jpg">  Swift: If Let vs. Guard Let</a>
+                <a class="text-dark" href="/blog/how-s-100-days-of-swiftui/"> <img height="30px" class="mr-1" src="/blog/assets/images/Screen Shot 2019-12-29 at 9.41.44 PM.png">  How's 100 Days of SwiftUI</a>
             </div>
           
-          
-            <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="/blog/how-static-is-used/"> How Static Is Used  <img height="30px" class="ml-1" src="/blog/https://i.ytimg.com/vi/s2E5hVxQAZQ/hqdefault.jpg"> </a>
-            </div>
           
         </div>
     </div>
