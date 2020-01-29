@@ -60,7 +60,7 @@ For some reason, we have to delay the cropper functionality from appearing, beca
       const cropper = new Cropper(image);
     }, 100)
 
-So this whole thing here becomes active when I show a view allowing the user to crop the image. I grab the image by its ID, and added a listener to it every time a crop has happened, otherwise, it will detect every event that manifests when you're still dragging the corners of the cropper. Get that base46 value of that image and assign it to `croppedImage`. To save it as a picture, you must first remove `data:image/png;base64,`.
+So this whole thing here becomes active when I show a view allowing the user to crop the image. I grab the image by its ID, and added a listener to it every time a crop has happened, otherwise, it will detect every event that manifests when you're still dragging the corners of the cropper. Get that base46 value of that image and assign it to `croppedImage`. To save it as a picture, you must first remove `data:image/png;base64,` string that is contained within the base64 string.
 
 Notice that `cropper` is initialized after the event listener, but somehow it just works inside the `addEventListener`.
 
