@@ -1,5 +1,5 @@
 ---
-date: 2020-01-29 13:47:29 +00:00
+date: 2020-01-29T13:47:29.000+00:00
 title: Detect Image File Change | Crop It Then Replace Image To .png Using Javascript
   Node
 categories:
@@ -14,7 +14,7 @@ tags:
 image: assets/images/Screen Shot 2020-01-28 at 9.40.54 AM.png
 
 ---
-The objective here is to grab an image that is recently been added to a particular folder. Give the user the ability to crop it with their own dimensions of choosing, then save that cropped image as a png. Lastly and optionally, delete the old image file from the system. 
+The objective here is to grab an image that is recently been added to a particular folder. Give the user the ability to crop it with their own dimensions of choosing, then save that cropped image as a png. Lastly and optionally, delete the old image file from the system.
 
 To give some context, I'm using Vue, but obviously, you could do this on react as well.
 
@@ -60,7 +60,9 @@ For some reason, we have to delay the cropper functionality from appearing, beca
       const cropper = new Cropper(image);
     }, 100)
 
-So this whole thing here becomes active when I show a view allowing the user to crop the image. I grab the image from by its ID, add a listener to it every time a crop has happened, otherwise, it will detect every event that manifests when you're still dragging the corners of the cropper. Get that base46 value of that image and assign it to `croppedImage`. To save it as a picture, you must first remove `data:image/png;base64,`.
+So this whole thing here becomes active when I show a view allowing the user to crop the image. I grab the image by its ID, and added a listener to it every time a crop has happened, otherwise, it will detect every event that manifests when you're still dragging the corners of the cropper. Get that base46 value of that image and assign it to `croppedImage`. To save it as a picture, you must first remove `data:image/png;base64,`.
+
+Notice that `cropper` is initialized after the event listener, but somehow it just works inside the `addEventListener`.
 
 Before saving it, we must first close the watcher to prevent it from detecting an image that we are about to add or save to that particular folder. Then we replace that image's extension to png, if it's a jpg, with our cropped image.
 
@@ -77,4 +79,4 @@ Before saving it, we must first close the watcher to prevent it from detecting a
 
 If we want to delete the old .jpg file, then we simply call this `unlink`. In my case, this is called when the view of where the cropping happens is put away.
 
-Oh and don't forget to `const fs `**`=`**` require('fs')` before maneuvering files.
+Oh and don't forget to `const fs`**`=`**`require('fs')` before maneuvering files.
