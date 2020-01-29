@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Use Jekyll Manager Instead of Jekyll Admin | iOS Junkie</title>
+    <title>Detect Image File Change | Crop It Then Replace Image To .png Using Javascript Node | iOS Junkie</title>
 
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Use Jekyll Manager Instead of Jekyll Admin | Blog</title>
+<title>Detect Image File Change Crop It Then Replace Image To .png Using Javascript Node | Blog</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Use Jekyll Manager Instead of Jekyll Admin" />
+<meta property="og:title" content="Detect Image File Change Crop It Then Replace Image To .png Using Javascript Node" />
 <meta name="author" content="jules" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s more intuitive. I am wrong. However, the upgrades done in jekyll-manager isn’t really all that drastic. They still haven’t got a fix for when selecting the image metadata. It is still http://localhost:4000/blog/assets/images/…jpg when I select an image from the static files. I wonder why they haven’t dealt this yet. This should have been the turning point of their fork. Instead, a few UI changes have been made. Some, impressive." />
-<meta property="og:description" content="I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s more intuitive. I am wrong. However, the upgrades done in jekyll-manager isn’t really all that drastic. They still haven’t got a fix for when selecting the image metadata. It is still http://localhost:4000/blog/assets/images/…jpg when I select an image from the static files. I wonder why they haven’t dealt this yet. This should have been the turning point of their fork. Instead, a few UI changes have been made. Some, impressive." />
-<link rel="canonical" href="http://iosjunkie.com/blog/use-jekyll-manager-instead-of-jekyll-admin/" />
-<meta property="og:url" content="http://iosjunkie.com/blog/use-jekyll-manager-instead-of-jekyll-admin/" />
+<meta name="description" content="The objective here is to grab an image that is recently been added to a particular folder. Give the user the ability to crop it with their own dimensions of choosing, then save that cropped image as a png. Lastly and optionally, delete the old image file from the system." />
+<meta property="og:description" content="The objective here is to grab an image that is recently been added to a particular folder. Give the user the ability to crop it with their own dimensions of choosing, then save that cropped image as a png. Lastly and optionally, delete the old image file from the system." />
+<link rel="canonical" href="http://iosjunkie.com/blog/detect-image-file-change-crop-it-then-replace-image-to-png-using-javascript-node/" />
+<meta property="og:url" content="http://iosjunkie.com/blog/detect-image-file-change-crop-it-then-replace-image-to-png-using-javascript-node/" />
 <meta property="og:site_name" content="Blog" />
-<meta property="og:image" content="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" />
+<meta property="og:image" content="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202020-01-28%20at%209.40.54%20AM.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-09-29T16:00:00-08:00" />
+<meta property="article:published_time" content="2020-01-29T05:47:29-08:00" />
 <script type="application/ld+json">
-{"description":"I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s more intuitive. I am wrong. However, the upgrades done in jekyll-manager isn’t really all that drastic. They still haven’t got a fix for when selecting the image metadata. It is still http://localhost:4000/blog/assets/images/…jpg when I select an image from the static files. I wonder why they haven’t dealt this yet. This should have been the turning point of their fork. Instead, a few UI changes have been made. Some, impressive.","dateModified":"2019-09-29T16:00:00-08:00","datePublished":"2019-09-29T16:00:00-08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://iosjunkie.com/blog/use-jekyll-manager-instead-of-jekyll-admin/"},"image":"http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png","url":"http://iosjunkie.com/blog/use-jekyll-manager-instead-of-jekyll-admin/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://iosjunkie.com/blog/assets/images/logo.png"},"name":"jules"},"author":{"@type":"Person","name":"jules"},"headline":"Use Jekyll Manager Instead of Jekyll Admin","@context":"https://schema.org"}</script>
+{"description":"The objective here is to grab an image that is recently been added to a particular folder. Give the user the ability to crop it with their own dimensions of choosing, then save that cropped image as a png. Lastly and optionally, delete the old image file from the system.","dateModified":"2020-01-29T05:47:29-08:00","datePublished":"2020-01-29T05:47:29-08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://iosjunkie.com/blog/detect-image-file-change-crop-it-then-replace-image-to-png-using-javascript-node/"},"image":"http://iosjunkie.com/blog/assets/images/Screen%20Shot%202020-01-28%20at%209.40.54%20AM.png","url":"http://iosjunkie.com/blog/detect-image-file-change-crop-it-then-replace-image-to-png-using-javascript-node/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://iosjunkie.com/blog/assets/images/logo.png"},"name":"jules"},"author":{"@type":"Person","name":"jules"},"headline":"Detect Image File Change Crop It Then Replace Image To .png Using Javascript Node","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -217,7 +217,7 @@ var documents = [{
     "id": 24,
     "url": "http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/",
     "title": "Using Netlify As A CMS For Your Jekyll Blog",
-    "body": "2019/10/27 - I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do. First thing’s first, Netlify is some kind of web hosting. Although you can opt to just run a local server from your computer by just running bundle exec jekyll serve. Let’s create our Netlify account and follow this guide by Thomas Bradley: This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn’t find the rest to be that useful, so I’ve written down below the next steps you should take. To create the Netlify Dashboard, you need to create a folder. This folder is a subdirectory of your blog. So, if you set your baseurl from your _config. yml to \blog, then this folder, let’s say, admin can be accessed through \blog\admin. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. index. html and config. yml. This is another config. yml different from the root’s _config. yml. I copied the contents of index. html from Add to Your Site. &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset= utf-8  /&gt; &lt;meta name= viewport  content= width=device-width, initial-scale=1. 0  /&gt; &lt;title&gt;Content Manager&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt; &lt;script src= https://unpkg. com/netlify-cms@^2. 0. 0/dist/netlify-cms. js &gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;Now comes the tricky part, which is setting up the look of our admin dashboard in config. yml. If you reverse engineer it, it’s easier than reading through html. There are ways to login to your dashboard, but I chose to login with Github. To do that, here’s what you’ll have to put in admin/config. yml: backend: name: github branch: gh-pages # Branch to update (optional; defaults to master) repo: iosjunkie/blog # Repository of your blog in Githubpublish_mode: editorial_workflowmedia_folder:  assets/images collections: - name:  posts   label:  Posts   folder:  _posts   create: true  slug:  {{year}}-{{month}}-{{day}}-{{slug}}   fields:   - { label:  Layout , name:  layout , widget:  hidden , default:  post  }   - { label:  Title , name:  title , widget:  string  }   - label:  Featured Image     name:  image     widget:  image     required: false    media_library:     config:      multiple: false   - { label:  Tags , name:  tags , widget:  list , required: false }   - { label:  Categories , name:  categories , widget:  string , required: true }   - { label:  Draft , name:  draft , widget:  boolean , default: true }   - label:  Body     name:  body     widget:  markdown  - name:  website-settings   label:  Settings   files:   - label:  Settings     name:  site     file:  _config. yml     fields:     - label:  Name       name:  name       widget:  string      - label:  Description       name:  description       widget:  markdown  I just came up with this from the tutorials I watched. The images below are the results of what we just typed in our config. yml. This is what it looks like when I go to http://localhost:4000/blog/admin/#/collections/website-settings: And this is what it looks like in http://localhost:4000/blog/admin/#/collections/posts:  Once done, commit and push it to your Github. Go back to https://app. netlify. com/sites/your-blog/deploys and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru https://your-blog. netlify. com/admin. Take: I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I’m typing this article, I often get a typo of Netflix. Would I use it? No! The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the /assets/images/ folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true. That’s my only problem with it, but if that’s not a problem for you, then give it a go. "
+    "body": "2019/10/27 - I was actually intimidated by the idea of trying out Netlify for my blog but not so much anymore. It turned out pretty easy to do. First thing’s first, Netlify is some kind of web hosting. Although you can opt to just run a local server from your computer by just running bundle exec jekyll serve. Let’s create our Netlify account and follow this guide by Thomas Bradley: This is actually a part of his Jekyll + NetlifyCMS hosting setup playlist. I didn’t find the rest to be that useful, so I’ve written down below the next steps you should take. To create the Netlify Dashboard, you need to create a folder. This folder is a subdirectory of your blog. So, if you set your baseurl from your _config. yml to \blog, then this folder, let’s say, admin can be accessed through \blog\admin. This folder has to be created at the root of your Jekyll project folder. Then there are only two files you need to create under the admin folder. index. html and config. yml. This is another config. yml different from the root’s _config. yml. I copied the contents of index. html from Add to Your Site. &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset= utf-8  /&gt; &lt;meta name= viewport  content= width=device-width, initial-scale=1. 0  /&gt; &lt;title&gt;Content Manager&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt; &lt;script src= https://unpkg. com/netlify-cms@^2. 0. 0/dist/netlify-cms. js &gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;Now comes the tricky part, which is setting up the look of our admin dashboard in config. yml. If you reverse engineer it, it’s easier than reading through html. There are ways to login to your dashboard, but I chose to login with Github. To do that, here’s what you’ll have to put in admin/config. yml: backend: name: github branch: gh-pages # Branch to update (optional; defaults to master) repo: iosjunkie/blog # Repository of your blog in Githubpublish_mode: editorial_workflowmedia_folder:  assets/images collections: - name:  posts   label:  Posts   folder:  _posts   create: true  slug:  ---   fields:   - { label:  Layout , name:  layout , widget:  hidden , default:  post  }   - { label:  Title , name:  title , widget:  string  }   - label:  Featured Image     name:  image     widget:  image     required: false    media_library:     config:      multiple: false   - { label:  Tags , name:  tags , widget:  list , required: false }   - { label:  Categories , name:  categories , widget:  string , required: true }   - { label:  Draft , name:  draft , widget:  boolean , default: true }   - label:  Body     name:  body     widget:  markdown  - name:  website-settings   label:  Settings   files:   - label:  Settings     name:  site     file:  _config. yml     fields:     - label:  Name       name:  name       widget:  string      - label:  Description       name:  description       widget:  markdown  I just came up with this from the tutorials I watched. The images below are the results of what we just typed in our config. yml. This is what it looks like when I go to http://localhost:4000/blog/admin/#/collections/website-settings: And this is what it looks like in http://localhost:4000/blog/admin/#/collections/posts:  Once done, commit and push it to your Github. Go back to https://app. netlify. com/sites/your-blog/deploys and make sure it is deployed. After deploying, you will be able to access Netlify admin dashboard thru https://your-blog. netlify. com/admin. Take: I like the UI of Netlify CMS. Reminds me of Netflix all the time and as I’m typing this article, I often get a typo of Netflix. Would I use it? No! The list of posts is not sorted by date. I’m used to having it sorted by date. The images in the /assets/images/ folder are also not sorted and there’s no way of sorting any collection in this CMS. Sad, but true. That’s my only problem with it, but if that’s not a problem for you, then give it a go. "
     }, {
     "id": 25,
     "url": "http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/",
@@ -514,24 +514,22 @@ function lunr_search(term) {
 					<p class="text-uppercase font-weight-bold">
                         <span class="catlist">
 						
-                          <a class="sscroll text-danger" href="/blog/categories.html#jekyll">jekyll</a><span class="sep">, </span>
+                          <a class="sscroll text-danger" href="/blog/categories.html#node">node</a><span class="sep">, </span>
                         
-                          <a class="sscroll text-danger" href="/blog/categories.html#admin">admin</a><span class="sep">, </span>
-                        
-                          <a class="sscroll text-danger" href="/blog/categories.html#manager">manager</a><span class="sep">, </span>
+                          <a class="sscroll text-danger" href="/blog/categories.html#javascript">javascript</a><span class="sep">, </span>
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">Use Jekyll Manager Instead of Jekyll Admin</h1>
+					<h1 class="display-4 mb-4 article-headline">Detect Image File Change | Crop It Then Replace Image To .png Using Javascript Node</h1>
 					<div class="d-flex align-items-center">
                         
                         <img class="rounded-circle" src="/blog//assets/images/avatar1.jpg" alt="Jules Lee" width="70"/>
                         
 						<small class="ml-3"> Jules Lee <span><a target="_blank" href="" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
-                            <span class="text-muted d-block mt-1">Sep 29, 2019 · <span class="reading-time">
+                            <span class="text-muted d-block mt-1">Jan 29, 2020 · <span class="reading-time">
   
   
-    2 mins read
+    3 mins read
   
 </span>
     </span>
@@ -540,7 +538,7 @@ function lunr_search(term) {
 				</div>
                 
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.31.40%20PM.png" alt="Use Jekyll Manager Instead of Jekyll Admin">
+					<img class="rounded" src="/blog/assets/images/Screen Shot 2020-01-28 at 9.40.54 AM.png" alt="Detect Image File Change | Crop It Then Replace Image To .png Using Javascript Node">
 				</div>
                 
 			</div>
@@ -580,31 +578,75 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<p>I was hesitant in making a change at first, since I just started blogging using Jekyll. Looking at how updates are freshly being added to the jekyll-admin library made me think it’s more intuitive. I am wrong. However, the upgrades done in jekyll-manager isn’t really all that drastic. They still haven’t got a fix for when selecting the image metadata. It is still http://localhost:4000/blog/assets/images/…jpg when I select an image from the static files. I wonder why they haven’t dealt this yet. This should have been the turning point of their fork. Instead, a few UI changes have been made. Some, impressive.</p>
+			<p>The objective here is to grab an image that is recently been added to a particular folder. Give the user the ability to crop it with their own dimensions of choosing, then save that cropped image as a png. Lastly and optionally, delete the old image file from the system.</p>
 
-<p><img src="/blog/assets/images/Screen%20Shot%202019-09-29%20at%2011.32.59%20PM.png" alt="assets" /></p>
+<p>To give some context, I’m using Vue, but obviously, you could do this on react as well.</p>
 
-<p>This is my favorite part about jekyll-manager and to be honest, the only thing I care about, really. Directories can be navigated to now, therefore making uploading a hell of a lot easier, now that I’m confident to use this dashboard for uploading images. I no longer have to drag and drop using Finder for this.</p>
+<p>There are two libraries needed for this task:</p>
 
-<p>The metadata too has changed. It is, by default, hidden and expandable. It’s quite confusing why it’s called a <code>FRONT MATTER</code>, instead of <code>metadata</code>. And by default too, <code>layout</code> is the first metadata you’ll be able to see. There’s a select dropdown for the choices for <code>layout</code>. Since in our config.yml, layout is set to <code>post</code> by default, then you can choose to remove this metadata field. <code>tags</code> has this cool feature that allows you to select from previous used tags. However, this feature is still buggy. I found a bug when I try removing a word. It removes the previous word instead of the current word (tag) that needs removing. It’s just sad that it doesn’t work the same with <code>categories</code>. Hence, when typing multiple categories, just separate them with spaces and not a comma.</p>
+<ul>
+  <li><a href="https://fengyuanchen.github.io/cropperjs/" title="Cropperjs">Cropperjs</a> - as the name suggests</li>
+  <li><a href="https://github.com/paulmillr/chokidar" title="Chokidar">Chokidar</a> - use this to detect changes in the folder</li>
+</ul>
 
-<p>The text editor’s panel for tools is now dark but overall, it works the same and still no Grammarly functionality. I mean <code>Grammarly</code> is disabled when using the text editor, but not on other text fields.  Bummer.</p>
+<p>First, we want to watch the <code>folder path</code> where our image belongs. In this case, I’m checking when an image is added to that folder. Only the image that is to be added to that folder, and not the existing contents that are already in the folder.</p>
 
-<p>For the most part, it looks almost exactly like jekyll-admin and better, but I don’t understand why there isn’t any noticeable changes in jekyll-admin that will make it better than the 2 years ago maintaned code of jekyll-manager.</p>
-
-<h3 id="automating">Automating</h3>
-<p>You might want to lessen the technicality of going through terminal to go to your blog directory and serving jekyll to access admin. You can do this by opening <code>Automator</code>. You have this preinstalled on your Mac OS. Create a new <code>workflow</code>, then choose to run shell script like so:</p>
-
-<p><img src="/blog/assets/images/Screen%20Shot%202019-10-02%20at%209.07.22%20PM.png" alt="shell" /></p>
-
-<p>Type in what you’d normally type on your terminal.</p>
-
-<pre><code>cd /Directory/To/Your/Blog
-source ~/.bash_profile
-bundle exec jekyll serve --watch
+<pre><code>this.watcher = chokidar.watch(folderPath.replace(/\\/g, '/'), {
+  ignored: /(^|[\/\\])\../, // ignore dotfiles
+  persistent: true,
+  ignoreInitial: true
+}).on('add', (event, path) =&gt; {
+  if (event.match(/\.(jpeg|jpg|gif|png)$/) != null) {
+    this.imageUrl = "file://" + event
+    this.imageUrlPath = event
+    this.imageHTML = `
+        &lt;img id="image" src="${this.imageUrl}" style="display: block;max-width: 100%;height: 600px;"&gt;
+  }
+})
 </code></pre>
 
-<p>If you run it and everything goes smoothly, try opening <code>localhost:4000/admin</code> on your browser. That’s how you’ll know if it works. And if it does, you may close the <code>Automator</code> and it’ll ask you to save the script. Save it as Application to your preferred directory. If you ever need to access the admin dashboard of your blog, just double-click like you would on a normal app. You might be surprised. This also works for pushing all your changes to github.</p>
+<p>To show the image to the DOM, we must stipulate that this image does not come from our app’s static files folder by adding <code>file://</code> before the path of the image’s location, which is the <code>event</code>. But we don’t need that when we’re saving or deleting the image file, hence a different variable was created for those purposes.</p>
+
+<p>For some reason, we have to delay the cropper functionality from appearing, because inserting the img to our DOM probably took some time. But before all that, we must first have the cropper.min.js and cropper.min.css, which you’ll find <a href="https://cdnjs.com/libraries/cropperjs" title="Cropper CDN">here</a>, added to your HTML.</p>
+
+<pre><code>setTimeout(() =&gt; {
+  const image = document.getElementById('image');
+  image.addEventListener('cropend', () =&gt; {
+    var croppedImage = cropper.getCroppedCanvas().toDataURL()
+    var base64Data = croppedImage.replace(/^data:image\/png;base64,/`, "");
+
+    if (!!this.watcher) this.watcher.close().then(() =&gt; this.watcher = null )
+    fs.writeFile(this.imageUrlPath.replace(/\.jpg$/i, ".png"), base64Data, 'base64', function (err) {
+      if (err) {
+        console.error(err)
+      } else {
+        console.log("Image has been saved")
+      }
+    });
+  })
+  const cropper = new Cropper(image);
+}, 100)
+</code></pre>
+
+<p>So this whole thing here becomes active when I show a view allowing the user to crop the image. I grab the image from by its ID, add a listener to it every time a crop has happened, otherwise, it will detect every event that manifests when you’re still dragging the corners of the cropper. Get that base46 value of that image and assign it to <code>croppedImage</code>. To save it as a picture, you must first remove <code>data:image/png;base64,</code>.</p>
+
+<p>Before saving it, we must first close the watcher to prevent it from detecting an image that we are about to add or save to that particular folder. Then we replace that image’s extension to png, if it’s a jpg, with our cropped image.</p>
+
+<h4 id="optional">OPTIONAL</h4>
+
+<pre><code>fs.unlink(this.imageUrlPath, (err) =&gt; {
+  if (err) {
+    this.imageUrl = this.imageUrl.replace(/\.jpg$/i, ".png")
+    console.error(err)
+  } else {
+    console.log("Image has been removed")
+  }
+})
+</code></pre>
+
+<p>If we want to delete the old .jpg file, then we simply call this <code>unlink</code>. In my case, this is called when the view of where the cropping happens is put away.</p>
+
+<p>Oh and don’t forget to <code>const fs </code><strong><code>=</code></strong><code> require('fs')</code> before maneuvering files.</p>
                 
 			</article>
 			
@@ -612,21 +654,15 @@ bundle exec jekyll serve --watch
 			<div class="mb-4">
 				<span class="taglist">
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#"></a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#jpg">jpg</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#featured">featured</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#png">png</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#jekyll-manager">jekyll-manager</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#image">image</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#jekyll-admin">jekyll-admin</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#node">node</a>
 				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#blog">blog</a>
-				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#dashboard">dashboard</a>
-				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#admin">admin</a>
-				
-				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#grammarly">grammarly</a>
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/blog/tags.html#javascript">javascript</a>
 				
 				</span>
 			</div>
@@ -685,13 +721,9 @@ bundle exec jekyll serve --watch
         <div class="row prevnextlinks small font-weight-bold">
           
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="/blog/inverse-or-not-filter-in-realm-swift/"> <img height="30px" class="mr-1" src="/blog/assets/images/1_DqzHUZj6HcmIBK9I2aOVww.png">  != VS. NOT Filter In Realm Swift</a>
+                <a class="text-dark" href="/blog/friendface-saving-nested-object-in-coredata-with-swiftui/"> <img height="30px" class="mr-1" src="/blog/assets/images/codable-json-swift-how-to-770x400-1.jpg">  FriendFace: Saving Nested Object In CoreData With SwiftUI</a>
             </div>
           
-          
-            <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="/blog/using-cloud-functions-to-create-remote-notifications-with-firebase-and-swift5/"> Using Cloud Functions To Create Remote Notifications With Firebase In Swift 5 and Javascript  <img height="30px" class="ml-1" src="/blog/https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_709/https://buildfire.com/wp-content/uploads/2018/03/uber.png"> </a>
-            </div>
           
         </div>
     </div>

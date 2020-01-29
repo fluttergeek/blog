@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2020-01-12T00:18:40-08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">Blog</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward Flutter and iOS development or Swift stuff. Technical yet simple tips on how Flutter and iOS components work.</subtitle><entry><title type="html">FriendFace: Saving Nested Object In CoreData With SwiftUI</title><link href="http://iosjunkie.com/blog/friendface-saving-nested-object-in-coredata-with-swiftui/" rel="alternate" type="text/html" title="FriendFace: Saving Nested Object In CoreData With SwiftUI" /><published>2020-01-11T23:47:51-08:00</published><updated>2020-01-11T23:47:51-08:00</updated><id>http://iosjunkie.com/blog/friendface-saving-nested-object-in-coredata-with-swiftui</id><content type="html" xml:base="http://iosjunkie.com/blog/friendface-saving-nested-object-in-coredata-with-swiftui/">&lt;p&gt;There’s no &lt;code&gt;face&lt;/code&gt; image in this challenge, from 100 days of SwiftUI. I will only be discussing my codes. Thanks to Peter Barclay for his &lt;a href=&quot;https://github.com/websurgeon-hws/hws-FriendFace/tree/Day-61-End&quot; title=&quot;Github&quot;&gt;repo&lt;/a&gt;. I assure you I didn’t follow through his logic, but it helped me construct my own logic. Let me start by first showing you the &lt;code&gt;User&lt;/code&gt; model and the &lt;code&gt;Friend&lt;/code&gt; model.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://iosjunkie.com/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iosjunkie.com/blog/" rel="alternate" type="text/html" /><updated>2020-01-29T06:23:56-08:00</updated><id>http://iosjunkie.com/blog/feed.xml</id><title type="html">Blog</title><subtitle>Demystifying complex instructions, tutorials, and a little bit more geared toward Flutter and iOS development or Swift stuff. Technical yet simple tips on how Flutter and iOS components work.</subtitle><entry><title type="html">Detect Image File Change | Crop It Then Replace Image To .png Using Javascript Node</title><link href="http://iosjunkie.com/blog/detect-image-file-change-crop-it-then-replace-image-to-png-using-javascript-node/" rel="alternate" type="text/html" title="Detect Image File Change | Crop It Then Replace Image To .png Using Javascript Node" /><published>2020-01-29T05:47:29-08:00</published><updated>2020-01-29T05:47:29-08:00</updated><id>http://iosjunkie.com/blog/detect-image-file-change-crop-it-then-replace-image-to-png-using-javascript-node</id><content type="html" xml:base="http://iosjunkie.com/blog/detect-image-file-change-crop-it-then-replace-image-to-png-using-javascript-node/">&lt;p&gt;The objective here is to grab an image that is recently been added to a particular folder. Give the user the ability to crop it with their own dimensions of choosing, then save that cropped image as a png. Lastly and optionally, delete the old image file from the system.&lt;/p&gt;
+
+&lt;p&gt;To give some context, I’m using Vue, but obviously, you could do this on react as well.&lt;/p&gt;
+
+&lt;p&gt;There are two libraries needed for this task:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://fengyuanchen.github.io/cropperjs/&quot; title=&quot;Cropperjs&quot;&gt;Cropperjs&lt;/a&gt; - as the name suggests&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/paulmillr/chokidar&quot; title=&quot;Chokidar&quot;&gt;Chokidar&lt;/a&gt; - use this to detect changes in the folder&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;First, we want to watch the &lt;code&gt;folder path&lt;/code&gt; where our image belongs. In this case, I’m checking when an image is added to that folder. Only the image that is to be added to that folder, and not the existing contents that are already in the folder.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;this.watcher = chokidar.watch(folderPath.replace(/\\/g, '/'), {
+  ignored: /(^|[\/\\])\../, // ignore dotfiles
+  persistent: true,
+  ignoreInitial: true
+}).on('add', (event, path) =&amp;gt; {
+  if (event.match(/\.(jpeg|jpg|gif|png)$/) != null) {
+    this.imageUrl = &quot;file://&quot; + event
+    this.imageUrlPath = event
+    this.imageHTML = `
+        &amp;lt;img id=&quot;image&quot; src=&quot;${this.imageUrl}&quot; style=&quot;display: block;max-width: 100%;height: 600px;&quot;&amp;gt;
+  }
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To show the image to the DOM, we must stipulate that this image does not come from our app’s static files folder by adding &lt;code&gt;file://&lt;/code&gt; before the path of the image’s location, which is the &lt;code&gt;event&lt;/code&gt;. But we don’t need that when we’re saving or deleting the image file, hence a different variable was created for those purposes.&lt;/p&gt;
+
+&lt;p&gt;For some reason, we have to delay the cropper functionality from appearing, because inserting the img to our DOM probably took some time. But before all that, we must first have the cropper.min.js and cropper.min.css, which you’ll find &lt;a href=&quot;https://cdnjs.com/libraries/cropperjs&quot; title=&quot;Cropper CDN&quot;&gt;here&lt;/a&gt;, added to your HTML.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;setTimeout(() =&amp;gt; {
+  const image = document.getElementById('image');
+  image.addEventListener('cropend', () =&amp;gt; {
+    var croppedImage = cropper.getCroppedCanvas().toDataURL()
+    var base64Data = croppedImage.replace(/^data:image\/png;base64,/`, &quot;&quot;);
+
+    if (!!this.watcher) this.watcher.close().then(() =&amp;gt; this.watcher = null )
+    fs.writeFile(this.imageUrlPath.replace(/\.jpg$/i, &quot;.png&quot;), base64Data, 'base64', function (err) {
+      if (err) {
+        console.error(err)
+      } else {
+        console.log(&quot;Image has been saved&quot;)
+      }
+    });
+  })
+  const cropper = new Cropper(image);
+}, 100)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So this whole thing here becomes active when I show a view allowing the user to crop the image. I grab the image from by its ID, add a listener to it every time a crop has happened, otherwise, it will detect every event that manifests when you’re still dragging the corners of the cropper. Get that base46 value of that image and assign it to &lt;code&gt;croppedImage&lt;/code&gt;. To save it as a picture, you must first remove &lt;code&gt;data:image/png;base64,&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Before saving it, we must first close the watcher to prevent it from detecting an image that we are about to add or save to that particular folder. Then we replace that image’s extension to png, if it’s a jpg, with our cropped image.&lt;/p&gt;
+
+&lt;h4 id=&quot;optional&quot;&gt;OPTIONAL&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;fs.unlink(this.imageUrlPath, (err) =&amp;gt; {
+  if (err) {
+    this.imageUrl = this.imageUrl.replace(/\.jpg$/i, &quot;.png&quot;)
+    console.error(err)
+  } else {
+    console.log(&quot;Image has been removed&quot;)
+  }
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If we want to delete the old .jpg file, then we simply call this &lt;code&gt;unlink&lt;/code&gt;. In my case, this is called when the view of where the cropping happens is put away.&lt;/p&gt;
+
+&lt;p&gt;Oh and don’t forget to &lt;code&gt;const fs &lt;/code&gt;&lt;strong&gt;&lt;code&gt;=&lt;/code&gt;&lt;/strong&gt;&lt;code&gt; require('fs')&lt;/code&gt; before maneuvering files.&lt;/p&gt;</content><author><name>jules</name></author><category term="jpg" /><category term="png" /><category term="image" /><category term="node" /><category term="javascript" /><summary type="html">The objective here is to grab an image that is recently been added to a particular folder. Give the user the ability to crop it with their own dimensions of choosing, then save that cropped image as a png. Lastly and optionally, delete the old image file from the system.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202020-01-28%20at%209.40.54%20AM.png" /></entry><entry><title type="html">FriendFace: Saving Nested Object In CoreData With SwiftUI</title><link href="http://iosjunkie.com/blog/friendface-saving-nested-object-in-coredata-with-swiftui/" rel="alternate" type="text/html" title="FriendFace: Saving Nested Object In CoreData With SwiftUI" /><published>2020-01-11T23:47:51-08:00</published><updated>2020-01-11T23:47:51-08:00</updated><id>http://iosjunkie.com/blog/friendface-saving-nested-object-in-coredata-with-swiftui</id><content type="html" xml:base="http://iosjunkie.com/blog/friendface-saving-nested-object-in-coredata-with-swiftui/">&lt;p&gt;There’s no &lt;code&gt;face&lt;/code&gt; image in this challenge, from 100 days of SwiftUI. I will only be discussing my codes. Thanks to Peter Barclay for his &lt;a href=&quot;https://github.com/websurgeon-hws/hws-FriendFace/tree/Day-61-End&quot; title=&quot;Github&quot;&gt;repo&lt;/a&gt;. I assure you I didn’t follow through his logic, but it helped me construct my own logic. Let me start by first showing you the &lt;code&gt;User&lt;/code&gt; model and the &lt;code&gt;Friend&lt;/code&gt; model.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;struct User: Codable, Identifiable {
     var id: UUID
@@ -396,64 +464,7 @@ if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &a
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vf7JyFFSNDU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="biometric" /><category term="touch id" /><category term="face id" /><category term="swift" /><summary type="html">To use Face ID, or even Touch ID, we need to import LocalAuthentication. The code below works for both Face and Touch ID. Whichever is enabled in the user’s settings.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/iphone-x-faceid-670x335.jpg" /></entry><entry><title type="html">Using Forestry As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Forestry As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with &lt;code&gt;/.forestry/settings.yml&lt;/code&gt;. It keeps saying &lt;code&gt;Invalid yaml syntax&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/Screen Shot 2019-10-28 at 2.36.31 PM.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-However, everything seems to be working just fine with Forestry.&lt;/p&gt;
-
-&lt;p&gt;Things I like about it:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;All the posts can be sorted by either &lt;code&gt;title&lt;/code&gt; or &lt;code&gt;date&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;I can insert and upload pictures on the markdown text editor with ease. It allows me to choose a photo from the assets folder that I’ve configured. It also allows me to just input a link instead of choosing from the assets folder.&lt;/li&gt;
-  &lt;li&gt;I can also insert and upload an image for my &lt;code&gt;Featured Image&lt;/code&gt; front matter.&lt;/li&gt;
-  &lt;li&gt;The markdown editor looks more professional that &lt;code&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;I don’t have to do &lt;code&gt;bundle exec jekyll serve&lt;/code&gt; anymore.&lt;/li&gt;
-  &lt;li&gt;I don’t have to push every change or addition I make to Github anymore. Once I click &lt;code&gt;save&lt;/code&gt; on forestry, it instantly writes it on my Github repository.&lt;/li&gt;
-  &lt;li&gt;Once you set your admin path, in settings, to &lt;code&gt;\admin\&lt;/code&gt;, it will deploy an admin code to your repository which allows you to access forestry from &lt;code&gt;http://your-blog.github.io/admin/.&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Grammarly works on the markdown text editor, unlike in &lt;code&gt;jekyll-manager&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Things I don’t like about it:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Whenever you edit an old post, it goes back up to the top of the recent list.&lt;/li&gt;
-  &lt;li&gt;Whenever I select an image for my Featured Image in the front matter, it leaves whitespaces on the filename. Rendering &lt;code&gt;background-image: url(/blog/assets/images/Screen Shot 2019-10-28 at 11.12.35 AM.png);&lt;/code&gt; invalid. A single quote is then required to fix this.&lt;/li&gt;
-  &lt;li&gt;You need to switch to &lt;code&gt;Raw Editor&lt;/code&gt; instead of &lt;code&gt;WYSIWYG&lt;/code&gt; to embed a YouTube video to prevent the text editor from detecting a link. Otherwise, just cancel the link creation when prompted.&lt;/li&gt;
-  &lt;li&gt;It doesn’t automatically add new posts to your sitemap.xml. So, you should build Jekyll locally on your terminal.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;tips&quot;&gt;Tips:&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Every time I write a block of code or insert an image in the &lt;code&gt;markdown&lt;/code&gt;, I have a hard time going to the next line. Merely pressing &lt;code&gt;Enter&lt;/code&gt; doesn’t do the trick. To go to the next line, you must &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;Enter&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;You don’t have to create a front matter for the body of your article. It took me a while to realize that there’s a markdown editor by default. I tried it first on my iPad, that’s why it took me a long time to notice the markdown editor, which is more conspicuous when using a web browser on my pc. It’s a gigantic view on the right side of my web browser when using the pc, but it looks like this on the iPad.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/F81E8C91-8257-430E-A75A-562F33452CBF.jpeg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-You need to click the icon on the top right corner to switch panels in order for you to see the text editor, which is shown below:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/images/7CFB1A72-88DA-4872-A596-3FD5804C40A4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So that’s how it looks on the iPad. I regret wasting my time on &lt;code&gt;jekyll-manager&lt;/code&gt; for quite some time now for not deeply exploring forestry.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;This is my workaround on the sitemap.xml problem. I use the app &lt;code&gt;Automator&lt;/code&gt; to automate some terminal commands that will pull my Github blog repo and build Jekyll on it, then push it back to Github.&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt;cd /Path/to/Blog
-source ~/.bash_profile
-git pull origin gh-pages
-JEKYLL_ENV=production bundle exec jekyll build
-git add .
-git commit -m &quot;new changes&quot;
-git push origin gh-pages --force
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Change the &lt;code&gt;Date&lt;/code&gt; front matter to hidden, required, and Use &lt;code&gt;now&lt;/code&gt; as default.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>jules</name></author><category term="cms" /><category term="netlify" /><category term="forestry.io" /><category term="forestry" /><category term="jekyll" /><summary type="html">This is by far the best CMS for Jekyll I have discovered. It only takes a few clicks to get it up and running, unlike Jekyll-admin/manager and Netlify. I still haven’t found a workaround the error I’m getting with /.forestry/settings.yml. It keeps saying Invalid yaml syntax.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/Screen%20Shot%202019-10-28%20at%202.33.01%20PM.png" /></entry><entry><title type="html">Using Netlify As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Netlify As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;I was actually intimidated by the idea of trying out &lt;code&gt;Netlify&lt;/code&gt; for my blog but not so much anymore. It turned out pretty easy to do.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vf7JyFFSNDU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jules</name></author><category term="biometric" /><category term="touch id" /><category term="face id" /><category term="swift" /><summary type="html">To use Face ID, or even Touch ID, we need to import LocalAuthentication. The code below works for both Face and Touch ID. Whichever is enabled in the user’s settings.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://iosjunkie.com/blog/assets/images/iphone-x-faceid-670x335.jpg" /></entry><entry><title type="html">Using Netlify As A CMS For Your Jekyll Blog</title><link href="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/" rel="alternate" type="text/html" title="Using Netlify As A CMS For Your Jekyll Blog" /><published>2019-10-27T08:00:00-08:00</published><updated>2019-10-27T08:00:00-08:00</updated><id>http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog</id><content type="html" xml:base="http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/">&lt;p&gt;I was actually intimidated by the idea of trying out &lt;code&gt;Netlify&lt;/code&gt; for my blog but not so much anymore. It turned out pretty easy to do.&lt;/p&gt;
 
 &lt;p&gt;First thing’s first, &lt;code&gt;Netlify&lt;/code&gt; is some kind of web hosting. Although you can opt to just run a local server from your computer by just running &lt;code&gt;bundle exec jekyll serve&lt;/code&gt;.&lt;/p&gt;
 
