@@ -45,7 +45,7 @@ There are ways to login to your dashboard, but I chose to login with `Github`. T
     backend:
       name: github
       branch: gh-pages # Branch to update (optional; defaults to master)
-      repo: iosjunkie/blog # Repository of your blog in Github
+      repo: fluttergeek/blog # Repository of your blog in Github
     
     publish_mode: editorial_workflow
     media_folder: "assets/images"

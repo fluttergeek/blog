@@ -19,16 +19,15 @@ defaults:
     path: _pages
   values:
     layout: page
-name: iOS Junkie
+name: FlutterGeek
 future: true
-description: Demystifying complex instructions, tutorials, and a little bit more geared
-  toward Flutter and iOS development or Swift stuff. Technical yet simple tips on how Flutter and iOS
+description: Demystifying complex instructions, tutorials, and a little bit more geared toward mobile development in Flutter.
   components work.
 logo: assets/images/logo.png
 favicon: assets/images/favicon.ico
 baseurl: "/blog"
-url: http://iosjunkie.com
-disqus: iosjunkie
+url: http://fluttergeek.com
+disqus: fluttergeek
 email: zoom.flux@gmail.com
 include:
 - _pages
@@ -42,9 +41,9 @@ gem:
 authors:
   jules:
     name: Jules Lee
-    site: https://iosjunkie.com
+    site: https://fluttergeek.com
     avatar: "/assets/images/avatar1.jpg"
-    bio: Hi, I am Jules, the author of iOS Junkie. Demystifying complex instructions
+    bio: Hi, I am Jules, the author of FlutterGeek. Demystifying complex instructions
       from the internet.
     email: zoom.flux@gmail.com
     facebook: https://facebook.com/mr.jules.lee

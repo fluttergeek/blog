@@ -17,7 +17,7 @@ tags:
 image: assets/images/Screen%20Shot%202019-09-27%20at%206.00.31%20PM.png
 ---
 
-This might be too technical for a non-computer-savvy to be doing, so I've formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdirectory just like my blog `iosjunkie.com/blog`, then you might want to see this first:
+This might be too technical for a non-computer-savvy to be doing, so I've formulated this article to help guide you in creating one of your own. If you want your blog to be in a subdirectory just like my blog `fluttergeek.com/blog`, then you might want to see this first:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nN6QuNqmAwk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -83,6 +83,6 @@ You can then copy it to your Applications folder and it works just like that. Yo
 
 ### Other Options
 
-On October 27, 2019, I tried Netlify and wrote a [guide](http://iosjunkie.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/ "Netlify") about it.
+On October 27, 2019, I tried Netlify and wrote a [guide](http://fluttergeek.com/blog/using-netlify-as-a-cms-for-your-jekyll-blog/ "Netlify") about it.
 
-On October 28, 2019, I tried Forestry.io again and wrote my likes and dislikes about it as well as some tips. [Check it out](http://iosjunkie.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/ "Forestry.io"). I've actually tried Forestry.io once before, but I didn't understand it back then.
+On October 28, 2019, I tried Forestry.io again and wrote my likes and dislikes about it as well as some tips. [Check it out](http://fluttergeek.com/blog/using-forestry-as-a-cms-for-your-jekyll-blog/ "Forestry.io"). I've actually tried Forestry.io once before, but I didn't understand it back then.

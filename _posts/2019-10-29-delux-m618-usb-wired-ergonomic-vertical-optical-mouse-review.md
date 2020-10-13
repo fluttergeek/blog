@@ -14,7 +14,7 @@ tags:
 image: assets/images/Delux-M618-2-4G-Wireless-Vertical-Mouse-Inalambrico-Ergonomic-1600-DPI-USB-Wired-Optical-Mouse-with.jpg
 
 ---
-My new vertical mouse just arrived as we speak. This is a little different from the [previous](http://iosjunkie.com/blog/using-vertical-mouse-my-take/ "Vertical Mouse") one; It has a wire instead of it being wireless and it feels funny around my hands.
+My new vertical mouse just arrived as we speak. This is a little different from the [previous](http://fluttergeek.com/blog/using-vertical-mouse-my-take/ "Vertical Mouse") one; It has a wire instead of it being wireless and it feels funny around my hands.
 
 I have now been accustomed to using my previous vertical mouse. It felt rather more comfortable when I wrap my hand around it, but I don't feel the same comfort with this new one.
 

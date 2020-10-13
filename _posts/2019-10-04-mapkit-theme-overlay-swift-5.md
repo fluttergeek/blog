@@ -78,5 +78,5 @@ No, silly! I copied that JSON file. There's actually tons of those themes out th
 
 
 [mappost]: https://medium.com/@ortizfernandomartin/customize-mapkits-mkmapview-with-google-maps-styling-wizard-a5dcc095e19f
-[git]: https://github.com/iosjunkie/StyleMapKit/blob/master/StyleMapKit/GoogleStyle.swift
+[git]: https://github.com/fluttergeek/StyleMapKit/blob/master/StyleMapKit/GoogleStyle.swift
 [snazzy]: https://snazzymaps.com/style/282895/xemeneies-pou

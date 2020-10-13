@@ -13,7 +13,7 @@ tags:
 image: assets/images/Screen%20Shot%202019-10-08%20at%208.38.36%20PM.png
 ---
 
-YouTube has been recommeding me blog tips and I've recently been keen on trying to get views on this blog. Today, my blog is still not indexed by google, but my half-baked portfolio `iosjunkie.com` is. Which is weird.
+YouTube has been recommeding me blog tips and I've recently been keen on trying to get views on this blog. Today, my blog is still not indexed by google, but my half-baked portfolio `fluttergeek.com` is. Which is weird.
 
 One of the tips of some YouTuber was to post your links on `Reddit`. I was hesitant at first because I felt like it would be kind of like spamming on the internet, but that YouTuber said that it would help index my blog faster, and so I did. So, it happens that there are three ways to post on Reddit, just like the numerous ways to post on Facebook. You can post a `link, image, or a text`. No wonder I've been seeing so many links only posts on Reddit. I thought they were spammy. 
 
