@@ -42,8 +42,8 @@ To add the pull to refresh feature inside the **BiggerBottomList()** widget, we'
 At first, I didn't expect **RefreshIndicator** as a widget name appropriate for this task. It didn't make sense. But now, I think of it like the circular motion thing that drops down when the list is pulled down as the indicator that the list is being refreshed.
 
     RefreshIndicator(
-      onRefresh: _.feed,
+      onRefresh: _.feed, // the future function
       child: ListView.builder(),
      )
 
-This widget is inside **BiggerBottomList()**, and it accepts a future function. When that future function is done, it stops the circular motion thing and the **ListView.builder()** rebuilds. 
+This widget is inside **BiggerBottomList()**, and it accepts a future function without parentheses. When that future function is done, it stops the circular motion thing and the **ListView.builder()** rebuilds. 
