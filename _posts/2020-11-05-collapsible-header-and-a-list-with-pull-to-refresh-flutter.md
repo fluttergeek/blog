@@ -22,7 +22,7 @@ Slivers are widgets that you can put inside **CustomScrollView** or inside **Nes
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k2v3gxtMlDE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-This here is a great tutorial if you want to start learning about **CustomScrollView**. But the thing about **CustomScrollView** is that you can't add a **RefreshIndicator** if you're just using a simple **ListView.builder**. Maybe you can if you wrapped it in a **SliverToBoxAdapter**. So, I just recently discovered the **NestedScrollView**, much like **CustomScrollView**, it allows you to add slivers as well, but the bottom part, which is the "body", allows you to create regular widgets. I mean non-slivers.
+This here is a great tutorial if you want to start learning about **CustomScrollView**. But the thing about **CustomScrollView** is that you can't add a **RefreshIndicator** if you're just using a simple **ListView.builder**. Maybe you can if you wrapped it in a **SliverToBoxAdapter**. So, I just recently discovered the **NestedScrollView**, much like **CustomScrollView**, it allows you to add slivers as well, but the bottom part, which is the "body", allows you to create one regular widget. I mean a non-sliver.
 
     NestedScrollView(
       headerSliverBuilder: (BuildContext ctx, bool boxIsScrolled) {
