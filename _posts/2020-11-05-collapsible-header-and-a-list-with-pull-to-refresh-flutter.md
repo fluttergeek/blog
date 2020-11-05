@@ -24,13 +24,26 @@ Slivers are widgets that you can put inside **CustomScrollView** or inside **Nes
 
 This here is a great tutorial if you want to start learning about **CustomScrollView**. But the thing about **CustomScrollView** is that you can't add a **RefreshIndicator** if you're just using a simple **ListView.builder**. Maybe you can if you wrapped it in a **SliverToBoxAdapter**. So, I just recently found out about the **NestedScrollView**, much like **CustomScrollView**, it allows you to add slivers as well, but the bottom part, which is the "body", allows you to create regular widgets. I mean non-slivers.
 
-    	NestedScrollView(
-          headerSliverBuilder: (BuildContext ctx, bool boxIsScrolled) {
-            return <Widget>[
-              SliverToBoxAdapter(
-                child: BigBlueBox(),
-              )
-            ];
-          },
-          body: BiggerBottomList(),
-        );
+    NestedScrollView(
+      headerSliverBuilder: (BuildContext ctx, bool boxIsScrolled) {
+        return <Widget>[
+          SliverToBoxAdapter(
+            child: BigBlueBox(),
+          )
+        ];
+      },
+      body: BiggerBottomList(),
+    ); 
+
+This is how you add both components together to make them both scrollable simultaneously. 
+
+Now, we add the pull to refresh inside the **BiggerBottomList()** widget, we'll be using RefreshIndicator. No installing of dependencies needed to make this happen. It's all part of Flutter material library. 
+
+At first, I didn't expect RefreshIndicator to be the widget name I'd be using. It didn't make sense. But now, I think of it like the circular motion thing that drops down when the list is pulled down as the indicator to refresh.
+
+    RefreshIndicator(
+      onRefresh: _.feed,
+      child: ListView.builder(),
+     )
+
+This widget accepts a future function. When that future function is done, it stops the circular motion thing and the **ListView.builder()** rebuilds. 
