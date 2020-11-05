@@ -37,7 +37,7 @@ This here is a great tutorial if you want to start learning about **CustomScroll
 
 This is how you add both components together to make them both scrollable simultaneously. 
 
-Now, we add the pull to refresh inside the **BiggerBottomList()** widget, we'll be using RefreshIndicator. No installing of dependencies needed to make this happen. It's all part of Flutter material library. 
+To add the pull to refresh inside the **BiggerBottomList()** widget, we'll be using **RefreshIndicator**. No installing of dependencies needed to make this happen. It's all part of Flutter material library. 
 
 At first, I didn't expect RefreshIndicator to be the widget name I'd be using. It didn't make sense. But now, I think of it like the circular motion thing that drops down when the list is pulled down as the indicator to refresh.
 
