@@ -39,7 +39,7 @@ This is how you add both components together to make them both scrollable simult
 
 To add the pull to refresh inside the **BiggerBottomList()** widget, we'll be using **RefreshIndicator**. No installing of dependencies needed to make this happen. It's all part of Flutter material library. 
 
-At first, I didn't expect **RefreshIndicator** as a widget name appropriate for this task. It didn't make sense. But now, I think of it like the circular motion thing that drops down when the list is pulled down as the indicator to refresh.
+At first, I didn't expect **RefreshIndicator** as a widget name appropriate for this task. It didn't make sense. But now, I think of it like the circular motion thing that drops down when the list is pulled down as the indicator that the list is being refreshed.
 
     RefreshIndicator(
       onRefresh: _.feed,
