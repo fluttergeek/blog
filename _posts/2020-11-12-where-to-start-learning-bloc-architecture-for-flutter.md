@@ -44,4 +44,4 @@ Knowing all that, you might want to watch more about how it is implemented, and 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oxeYeMHVLII" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-But if you want to dive right into building things already, then read the documentation in [https://pub.dev/packages/flutter_bloc](https://pub.dev/packages/flutter_bloc "Flutter_Bloc") to see some application examples.  
+But if you want to dive right into building things already, then read the documentation in [https://bloclibrary.dev/](https://bloclibrary.dev/ "https://bloclibrary.dev/") to see some really useful application examples.
