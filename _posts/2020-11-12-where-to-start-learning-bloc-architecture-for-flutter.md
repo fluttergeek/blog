@@ -44,4 +44,10 @@ Knowing all that, you might want to watch more about how it is implemented, and 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oxeYeMHVLII" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Once you're done with all that, you might want to look into a more realistic process. I just found out about this and it's way more understandable than Reso Coder.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ypLnx8dtq08" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Don't be put off by his name, [**Ovidius Mazuru**](https://www.youtube.com/channel/UCJW25d8mW8ciz0DQC-5XNsQ). He speaks English like a native. 
+
 But if you want to dive right into building things already, then read the documentation in [https://bloclibrary.dev/](https://bloclibrary.dev/ "https://bloclibrary.dev/") to see some really useful application examples.
