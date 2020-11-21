@@ -11,7 +11,7 @@ tags:
 - json_serializable
 - freezed
 - flutter
-image: ''
+image: assets/images/1_xrvmy8qxakw_-sldq5jcta.jpeg
 
 ---
 This is for when you create a class that has a member with an unusual type, like for example, GeoFirePoint.
