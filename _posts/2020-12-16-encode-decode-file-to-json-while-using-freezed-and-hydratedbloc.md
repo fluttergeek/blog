@@ -12,7 +12,7 @@ tags:
 - flutter bloc
 - freezed
 - hydrated bloc
-image: ''
+image: assets/images/d8mln-lxyaa7hnz-jpg_large.jpeg
 
 ---
 You might have encountered an error when using a HydratedBloc. It turns out your Model that has a File member cannot be encoded or decoded to JSON. Well, this is a snippet on how you can around making your model compatible with hydrated bloc. 

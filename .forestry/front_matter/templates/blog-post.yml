@@ -38,8 +38,8 @@ pages:
 - _posts/2020-01-12-friendface-saving-nested-object-in-coredata-with-swiftui.md
 - _posts/2020-11-05-collapsible-header-and-a-list-with-pull-to-refresh-flutter.md
 - _posts/2020-11-07-when-should-you-use-or-not-use-velocityx-for-flutter.md
+- _posts/2020-12-16-encode-decode-file-to-json-while-using-freezed-and-hydratedbloc.md
 - _posts/draggable-card-sheet-search-places-on-mapkit.md
-- _posts/encode-decode-file-to-json-while-using-freezed-and-hydratedbloc.md
 - _posts/freezed-jsonserializable-geofirepoint-none-of-the-provided-typehelper-instances-support-the-defined-type.md
 - _posts/i-m-choosing-getx-over-provider-riverpod.md
 - _posts/the-tale-of-protocol-and-delegate-uikit-swift.md
