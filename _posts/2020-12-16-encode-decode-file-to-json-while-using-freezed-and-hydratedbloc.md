@@ -15,11 +15,11 @@ tags:
 image: assets/images/d8mln-lxyaa7hnz-jpg_large.jpeg
 
 ---
-You might have encountered an error when using a HydratedBloc. It turns out your Model that has a File member cannot be encoded or decoded to JSON. Well, this is a snippet on how you can work around making your model compatible with hydrated bloc.
+You might have encountered an error when using a **HydratedBloc**. It turns out your Model that has a **File** member cannot be encoded or decoded to **JSON**. Well, this is a snippet on how you can work around making your model compatible with hydrated bloc.
 
-This will give you an idea of how to make it compatible. You can even build your own idea on top of it. You can replace the now date that I did in fromJson to your preferred string just to make a File out of a JSON.
+This will give you an idea of how to make it compatible. You can even build your own idea on top of it. You can replace the now date that I did in fromJson to your preferred string just to make a File out of a **JSON**.
 
-Caveat: The files I'm trying to encode or decode are images. Hence, I used ".png" as a file type. Change it to whatever file type your app requires.
+Caveat: The files I'm trying to encode or decode are images. Hence, I used "**.png**" as a file type. Change it to whatever file type your app requires.
 
     import 'dart:io';
     import 'dart:io' as Io;
