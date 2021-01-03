@@ -30,7 +30,7 @@ The **_image__picker** is pretty straightforward to use.
     final picker = ImagePicker();
     final PickedFile image = await picker.getImage(source: ImageSource.gallery);
 
-Although we're using flutter web, we can still use **ImageSource.gallery** as the source of our image's location. However, the return type is not what you're actually expecting. **PickedFile** is not the same as File and there's no way you can directly convert it to **File** type, unless you do conversions.
+Although we're using flutter web, we can still use **ImageSource.gallery** as the source of our image's location. However, the return type is not what you're actually expecting. **PickedFile** is not the same as **File** and there's no way you can directly convert it to **File** type, unless you do conversions.
 
 In this article, the file type we're going to extract off of PickedFile is a **Uint8List**, other known as bytes. You'd need to import 'dart:typed_data'; for that.
 
