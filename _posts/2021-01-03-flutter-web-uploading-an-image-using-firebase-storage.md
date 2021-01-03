@@ -23,7 +23,7 @@ There is no need to initialize **firebase_storage** in index.html or in main.dar
 
 Caveat...
 
-In my experience, I haven't been able to upload images when uploading an image thru the localhost. I've had to deploy the project to firebase to steer clear of the access error.
+In my experience, I haven't been able to upload images when uploading an image thru the localhost. I've had to deploy the project to firebase hosting to steer clear of the access error.
 
 The **_image__picker** is pretty straightforward to use.
 
