@@ -17,6 +17,14 @@ Even now, there is hardly a bulletproof solution around this; but a solution, th
 
 There have been plenty of other articles written about how to upload an image using flutter web. It even entails adding a number of other dependencies. But here, you'll need the **firebase_storage** of course; the latest version you can find. Moreover, in my web/index.html, I use the firebase-storage.js version 7.22.1. The other dependency you need is **image_picker**.
 
+There is one other dependency that I have imported but haven't used; **image_picker_for_web**.
+
+I don't know why but the **image_picker** only works and doesn't give me this error:
+
+    MissingPluginException(No implementation found for method pickImage on channel plugins.flutter.io/image_picker)
+
+... if I have **image_picker_for_web** imported in the dart file where I'm using **image_picker**.
+
 There is no need to initialize **firebase_storage** in index.html or in main.dart, just the use of FirebaseStorage.instance.
 
      final FirebaseStorage _firebaseStorage = FirebaseStorage.instance;
