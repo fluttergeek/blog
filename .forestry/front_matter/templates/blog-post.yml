@@ -39,6 +39,7 @@ pages:
 - _posts/2020-11-05-collapsible-header-and-a-list-with-pull-to-refresh-flutter.md
 - _posts/2020-11-07-when-should-you-use-or-not-use-velocityx-for-flutter.md
 - _posts/2020-12-16-encode-decode-file-to-json-while-using-freezed-and-hydratedbloc.md
+- _posts/coding-in-flutter-on-a-macbook-m1-january-2021-update.md
 - _posts/draggable-card-sheet-search-places-on-mapkit.md
 - _posts/flutter-web-uploading-an-image-using-firebase-storage.md
 - _posts/freezed-jsonserializable-geofirepoint-none-of-the-provided-typehelper-instances-support-the-defined-type.md
