@@ -50,3 +50,5 @@ In this article, the file type we're going to extract off of PickedFile is a **U
     	.whenComplete(() => print('done'))
         .catchError((error) => print('something went wrong')));
     String url = await taskSnapshot.ref.getDownloadURL();
+
+However, this is still a work in progress. I am able to upload an image, but I don't yet know how to display it. Displaying a different image URL found someplace on the internet works. It seems there's something wrong with the image being uploaded, even though when I put the generated URL manually on a browser, the image shows successfully.
