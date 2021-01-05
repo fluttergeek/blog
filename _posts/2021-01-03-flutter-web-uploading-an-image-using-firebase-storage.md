@@ -25,7 +25,7 @@ Caveat...
 
 In my experience, I haven't been able to upload images when uploading an image thru the localhost. I've had to deploy the project to firebase hosting to steer clear of the access error.
 
-The **_image__picker** is pretty straightforward to use.
+The **image_picker** is pretty straightforward to use.
 
     final picker = ImagePicker();
     final PickedFile image = await picker.getImage(source: ImageSource.gallery);
