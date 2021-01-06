@@ -23,6 +23,10 @@ The image codec, or whatever it's called, is uploaded as **Uint8List**. When I t
 
 I realized it's not really a JPEG file. Although, when I use the URL and manually load it on a browser, it displays the image flawlessly. The putData only uploaded it as Uint8List, regardless of adding the **.jpeg** extension on the filename. That's when I knew, I just had to download it as a Uint8List first.
 
+But before anything, let's allow downloading a file from a **firebase_storage** using Flutter web by configuring our CORS. There's a straightforward instruction for this: [CORS Configuration](https://firebase.google.com/docs/storage/web/download-files "CORS Configuration"). It's kinda tedious but trust me, it was smooth sailing; I didn't run into any problems configuring that. 
+
+Now, we can start to download the image from **firebase_storage** without hiccups.
+
     http.Response response = await http.get(
       await _firestorageService.uploadPicture(file: file),
     );
