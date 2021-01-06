@@ -51,4 +51,4 @@ In this article, the file type we're going to extract off of PickedFile is a **U
         .catchError((error) => print('something went wrong')));
     String url = await taskSnapshot.ref.getDownloadURL();
 
-Now that you've learned to upload, downloading this file is kind of different from the way you're used to. I made another article on that.
+Now that you've learned to upload, downloading this file is kind of different from the way you're used to. I wrote another article about that; [Displaying a Uint8List Image File From Firebase Storage and \[Flutter Web\] 2021](/blog/displaying-a-uint8list-image-file-from-firebase-storage-and-flutter-web-2021/).
