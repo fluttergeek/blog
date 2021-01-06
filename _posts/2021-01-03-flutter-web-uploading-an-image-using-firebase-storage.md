@@ -38,7 +38,9 @@ The **image_picker** is pretty straightforward to use.
     final picker = ImagePicker();
     final PickedFile image = await picker.getImage(source: ImageSource.gallery);
 
-Although we're using flutter web, we can still use **ImageSource.gallery** as the source of our image's location. However, the return type is not what you're actually expecting. **PickedFile** is not the same as **File** and there's no way you can directly convert it to **File** type, unless you do conversions.
+Although we're using flutter web, we can still use **ImageSource.gallery** as the source of our image's location. However, the return type is not what you're actually expecting. **PickedFile** is not the same as **File** and there's no way you can directly convert it to **File** type unless you do conversions.
+
+Also, why not use **File** at all? Even **html.File**? To answer your question; I've tried both. Flutter web at the moment doesn't allow us to use **File** from **dart:io**. It always ends up in error whenever I use it. **html.File**, from **dart:html**, on the other hand, isn't accepted by **putData's** File parameter; the only **File** from **dart:io** is accepted. Plus, I could not convert **Uint8List** to **html.File**.
 
 In this article, the file type we're going to extract off of PickedFile is a **Uint8List**, other known as bytes. You'd need to import 'dart:typed_data'; for that.
 
